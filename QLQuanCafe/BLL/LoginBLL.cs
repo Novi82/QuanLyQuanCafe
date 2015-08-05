@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using QLQuanCafe.DTO;
+﻿using MySql.Data.MySqlClient;
 using QLQuanCafe.Common;
 using QLQuanCafe.DAO;
-using System.Windows.Input;
-using MySql.Data.MySqlClient;
+using QLQuanCafe.DTO;
+
 namespace QLQuanCafe.BLL
 {
-    public class LoginBLL : BllBase
+    public class LoginBll : BllBase
     {
 
         #region Properties
@@ -20,21 +15,21 @@ namespace QLQuanCafe.BLL
         public AccountData Account
         {
             get { return _account; }
-            set { SetProperty<AccountData>(ref _account, value); }
+            set { SetProperty(ref _account, value); }
         }
 
         private bool _isLogin;
         public bool IsLogin
         {
             get { return _isLogin; }
-            set { SetProperty<bool>(ref _isLogin, value); }
+            set { SetProperty(ref _isLogin, value); }
         }
 
         private bool _isManageAccount;
         public bool IsManageAccount
         {
             get { return _isManageAccount; }
-            set { SetProperty<bool>(ref _isManageAccount, value); }
+            set { SetProperty(ref _isManageAccount, value); }
         }
 
 
@@ -42,14 +37,14 @@ namespace QLQuanCafe.BLL
         public bool IsMenu
         {
             get { return _isMenu; }
-            set { SetProperty<bool>(ref _isMenu, value); }
+            set { SetProperty(ref _isMenu, value); }
         }
 
         private bool _isHomePage;
         public bool IsHomePage
         {
             get { return _isHomePage; }
-            set { SetProperty<bool>(ref _isHomePage, value); }
+            set { SetProperty(ref _isHomePage, value); }
         }
 
         #endregion
@@ -66,7 +61,7 @@ namespace QLQuanCafe.BLL
 
         #endregion
 
-        public LoginBLL()
+        public LoginBll()
         {
             Load();
         }

@@ -1,12 +1,8 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Diagnostics;
-using System.Threading.Tasks;
+using System.Configuration;
 using System.Data;
-using System.Windows;
+using MySql.Data.MySqlClient;
 
 namespace QLQuanCafe.DAO
 {
@@ -24,7 +20,7 @@ namespace QLQuanCafe.DAO
         {
             try
             {
-                _sqlConnection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["MyConnectString"].ConnectionString;
+                _sqlConnection.ConnectionString = ConfigurationManager.ConnectionStrings["MyConnectString"].ConnectionString;
                 _sqlConnection.Open();
             }
             catch (Exception ex)

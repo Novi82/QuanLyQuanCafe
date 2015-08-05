@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data;
 using QLQuanCafe.DTO;
 
@@ -27,16 +24,16 @@ namespace QLQuanCafe.DAO
                 BillDetailData billDetail = new BillDetailData();
                 billDetail.BillDetaiId = row["MaCTHoaDon"].ToString();
                 billDetail.BillId = row["MaHoaDon"].ToString();
-                billDetail.MenuItem = new MenuItemData()
+                billDetail.MenuItem = new MenuItemData
                 {
                     MenuItemId = row["MaMonAn"].ToString(),
                     MenuItemName = row["TenMonAn"].ToString(),
-                    Unit = new UnitData()
+                    Unit = new UnitData
                     {
                         UnitId = row["MaDonVi"].ToString(),
-                        UnitName = row["TenDonVi"].ToString(),
+                        UnitName = row["TenDonVi"].ToString()
                     },
-                    Price = Decimal.Parse(row["DonGia"].ToString()),
+                    Price = Decimal.Parse(row["DonGia"].ToString())
                 };
                 billDetail.Quantity = int.Parse(row["SoLuong"].ToString());
                 billDetail.IsPrepare = bool.Parse(row["DaChuanBi"].ToString());

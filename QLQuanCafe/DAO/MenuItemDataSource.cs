@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using QLQuanCafe.DTO;
 using System.Data;
+using QLQuanCafe.DTO;
 
 namespace QLQuanCafe.DAO
 {
@@ -36,10 +33,10 @@ namespace QLQuanCafe.DAO
                 menuItem.MenuItemId = row["MaMonAn"].ToString();
                 menuItem.MenuItemName = row["TenMonAn"].ToString();
                 menuItem.ImagePath = row["HinhAnh"].ToString();
-                menuItem.Unit = new UnitData()
+                menuItem.Unit = new UnitData
                 {
                     UnitId = row["MaDonVi"].ToString(),
-                    UnitName = row["TenDonVi"].ToString(),
+                    UnitName = row["TenDonVi"].ToString()
                 };
                 menuItem.Price = Decimal.Parse(row["DonGia"].ToString());
 
@@ -64,16 +61,16 @@ namespace QLQuanCafe.DAO
                 MenuItem.ImagePath = row["HinhAnh"].ToString();
                 MenuItem.Price = Decimal.Parse(row["DonGia"].ToString());
 
-                MenuItem.Unit = new UnitData()
+                MenuItem.Unit = new UnitData
                 {
                     UnitId = row["MaDonVi"].ToString(),
-                    UnitName = row["TenDonVi"].ToString(),
+                    UnitName = row["TenDonVi"].ToString()
                 };
 
-                MenuItem.MenuCategory = new MenuCategoryData()
+                MenuItem.MenuCategory = new MenuCategoryData
                 {
                     MenuCategoryId = row["MaLoaiMon"].ToString(),
-                    MenuCategoryName = row["TenLoaiMon"].ToString(),
+                    MenuCategoryName = row["TenLoaiMon"].ToString()
                 };
 
                 listMenuItem.Add(MenuItem);

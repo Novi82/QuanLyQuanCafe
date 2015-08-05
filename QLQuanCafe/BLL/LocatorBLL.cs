@@ -1,116 +1,110 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace QLQuanCafe.BLL
+﻿namespace QLQuanCafe.BLL
 {
-    public class LocatorViewModel
+    public class LocatorBll
     {
-        private static MainWindowBLL _mainWindowVM;
-        public static MainWindowBLL MainWindowVM
+        private static MainWindowBll _mainWindowVM;
+        public static MainWindowBll MainWindowVM
         {
             get
             {
                 if (_mainWindowVM == null)
-                    _mainWindowVM = new MainWindowBLL();
+                    _mainWindowVM = new MainWindowBll();
 
                 return _mainWindowVM;
             }
         }
 
-        private static HomePageViewModel _homePageVM;
-        public static HomePageViewModel HomePageVM
+        private static HomePageBll _homePageVM;
+        public static HomePageBll HomePageVM
         {
             get
             {
                 if (_homePageVM == null)
-                    _homePageVM = new HomePageViewModel();
+                    _homePageVM = new HomePageBll();
 
                 return _homePageVM;
             }
         }
 
-        private static AreaAndTableBLL _areaAndTableVM;
-        public static AreaAndTableBLL AreaAndTableVM
+        private static AreaAndTableBll _areaAndTableVM;
+        public static AreaAndTableBll AreaAndTableVM
         {
             get
             {
                 if (_areaAndTableVM == null)
-                    _areaAndTableVM = new AreaAndTableBLL();
+                    _areaAndTableVM = new AreaAndTableBll();
 
                 return _areaAndTableVM;
             }
         }
 
-        private static MenuCategoryAndMenuItemBLL _menuCategoryAndMenuItemVM;
-        public static MenuCategoryAndMenuItemBLL MenuCategoryAndMenuItemVM
+        private static MenuCategoryAndMenuItemBll _menuCategoryAndMenuItemVM;
+        public static MenuCategoryAndMenuItemBll MenuCategoryAndMenuItemVM
         {
             get
             {
                 if (_menuCategoryAndMenuItemVM == null)
-                    _menuCategoryAndMenuItemVM = new MenuCategoryAndMenuItemBLL();
+                    _menuCategoryAndMenuItemVM = new MenuCategoryAndMenuItemBll();
 
                 return _menuCategoryAndMenuItemVM;
             }
         }
 
-        private static UnitBLL _unitVM;
-        public static UnitBLL UnitVM
+        private static UnitBll _unitVM;
+        public static UnitBll UnitVM
         {
             get
             {
                 if (_unitVM == null)
-                    _unitVM = new UnitBLL();
+                    _unitVM = new UnitBll();
 
                 return _unitVM;
             }
         }
 
-        private static BillBLL _billVM;
-        public static BillBLL BillVM
+        private static BillBll _billVM;
+        public static BillBll BillVM
         {
             get
             {
                 if (_billVM == null)
-                    _billVM = new BillBLL();
+                    _billVM = new BillBll();
 
                 return _billVM;
             }
         }
 
-        private static MaterialBLL _materialVM;
-        public static MaterialBLL MaterialVM
+        private static MaterialBll _materialVM;
+        public static MaterialBll MaterialVM
         {
             get
             {
                 if (_materialVM == null)
-                    _materialVM = new MaterialBLL();
+                    _materialVM = new MaterialBll();
 
                 return _materialVM;
             }
         }
 
-        private static LoginBLL _loginVM;
-        public static LoginBLL LoginVM
+        private static LoginBll _loginVM;
+        public static LoginBll LoginVM
         {
             get
             {
                 if (_loginVM == null)
-                    _loginVM = new LoginBLL();
+                    _loginVM = new LoginBll();
 
                 return _loginVM;
             }
         }
 
-        private static AccountViewModel _accountVM;
-        public static AccountViewModel AccountVM
+        private static AccountBll _accountVM;
+        public static AccountBll AccountVM
         {
             get
             {
                 if (_accountVM == null)
-                    _accountVM = new AccountViewModel();
+                    _accountVM = new AccountBll();
 
                 return _accountVM;
             }

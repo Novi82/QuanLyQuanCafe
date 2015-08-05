@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 using QLQuanCafe.Common;
-using System.ComponentModel;
 
 namespace QLQuanCafe.DTO
 {
@@ -29,8 +24,8 @@ namespace QLQuanCafe.DTO
          {
              get
              {
-                 if (this.CanValidate)
-                     return this.Validate(collumnName);
+                 if (CanValidate)
+                     return Validate(collumnName);
 
                  return string.Empty;
              }
@@ -45,7 +40,7 @@ namespace QLQuanCafe.DTO
 
          public string Validate(string propertyName)
          {
-             if (this.OnValidateProperty != null)
+             if (OnValidateProperty != null)
                  return OnValidateProperty(propertyName);
 
              return string.Empty;

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 
 namespace QLQuanCafe.Common
@@ -29,10 +25,7 @@ namespace QLQuanCafe.Common
                 File.Copy(imagePath, newFileName, true);
                 return newFileName;
             }
-            else
-            {
-                return "";
-            }
+            return "";
         }
     }
 }

@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using QLQuanCafe.DTO;
+﻿using System.Collections.Generic;
 using System.Windows.Input;
+using MySql.Data.MySqlClient;
 using QLQuanCafe.Common;
 using QLQuanCafe.DAO;
-using MySql.Data.MySqlClient;
-using System.Drawing;
+using QLQuanCafe.DTO;
+
 namespace QLQuanCafe.BLL
 {
-    public class AccountViewModel : BllBase
+    public class AccountBll : BllBase
     {
 
         #region Properties
@@ -20,35 +16,35 @@ namespace QLQuanCafe.BLL
         public List<AccountData> ListAccount
         {
             get { return _listAccount; }
-            set { SetProperty<List<AccountData>>(ref _listAccount, value); }
+            set { SetProperty(ref _listAccount, value); }
         }
 
         private AccountData _accountSelected;
         public AccountData AccountSelected
         {
             get { return _accountSelected; }
-            set { SetProperty<AccountData>(ref _accountSelected, value); }
+            set { SetProperty(ref _accountSelected, value); }
         }
 
         private AccountData _accountToSave;
         public AccountData AccountToSave
         {
             get { return _accountToSave; }
-            set { SetProperty<AccountData>(ref _accountToSave, value); }
+            set { SetProperty(ref _accountToSave, value); }
         }
 
         private List<PermissionData> _listPermission;
         public List<PermissionData> ListPermission
         {
             get { return _listPermission; }
-            set { SetProperty<List<PermissionData>>(ref _listPermission, value); }
+            set { SetProperty(ref _listPermission, value); }
         }
 
         private PermissionData _permissionSelected;
         public PermissionData PermissionSelected
         {
             get { return _permissionSelected; }
-            set { SetProperty<PermissionData>(ref _permissionSelected, value); }
+            set { SetProperty(ref _permissionSelected, value); }
         }
 
         #endregion

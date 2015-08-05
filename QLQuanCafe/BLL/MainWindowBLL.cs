@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace QLQuanCafe.BLL
+﻿namespace QLQuanCafe.BLL
 {
     public enum MyPage
     {
@@ -15,19 +9,19 @@ namespace QLQuanCafe.BLL
         BillPage,
         MaterialPage,
         InventoryPage,
-        AccountPage,
+        AccountPage
     }
 
-    public class MainWindowBLL : BllBase
+    public class MainWindowBll : BllBase
     {
         private MyPage _currentPage;
         public MyPage CurrentPage
         {
             get { return _currentPage; }
-            set { SetProperty<MyPage>(ref _currentPage, value); }
+            set { SetProperty(ref _currentPage, value); }
         }
 
-        public MainWindowBLL()
+        public MainWindowBll()
         {
             Load();
         }

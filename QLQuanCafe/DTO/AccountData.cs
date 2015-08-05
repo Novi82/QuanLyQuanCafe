@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using QLQuanCafe.Common;
+﻿using QLQuanCafe.Common;
 
 namespace QLQuanCafe.DTO
 {
@@ -13,21 +8,21 @@ namespace QLQuanCafe.DTO
         public string UserName
         {
             get { return _userName; }
-            set { SetProperty<string>(ref _userName, value); }
+            set { SetProperty(ref _userName, value); }
         }
 
         private string _password;
         public string Password
         {
             get { return _password; }
-            set { SetProperty<string>(ref _password, value); }
+            set { SetProperty(ref _password, value); }
         }
 
         private PermissionData _permission;
         public PermissionData Permission
         {
             get { return _permission; }
-            set { SetProperty<PermissionData>(ref _permission, value); }
+            set { SetProperty(ref _permission, value); }
         }
     }
 }

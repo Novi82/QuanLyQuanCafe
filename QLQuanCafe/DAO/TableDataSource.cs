@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Data;
 using QLQuanCafe.DTO;
-                         
+
 namespace QLQuanCafe.DAO
 {
     public class TableDataSource : DataSourceBase
@@ -20,10 +16,10 @@ namespace QLQuanCafe.DAO
                 TableData table = new TableData();
                 table.TableId = row["MaBan"].ToString();
                 table.TableName = row["TenBan"].ToString();
-                table.Area = new AreaData()
+                table.Area = new AreaData
                 {
                     AreaId = row["MaKhuVuc"].ToString(),
-                    AreaName = row["TenKhuVuc"].ToString(),
+                    AreaName = row["TenKhuVuc"].ToString()
                 };
 
                 table.TableState = row["TinhTrang"].ToString();
@@ -80,9 +76,9 @@ namespace QLQuanCafe.DAO
                 table.TableId = row["MaBan"].ToString();
                 table.TableName = row["TenBan"].ToString();
 
-                table.Area = new AreaData()
+                table.Area = new AreaData
                 {
-                    AreaId = row["MaKhuVuc"].ToString(),
+                    AreaId = row["MaKhuVuc"].ToString()
                 };
 
                 listTable.Add(table);
@@ -103,10 +99,10 @@ namespace QLQuanCafe.DAO
             {
                 getTable.TableId = dt.Rows[0]["MaBan"].ToString();
                 getTable.TableName = dt.Rows[0]["TenBan"].ToString();
-                getTable.Area = new AreaData()
+                getTable.Area = new AreaData
                 {
                     AreaId = dt.Rows[0]["MaKhuVuc"].ToString(),
-                    AreaName = dt.Rows[0]["TenKhuVuc"].ToString(),
+                    AreaName = dt.Rows[0]["TenKhuVuc"].ToString()
                 };
 
                 getTable.TableState = dt.Rows[0]["TinhTrang"].ToString();

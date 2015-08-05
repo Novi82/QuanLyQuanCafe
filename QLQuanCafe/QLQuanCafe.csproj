@@ -52,17 +52,17 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\AccountBLL.cs" />
-    <Compile Include="BLL\AreaAndTableBLL.cs" />
-    <Compile Include="BLL\BillBLL.cs" />
+    <Compile Include="BLL\AccountBll.cs" />
+    <Compile Include="BLL\AreaAndTableBll.cs" />
+    <Compile Include="BLL\BillBll.cs" />
     <Compile Include="BLL\BllBase.cs" />
-    <Compile Include="BLL\HomePageBLL.cs" />
-    <Compile Include="BLL\LocatorBLL.cs" />
-    <Compile Include="BLL\LoginBLL.cs" />
-    <Compile Include="BLL\MainWindowBLL.cs" />
-    <Compile Include="BLL\MaterialBLL.cs" />
-    <Compile Include="BLL\MenuCategoryAndMenuItemBLL.cs" />
-    <Compile Include="BLL\UnitBLL.cs" />
+    <Compile Include="BLL\HomePageBll.cs" />
+    <Compile Include="BLL\LocatorBll.cs" />
+    <Compile Include="BLL\LoginBll.cs" />
+    <Compile Include="BLL\MainWindowBll.cs" />
+    <Compile Include="BLL\MaterialBll.cs" />
+    <Compile Include="BLL\MenuCategoryAndMenuItemBll.cs" />
+    <Compile Include="BLL\UnitBll.cs" />
     <Compile Include="Common\BindableBase.cs" />
     <Compile Include="Common\ImageHelper.cs" />
     <Compile Include="Common\MessageDialogHelper.cs" />

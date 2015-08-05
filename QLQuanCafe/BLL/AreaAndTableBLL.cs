@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using QLQuanCafe.DTO;
-using QLQuanCafe.DAO;
-using QLQuanCafe.Common;
-using System.Windows.Input;
-using System.Windows;
-using MySql.Data.MySqlClient;
-using System.Drawing;
+﻿using System.Collections.Generic;
 using System.Windows.Forms;
+using System.Windows.Input;
+using MySql.Data.MySqlClient;
+using QLQuanCafe.Common;
+using QLQuanCafe.DAO;
+using QLQuanCafe.DTO;
+
 namespace QLQuanCafe.BLL
 {
-    public class AreaAndTableBLL : BllBase
+    public class AreaAndTableBll : BllBase
     {
         #region Properties
 
@@ -21,7 +16,7 @@ namespace QLQuanCafe.BLL
         public List<AreaData> ListArea
         {
             get { return _listArea; }
-            set { SetProperty<List<AreaData>>(ref _listArea, value); }
+            set { SetProperty(ref _listArea, value); }
         }
 
         private AreaData _areaSelected;
@@ -30,7 +25,7 @@ namespace QLQuanCafe.BLL
             get { return _areaSelected; }
             set
             {
-                if (SetProperty<AreaData>(ref _areaSelected, value))
+                if (SetProperty(ref _areaSelected, value))
                 {
                     ((RelayCommand<object>)ShowEditAreaWindowCommand).RaiseCanExecuteChanged();
                     ((RelayCommand<object>)DeleteAreaCommand).RaiseCanExecuteChanged();
@@ -44,7 +39,7 @@ namespace QLQuanCafe.BLL
             get { return _areaToSave; }
             set
             {
-                SetProperty<AreaData>(ref _areaToSave, value);
+                SetProperty(ref _areaToSave, value);
             }
         }
 
@@ -52,7 +47,7 @@ namespace QLQuanCafe.BLL
         public List<TableData> ListTable
         {
             get { return _listTable; }
-            set { SetProperty<List<TableData>>(ref _listTable, value); }
+            set { SetProperty(ref _listTable, value); }
         }
 
         private TableData _tableSelected;
@@ -61,7 +56,7 @@ namespace QLQuanCafe.BLL
             get { return _tableSelected; }
             set
             {
-                if (SetProperty<TableData>(ref _tableSelected, value))
+                if (SetProperty(ref _tableSelected, value))
                 {
                     ((RelayCommand<object>)ShowEditTableWindowCommand).RaiseCanExecuteChanged();
                     ((RelayCommand<object>)DeleteTableCommand).RaiseCanExecuteChanged();
@@ -75,7 +70,7 @@ namespace QLQuanCafe.BLL
             get { return _tableToSave; }
             set
             {
-                SetProperty<TableData>(ref _tableToSave, value);
+                SetProperty(ref _tableToSave, value);
             }
         }
 
@@ -135,10 +130,10 @@ namespace QLQuanCafe.BLL
                     _showEditAreaWindowCommand = new RelayCommand<object>(
                         p =>
                         {
-                            AreaToSave = new AreaData()
+                            AreaToSave = new AreaData
                             {
                                 AreaId = AreaSelected.AreaId,
-                                AreaName = AreaSelected.AreaName,
+                                AreaName = AreaSelected.AreaName
                             };
                             // HACK from view
                             //EditAreaWindow editAreaWindow = new EditAreaWindow();
@@ -211,9 +206,9 @@ namespace QLQuanCafe.BLL
                     _showAddTableWindowCommand = new RelayCommand<object>(
                         p =>
                         {
-                            TableToSave = new TableData()
+                            TableToSave = new TableData
                             {
-                                Area = AreaSelected,
+                                Area = AreaSelected
                             };
                             //HACK from view
                             //AddTableWindow addTableWindow = new AddTableWindow();
@@ -238,11 +233,11 @@ namespace QLQuanCafe.BLL
                     _showEditTableWindowCommand = new RelayCommand<object>(
                         p =>
                         {
-                            TableToSave = new TableData()
+                            TableToSave = new TableData
                             {
                                 TableId = TableSelected.TableId,
                                 TableName = TableSelected.TableName,
-                                Area = AreaSelected,
+                                Area = AreaSelected
                             };
                             //HACK from view
                             //EditTableWindow editTableWindow = new EditTableWindow();

@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using QLQuanCafe.DTO;
-using QLQuanCafe.Common;
-using QLQuanCafe.DAO;
 using System.Windows.Input;
 using MySql.Data.MySqlClient;
+using QLQuanCafe.Common;
+using QLQuanCafe.DAO;
+using QLQuanCafe.DTO;
 
 namespace QLQuanCafe.BLL
 {
-    public class BillBLL : BllBase
+    public class BillBll : BllBase
     {
         #region Properties
 
@@ -19,21 +17,21 @@ namespace QLQuanCafe.BLL
         public DateTime FromDate
         {
             get { return _fromDate; }
-            set { SetProperty<DateTime>(ref _fromDate, value); }
+            set { SetProperty(ref _fromDate, value); }
         }
 
         private DateTime _toDate;
         public DateTime ToDate
         {
             get { return _toDate; }
-            set { SetProperty<DateTime>(ref _toDate, value); }
+            set { SetProperty(ref _toDate, value); }
         }
 
         private List<AreaData> _listArea;
         public List<AreaData> ListArea
         {
             get { return _listArea; }
-            set { SetProperty<List<AreaData>>(ref _listArea, value); }
+            set { SetProperty(ref _listArea, value); }
         }
 
         private AreaData _areaSelected;
@@ -42,7 +40,7 @@ namespace QLQuanCafe.BLL
             get { return _areaSelected; }
             set
             {
-                if (SetProperty<AreaData>(ref _areaSelected, value))
+                if (SetProperty(ref _areaSelected, value))
                 {
                     if (AreaSelected != null)
                     {
@@ -64,7 +62,7 @@ namespace QLQuanCafe.BLL
         public List<TableData> ListTable
         {
             get { return _listTable; }
-            set { SetProperty<List<TableData>>(ref _listTable, value); }
+            set { SetProperty(ref _listTable, value); }
         }
 
         private TableData _tableSelected;
@@ -73,7 +71,7 @@ namespace QLQuanCafe.BLL
             get { return _tableSelected; }
             set
             {
-                if (SetProperty<TableData>(ref _tableSelected, value))
+                if (SetProperty(ref _tableSelected, value))
                 {
                     if (TableSelected != null && !string.IsNullOrEmpty(TableSelected.TableId))
                     {
@@ -87,7 +85,7 @@ namespace QLQuanCafe.BLL
         public List<BillData> ListBill
         {
             get { return _listBill; }
-            set { SetProperty<List<BillData>>(ref _listBill, value); }
+            set { SetProperty(ref _listBill, value); }
         }
 
 

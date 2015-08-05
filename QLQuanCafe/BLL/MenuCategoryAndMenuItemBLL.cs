@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using QLQuanCafe.DTO;
-using QLQuanCafe.Common;
-using QLQuanCafe.DAO;
 using System.Windows.Input;
 using MySql.Data.MySqlClient;
+using QLQuanCafe.Common;
+using QLQuanCafe.DAO;
+using QLQuanCafe.DTO;
+
 namespace QLQuanCafe.BLL
 {
-    public class MenuCategoryAndMenuItemBLL : BllBase
+    public class MenuCategoryAndMenuItemBll : BllBase
     {
 
         #region Properties
@@ -19,56 +17,56 @@ namespace QLQuanCafe.BLL
         public List<MenuCategoryData> ListMenuCategory
         {
             get { return _listMenuCategory; }
-            set { SetProperty<List<MenuCategoryData>>(ref _listMenuCategory, value); }
+            set { SetProperty(ref _listMenuCategory, value); }
         }
 
         private MenuCategoryData _menuCategorySelected;
         public MenuCategoryData MenuCategorySelected
         {
             get { return _menuCategorySelected; }
-            set { SetProperty<MenuCategoryData>(ref _menuCategorySelected, value); }
+            set { SetProperty(ref _menuCategorySelected, value); }
         }
 
         private MenuCategoryData _menuCategoryToSave;
         public MenuCategoryData MenuCategoryToSave
         {
             get { return _menuCategoryToSave; }
-            set { SetProperty<MenuCategoryData>(ref _menuCategoryToSave, value); }
+            set { SetProperty(ref _menuCategoryToSave, value); }
         }
 
         private List<MenuItemData> _listMenuItem;
         public List<MenuItemData> ListMenuItem
         {
             get { return _listMenuItem; }
-            set { SetProperty<List<MenuItemData>>(ref _listMenuItem, value); }
+            set { SetProperty(ref _listMenuItem, value); }
         }
 
         private MenuItemData _menuItemSelected;
         public MenuItemData MenuItemSelected
         {
             get { return _menuItemSelected; }
-            set { SetProperty<MenuItemData>(ref _menuItemSelected, value); }
+            set { SetProperty(ref _menuItemSelected, value); }
         }
 
         private MenuItemData _menuItemToSave;
         public MenuItemData MenuItemToSave
         {
             get { return _menuItemToSave; }
-            set { SetProperty<MenuItemData>(ref _menuItemToSave, value); }
+            set { SetProperty(ref _menuItemToSave, value); }
         }
 
         private List<UnitData> _listUnit;
         public List<UnitData> ListUnit
         {
             get { return _listUnit; }
-            set { SetProperty<List<UnitData>>(ref _listUnit, value); }
+            set { SetProperty(ref _listUnit, value); }
         }
 
         private UnitData _unitSelected;
         public UnitData UnitSelected
         {
             get { return _unitSelected; }
-            set { SetProperty<UnitData>(ref _unitSelected, value); }
+            set { SetProperty(ref _unitSelected, value); }
         }
 
         #endregion
@@ -121,10 +119,10 @@ namespace QLQuanCafe.BLL
                     _showEditMenuCategoryWindowCommand = new RelayCommand<object>(
                         p =>
                         {
-                            MenuCategoryToSave = new MenuCategoryData()
+                            MenuCategoryToSave = new MenuCategoryData
                             {
                                 MenuCategoryId = MenuCategorySelected.MenuCategoryId,
-                                MenuCategoryName = MenuCategorySelected.MenuCategoryName,
+                                MenuCategoryName = MenuCategorySelected.MenuCategoryName
                             };
                             //HACK VIEW
                             //EditMenuCategoryWindow editMenuCategoryWindow = new EditMenuCategoryWindow();
@@ -190,9 +188,9 @@ namespace QLQuanCafe.BLL
                         {
                             try
                             {
-                                MenuItemToSave = new MenuItemData()
+                                MenuItemToSave = new MenuItemData
                                 {
-                                    MenuCategory = MenuCategorySelected,
+                                    MenuCategory = MenuCategorySelected
                                 };
 
                                 ListUnit = LocatorDataSource.UnitDS.GetAllUnit();
@@ -221,12 +219,12 @@ namespace QLQuanCafe.BLL
                     _showEditMenuItemWindowCommand = new RelayCommand<object>(
                         p =>
                         {
-                            MenuItemToSave = new MenuItemData()
+                            MenuItemToSave = new MenuItemData
                             {
                                 MenuItemId = MenuItemSelected.MenuItemId,
                                 MenuItemName = MenuItemSelected.MenuItemName,
                                 ImagePath = MenuItemSelected.ImagePath,
-                                Price = MenuItemSelected.Price,
+                                Price = MenuItemSelected.Price
                             };
 
                             MenuItemToSave.MenuCategory = ListMenuCategory.SingleOrDefault(m => m.MenuCategoryId == MenuItemSelected.MenuCategory.MenuCategoryId);

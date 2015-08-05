@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using QLQuanCafe.DTO;
 using System.Data;
+using QLQuanCafe.DTO;
 
 namespace QLQuanCafe.DAO
 {
@@ -25,8 +22,8 @@ namespace QLQuanCafe.DAO
             if (dt.Rows.Count == 1)
             {
                 bill.BillId = dt.Rows[0]["MaHoaDon"].ToString();
-                bill.Table = new TableData() { TableId = dt.Rows[0]["MaBan"].ToString() };
-                bill.TableLiquidate = new TableData() { TableId = dt.Rows[0]["MaBanThanhToan"].ToString() };
+                bill.Table = new TableData { TableId = dt.Rows[0]["MaBan"].ToString() };
+                bill.TableLiquidate = new TableData { TableId = dt.Rows[0]["MaBanThanhToan"].ToString() };
                 bill.Time = DateTime.Parse(dt.Rows[0]["ThoiGian"].ToString());
                 bill.TotalMoney = Decimal.Parse(dt.Rows[0]["TongTien"].ToString());
             }
@@ -71,7 +68,7 @@ namespace QLQuanCafe.DAO
         /// Gộp hóa đơn khi gộp bàn.
         /// </summary>
         /// <param name="maHoaDon">mã hóa đơn cần gộp (của bàn thứ 1)</param>
-        /// <param name="maBan">mã bàn thanh toán (mã bàn thứ 2)</param>
+        /// <param name="maBanThanhToan">>mã bàn thanh toán (mã bàn thứ 2)</param>
         /// <returns></returns>
         public int GroupBill(string maHoaDon, string maBanThanhToan)
         {
@@ -111,12 +108,14 @@ namespace QLQuanCafe.DAO
         /// <summary>
         /// Đánh dấu các món ăn lưu trong hóa đơn thành đã được chuẩn bị.
         /// </summary>
-        /// <param name="billDetail"></param>
+        /// <param name="bill"></param>
         /// <returns></returns>
         public int PrepareBill(BillData bill)
         {
-            Dictionary<string, object> sqlStoredProcedureParams = new Dictionary<string, object>();
-            sqlStoredProcedureParams.Add("maHoaDon", bill.BillId);
+            Dictionary<string, object> sqlStoredProcedureParams = new Dictionary<string, object>
+            {
+                {"maHoaDon", bill.BillId}
+            };
 
             return provider.ExecuteNonQuery("HOADON_proc_prepare", sqlStoredProcedureParams);
         }
@@ -136,14 +135,14 @@ namespace QLQuanCafe.DAO
             {
                 BillData bill = new BillData();
                 bill.BillId = row["MaHoaDon"].ToString();
-                bill.Table = new TableData()
+                bill.Table = new TableData
                 {
                     TableId = row["MaBan"].ToString(),
                     TableName = row["TenBan"].ToString(),
-                    Area = new AreaData()
+                    Area = new AreaData
                     {
                         AreaId = row["MaKhuVuc"].ToString(),
-                        AreaName = row["TenKhuVuc"].ToString(),
+                        AreaName = row["TenKhuVuc"].ToString()
                     }
                 };
                 bill.Time = DateTime.Parse(row["ThoiGian"].ToString());

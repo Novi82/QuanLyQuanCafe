@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using QLQuanCafe.DTO;
-using QLQuanCafe.Common;
-using QLQuanCafe.DAO;
 using System.Windows.Input;
 using MySql.Data.MySqlClient;
+using QLQuanCafe.Common;
+using QLQuanCafe.DAO;
+using QLQuanCafe.DTO;
+
 namespace QLQuanCafe.BLL
 {
-    public class MaterialViewModel : BllBase
+    public class MaterialBll : BllBase
     {
 
         #region Properties
@@ -19,35 +17,35 @@ namespace QLQuanCafe.BLL
         public List<MaterialData> ListMaterial
         {
             get { return _listMaterial; }
-            set { SetProperty<List<MaterialData>>(ref _listMaterial, value); }
+            set { SetProperty(ref _listMaterial, value); }
         }
 
         private MaterialData _materialSelected;
         public MaterialData MaterialSelected
         {
             get { return _materialSelected; }
-            set { SetProperty<MaterialData>(ref _materialSelected, value); }
+            set { SetProperty(ref _materialSelected, value); }
         }
 
         private MaterialData _materialToSave;
         public MaterialData MaterialToSave
         {
             get { return _materialToSave; }
-            set { SetProperty<MaterialData>(ref _materialToSave, value); }
+            set { SetProperty(ref _materialToSave, value); }
         }
 
         private List<UnitData> _listUnit;
         public List<UnitData> ListUnit
         {
             get { return _listUnit; }
-            set { SetProperty<List<UnitData>>(ref _listUnit, value); }
+            set { SetProperty(ref _listUnit, value); }
         }
 
         private UnitData _unitSelected;
         public UnitData UnitSelected
         {
             get { return _unitSelected; }
-            set { SetProperty<UnitData>(ref _unitSelected, value); }
+            set { SetProperty(ref _unitSelected, value); }
         }
 
         #endregion
@@ -108,11 +106,11 @@ namespace QLQuanCafe.BLL
                     _showEditMaterialWindowCommand = new RelayCommand<object>(
                         p =>
                         {
-                            MaterialToSave = new MaterialData()
+                            MaterialToSave = new MaterialData
                             {
                                 MaterialId = MaterialSelected.MaterialId,
                                 MaterialName = MaterialSelected.MaterialName,
-                                Price = MaterialSelected.Price,
+                                Price = MaterialSelected.Price
                             };
 
                             try
@@ -169,13 +167,13 @@ namespace QLQuanCafe.BLL
                     _showImportMaterialWindowCommand = new RelayCommand<object>(
                         p =>
                         {
-                            MaterialToSave = new MaterialData()
+                            MaterialToSave = new MaterialData
                             {
                                 MaterialId = MaterialSelected.MaterialId,
                                 MaterialName = MaterialSelected.MaterialName,
                                 Price = MaterialSelected.Price,
                                 Quantity = 0,
-                                Unit = MaterialSelected.Unit,
+                                Unit = MaterialSelected.Unit
                             };
                             //HACK VIEW
                             //ImportMaterialWindow importMaterialWindow = new ImportMaterialWindow();
@@ -196,13 +194,13 @@ namespace QLQuanCafe.BLL
                     _showExportMaterialWindowCommand = new RelayCommand<object>(
                         p =>
                         {
-                            MaterialToSave = new MaterialData()
+                            MaterialToSave = new MaterialData
                             {
                                 MaterialId = MaterialSelected.MaterialId,
                                 MaterialName = MaterialSelected.MaterialName,
                                 Price = MaterialSelected.Price,
                                 Quantity = 0,
-                                Unit = MaterialSelected.Unit,
+                                Unit = MaterialSelected.Unit
                             };
                             //HACK VIEW
                             //ExportMaterialWindow exportMaterialWindow = new ExportMaterialWindow();
@@ -223,13 +221,13 @@ namespace QLQuanCafe.BLL
                     _showUpdateInventoryWindowCommand = new RelayCommand<object>(
                         p =>
                         {
-                            MaterialToSave = new MaterialData()
+                            MaterialToSave = new MaterialData
                             {
                                 MaterialId = MaterialSelected.MaterialId,
                                 MaterialName = MaterialSelected.MaterialName,
                                 Price = MaterialSelected.Price,
                                 Quantity = MaterialSelected.Quantity,
-                                Unit = MaterialSelected.Unit,
+                                Unit = MaterialSelected.Unit
                             };
                             // HACK VIEW
                             //UpdateInventoryWindow updateInventoryWindow = new UpdateInventoryWindow();

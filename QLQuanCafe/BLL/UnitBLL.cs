@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using QLQuanCafe.DTO;
-using QLQuanCafe.Common;
-using QLQuanCafe.DAO;
+﻿using System.Collections.Generic;
 using System.Windows.Input;
 using MySql.Data.MySqlClient;
+using QLQuanCafe.Common;
+using QLQuanCafe.DAO;
+using QLQuanCafe.DTO;
+
 namespace QLQuanCafe.BLL
 {
-    public class UnitBLL : BllBase
+    public class UnitBll : BllBase
     {
         #region Properties
 
@@ -18,21 +15,21 @@ namespace QLQuanCafe.BLL
         public List<UnitData> ListUnit
         {
             get { return _listUnit; }
-            set { SetProperty<List<UnitData>>(ref _listUnit, value); }
+            set { SetProperty(ref _listUnit, value); }
         }
 
         private UnitData _unitSelected;
         public UnitData UnitSelected
         {
             get { return _unitSelected; }
-            set { SetProperty<UnitData>(ref _unitSelected, value); }
+            set { SetProperty(ref _unitSelected, value); }
         }
 
         private UnitData _unitToSave;
         public UnitData UnitToSave
         {
             get { return _unitToSave; }
-            set { SetProperty<UnitData>(ref _unitToSave, value); }
+            set { SetProperty(ref _unitToSave, value); }
         }
 
         #endregion
@@ -91,10 +88,10 @@ namespace QLQuanCafe.BLL
                     _showEditUnitWindowCommand = new RelayCommand<object>(
                         p =>
                         {
-                            UnitToSave = new UnitData()
+                            UnitToSave = new UnitData
                             {
                                 UnitId = UnitSelected.UnitId,
-                                UnitName = UnitSelected.UnitName,
+                                UnitName = UnitSelected.UnitName
                             };
                             //HACK VIEW
                             //EditUnitWindow editUnitWindow = new EditUnitWindow();

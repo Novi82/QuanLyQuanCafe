@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using QLQuanCafe.DTO;
 using System.Data;
+using QLQuanCafe.DTO;
 
 namespace QLQuanCafe.DAO
 {
@@ -22,10 +19,10 @@ namespace QLQuanCafe.DAO
                 material.MaterialName = row["TenNguyenLieu"].ToString();
                 material.Price = Decimal.Parse(row["GiaNhap"].ToString());
                 material.Quantity = int.Parse(row["SoLuong"].ToString());
-                material.Unit = new UnitData()
+                material.Unit = new UnitData
                 {
                     UnitId = row["MaDonVi"].ToString(),
-                    UnitName = row["TenDonVi"].ToString(),
+                    UnitName = row["TenDonVi"].ToString()
                 };
 
                 listMaterial.Add(material);

@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using QLQuanCafe.DTO;
+﻿using System.Collections.Generic;
 using System.Data;
+using QLQuanCafe.DTO;
 
 namespace QLQuanCafe.DAO
 {
@@ -17,14 +13,14 @@ namespace QLQuanCafe.DAO
 
             foreach (DataRow row in dt.Rows)
             {
-                AccountData Account = new AccountData();
-                Account.UserName = row["Username"].ToString();
-                Account.Permission = new PermissionData()
+                AccountData account = new AccountData();
+                account.UserName = row["Username"].ToString();
+                account.Permission = new PermissionData
                 {
-                    PermissionName = row["TenQuyen"].ToString(),
+                    PermissionName = row["TenQuyen"].ToString()
                 };
 
-                listAccount.Add(Account);
+                listAccount.Add(account);
             }
 
             return listAccount;
@@ -59,10 +55,10 @@ namespace QLQuanCafe.DAO
             if (dt.Rows.Count == 1)
             {
                 getAccount.UserName = dt.Rows[0]["Username"].ToString();
-                getAccount.Permission = new PermissionData()
+                getAccount.Permission = new PermissionData
                 {
                     PermissionId = dt.Rows[0]["MaPhanQuyen"].ToString(),
-                    PermissionName = dt.Rows[0]["TenQuyen"].ToString(),
+                    PermissionName = dt.Rows[0]["TenQuyen"].ToString()
                 };
             }
 
@@ -80,10 +76,10 @@ namespace QLQuanCafe.DAO
             if (dt.Rows.Count == 1)
             {
                 getAccount.UserName = dt.Rows[0]["Username"].ToString();
-                getAccount.Permission = new PermissionData()
+                getAccount.Permission = new PermissionData
                 {
                     PermissionId = dt.Rows[0]["MaPhanQuyen"].ToString(),
-                    PermissionName = dt.Rows[0]["TenQuyen"].ToString(),
+                    PermissionName = dt.Rows[0]["TenQuyen"].ToString()
                 };
             }
 
@@ -99,27 +95,27 @@ namespace QLQuanCafe.DAO
 
         }
 
-        public int AddAccount(AccountData Account)
+        public int AddAccount(AccountData account)
         {
             Dictionary<string, object> sqlStoredProcedureParams = new Dictionary<string, object>();
-            sqlStoredProcedureParams.Add("username", Account.UserName);
-            sqlStoredProcedureParams.Add("password", Account.Password);
-            sqlStoredProcedureParams.Add("maPhanQuyen", Account.Permission.PermissionId);
+            sqlStoredProcedureParams.Add("username", account.UserName);
+            sqlStoredProcedureParams.Add("password", account.Password);
+            sqlStoredProcedureParams.Add("maPhanQuyen", account.Permission.PermissionId);
             return provider.ExecuteNonQuery("TAIKHOAN_proc_insert", sqlStoredProcedureParams);
         }
 
-        public int ChangePassword(AccountData Account)
+        public int ChangePassword(AccountData account)
         {
             Dictionary<string, object> sqlStoredProcedureParams = new Dictionary<string, object>();
-            sqlStoredProcedureParams.Add("username", Account.UserName);
-            sqlStoredProcedureParams.Add("password", Account.Password);
+            sqlStoredProcedureParams.Add("username", account.UserName);
+            sqlStoredProcedureParams.Add("password", account.Password);
             return provider.ExecuteNonQuery("TAIKHOAN_proc_change_password", sqlStoredProcedureParams);
         }
 
-        public int DeleteAccount(AccountData Account)
+        public int DeleteAccount(AccountData account)
         {
             Dictionary<string, object> sqlStoredProcedureParams = new Dictionary<string, object>();
-            sqlStoredProcedureParams.Add("username", Account.UserName);
+            sqlStoredProcedureParams.Add("username", account.UserName);
             return provider.ExecuteNonQuery("TAIKHOAN_proc_delete", sqlStoredProcedureParams);
         }
     }
