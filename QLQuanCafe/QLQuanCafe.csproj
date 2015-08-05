@@ -35,20 +35,38 @@
     <Reference Include="MySql.Data">
       <HintPath>..\packages\MySql.Data.6.9.7\lib\net45\MySql.Data.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Input.Manipulations" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\AccountBLL.cs" />
+    <Compile Include="BLL\AreaAndTableBLL.cs" />
+    <Compile Include="BLL\BillBLL.cs" />
+    <Compile Include="BLL\BllBase.cs" />
+    <Compile Include="BLL\HomePageBLL.cs" />
+    <Compile Include="BLL\LocatorBLL.cs" />
+    <Compile Include="BLL\LoginBLL.cs" />
+    <Compile Include="BLL\MainWindowBLL.cs" />
+    <Compile Include="BLL\MaterialBLL.cs" />
+    <Compile Include="BLL\MenuCategoryAndMenuItemBLL.cs" />
+    <Compile Include="BLL\UnitBLL.cs" />
     <Compile Include="Common\BindableBase.cs" />
+    <Compile Include="Common\ImageHelper.cs" />
+    <Compile Include="Common\MessageDialogHelper.cs" />
+    <Compile Include="Common\ReplayCommand.cs" />
     <Compile Include="DAO\AccountDataSource.cs" />
     <Compile Include="DAO\AreaDataSource.cs" />
     <Compile Include="DAO\BillDataSource.cs" />
@@ -101,8 +119,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BLL\" />
     <Folder Include="GUI\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
