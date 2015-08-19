@@ -41,8 +41,8 @@ namespace QLQuanCafe.GUI.Form
             this.btnThemDvt = new DevComponents.DotNetBar.ButtonX();
             this.btnSuaDvt = new DevComponents.DotNetBar.ButtonX();
             this.dataGridViewX1 = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.unitDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnThoat = new DevComponents.DotNetBar.ButtonX();
+            this.unitDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.unitIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.unitNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).BeginInit();
@@ -132,10 +132,6 @@ namespace QLQuanCafe.GUI.Form
             this.dataGridViewX1.TabIndex = 5;
             this.dataGridViewX1.SelectionChanged += new System.EventHandler(this.dataGridViewX1_SelectionChanged);
             // 
-            // unitDataBindingSource
-            // 
-            this.unitDataBindingSource.DataSource = typeof(QLQuanCafe.DTO.UnitData);
-            // 
             // btnThoat
             // 
             this.btnThoat.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -147,6 +143,10 @@ namespace QLQuanCafe.GUI.Form
             this.btnThoat.TabIndex = 1;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // unitDataBindingSource
+            // 
+            this.unitDataBindingSource.DataSource = typeof(QLQuanCafe.DTO.UnitData);
             // 
             // unitIdDataGridViewTextBoxColumn
             // 

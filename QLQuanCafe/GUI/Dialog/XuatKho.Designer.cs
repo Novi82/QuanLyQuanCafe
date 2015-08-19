@@ -2,7 +2,7 @@
 using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.Controls;
 
-namespace QLQuanCafe.GUI
+namespace QLQuanCafe.GUI.Dialog
 {
     partial class XuatKho
     {

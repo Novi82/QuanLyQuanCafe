@@ -3,7 +3,7 @@ using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.Controls;
 using DevComponents.Editors;
 
-namespace QLQuanCafe.GUI
+namespace QLQuanCafe.GUI.Dialog
 {
     partial class NhapKho
     {
