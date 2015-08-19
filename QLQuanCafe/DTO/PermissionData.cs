@@ -17,5 +17,10 @@ namespace QLQuanCafe.DTO
             get { return _permissionName; }
             set { SetProperty(ref _permissionName, value); }
         }
+
+        public override string ToString()
+        {
+            return PermissionName;
+        }
     }
 }

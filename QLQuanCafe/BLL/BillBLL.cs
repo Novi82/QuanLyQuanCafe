@@ -84,7 +84,11 @@ namespace QLQuanCafe.BLL
         private List<BillData> _listBill;
         public List<BillData> ListBill
         {
-            get { return _listBill; }
+            get
+            {
+                Load();
+                return _listBill;
+            }
             set { SetProperty(ref _listBill, value); }
         }
 

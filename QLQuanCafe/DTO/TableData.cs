@@ -38,5 +38,10 @@ namespace QLQuanCafe.DTO
             get { return _tableState; }
             set { SetProperty(ref _tableState, value); }
         }
+
+        public override string ToString()
+        {
+            return TableName;
+        }
     }
 }

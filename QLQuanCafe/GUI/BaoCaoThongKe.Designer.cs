@@ -1,11 +1,16 @@
-﻿namespace QLQuanCafe.GUI
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+using DevComponents.DotNetBar;
+using DevComponents.DotNetBar.Controls;
+
+namespace QLQuanCafe.GUI
 {
     partial class BaoCao_ThongKe
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -153,7 +158,6 @@
             this.Controls.Add(this.comboBoxEx1);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
-            this.DoubleBuffered = true;
             this.MaximizeBox = false;
             this.Name = "BaoCao_ThongKe";
             this.ShowIcon = false;
@@ -167,13 +171,13 @@
 
         #endregion
 
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx comboBoxEx1;
-        private DevComponents.DotNetBar.LabelX labelX1;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx comboBoxEx2;
-        private DevComponents.DotNetBar.LabelX labelX2;
-        private DevComponents.DotNetBar.ButtonX buttonX1;
-        private DevComponents.DotNetBar.ButtonX buttonX2;
+        private RadioButton radioButton1;
+        private RadioButton radioButton2;
+        private ComboBoxEx comboBoxEx1;
+        private LabelX labelX1;
+        private ComboBoxEx comboBoxEx2;
+        private LabelX labelX2;
+        private ButtonX buttonX1;
+        private ButtonX buttonX2;
     }
 }

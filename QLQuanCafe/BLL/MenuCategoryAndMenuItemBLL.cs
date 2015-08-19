@@ -1,10 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Forms;
 using System.Windows.Input;
 using MySql.Data.MySqlClient;
 using QLQuanCafe.Common;
 using QLQuanCafe.DAO;
 using QLQuanCafe.DTO;
+using QLQuanCafe.GUI;
+using QLQuanCafe.GUI.Dialog;
 
 namespace QLQuanCafe.BLL
 {
@@ -100,9 +103,8 @@ namespace QLQuanCafe.BLL
                         p =>
                         {
                             MenuCategoryToSave = new MenuCategoryData();
-                            //HACK VIEW
-                            //AddMenuCategoryWindow addMenuCategoryWindow = new AddMenuCategoryWindow();
-                            //addMenuCategoryWindow.ShowDialog();
+                            ThemLoaiMonAn themLoaiMonAn = new ThemLoaiMonAn();
+                            themLoaiMonAn.ShowDialog();
                         },
                         p => true);
                 return _showAddMenuCategoryWindowCommand;
@@ -124,9 +126,8 @@ namespace QLQuanCafe.BLL
                                 MenuCategoryId = MenuCategorySelected.MenuCategoryId,
                                 MenuCategoryName = MenuCategorySelected.MenuCategoryName
                             };
-                            //HACK VIEW
-                            //EditMenuCategoryWindow editMenuCategoryWindow = new EditMenuCategoryWindow();
-                            //editMenuCategoryWindow.ShowDialog();
+                            SuaLoaiMonAn suaLoaiMonAn = new SuaLoaiMonAn();
+                            suaLoaiMonAn.ShowDialog();
                         },
                         p => MenuCategorySelected != null);
                 return _showEditMenuCategoryWindowCommand;
@@ -195,9 +196,8 @@ namespace QLQuanCafe.BLL
 
                                 ListUnit = LocatorDataSource.UnitDS.GetAllUnit();
                                 UnitSelected = null;
-                                //HACK VIEW
-                                //AddMenuItemWindow addMenuItemWindow = new AddMenuItemWindow();
-                                //addMenuItemWindow.ShowDialog();
+                                ThemMonAn themMonAn = new ThemMonAn();
+                                themMonAn.ShowDialog();
                             }
                             catch (MySqlException ex)
                             {
@@ -232,9 +232,9 @@ namespace QLQuanCafe.BLL
                             ListUnit = LocatorDataSource.UnitDS.GetAllUnit();
                             MenuItemToSave.Unit = ListUnit.SingleOrDefault(u => u.UnitId == MenuItemSelected.Unit.UnitId);
 
-                            //HACK VIEW
-                            //EditMenuItemWindow editMenuItemWindow = new EditMenuItemWindow();
-                            //editMenuItemWindow.ShowDialog();
+                            SuaMonAn suaMonAn = new SuaMonAn();
+                            suaMonAn.ShowDialog();
+
                         },
                         p => MenuItemSelected != null);
                 return _showEditMenuItemWindowCommand;
@@ -276,7 +276,7 @@ namespace QLQuanCafe.BLL
         {
             if (obj != null)
             {
-                MenuCategorySelected = obj as MenuCategoryData;
+                MenuCategorySelected = ((DataGridViewRow)obj).DataBoundItem as MenuCategoryData;
 
                 try
                 {
@@ -293,7 +293,7 @@ namespace QLQuanCafe.BLL
         {
             if (obj != null)
             {
-                MenuItemSelected = obj as MenuItemData;
+                MenuItemSelected = ((DataGridViewRow)obj).DataBoundItem as MenuItemData;
             }
         }
 
@@ -354,7 +354,7 @@ namespace QLQuanCafe.BLL
             {
                 MenuItemToSave.ImagePath = ImageHelper.CreateImage(MenuItemToSave.ImagePath);
 
-                MenuItemToSave.Unit = UnitSelected;
+//                MenuItemToSave.Unit = UnitSelected;
                 LocatorDataSource.MenuItemDS.AddMenuItem(MenuItemToSave);
                 ListMenuItem = LocatorDataSource.MenuItemDS.GetAllMenuItem(MenuCategorySelected);
 

@@ -17,5 +17,10 @@ namespace QLQuanCafe.DTO
             get { return _unitName; }
             set { SetProperty(ref _unitName, value); }
         }
+
+        public override string ToString()
+        {
+            return UnitName;
+        }
     }
 }

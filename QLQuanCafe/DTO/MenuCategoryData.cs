@@ -17,5 +17,10 @@ namespace QLQuanCafe.DTO
             get { return _menuCategoryName; }
             set { SetProperty(ref _menuCategoryName, value); }
         }
+
+        public override string ToString()
+        {
+            return MenuCategoryName;
+        }
     }
 }

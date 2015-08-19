@@ -4,6 +4,9 @@ using MySql.Data.MySqlClient;
 using QLQuanCafe.Common;
 using QLQuanCafe.DAO;
 using QLQuanCafe.DTO;
+using QLQuanCafe.GUI;
+using System.Windows.Forms;
+using QLQuanCafe.GUI.Dialog;
 
 namespace QLQuanCafe.BLL
 {
@@ -14,7 +17,11 @@ namespace QLQuanCafe.BLL
         private List<UnitData> _listUnit;
         public List<UnitData> ListUnit
         {
-            get { return _listUnit; }
+            get
+            {
+                Load();
+                return _listUnit;
+            }
             set { SetProperty(ref _listUnit, value); }
         }
 
@@ -67,6 +74,8 @@ namespace QLQuanCafe.BLL
                         {
                             UnitToSave = new UnitData();
                             //HACK VIEW
+                            ThemDonViTinh themDonViTinh = new ThemDonViTinh();
+                            themDonViTinh.ShowDialog();
                             //AddUnitWindow addUnitWindow = new AddUnitWindow();
                             //addUnitWindow.ShowDialog();
                         },
@@ -94,6 +103,8 @@ namespace QLQuanCafe.BLL
                                 UnitName = UnitSelected.UnitName
                             };
                             //HACK VIEW
+                            SuaDonViTinh suaDonViTinh = new SuaDonViTinh();
+                            suaDonViTinh.ShowDialog();
                             //EditUnitWindow editUnitWindow = new EditUnitWindow();
                             //editUnitWindow.ShowDialog();
                         },
@@ -140,7 +151,7 @@ namespace QLQuanCafe.BLL
         {
             if (obj != null)
             {
-                UnitSelected = obj as UnitData;
+                UnitSelected = ((DataGridViewRow) obj).DataBoundItem as UnitData;
             }
         }
 

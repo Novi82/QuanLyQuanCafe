@@ -1,11 +1,15 @@
-﻿namespace QLQuanCafe.GUI
+﻿using System.ComponentModel;
+using DevComponents.DotNetBar;
+using DevComponents.DotNetBar.Controls;
+
+namespace QLQuanCafe.GUI
 {
     partial class DoiMatKhau
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -193,14 +197,14 @@
 
         #endregion
 
-        private DevComponents.DotNetBar.LabelX IChangePass;
-        private DevComponents.DotNetBar.LabelX CUser;
-        private DevComponents.DotNetBar.Controls.TextBoxX TCUser;
-        private DevComponents.DotNetBar.LabelX NPass;
-        private DevComponents.DotNetBar.LabelX S2Pass;
-        private DevComponents.DotNetBar.Controls.TextBoxX TNPass;
-        private DevComponents.DotNetBar.Controls.TextBoxX TNPass2;
-        private DevComponents.DotNetBar.ButtonX BAccept;
-        private DevComponents.DotNetBar.ButtonX BCancel;
+        private LabelX IChangePass;
+        private LabelX CUser;
+        private TextBoxX TCUser;
+        private LabelX NPass;
+        private LabelX S2Pass;
+        private TextBoxX TNPass;
+        private TextBoxX TNPass2;
+        private ButtonX BAccept;
+        private ButtonX BCancel;
     }
 }

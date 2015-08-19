@@ -24,6 +24,11 @@ namespace QLQuanCafe.DTO
             get { return _note; }
             set { SetProperty(ref _note, value); }
         }
+
+         public override string ToString()
+         {
+             return AreaName;
+         }
     }
 }
 

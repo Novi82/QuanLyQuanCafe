@@ -120,10 +120,10 @@
     <Compile Include="GUI\DoiMatKhau.Designer.cs">
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\DonViTinh.cs">
+    <Compile Include="GUI\Form\DonViTinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\DonViTinh.Designer.cs">
+    <Compile Include="GUI\Form\DonViTinh.Designer.cs">
       <DependentUpon>DonViTinh.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FormMain.cs">
@@ -132,136 +132,130 @@
     <Compile Include="GUI\FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\HieuChinhSoLuong.cs">
+    <Compile Include="GUI\Dialog\CapNhatKho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\HieuChinhSoLuong.Designer.cs">
-      <DependentUpon>HieuChinhSoLuong.cs</DependentUpon>
+    <Compile Include="GUI\Dialog\CapNhatKho.Designer.cs">
+      <DependentUpon>CapNhatKho.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\HoaDon.cs">
+    <Compile Include="GUI\Form\HoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\HoaDon.Designer.cs">
+    <Compile Include="GUI\Form\HoaDon.Designer.cs">
       <DependentUpon>HoaDon.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Kho.cs">
+    <Compile Include="GUI\Form\Kho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Kho.Designer.cs">
+    <Compile Include="GUI\Form\Kho.Designer.cs">
       <DependentUpon>Kho.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\NhapKho.cs">
+    <Compile Include="GUI\Dialog\NhapKho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\NhapKho.Designer.cs">
+    <Compile Include="GUI\Dialog\NhapKho.Designer.cs">
       <DependentUpon>NhapKho.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\QuanLyKhuVuc-Ban.cs">
+    <Compile Include="GUI\Form\QuanLyKhuVuc-Ban.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\QuanLyKhuVuc-Ban.Designer.cs">
+    <Compile Include="GUI\Form\QuanLyKhuVuc-Ban.Designer.cs">
       <DependentUpon>QuanLyKhuVuc-Ban.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\QuanLyTaiKhoan.cs">
+    <Compile Include="GUI\Form\QuanLyTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\QuanLyTaiKhoan.Designer.cs">
+    <Compile Include="GUI\Form\QuanLyTaiKhoan.Designer.cs">
       <DependentUpon>QuanLyTaiKhoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\SuaBan.cs">
+    <Compile Include="GUI\Dialog\SuaBan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\SuaBan.Designer.cs">
+    <Compile Include="GUI\Dialog\SuaBan.Designer.cs">
       <DependentUpon>SuaBan.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\SuaDonViTinh.cs">
+    <Compile Include="GUI\Dialog\SuaDonViTinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\SuaDonViTinh.Designer.cs">
+    <Compile Include="GUI\Dialog\SuaDonViTinh.Designer.cs">
       <DependentUpon>SuaDonViTinh.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\SuaKhuVuc.cs">
+    <Compile Include="GUI\Dialog\SuaKhuVuc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\SuaKhuVuc.Designer.cs">
+    <Compile Include="GUI\Dialog\SuaKhuVuc.Designer.cs">
       <DependentUpon>SuaKhuVuc.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\SuaLoaiMonAn.cs">
+    <Compile Include="GUI\Dialog\SuaLoaiMonAn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\SuaLoaiMonAn.Designer.cs">
+    <Compile Include="GUI\Dialog\SuaLoaiMonAn.Designer.cs">
       <DependentUpon>SuaLoaiMonAn.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\SuaMonAn.cs">
+    <Compile Include="GUI\Dialog\SuaMonAn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\SuaMonAn.Designer.cs">
+    <Compile Include="GUI\Dialog\SuaMonAn.Designer.cs">
       <DependentUpon>SuaMonAn.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\SuaThongTinNguyenLieu.cs">
+    <Compile Include="GUI\Dialog\SuaThongTinNguyenLieu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\SuaThongTinNguyenLieu.Designer.cs">
+    <Compile Include="GUI\Dialog\SuaThongTinNguyenLieu.Designer.cs">
       <DependentUpon>SuaThongTinNguyenLieu.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Test.cs">
+    <Compile Include="GUI\Dialog\ThemBan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Test.Designer.cs">
-      <DependentUpon>Test.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\ThemBan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\ThemBan.Designer.cs">
+    <Compile Include="GUI\Dialog\ThemBan.Designer.cs">
       <DependentUpon>ThemBan.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ThemDonViTinh.cs">
+    <Compile Include="GUI\Dialog\ThemDonViTinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\ThemDonViTinh.Designer.cs">
+    <Compile Include="GUI\Dialog\ThemDonViTinh.Designer.cs">
       <DependentUpon>ThemDonViTinh.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ThemKhuVuc.cs">
+    <Compile Include="GUI\Dialog\ThemKhuVuc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\ThemKhuVuc.Designer.cs">
+    <Compile Include="GUI\Dialog\ThemKhuVuc.Designer.cs">
       <DependentUpon>ThemKhuVuc.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ThemLoaiMonAn.cs">
+    <Compile Include="GUI\Dialog\ThemLoaiMonAn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\ThemLoaiMonAn.Designer.cs">
+    <Compile Include="GUI\Dialog\ThemLoaiMonAn.Designer.cs">
       <DependentUpon>ThemLoaiMonAn.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ThemMonAn.cs">
+    <Compile Include="GUI\Dialog\ThemMonAn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\ThemMonAn.Designer.cs">
+    <Compile Include="GUI\Dialog\ThemMonAn.Designer.cs">
       <DependentUpon>ThemMonAn.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ThemTaiKhoan.cs">
+    <Compile Include="GUI\Dialog\ThemTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\ThemTaiKhoan.Designer.cs">
+    <Compile Include="GUI\Dialog\ThemTaiKhoan.Designer.cs">
       <DependentUpon>ThemTaiKhoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ThemThongTinNguyenLieu.cs">
+    <Compile Include="GUI\Dialog\ThemThongTinNguyenLieu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\ThemThongTinNguyenLieu.Designer.cs">
+    <Compile Include="GUI\Dialog\ThemThongTinNguyenLieu.Designer.cs">
       <DependentUpon>ThemThongTinNguyenLieu.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ThongTinNguyenLieu.cs">
+    <Compile Include="GUI\Form\ThongTinNguyenLieu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\ThongTinNguyenLieu.Designer.cs">
+    <Compile Include="GUI\Form\ThongTinNguyenLieu.Designer.cs">
       <DependentUpon>ThongTinNguyenLieu.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ThucDon.cs">
+    <Compile Include="GUI\Form\ThucDon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\ThucDon.Designer.cs">
+    <Compile Include="GUI\Form\ThucDon.Designer.cs">
       <DependentUpon>ThucDon.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\XacNhanThanhToan.cs">
@@ -270,10 +264,10 @@
     <Compile Include="GUI\XacNhanThanhToan.Designer.cs">
       <DependentUpon>XacNhanThanhToan.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\XuatKho.cs">
+    <Compile Include="GUI\Dialog\XuatKho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\XuatKho.Designer.cs">
+    <Compile Include="GUI\Dialog\XuatKho.Designer.cs">
       <DependentUpon>XuatKho.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\YeuCauMon.cs">
@@ -284,7 +278,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="testgit.cs" />
+    <EmbeddedResource Include="GUI\BaoCaoThongKe.resx">
+      <DependentUpon>BaoCaoThongKe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -294,82 +290,79 @@
     <EmbeddedResource Include="GUI\DoiMatKhau.resx">
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\DonViTinh.resx">
+    <EmbeddedResource Include="GUI\Form\DonViTinh.resx">
       <DependentUpon>DonViTinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\HieuChinhSoLuong.resx">
-      <DependentUpon>HieuChinhSoLuong.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Dialog\CapNhatKho.resx">
+      <DependentUpon>CapNhatKho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\HoaDon.resx">
+    <EmbeddedResource Include="GUI\Form\HoaDon.resx">
       <DependentUpon>HoaDon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Kho.resx">
+    <EmbeddedResource Include="GUI\Form\Kho.resx">
       <DependentUpon>Kho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\NhapKho.resx">
+    <EmbeddedResource Include="GUI\Dialog\NhapKho.resx">
       <DependentUpon>NhapKho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\QuanLyKhuVuc-Ban.resx">
+    <EmbeddedResource Include="GUI\Form\QuanLyKhuVuc-Ban.resx">
       <DependentUpon>QuanLyKhuVuc-Ban.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\QuanLyTaiKhoan.resx">
+    <EmbeddedResource Include="GUI\Form\QuanLyTaiKhoan.resx">
       <DependentUpon>QuanLyTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\SuaBan.resx">
+    <EmbeddedResource Include="GUI\Dialog\SuaBan.resx">
       <DependentUpon>SuaBan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\SuaDonViTinh.resx">
+    <EmbeddedResource Include="GUI\Dialog\SuaDonViTinh.resx">
       <DependentUpon>SuaDonViTinh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\SuaKhuVuc.resx">
+    <EmbeddedResource Include="GUI\Dialog\SuaKhuVuc.resx">
       <DependentUpon>SuaKhuVuc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\SuaLoaiMonAn.resx">
+    <EmbeddedResource Include="GUI\Dialog\SuaLoaiMonAn.resx">
       <DependentUpon>SuaLoaiMonAn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\SuaMonAn.resx">
+    <EmbeddedResource Include="GUI\Dialog\SuaMonAn.resx">
       <DependentUpon>SuaMonAn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\SuaThongTinNguyenLieu.resx">
+    <EmbeddedResource Include="GUI\Dialog\SuaThongTinNguyenLieu.resx">
       <DependentUpon>SuaThongTinNguyenLieu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Test.resx">
-      <DependentUpon>Test.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ThemBan.resx">
+    <EmbeddedResource Include="GUI\Dialog\ThemBan.resx">
       <DependentUpon>ThemBan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ThemDonViTinh.resx">
+    <EmbeddedResource Include="GUI\Dialog\ThemDonViTinh.resx">
       <DependentUpon>ThemDonViTinh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ThemKhuVuc.resx">
+    <EmbeddedResource Include="GUI\Dialog\ThemKhuVuc.resx">
       <DependentUpon>ThemKhuVuc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ThemLoaiMonAn.resx">
+    <EmbeddedResource Include="GUI\Dialog\ThemLoaiMonAn.resx">
       <DependentUpon>ThemLoaiMonAn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ThemMonAn.resx">
+    <EmbeddedResource Include="GUI\Dialog\ThemMonAn.resx">
       <DependentUpon>ThemMonAn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ThemTaiKhoan.resx">
+    <EmbeddedResource Include="GUI\Dialog\ThemTaiKhoan.resx">
       <DependentUpon>ThemTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ThemThongTinNguyenLieu.resx">
+    <EmbeddedResource Include="GUI\Dialog\ThemThongTinNguyenLieu.resx">
       <DependentUpon>ThemThongTinNguyenLieu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ThongTinNguyenLieu.resx">
+    <EmbeddedResource Include="GUI\Form\ThongTinNguyenLieu.resx">
       <DependentUpon>ThongTinNguyenLieu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ThucDon.resx">
+    <EmbeddedResource Include="GUI\Form\ThucDon.resx">
       <DependentUpon>ThucDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\XacNhanThanhToan.resx">
       <DependentUpon>XacNhanThanhToan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\XuatKho.resx">
+    <EmbeddedResource Include="GUI\Dialog\XuatKho.resx">
       <DependentUpon>XuatKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\YeuCauMon.resx">
@@ -383,8 +376,19 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\QLQuanCafe.DTO.AccountData.datasource" />
+    <None Include="Properties\DataSources\QLQuanCafe.DTO.AreaData.datasource" />
+    <None Include="Properties\DataSources\QLQuanCafe.DTO.BillData.datasource" />
+    <None Include="Properties\DataSources\QLQuanCafe.DTO.InventoryLogData.datasource" />
+    <None Include="Properties\DataSources\QLQuanCafe.DTO.MaterialData.datasource" />
+    <None Include="Properties\DataSources\QLQuanCafe.DTO.MenuCategoryData.datasource" />
+    <None Include="Properties\DataSources\QLQuanCafe.DTO.MenuItemData.datasource" />
+    <None Include="Properties\DataSources\QLQuanCafe.DTO.PermissionData.datasource" />
+    <None Include="Properties\DataSources\QLQuanCafe.DTO.TableData.datasource" />
+    <None Include="Properties\DataSources\QLQuanCafe.DTO.UnitData.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -399,6 +403,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\about.bmp" />
     <Content Include="Resources\about.png" />
     <Content Include="Resources\AddAreas.png" />
     <Content Include="Resources\AddAreas1.png" />

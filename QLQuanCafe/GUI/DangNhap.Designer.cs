@@ -1,11 +1,16 @@
-﻿namespace QLQuanCafe.GUI
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+using DevComponents.DotNetBar;
+using DevComponents.DotNetBar.Controls;
+
+namespace QLQuanCafe.GUI
 {
     partial class Login
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -48,7 +53,7 @@
             // 
             this.TUser.Border.Class = "TextBoxBorder";
             this.TUser.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-           // this.TUser.DisabledBackColor = System.Drawing.Color.White;
+            this.TUser.DisabledBackColor = System.Drawing.Color.White;
             this.TUser.ForeColor = System.Drawing.Color.Black;
             this.TUser.Location = new System.Drawing.Point(175, 140);
             this.TUser.Name = "TUser";
@@ -67,6 +72,7 @@
             this.BLogin.SymbolSize = 10F;
             this.BLogin.TabIndex = 1;
             this.BLogin.Text = "Đăng Nhập";
+            this.BLogin.Click += new System.EventHandler(this.BLogin_Click);
             // 
             // BCancel
             // 
@@ -128,8 +134,10 @@
             this.TPass.ForeColor = System.Drawing.Color.Black;
             this.TPass.Location = new System.Drawing.Point(175, 191);
             this.TPass.Name = "TPass";
+            this.TPass.PasswordChar = '*';
             this.TPass.Size = new System.Drawing.Size(140, 20);
             this.TPass.TabIndex = 7;
+            this.TPass.UseSystemPasswordChar = true;
             // 
             // ILogin
             // 
@@ -160,7 +168,6 @@
             this.Controls.Add(this.BCancel);
             this.Controls.Add(this.BLogin);
             this.Controls.Add(this.TUser);
-            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "Login";
@@ -174,13 +181,13 @@
 
         #endregion
 
-        private DevComponents.DotNetBar.Controls.TextBoxX TUser;
-        private DevComponents.DotNetBar.ButtonX BLogin;
-        private DevComponents.DotNetBar.ButtonX BCancel;
-        private System.Windows.Forms.ImageList imageList1;
-        private DevComponents.DotNetBar.LabelX Pass;
-        private DevComponents.DotNetBar.LabelX User;
-        private DevComponents.DotNetBar.Controls.TextBoxX TPass;
-        private DevComponents.DotNetBar.LabelX ILogin;
+        private TextBoxX TUser;
+        private ButtonX BLogin;
+        private ButtonX BCancel;
+        private ImageList imageList1;
+        private LabelX Pass;
+        private LabelX User;
+        private TextBoxX TPass;
+        private LabelX ILogin;
     }
 }

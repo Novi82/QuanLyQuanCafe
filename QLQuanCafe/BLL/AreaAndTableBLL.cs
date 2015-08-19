@@ -5,6 +5,8 @@ using MySql.Data.MySqlClient;
 using QLQuanCafe.Common;
 using QLQuanCafe.DAO;
 using QLQuanCafe.DTO;
+using QLQuanCafe.GUI;
+using QLQuanCafe.GUI.Dialog;
 
 namespace QLQuanCafe.BLL
 {
@@ -108,9 +110,8 @@ namespace QLQuanCafe.BLL
                         p =>
                         {
                             AreaToSave = new AreaData();
-                            //HACK form view
-                            //AddAreaWindow addAreaWindow = new AddAreaWindow(); 
-                            //addAreaWindow.ShowDialog();
+                            ThemKhuVuc themKhuVuc = new ThemKhuVuc();
+                            themKhuVuc.ShowDialog();
                         },
                         p => true);
                 return _showAddAreaWindowCommand;
@@ -135,9 +136,8 @@ namespace QLQuanCafe.BLL
                                 AreaId = AreaSelected.AreaId,
                                 AreaName = AreaSelected.AreaName
                             };
-                            // HACK from view
-                            //EditAreaWindow editAreaWindow = new EditAreaWindow();
-                            //editAreaWindow.ShowDialog();
+                            SuaKhuVuc suaKhuVuc = new SuaKhuVuc();
+                            suaKhuVuc.ShowDialog();
                         },
                         p => AreaSelected != null);
                 return _showEditAreaWindowCommand;
@@ -210,10 +210,8 @@ namespace QLQuanCafe.BLL
                             {
                                 Area = AreaSelected
                             };
-                            //HACK from view
-                            //AddTableWindow addTableWindow = new AddTableWindow();
-                            //addTableWindow.ShowDialog();
-
+                            ThemBan themBan = new ThemBan();
+                            themBan.ShowDialog();
                         },
                         p => AreaSelected != null);
                 return _showAddTableWindowCommand;
@@ -239,9 +237,8 @@ namespace QLQuanCafe.BLL
                                 TableName = TableSelected.TableName,
                                 Area = AreaSelected
                             };
-                            //HACK from view
-                            //EditTableWindow editTableWindow = new EditTableWindow();
-                            //editTableWindow.ShowDialog();
+                            SuaBan suaBan = new SuaBan();
+                            suaBan.ShowDialog();
                         },
                         p => TableSelected != null);
                 return _showEditTableWindowCommand;
@@ -289,8 +286,7 @@ namespace QLQuanCafe.BLL
         {
             if (obj != null)
             {
-                AreaSelected = obj as AreaData;
-
+                AreaSelected = ((DataGridViewRow)obj).DataBoundItem as AreaData;
                 ListTable = LocatorDataSource.TableDS.GetAllTable(AreaSelected);
             }
         }
@@ -299,7 +295,7 @@ namespace QLQuanCafe.BLL
         {
             if (obj != null)
             {
-                TableSelected = obj as TableData;
+                TableSelected = ((DataGridViewRow)obj).DataBoundItem as TableData;
             }
         }
 

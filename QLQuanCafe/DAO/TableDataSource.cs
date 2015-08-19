@@ -42,6 +42,9 @@ namespace QLQuanCafe.DAO
                 TableData table = new TableData();
                 table.TableId = row["MaBan"].ToString();
                 table.TableName = row["TenBan"].ToString();
+                table.Area = area;
+                table.TableState = row["TinhTrang"].ToString();
+                table.Note = row["GhiChu"].ToString();
 
                 listTable.Add(table);
             }

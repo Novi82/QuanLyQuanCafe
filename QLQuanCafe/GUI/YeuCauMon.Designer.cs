@@ -1,11 +1,16 @@
-﻿namespace QLQuanCafe.GUI
+﻿using System.ComponentModel;
+using DevComponents.DotNetBar;
+using DevComponents.DotNetBar.Controls;
+using DevComponents.Editors;
+
+namespace QLQuanCafe.GUI
 {
     partial class YeuCauMon
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -181,13 +186,13 @@
 
         #endregion
 
-        private DevComponents.DotNetBar.LabelX LDonGia;
-        private DevComponents.DotNetBar.LabelX LThanhTien;
-        private DevComponents.Editors.DoubleInput SoLuong;
-        private DevComponents.DotNetBar.LabelX LSoLuong;
-        private DevComponents.DotNetBar.ButtonX BAccept;
-        private DevComponents.DotNetBar.ButtonX BCancel;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX1;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX2;
+        private LabelX LDonGia;
+        private LabelX LThanhTien;
+        private DoubleInput SoLuong;
+        private LabelX LSoLuong;
+        private ButtonX BAccept;
+        private ButtonX BCancel;
+        private TextBoxX textBoxX1;
+        private TextBoxX textBoxX2;
     }
 }

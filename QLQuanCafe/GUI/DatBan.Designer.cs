@@ -1,11 +1,17 @@
-﻿namespace QLQuanCafe.GUI
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+using DevComponents.DotNetBar;
+using DevComponents.DotNetBar.Controls;
+using DevComponents.Editors.DateTimeAdv;
+
+namespace QLQuanCafe.GUI
 {
     partial class DatBan
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -264,17 +270,17 @@
 
         #endregion
 
-        private DevComponents.DotNetBar.Controls.ComboBoxEx comboBoxEx2;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx comboBoxEx1;
-        private DevComponents.DotNetBar.LabelX labelX3;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX1;
-        private DevComponents.DotNetBar.LabelX labelX4;
-        private DevComponents.Editors.DateTimeAdv.DateTimeInput dateTimeInput1;
-        private DevComponents.DotNetBar.LabelX labelX5;
-        private DevComponents.DotNetBar.ButtonX buttonX3;
-        private DevComponents.DotNetBar.ButtonX buttonX4;
-        private DevComponents.DotNetBar.LabelX labelX6;
-        private DevComponents.DotNetBar.LabelX labelX7;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private ComboBoxEx comboBoxEx2;
+        private ComboBoxEx comboBoxEx1;
+        private LabelX labelX3;
+        private TextBoxX textBoxX1;
+        private LabelX labelX4;
+        private DateTimeInput dateTimeInput1;
+        private LabelX labelX5;
+        private ButtonX buttonX3;
+        private ButtonX buttonX4;
+        private LabelX labelX6;
+        private LabelX labelX7;
+        private RichTextBox richTextBox1;
     }
 }

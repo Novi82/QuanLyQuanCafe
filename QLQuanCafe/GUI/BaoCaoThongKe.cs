@@ -1,8 +1,9 @@
 ﻿using System;
+using DevComponents.DotNetBar.Metro;
 
 namespace QLQuanCafe.GUI
 {
-    public partial class BaoCao_ThongKe : DevComponents.DotNetBar.Metro.MetroForm
+    public partial class BaoCao_ThongKe : MetroForm
     {
         public BaoCao_ThongKe()
         {

@@ -1,10 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Forms;
 using System.Windows.Input;
 using MySql.Data.MySqlClient;
 using QLQuanCafe.Common;
 using QLQuanCafe.DAO;
 using QLQuanCafe.DTO;
+using QLQuanCafe.GUI;
+using QLQuanCafe.GUI.Dialog;
 
 namespace QLQuanCafe.BLL
 {
@@ -16,7 +19,11 @@ namespace QLQuanCafe.BLL
         private List<MaterialData> _listMaterial;
         public List<MaterialData> ListMaterial
         {
-            get { return _listMaterial; }
+            get
+            {
+                Load();
+                return _listMaterial;
+            }
             set { SetProperty(ref _listMaterial, value); }
         }
 
@@ -87,9 +94,9 @@ namespace QLQuanCafe.BLL
                             {
                                 MessageDialogHelper.CreateErrorMessage(ex.Message);
                             }
-                            //HACK VIEW
-                            //AddMaterialWindow addMaterialWindow = new AddMaterialWindow();
-                            //addMaterialWindow.ShowDialog();
+                            // HACK VIEW
+                            frmThemNguyenLieu themThongTinNguyenLieu = new frmThemNguyenLieu();
+                            themThongTinNguyenLieu.ShowDialog();
                         },
                         p => true);
                 return _showAddMaterialWindowCommand;
@@ -123,8 +130,8 @@ namespace QLQuanCafe.BLL
                                 MessageDialogHelper.CreateErrorMessage(ex.Message);
                             }
                             //HACK VIEW
-                            //EditMaterialWindow editMaterialWindow = new EditMaterialWindow();
-                            //editMaterialWindow.ShowDialog();
+                            frmSuaThongTinNguyenLieu suaThongTinNguyenLieu = new frmSuaThongTinNguyenLieu();
+                            suaThongTinNguyenLieu.ShowDialog();
                         },
                         p => MaterialSelected != null);
                 return _showEditMaterialWindowCommand;
@@ -176,8 +183,8 @@ namespace QLQuanCafe.BLL
                                 Unit = MaterialSelected.Unit
                             };
                             //HACK VIEW
-                            //ImportMaterialWindow importMaterialWindow = new ImportMaterialWindow();
-                            //importMaterialWindow.ShowDialog();
+                            NhapKho nhapKho = new NhapKho();
+                            nhapKho.ShowDialog();
                         },
                         p => MaterialSelected != null);
                 return _showImportMaterialWindowCommand;
@@ -203,8 +210,8 @@ namespace QLQuanCafe.BLL
                                 Unit = MaterialSelected.Unit
                             };
                             //HACK VIEW
-                            //ExportMaterialWindow exportMaterialWindow = new ExportMaterialWindow();
-                            //exportMaterialWindow.ShowDialog();
+                            XuatKho xuatKho = new XuatKho();
+                            xuatKho.ShowDialog();
                         },
                         p => MaterialSelected != null);
                 return _showExportMaterialWindowCommand;
@@ -230,8 +237,8 @@ namespace QLQuanCafe.BLL
                                 Unit = MaterialSelected.Unit
                             };
                             // HACK VIEW
-                            //UpdateInventoryWindow updateInventoryWindow = new UpdateInventoryWindow();
-                            //updateInventoryWindow.ShowDialog();
+                            CapNhatKho capNhatKho = new CapNhatKho();
+                            capNhatKho.ShowDialog();
                         },
                         p => MaterialSelected != null);
                 return _showUpdateInventoryWindowCommand;
@@ -247,7 +254,7 @@ namespace QLQuanCafe.BLL
         {
             if (obj != null)
             {
-                MaterialSelected = obj as MaterialData;
+                MaterialSelected = ((DataGridViewRow)obj).DataBoundItem as MaterialData;
             }
         }
 
@@ -272,7 +279,7 @@ namespace QLQuanCafe.BLL
         {
             try
             {
-                MaterialToSave.Unit = UnitSelected;
+//                MaterialToSave.Unit = UnitSelected;
                 LocatorDataSource.MaterialDS.AddMaterial(MaterialToSave);
 
                 ListMaterial = LocatorDataSource.MaterialDS.GetAllMaterial();
@@ -291,7 +298,7 @@ namespace QLQuanCafe.BLL
         {
             try
             {
-                MaterialToSave.Unit = UnitSelected;
+//                MaterialToSave.Unit = UnitSelected;
                 LocatorDataSource.MaterialDS.UpdateMaterial(MaterialToSave);
 
                 ListMaterial = LocatorDataSource.MaterialDS.GetAllMaterial();

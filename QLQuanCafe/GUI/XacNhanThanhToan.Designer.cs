@@ -1,11 +1,14 @@
-﻿namespace QLQuanCafe.GUI
+﻿using System.ComponentModel;
+using DevComponents.DotNetBar;
+
+namespace QLQuanCafe.GUI
 {
     partial class XacNhanThanhToan
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -149,12 +152,12 @@
 
         #endregion
 
-        private DevComponents.DotNetBar.ButtonX buttonX2;
-        private DevComponents.DotNetBar.ButtonX buttonX3;
-        private DevComponents.DotNetBar.ButtonX buttonX4;
-        private DevComponents.DotNetBar.LabelX labelX4;
-        private DevComponents.DotNetBar.LabelX labelX5;
-        private DevComponents.DotNetBar.LabelX labelX1;
-        private DevComponents.DotNetBar.LabelX labelX2;
+        private ButtonX buttonX2;
+        private ButtonX buttonX3;
+        private ButtonX buttonX4;
+        private LabelX labelX4;
+        private LabelX labelX5;
+        private LabelX labelX1;
+        private LabelX labelX2;
     }
 }

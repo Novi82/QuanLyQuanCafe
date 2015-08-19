@@ -1,9 +1,12 @@
 ﻿using System.Collections.Generic;
+using System.Windows.Forms;
 using System.Windows.Input;
 using MySql.Data.MySqlClient;
 using QLQuanCafe.Common;
 using QLQuanCafe.DAO;
 using QLQuanCafe.DTO;
+using QLQuanCafe.GUI;
+using QLQuanCafe.GUI.Dialog;
 
 namespace QLQuanCafe.BLL
 {
@@ -15,7 +18,11 @@ namespace QLQuanCafe.BLL
         private List<AccountData> _listAccount;
         public List<AccountData> ListAccount
         {
-            get { return _listAccount; }
+            get
+            {
+                Load();
+                return _listAccount;
+            }
             set { SetProperty(ref _listAccount, value); }
         }
 
@@ -36,7 +43,11 @@ namespace QLQuanCafe.BLL
         private List<PermissionData> _listPermission;
         public List<PermissionData> ListPermission
         {
-            get { return _listPermission; }
+            get
+            {
+                Load();
+                return _listPermission;
+            }
             set { SetProperty(ref _listPermission, value); }
         }
 
@@ -77,10 +88,11 @@ namespace QLQuanCafe.BLL
                             AccountToSave = new AccountData();
 
                             ListPermission = LocatorDataSource.AccountDS.GetAllPermission();
-                            PermissionSelected = null;
+//                            PermissionSelected = null;
 
-                            //AddAccountWindow addAccountWindow = new AddAccountWindow(); //HACK from View
-                            //addAccountWindow.ShowDialog();
+                            //HACK View
+                            ThemTaiKhoan themTaiKhoan = new ThemTaiKhoan(); 
+                            themTaiKhoan.ShowDialog();
                         },
                         p => true);
                 return _showAddAccountWindowCommand;
@@ -123,7 +135,7 @@ namespace QLQuanCafe.BLL
         {
             if (obj != null)
             {
-                AccountSelected = obj as AccountData;
+                AccountSelected = ((DataGridViewRow)obj).DataBoundItem as AccountData;
             }
         }
 
@@ -150,7 +162,7 @@ namespace QLQuanCafe.BLL
             try
             {
                 AccountToSave.Password = password;
-                AccountToSave.Permission = PermissionSelected;
+//                AccountToSave.Permission = PermissionSelected;
                 LocatorDataSource.AccountDS.AddAccount(AccountToSave);
 
                 ListAccount = LocatorDataSource.AccountDS.GetAllAccount();
