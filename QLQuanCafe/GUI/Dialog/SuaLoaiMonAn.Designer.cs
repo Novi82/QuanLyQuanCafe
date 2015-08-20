@@ -46,7 +46,7 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             this.LTenLoaiMonAn.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.LTenLoaiMonAn.ForeColor = System.Drawing.Color.Black;
-            this.LTenLoaiMonAn.Location = new System.Drawing.Point(12, 47);
+            this.LTenLoaiMonAn.Location = new System.Drawing.Point(12, 35);
             this.LTenLoaiMonAn.Name = "LTenLoaiMonAn";
             this.LTenLoaiMonAn.Size = new System.Drawing.Size(98, 23);
             this.LTenLoaiMonAn.TabIndex = 0;
@@ -62,7 +62,7 @@ namespace QLQuanCafe.GUI.Dialog
             this.txtTenLoaiMonAn.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtTenLoaiMonAn.DisabledBackColor = System.Drawing.Color.White;
             this.txtTenLoaiMonAn.ForeColor = System.Drawing.Color.Black;
-            this.txtTenLoaiMonAn.Location = new System.Drawing.Point(128, 47);
+            this.txtTenLoaiMonAn.Location = new System.Drawing.Point(128, 38);
             this.txtTenLoaiMonAn.Name = "txtTenLoaiMonAn";
             this.txtTenLoaiMonAn.Size = new System.Drawing.Size(110, 20);
             this.txtTenLoaiMonAn.TabIndex = 1;
@@ -104,6 +104,7 @@ namespace QLQuanCafe.GUI.Dialog
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "SuaLoaiMonAn";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

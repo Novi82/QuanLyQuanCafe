@@ -46,7 +46,7 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             this.LDonViTinh.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.LDonViTinh.ForeColor = System.Drawing.Color.Black;
-            this.LDonViTinh.Location = new System.Drawing.Point(31, 37);
+            this.LDonViTinh.Location = new System.Drawing.Point(12, 35);
             this.LDonViTinh.Name = "LDonViTinh";
             this.LDonViTinh.Size = new System.Drawing.Size(99, 23);
             this.LDonViTinh.TabIndex = 0;
@@ -62,7 +62,7 @@ namespace QLQuanCafe.GUI.Dialog
             this.DonViTinh.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.DonViTinh.DisabledBackColor = System.Drawing.Color.White;
             this.DonViTinh.ForeColor = System.Drawing.Color.Black;
-            this.DonViTinh.Location = new System.Drawing.Point(137, 37);
+            this.DonViTinh.Location = new System.Drawing.Point(128, 38);
             this.DonViTinh.Name = "DonViTinh";
             this.DonViTinh.Size = new System.Drawing.Size(108, 20);
             this.DonViTinh.TabIndex = 1;
@@ -103,6 +103,7 @@ namespace QLQuanCafe.GUI.Dialog
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "SuaDonViTinh";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
