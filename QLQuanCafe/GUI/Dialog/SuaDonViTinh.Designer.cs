@@ -101,10 +101,11 @@ namespace QLQuanCafe.GUI.Dialog
             this.Controls.Add(this.DonViTinh);
             this.Controls.Add(this.LDonViTinh);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "SuaDonViTinh";
             this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TitleText = "<font color=\"#ffffff\">Sửa Đơn Vị Tính</font><font color=\"#000000\"></font>";
             this.Load += new System.EventHandler(this.SuaDonViTinh_Load);

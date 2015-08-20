@@ -159,9 +159,11 @@ namespace QLQuanCafe.GUI
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "BaoCao_ThongKe";
             this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TitleText = "<font color=\"#ffffff\">Báo Cáo Thống Kê</font><font color=\"#000000\"></font>";
             this.Load += new System.EventHandler(this.BaoCao_ThongKe_Load);

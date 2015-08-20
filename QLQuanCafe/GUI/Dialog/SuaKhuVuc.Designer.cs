@@ -40,10 +40,12 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             // LTenKhuVuc
             // 
+            this.LTenKhuVuc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
             // 
             // 
             this.LTenKhuVuc.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.LTenKhuVuc.ForeColor = System.Drawing.Color.Black;
             this.LTenKhuVuc.Location = new System.Drawing.Point(12, 35);
             this.LTenKhuVuc.Name = "LTenKhuVuc";
             this.LTenKhuVuc.Size = new System.Drawing.Size(75, 23);
@@ -93,17 +95,18 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Window;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(284, 146);
             this.Controls.Add(this.btnHuybo);
             this.Controls.Add(this.btnDongY);
             this.Controls.Add(this.txtTenKhuVuc);
             this.Controls.Add(this.LTenKhuVuc);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "SuaKhuVuc";
             this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TitleText = "<font color=\"#ffffff\">Sửa Khu Vực</font>";
             this.Load += new System.EventHandler(this.SuaKhuVuc_Load);

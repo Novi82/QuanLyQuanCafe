@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.btnOK = new DevComponents.DotNetBar.ButtonX();
-            this.LabIConfirm = new DevComponents.DotNetBar.LabelX();
             this.LbConfirm = new DevComponents.DotNetBar.LabelX();
+            this.LabIConfirm = new DevComponents.DotNetBar.LabelX();
             this.SuspendLayout();
             // 
             // btnOK
@@ -43,6 +43,21 @@
             this.btnOK.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
             this.btnOK.TabIndex = 0;
             this.btnOK.Text = "OK";
+            // 
+            // LbConfirm
+            // 
+            this.LbConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // 
+            // 
+            this.LbConfirm.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.LbConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.LbConfirm.ForeColor = System.Drawing.Color.Black;
+            this.LbConfirm.Location = new System.Drawing.Point(105, 41);
+            this.LbConfirm.Name = "LbConfirm";
+            this.LbConfirm.Size = new System.Drawing.Size(119, 23);
+            this.LbConfirm.TabIndex = 2;
+            this.LbConfirm.Text = "Lưu Thành Công";
             // 
             // LabIConfirm
             // 
@@ -60,21 +75,6 @@
             this.LabIConfirm.TabIndex = 1;
             this.LabIConfirm.Click += new System.EventHandler(this.labelX1_Click);
             // 
-            // LbConfirm
-            // 
-            this.LbConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            // 
-            // 
-            // 
-            this.LbConfirm.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.LbConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.LbConfirm.ForeColor = System.Drawing.Color.Black;
-            this.LbConfirm.Location = new System.Drawing.Point(105, 41);
-            this.LbConfirm.Name = "LbConfirm";
-            this.LbConfirm.Size = new System.Drawing.Size(119, 23);
-            this.LbConfirm.TabIndex = 2;
-            this.LbConfirm.Text = "Lưu Thành Công";
-            // 
             // ThongTin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -84,10 +84,12 @@
             this.Controls.Add(this.LabIConfirm);
             this.Controls.Add(this.btnOK);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ThongTin";
             this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.TitleText = "<font color=\"#FFFFFF\">Thông \r\nTin</font>";
             this.ResumeLayout(false);
 

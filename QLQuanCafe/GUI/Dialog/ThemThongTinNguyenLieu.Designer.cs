@@ -212,10 +212,11 @@ namespace QLQuanCafe.GUI.Dialog
             this.Controls.Add(this.TxtTenNguyenLieu);
             this.Controls.Add(this.TenNguyenLieu);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "frmThemNguyenLieu";
             this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TitleText = "<font color=\"#ffffff\">Thêm Thông Tin Nguyên Liệu</font><font color=\"#ffffff\"></fo" +
     "nt>";

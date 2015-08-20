@@ -262,11 +262,12 @@ namespace QLQuanCafe.GUI
             this.Controls.Add(this.buttonX3);
             this.Controls.Add(this.labelX5);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "DatBan";
             this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TitleText = "<font color=\"#ffffff\">Đặt Bàn</font><font color=\"#000000\"></font>";
             this.Load += new System.EventHandler(this.DatBan_Load);

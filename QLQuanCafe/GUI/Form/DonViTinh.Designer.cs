@@ -111,17 +111,17 @@ namespace QLQuanCafe.GUI.Form
             this.unitIdDataGridViewTextBoxColumn,
             this.unitNameDataGridViewTextBoxColumn});
             this.dataGridViewX1.DataSource = this.unitDataBindingSource;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewX1.EnableHeadersVisualStyles = false;
-            this.dataGridViewX1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dataGridViewX1.Location = new System.Drawing.Point(0, 13);
+            this.dataGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.dataGridViewX1.Location = new System.Drawing.Point(5, 13);
             this.dataGridViewX1.MultiSelect = false;
             this.dataGridViewX1.Name = "dataGridViewX1";
             this.dataGridViewX1.ReadOnly = true;
@@ -166,12 +166,12 @@ namespace QLQuanCafe.GUI.Form
             this.unitIdDataGridViewTextBoxColumn.HeaderText = "Mã Đơn Vị Tính";
             this.unitIdDataGridViewTextBoxColumn.Name = "unitIdDataGridViewTextBoxColumn";
             this.unitIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.unitIdDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.unitIdDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.unitIdDataGridViewTextBoxColumn.Width = 120;
             // 
             // unitNameDataGridViewTextBoxColumn
             // 
+            this.unitNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.unitNameDataGridViewTextBoxColumn.DataPropertyName = "UnitName";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             this.unitNameDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
@@ -179,7 +179,6 @@ namespace QLQuanCafe.GUI.Form
             this.unitNameDataGridViewTextBoxColumn.Name = "unitNameDataGridViewTextBoxColumn";
             this.unitNameDataGridViewTextBoxColumn.ReadOnly = true;
             this.unitNameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.unitNameDataGridViewTextBoxColumn.Width = 251;
             // 
             // unitDataBindingSource
             // 
@@ -189,17 +188,18 @@ namespace QLQuanCafe.GUI.Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(374, 386);
+            this.ClientSize = new System.Drawing.Size(382, 386);
             this.Controls.Add(this.dataGridViewX1);
             this.Controls.Add(this.btnSuaDvt);
             this.Controls.Add(this.btnThemDvt);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnXoaDvt);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "DonViTinh";
             this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TitleText = "<font color=\"#ffffff\">Đơn Vị Tính</font><font color=\"#000000\"></font>";
             this.Load += new System.EventHandler(this.DanhSachDonViTinh_Load);

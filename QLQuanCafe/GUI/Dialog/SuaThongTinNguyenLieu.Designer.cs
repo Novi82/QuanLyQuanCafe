@@ -50,10 +50,12 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             // LTenNguyenLieu
             // 
+            this.LTenNguyenLieu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
             // 
             // 
             this.LTenNguyenLieu.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.LTenNguyenLieu.ForeColor = System.Drawing.Color.Black;
             this.LTenNguyenLieu.Location = new System.Drawing.Point(15, 40);
             this.LTenNguyenLieu.Name = "LTenNguyenLieu";
             this.LTenNguyenLieu.Size = new System.Drawing.Size(111, 23);
@@ -62,10 +64,12 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             // LDonViTinh
             // 
+            this.LDonViTinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
             // 
             // 
             this.LDonViTinh.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.LDonViTinh.ForeColor = System.Drawing.Color.Black;
             this.LDonViTinh.Location = new System.Drawing.Point(15, 82);
             this.LDonViTinh.Name = "LDonViTinh";
             this.LDonViTinh.Size = new System.Drawing.Size(75, 23);
@@ -74,10 +78,12 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             // LDonGia
             // 
+            this.LDonGia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
             // 
             // 
             this.LDonGia.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.LDonGia.ForeColor = System.Drawing.Color.Black;
             this.LDonGia.Location = new System.Drawing.Point(15, 125);
             this.LDonGia.Name = "LDonGia";
             this.LDonGia.Size = new System.Drawing.Size(75, 23);
@@ -114,6 +120,7 @@ namespace QLQuanCafe.GUI.Dialog
             this.cbxDonViTinh.DataSource = this.unitDataBindingSource;
             this.cbxDonViTinh.DisplayMember = "UnitName";
             this.cbxDonViTinh.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbxDonViTinh.ForeColor = System.Drawing.Color.Black;
             this.cbxDonViTinh.FormattingEnabled = true;
             this.cbxDonViTinh.ItemHeight = 14;
             this.cbxDonViTinh.Location = new System.Drawing.Point(123, 125);
@@ -128,12 +135,14 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             // dipDonGia
             // 
+            this.dipDonGia.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
             this.dipDonGia.BackgroundStyle.Class = "DateTimeInputBackground";
             this.dipDonGia.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.dipDonGia.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.dipDonGia.ForeColor = System.Drawing.Color.Black;
             this.dipDonGia.Increment = 1D;
             this.dipDonGia.Location = new System.Drawing.Point(123, 84);
             this.dipDonGia.MinValue = 0D;
@@ -172,7 +181,7 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Window;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(284, 228);
             this.Controls.Add(this.btnThemDonViTinh);
             this.Controls.Add(this.txtTenNguyenLieu);
@@ -184,10 +193,11 @@ namespace QLQuanCafe.GUI.Dialog
             this.Controls.Add(this.LDonViTinh);
             this.Controls.Add(this.LTenNguyenLieu);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "frmSuaThongTinNguyenLieu";
             this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TitleText = "<font color=\"#ffffff\">Sửa Thông Tin Nguyên Liệu</font>";
             this.Load += new System.EventHandler(this.SuaThongTinNguyenLieu_Load);

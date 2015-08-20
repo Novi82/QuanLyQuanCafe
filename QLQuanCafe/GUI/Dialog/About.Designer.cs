@@ -89,7 +89,7 @@
             // 
             this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelX4.Location = new System.Drawing.Point(12, 118);
+            this.labelX4.Location = new System.Drawing.Point(27, 126);
             this.labelX4.Name = "labelX4";
             this.labelX4.Size = new System.Drawing.Size(75, 23);
             this.labelX4.TabIndex = 2;
@@ -115,7 +115,7 @@
             // 
             this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelX6.Location = new System.Drawing.Point(71, 234);
+            this.labelX6.Location = new System.Drawing.Point(90, 233);
             this.labelX6.Name = "labelX6";
             this.labelX6.Size = new System.Drawing.Size(219, 23);
             this.labelX6.TabIndex = 2;
@@ -128,7 +128,7 @@
             // 
             this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelX7.Location = new System.Drawing.Point(71, 176);
+            this.labelX7.Location = new System.Drawing.Point(90, 175);
             this.labelX7.Name = "labelX7";
             this.labelX7.Size = new System.Drawing.Size(219, 23);
             this.labelX7.TabIndex = 2;
@@ -141,7 +141,7 @@
             // 
             this.labelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelX8.Location = new System.Drawing.Point(71, 205);
+            this.labelX8.Location = new System.Drawing.Point(90, 204);
             this.labelX8.Name = "labelX8";
             this.labelX8.Size = new System.Drawing.Size(259, 23);
             this.labelX8.TabIndex = 2;
@@ -154,7 +154,7 @@
             // 
             this.labelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelX9.Location = new System.Drawing.Point(71, 147);
+            this.labelX9.Location = new System.Drawing.Point(90, 146);
             this.labelX9.Name = "labelX9";
             this.labelX9.Size = new System.Drawing.Size(259, 23);
             this.labelX9.TabIndex = 2;
@@ -216,6 +216,7 @@
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.labelX1);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "About";

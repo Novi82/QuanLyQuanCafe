@@ -169,10 +169,11 @@ namespace QLQuanCafe.GUI
             this.Controls.Add(this.BLogin);
             this.Controls.Add(this.TUser);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Login";
             this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TitleText = "<font color=\"#ffffff\" >Đăng Nhập</font><font color=\"#0072BC\"></font>";
             this.Load += new System.EventHandler(this.DangNhap_Load);

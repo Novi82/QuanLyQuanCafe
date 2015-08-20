@@ -43,8 +43,8 @@ namespace QLQuanCafe.GUI.Dialog
             this.txtTenNguyenLieu = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtGiaNhap = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtDonViTinh = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.reflectionImage1 = new DevComponents.DotNetBar.Controls.ReflectionImage();
             this.dipSoLuong = new DevComponents.Editors.DoubleInput();
+            this.reflectionImage1 = new DevComponents.DotNetBar.Controls.ReflectionImage();
             ((System.ComponentModel.ISupportInitialize)(this.dipSoLuong)).BeginInit();
             this.SuspendLayout();
             // 
@@ -206,22 +206,6 @@ namespace QLQuanCafe.GUI.Dialog
             this.txtDonViTinh.Size = new System.Drawing.Size(121, 20);
             this.txtDonViTinh.TabIndex = 11;
             // 
-            // reflectionImage1
-            // 
-            this.reflectionImage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            // 
-            // 
-            // 
-            this.reflectionImage1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.reflectionImage1.BackgroundStyle.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.reflectionImage1.ForeColor = System.Drawing.Color.Black;
-            this.reflectionImage1.Image = global::QLQuanCafe.Properties.Resources.XuatKho;
-            this.reflectionImage1.Location = new System.Drawing.Point(94, 12);
-            this.reflectionImage1.Name = "reflectionImage1";
-            this.reflectionImage1.ReflectionEnabled = false;
-            this.reflectionImage1.Size = new System.Drawing.Size(128, 116);
-            this.reflectionImage1.TabIndex = 7;
-            // 
             // dipSoLuong
             // 
             this.dipSoLuong.AllowEmptyState = false;
@@ -242,6 +226,22 @@ namespace QLQuanCafe.GUI.Dialog
             this.dipSoLuong.Size = new System.Drawing.Size(121, 20);
             this.dipSoLuong.TabIndex = 13;
             // 
+            // reflectionImage1
+            // 
+            this.reflectionImage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // 
+            // 
+            this.reflectionImage1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.reflectionImage1.BackgroundStyle.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.reflectionImage1.ForeColor = System.Drawing.Color.Black;
+            this.reflectionImage1.Image = global::QLQuanCafe.Properties.Resources.XuatKho;
+            this.reflectionImage1.Location = new System.Drawing.Point(94, 12);
+            this.reflectionImage1.Name = "reflectionImage1";
+            this.reflectionImage1.ReflectionEnabled = false;
+            this.reflectionImage1.Size = new System.Drawing.Size(128, 116);
+            this.reflectionImage1.TabIndex = 7;
+            // 
             // XuatKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -261,10 +261,11 @@ namespace QLQuanCafe.GUI.Dialog
             this.Controls.Add(this.LMaNguyenLieu);
             this.Controls.Add(this.LSoLuong);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "XuatKho";
             this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TitleText = "<font color=\"#ffffff\">Xuất Kho</font><font color=\"#000000\"></font>";
             this.Load += new System.EventHandler(this.XuatKho_Load);

@@ -242,12 +242,13 @@ namespace QLQuanCafe.GUI.Dialog
             this.Controls.Add(this.LTenMonAn);
             this.Controls.Add(this.imgMonAn);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "SuaMonAn";
             this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.TitleText = "<font color=\"#ffffff\">Sửa Món Ăn</font><font color=\"#000000\"></font>";
+            this.TitleText = "<font color=\"#ffffff\">Sửa Món </font><font color=\"#000000\"></font>";
             this.Load += new System.EventHandler(this.SuaMonAn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.menuCategoryDataBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dipDonGia)).EndInit();

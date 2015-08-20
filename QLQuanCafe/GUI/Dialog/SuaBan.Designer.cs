@@ -102,11 +102,12 @@ namespace QLQuanCafe.GUI.Dialog
             this.Controls.Add(this.txtTenBan);
             this.Controls.Add(this.labelX1);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "SuaBan";
             this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TitleText = "<font color=\"#ffffff\">Sửa Bàn</font><font color=\"#000000\"></font>";
             this.Load += new System.EventHandler(this.SuaBan_Load);

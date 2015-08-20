@@ -51,16 +51,16 @@ namespace QLQuanCafe.GUI.Form
             this.btnSuaMonAn = new DevComponents.DotNetBar.ButtonX();
             this.btnXoaMonAn = new DevComponents.DotNetBar.ButtonX();
             this.btnThoat = new DevComponents.DotNetBar.ButtonX();
-            this.menuItemDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.menuCategoryDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.menuCategoryIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.menuCategoryNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuItemIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuItemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imagePathDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.unitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuCategoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menuItemDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.menuCategoryIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menuCategoryNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menuCategoryDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiMonAn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMonAn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.menuItemDataBindingSource)).BeginInit();
@@ -69,15 +69,18 @@ namespace QLQuanCafe.GUI.Form
             // 
             // labelX1
             // 
+            this.labelX1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
             // 
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Location = new System.Drawing.Point(12, 12);
+            this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelX1.ForeColor = System.Drawing.Color.Black;
+            this.labelX1.Location = new System.Drawing.Point(13, 23);
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(75, 23);
             this.labelX1.TabIndex = 0;
-            this.labelX1.Text = "Loại Món Ăn :";
+            this.labelX1.Text = "Loại Món :";
             // 
             // dgvLoaiMonAn
             // 
@@ -100,7 +103,7 @@ namespace QLQuanCafe.GUI.Form
             this.menuCategoryIdDataGridViewTextBoxColumn,
             this.menuCategoryNameDataGridViewTextBoxColumn});
             this.dgvLoaiMonAn.DataSource = this.menuCategoryDataBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
@@ -131,15 +134,18 @@ namespace QLQuanCafe.GUI.Form
             // 
             // labelX2
             // 
+            this.labelX2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
             // 
             // 
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Location = new System.Drawing.Point(364, 12);
+            this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelX2.ForeColor = System.Drawing.Color.Black;
+            this.labelX2.Location = new System.Drawing.Point(367, 23);
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(75, 23);
             this.labelX2.TabIndex = 0;
-            this.labelX2.Text = "Món Ăn :";
+            this.labelX2.Text = "Món :";
             // 
             // dgvMonAn
             // 
@@ -166,7 +172,7 @@ namespace QLQuanCafe.GUI.Form
             this.unitDataGridViewTextBoxColumn,
             this.menuCategoryDataGridViewTextBoxColumn});
             this.dgvMonAn.DataSource = this.menuItemDataBindingSource;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
@@ -240,7 +246,7 @@ namespace QLQuanCafe.GUI.Form
             this.btnThemMonAn.Size = new System.Drawing.Size(75, 23);
             this.btnThemMonAn.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnThemMonAn.TabIndex = 10;
-            this.btnThemMonAn.Text = "Thêm Món Ăn";
+            this.btnThemMonAn.Text = "Thêm Món";
             this.btnThemMonAn.Click += new System.EventHandler(this.btnThemMonAn_Click);
             // 
             // btnSuaMonAn
@@ -252,7 +258,7 @@ namespace QLQuanCafe.GUI.Form
             this.btnSuaMonAn.Size = new System.Drawing.Size(75, 23);
             this.btnSuaMonAn.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnSuaMonAn.TabIndex = 10;
-            this.btnSuaMonAn.Text = "Sửa Món Ăn";
+            this.btnSuaMonAn.Text = "Sửa Món";
             this.btnSuaMonAn.Click += new System.EventHandler(this.btnSuaMonAn_Click);
             // 
             // btnXoaMonAn
@@ -264,7 +270,7 @@ namespace QLQuanCafe.GUI.Form
             this.btnXoaMonAn.Size = new System.Drawing.Size(75, 23);
             this.btnXoaMonAn.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnXoaMonAn.TabIndex = 10;
-            this.btnXoaMonAn.Text = "Xóa Món Ăn";
+            this.btnXoaMonAn.Text = "Xóa Món";
             this.btnXoaMonAn.Click += new System.EventHandler(this.btnXoaMonAn_Click);
             // 
             // btnThoat
@@ -278,32 +284,6 @@ namespace QLQuanCafe.GUI.Form
             this.btnThoat.TabIndex = 10;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.Click += new System.EventHandler(this.btnXoaMonAn_Click);
-            // 
-            // menuItemDataBindingSource
-            // 
-            this.menuItemDataBindingSource.DataSource = typeof(QLQuanCafe.DTO.MenuItemData);
-            // 
-            // menuCategoryDataBindingSource
-            // 
-            this.menuCategoryDataBindingSource.DataSource = typeof(QLQuanCafe.DTO.MenuCategoryData);
-            // 
-            // menuCategoryIdDataGridViewTextBoxColumn
-            // 
-            this.menuCategoryIdDataGridViewTextBoxColumn.DataPropertyName = "MenuCategoryId";
-            this.menuCategoryIdDataGridViewTextBoxColumn.HeaderText = "Mã Loại";
-            this.menuCategoryIdDataGridViewTextBoxColumn.Name = "menuCategoryIdDataGridViewTextBoxColumn";
-            this.menuCategoryIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.menuCategoryIdDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.menuCategoryIdDataGridViewTextBoxColumn.Width = 120;
-            // 
-            // menuCategoryNameDataGridViewTextBoxColumn
-            // 
-            this.menuCategoryNameDataGridViewTextBoxColumn.DataPropertyName = "MenuCategoryName";
-            this.menuCategoryNameDataGridViewTextBoxColumn.HeaderText = "Loại Món Ăn";
-            this.menuCategoryNameDataGridViewTextBoxColumn.Name = "menuCategoryNameDataGridViewTextBoxColumn";
-            this.menuCategoryNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.menuCategoryNameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.menuCategoryNameDataGridViewTextBoxColumn.Width = 165;
             // 
             // menuItemIdDataGridViewTextBoxColumn
             // 
@@ -351,6 +331,32 @@ namespace QLQuanCafe.GUI.Form
             this.menuCategoryDataGridViewTextBoxColumn.ReadOnly = true;
             this.menuCategoryDataGridViewTextBoxColumn.Width = 150;
             // 
+            // menuItemDataBindingSource
+            // 
+            this.menuItemDataBindingSource.DataSource = typeof(QLQuanCafe.DTO.MenuItemData);
+            // 
+            // menuCategoryIdDataGridViewTextBoxColumn
+            // 
+            this.menuCategoryIdDataGridViewTextBoxColumn.DataPropertyName = "MenuCategoryId";
+            this.menuCategoryIdDataGridViewTextBoxColumn.HeaderText = "Mã Loại";
+            this.menuCategoryIdDataGridViewTextBoxColumn.Name = "menuCategoryIdDataGridViewTextBoxColumn";
+            this.menuCategoryIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.menuCategoryIdDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.menuCategoryIdDataGridViewTextBoxColumn.Width = 120;
+            // 
+            // menuCategoryNameDataGridViewTextBoxColumn
+            // 
+            this.menuCategoryNameDataGridViewTextBoxColumn.DataPropertyName = "MenuCategoryName";
+            this.menuCategoryNameDataGridViewTextBoxColumn.HeaderText = "Loại Món";
+            this.menuCategoryNameDataGridViewTextBoxColumn.Name = "menuCategoryNameDataGridViewTextBoxColumn";
+            this.menuCategoryNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.menuCategoryNameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.menuCategoryNameDataGridViewTextBoxColumn.Width = 165;
+            // 
+            // menuCategoryDataBindingSource
+            // 
+            this.menuCategoryDataBindingSource.DataSource = typeof(QLQuanCafe.DTO.MenuCategoryData);
+            // 
             // ThucDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -368,9 +374,11 @@ namespace QLQuanCafe.GUI.Form
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.labelX1);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "ThucDon";
             this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TitleText = "<font color=\"#ffffff\">Thực Đơn</font>";
             this.Load += new System.EventHandler(this.ThucDon_Load);
@@ -397,13 +405,13 @@ namespace QLQuanCafe.GUI.Form
         private BindingSource menuCategoryDataBindingSource;
         private BindingSource menuItemDataBindingSource;
         private ButtonX btnThoat;
-        private DataGridViewTextBoxColumn menuCategoryIdDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn menuCategoryNameDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn menuItemIdDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn menuItemNameDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn imagePathDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn unitDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn menuCategoryDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn menuCategoryIdDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn menuCategoryNameDataGridViewTextBoxColumn;
     }
 }

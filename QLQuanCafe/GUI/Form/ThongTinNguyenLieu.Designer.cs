@@ -76,7 +76,7 @@ namespace QLQuanCafe.GUI.Form
             this.priceDataGridViewTextBoxColumn,
             this.quantityDataGridViewTextBoxColumn});
             this.dgvNguyenLieu.DataSource = this.materialDataBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
@@ -162,11 +162,11 @@ namespace QLQuanCafe.GUI.Form
             // 
             // materialNameDataGridViewTextBoxColumn
             // 
+            this.materialNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.materialNameDataGridViewTextBoxColumn.DataPropertyName = "MaterialName";
             this.materialNameDataGridViewTextBoxColumn.HeaderText = "Tên";
             this.materialNameDataGridViewTextBoxColumn.Name = "materialNameDataGridViewTextBoxColumn";
             this.materialNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.materialNameDataGridViewTextBoxColumn.Width = 120;
             // 
             // unitDataGridViewTextBoxColumn
             // 
@@ -204,9 +204,11 @@ namespace QLQuanCafe.GUI.Form
             this.Controls.Add(this.btnThemNguyenLieu);
             this.Controls.Add(this.dgvNguyenLieu);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "ThongTinNguyenLieu";
             this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TitleText = "<font color=\"#ffffff\">Thông Tin Nguyên Liệu</font><font color=\"#000000\"></font>";
             this.Load += new System.EventHandler(this.ThongTinNguyenLieu_Load);

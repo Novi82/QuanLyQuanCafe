@@ -50,10 +50,12 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             // LMaNguyenLieu
             // 
+            this.LMaNguyenLieu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
             // 
             // 
             this.LMaNguyenLieu.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.LMaNguyenLieu.ForeColor = System.Drawing.Color.Black;
             this.LMaNguyenLieu.Location = new System.Drawing.Point(24, 55);
             this.LMaNguyenLieu.Name = "LMaNguyenLieu";
             this.LMaNguyenLieu.Size = new System.Drawing.Size(95, 23);
@@ -62,10 +64,12 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             // LDonViTinh
             // 
+            this.LDonViTinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
             // 
             // 
             this.LDonViTinh.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.LDonViTinh.ForeColor = System.Drawing.Color.Black;
             this.LDonViTinh.Location = new System.Drawing.Point(24, 182);
             this.LDonViTinh.Name = "LDonViTinh";
             this.LDonViTinh.Size = new System.Drawing.Size(75, 23);
@@ -74,10 +78,12 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             // LSoLuong
             // 
+            this.LSoLuong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
             // 
             // 
             this.LSoLuong.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.LSoLuong.ForeColor = System.Drawing.Color.Black;
             this.LSoLuong.Location = new System.Drawing.Point(24, 227);
             this.LSoLuong.Name = "LSoLuong";
             this.LSoLuong.Size = new System.Drawing.Size(75, 23);
@@ -86,10 +92,12 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             // LTenNguyenLieu
             // 
+            this.LTenNguyenLieu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
             // 
             // 
             this.LTenNguyenLieu.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.LTenNguyenLieu.ForeColor = System.Drawing.Color.Black;
             this.LTenNguyenLieu.Location = new System.Drawing.Point(24, 100);
             this.LTenNguyenLieu.Name = "LTenNguyenLieu";
             this.LTenNguyenLieu.Size = new System.Drawing.Size(95, 23);
@@ -98,10 +106,12 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             // LGiaNhap
             // 
+            this.LGiaNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
             // 
             // 
             this.LGiaNhap.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.LGiaNhap.ForeColor = System.Drawing.Color.Black;
             this.LGiaNhap.Location = new System.Drawing.Point(24, 142);
             this.LGiaNhap.Name = "LGiaNhap";
             this.LGiaNhap.Size = new System.Drawing.Size(75, 23);
@@ -111,6 +121,7 @@ namespace QLQuanCafe.GUI.Dialog
             // dipSoLuong
             // 
             this.dipSoLuong.AllowEmptyState = false;
+            this.dipSoLuong.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
@@ -118,6 +129,7 @@ namespace QLQuanCafe.GUI.Dialog
             this.dipSoLuong.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.dipSoLuong.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.dipSoLuong.DisplayFormat = "0";
+            this.dipSoLuong.ForeColor = System.Drawing.Color.Black;
             this.dipSoLuong.Increment = 1D;
             this.dipSoLuong.Location = new System.Drawing.Point(126, 227);
             this.dipSoLuong.MinValue = 0D;
@@ -232,10 +244,11 @@ namespace QLQuanCafe.GUI.Dialog
             this.Controls.Add(this.LDonViTinh);
             this.Controls.Add(this.LMaNguyenLieu);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "CapNhatKho";
             this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TitleText = "<font color=\"#ffffff\">Hiệu Chỉnh Số Lượng</font><font color=\"#000000\"></font>";
             this.Load += new System.EventHandler(this.HieuChinhSoLuong_Load);

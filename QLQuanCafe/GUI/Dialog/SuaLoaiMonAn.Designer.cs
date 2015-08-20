@@ -50,7 +50,7 @@ namespace QLQuanCafe.GUI.Dialog
             this.LTenLoaiMonAn.Name = "LTenLoaiMonAn";
             this.LTenLoaiMonAn.Size = new System.Drawing.Size(98, 23);
             this.LTenLoaiMonAn.TabIndex = 0;
-            this.LTenLoaiMonAn.Text = "Tên Loại Món Ăn :";
+            this.LTenLoaiMonAn.Text = "Tên Loại Món  :";
             // 
             // txtTenLoaiMonAn
             // 
@@ -102,10 +102,11 @@ namespace QLQuanCafe.GUI.Dialog
             this.Controls.Add(this.txtTenLoaiMonAn);
             this.Controls.Add(this.LTenLoaiMonAn);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "SuaLoaiMonAn";
             this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TitleText = "<font color=\"#ffffff\">Sửa Loại Món Ăn</font><font color=\"#000000\"></font>";
             this.Load += new System.EventHandler(this.SuaLoaiMonAn_Load);

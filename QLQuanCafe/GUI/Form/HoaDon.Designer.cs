@@ -37,6 +37,7 @@ namespace QLQuanCafe.GUI.Form
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtiTuNgay = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
@@ -64,6 +65,7 @@ namespace QLQuanCafe.GUI.Form
             // 
             // dtiTuNgay
             // 
+            this.dtiTuNgay.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
@@ -71,6 +73,7 @@ namespace QLQuanCafe.GUI.Form
             this.dtiTuNgay.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.dtiTuNgay.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
             this.dtiTuNgay.ButtonDropDown.Visible = true;
+            this.dtiTuNgay.ForeColor = System.Drawing.Color.Black;
             this.dtiTuNgay.IsPopupCalendarOpen = false;
             this.dtiTuNgay.Location = new System.Drawing.Point(62, 32);
             // 
@@ -113,10 +116,12 @@ namespace QLQuanCafe.GUI.Form
             // 
             // labelX1
             // 
+            this.labelX1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
             // 
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.ForeColor = System.Drawing.Color.Black;
             this.labelX1.Location = new System.Drawing.Point(23, 32);
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(33, 23);
@@ -125,10 +130,12 @@ namespace QLQuanCafe.GUI.Form
             // 
             // labelX2
             // 
+            this.labelX2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
             // 
             // 
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX2.ForeColor = System.Drawing.Color.Black;
             this.labelX2.Location = new System.Drawing.Point(178, 29);
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(33, 23);
@@ -137,6 +144,7 @@ namespace QLQuanCafe.GUI.Form
             // 
             // dtiDenNgay
             // 
+            this.dtiDenNgay.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
@@ -144,6 +152,7 @@ namespace QLQuanCafe.GUI.Form
             this.dtiDenNgay.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.dtiDenNgay.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
             this.dtiDenNgay.ButtonDropDown.Visible = true;
+            this.dtiDenNgay.ForeColor = System.Drawing.Color.Black;
             this.dtiDenNgay.IsPopupCalendarOpen = false;
             this.dtiDenNgay.Location = new System.Drawing.Point(217, 32);
             // 
@@ -188,6 +197,7 @@ namespace QLQuanCafe.GUI.Form
             // 
             this.cbxKhuVuc.DisplayMember = "Text";
             this.cbxKhuVuc.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbxKhuVuc.ForeColor = System.Drawing.Color.Black;
             this.cbxKhuVuc.FormattingEnabled = true;
             this.cbxKhuVuc.ItemHeight = 14;
             this.cbxKhuVuc.Location = new System.Drawing.Point(334, 32);
@@ -201,6 +211,7 @@ namespace QLQuanCafe.GUI.Form
             // 
             this.cbxBan.DisplayMember = "Text";
             this.cbxBan.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbxBan.ForeColor = System.Drawing.Color.Black;
             this.cbxBan.FormattingEnabled = true;
             this.cbxBan.ItemHeight = 14;
             this.cbxBan.Location = new System.Drawing.Point(483, 32);
@@ -238,14 +249,14 @@ namespace QLQuanCafe.GUI.Form
             this.dgvHoaDon.AllowUserToDeleteRows = false;
             this.dgvHoaDon.AllowUserToResizeRows = false;
             this.dgvHoaDon.AutoGenerateColumns = false;
-            this.dgvHoaDon.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dgvHoaDon.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgvHoaDon.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvHoaDon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
@@ -257,18 +268,27 @@ namespace QLQuanCafe.GUI.Form
             this.tableDataGridViewTextBoxColumn});
             this.dgvHoaDon.DataSource = this.billDataBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvHoaDon.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvHoaDon.EnableHeadersVisualStyles = false;
             this.dgvHoaDon.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.dgvHoaDon.Location = new System.Drawing.Point(12, 92);
             this.dgvHoaDon.MultiSelect = false;
             this.dgvHoaDon.Name = "dgvHoaDon";
             this.dgvHoaDon.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHoaDon.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvHoaDon.RowHeadersVisible = false;
             this.dgvHoaDon.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvHoaDon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -360,9 +380,11 @@ namespace QLQuanCafe.GUI.Form
             this.Controls.Add(this.dtiDenNgay);
             this.Controls.Add(this.dtiTuNgay);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "HoaDon";
             this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HoaDon";
             this.TitleText = "<font color=\"#ffffff\">Hóa Đơn\r\n</font>";

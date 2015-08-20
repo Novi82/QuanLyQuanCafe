@@ -40,10 +40,12 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             // LTenLoaiMonAn
             // 
+            this.LTenLoaiMonAn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
             // 
             // 
             this.LTenLoaiMonAn.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.LTenLoaiMonAn.ForeColor = System.Drawing.Color.Black;
             this.LTenLoaiMonAn.Location = new System.Drawing.Point(17, 39);
             this.LTenLoaiMonAn.Name = "LTenLoaiMonAn";
             this.LTenLoaiMonAn.Size = new System.Drawing.Size(94, 23);
@@ -93,17 +95,18 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Window;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(284, 133);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnDongY);
             this.Controls.Add(this.txtTenLoaiMon);
             this.Controls.Add(this.LTenLoaiMonAn);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "ThemLoaiMonAn";
             this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TitleText = "<font color=\"#ffffff\">Thêm Loại Món Ăn</font><font color=\"#000000\"></font>";
             this.Load += new System.EventHandler(this.ThemLoaiMonAn_Load);

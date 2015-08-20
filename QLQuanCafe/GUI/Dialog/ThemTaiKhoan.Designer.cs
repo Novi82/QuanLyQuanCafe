@@ -243,10 +243,11 @@ namespace QLQuanCafe.GUI.Dialog
             this.Controls.Add(this.IAddUser);
             this.Controls.Add(this.labelX1);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "ThemTaiKhoan";
             this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TitleText = "<font color=\"#ffffff\">Thêm Tài Khoản</font><font color=\"#000000\"></font>";
             this.Load += new System.EventHandler(this.ThemTaiKhoan_Load);
