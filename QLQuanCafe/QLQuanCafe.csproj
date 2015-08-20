@@ -302,9 +302,6 @@
     <EmbeddedResource Include="GUI\Dialog\About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Dialog\ThongTin.resx">
-      <DependentUpon>ThongTin.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\DoiMatKhau.resx">
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
@@ -422,6 +419,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\about.bmp" />
+    <None Include="Resources\128px-coffee-icon-small.png" />
     <Content Include="Resources\about.png" />
     <Content Include="Resources\AddAreas.png" />
     <Content Include="Resources\AddAreas1.png" />
