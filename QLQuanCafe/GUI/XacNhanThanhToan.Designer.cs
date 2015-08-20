@@ -43,25 +43,26 @@ namespace QLQuanCafe.GUI
             // 
             // GThanhtoan
             // 
-            this.GThanhtoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.GThanhtoan.CanvasColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.GThanhtoan.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
+            this.GThanhtoan.BackColor = System.Drawing.SystemColors.Window;
+            this.GThanhtoan.CanvasColor = System.Drawing.SystemColors.Control;
+            this.GThanhtoan.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
+            this.GThanhtoan.ColorTable = DevComponents.DotNetBar.Controls.ePanelColorTable.Green;
             this.GThanhtoan.Controls.Add(this.labelX2);
             this.GThanhtoan.Controls.Add(this.labelX3);
             this.GThanhtoan.Controls.Add(this.labelX1);
             this.GThanhtoan.DisabledBackColor = System.Drawing.Color.Empty;
-            this.GThanhtoan.Location = new System.Drawing.Point(12, 20);
+            this.GThanhtoan.Location = new System.Drawing.Point(3, 12);
             this.GThanhtoan.Name = "GThanhtoan";
-            this.GThanhtoan.Size = new System.Drawing.Size(340, 136);
+            this.GThanhtoan.Size = new System.Drawing.Size(357, 148);
             // 
             // 
             // 
-            this.GThanhtoan.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.GThanhtoan.Style.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(217)))), ((int)(((byte)(185)))));
+            this.GThanhtoan.Style.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(191)))), ((int)(((byte)(139)))));
             this.GThanhtoan.Style.BackColorGradientAngle = 90;
-            this.GThanhtoan.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.GThanhtoan.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
             this.GThanhtoan.Style.BorderBottomWidth = 1;
-            this.GThanhtoan.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.GThanhtoan.Style.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(164)))), ((int)(((byte)(90)))));
             this.GThanhtoan.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
             this.GThanhtoan.Style.BorderLeftWidth = 1;
             this.GThanhtoan.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
@@ -71,7 +72,7 @@ namespace QLQuanCafe.GUI
             this.GThanhtoan.Style.CornerDiameter = 4;
             this.GThanhtoan.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
             this.GThanhtoan.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.GThanhtoan.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.GThanhtoan.Style.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(74)))), ((int)(((byte)(31)))));
             this.GThanhtoan.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
             // 
             // 
@@ -85,7 +86,7 @@ namespace QLQuanCafe.GUI
             // 
             // labelX1
             // 
-            this.labelX1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.labelX1.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
@@ -100,7 +101,7 @@ namespace QLQuanCafe.GUI
             // 
             // labelX2
             // 
-            this.labelX2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.labelX2.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
@@ -128,7 +129,7 @@ namespace QLQuanCafe.GUI
             // 
             this.btnIn.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnIn.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnIn.Location = new System.Drawing.Point(137, 189);
+            this.btnIn.Location = new System.Drawing.Point(142, 189);
             this.btnIn.Name = "btnIn";
             this.btnIn.Size = new System.Drawing.Size(75, 23);
             this.btnIn.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -148,7 +149,7 @@ namespace QLQuanCafe.GUI
             // 
             // labelX3
             // 
-            this.labelX3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.labelX3.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 

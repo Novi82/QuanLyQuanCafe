@@ -50,7 +50,7 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             // LTenNguyenLieu
             // 
-            this.LTenNguyenLieu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.LTenNguyenLieu.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
@@ -64,7 +64,7 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             // LDonViTinh
             // 
-            this.LDonViTinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.LDonViTinh.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
@@ -78,7 +78,7 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             // LDonGia
             // 
-            this.LDonGia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.LDonGia.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 

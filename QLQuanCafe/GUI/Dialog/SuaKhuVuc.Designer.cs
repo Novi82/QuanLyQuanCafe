@@ -40,7 +40,7 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             // LTenKhuVuc
             // 
-            this.LTenKhuVuc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.LTenKhuVuc.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 

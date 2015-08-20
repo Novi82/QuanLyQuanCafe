@@ -46,7 +46,7 @@ namespace QLQuanCafe.GUI
             // 
             // CUser
             // 
-            this.CUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.CUser.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
@@ -75,7 +75,7 @@ namespace QLQuanCafe.GUI
             // 
             // NPass
             // 
-            this.NPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NPass.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
@@ -89,7 +89,7 @@ namespace QLQuanCafe.GUI
             // 
             // S2Pass
             // 
-            this.S2Pass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.S2Pass.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 

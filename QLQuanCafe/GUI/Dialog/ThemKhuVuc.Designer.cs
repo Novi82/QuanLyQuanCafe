@@ -42,7 +42,7 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             // AddArea
             // 
-            this.AddArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.AddArea.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 

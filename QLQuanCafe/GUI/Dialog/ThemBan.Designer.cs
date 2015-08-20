@@ -41,7 +41,7 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             // ATable
             // 
-            this.ATable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.ATable.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 

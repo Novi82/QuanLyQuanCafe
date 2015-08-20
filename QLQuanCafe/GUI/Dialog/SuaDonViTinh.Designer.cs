@@ -40,7 +40,7 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             // LDonViTinh
             // 
-            this.LDonViTinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.LDonViTinh.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 

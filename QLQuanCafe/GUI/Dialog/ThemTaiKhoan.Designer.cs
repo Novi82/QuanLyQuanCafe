@@ -66,7 +66,7 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             // AUser
             // 
-            this.AUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.AUser.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
@@ -95,7 +95,7 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             // APass
             // 
-            this.APass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.APass.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
@@ -125,7 +125,7 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             // labelX4
             // 
-            this.labelX4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.labelX4.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
@@ -155,7 +155,7 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             // labelX5
             // 
-            this.labelX5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.labelX5.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 

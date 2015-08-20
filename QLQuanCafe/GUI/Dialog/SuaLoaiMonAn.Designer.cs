@@ -40,7 +40,7 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             // LTenLoaiMonAn
             // 
-            this.LTenLoaiMonAn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.LTenLoaiMonAn.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 

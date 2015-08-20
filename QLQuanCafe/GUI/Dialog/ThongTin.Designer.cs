@@ -46,7 +46,7 @@
             // 
             // LbConfirm
             // 
-            this.LbConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.LbConfirm.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 

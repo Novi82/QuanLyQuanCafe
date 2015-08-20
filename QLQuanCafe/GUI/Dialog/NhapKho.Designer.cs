@@ -75,7 +75,7 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             // LMaNguyenLieu
             // 
-            this.LMaNguyenLieu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.LMaNguyenLieu.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
@@ -89,7 +89,7 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             // LTenNguyenLieu
             // 
-            this.LTenNguyenLieu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.LTenNguyenLieu.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
@@ -103,7 +103,7 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             // LGiaNhap
             // 
-            this.LGiaNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.LGiaNhap.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
@@ -117,7 +117,7 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             // LSoLuong
             // 
-            this.LSoLuong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.LSoLuong.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
@@ -131,7 +131,7 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             // LDonViTinh
             // 
-            this.LDonViTinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.LDonViTinh.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
@@ -264,10 +264,8 @@ namespace QLQuanCafe.GUI.Dialog
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "NhapKho";
             this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TitleText = "<font color=\"#ffffff\">Nhập Kho</font><font color=\"#000000\"></font>";
             this.Load += new System.EventHandler(this.NhapKho_Load);
