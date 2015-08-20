@@ -182,9 +182,9 @@
             this.labelX10.ForeColor = System.Drawing.Color.Black;
             this.labelX10.Location = new System.Drawing.Point(0, 279);
             this.labelX10.Name = "labelX10";
-            this.labelX10.Size = new System.Drawing.Size(214, 30);
+            this.labelX10.Size = new System.Drawing.Size(281, 30);
             this.labelX10.TabIndex = 3;
-            this.labelX10.Text = "Trường ĐH Công Nghệ Thông Tin";
+            this.labelX10.Text = "Trường ĐH Công Nghệ Thông Tin - Khoa CNPM";
             // 
             // btnOK
             // 
