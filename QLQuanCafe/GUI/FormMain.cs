@@ -56,5 +56,11 @@ namespace QLQuanCafe.GUI
         {
             // TODO write it later
         }
+
+        private void buttonX25_Click(object sender, EventArgs e)
+        {
+            new XacNhanThanhToan().ShowDialog();
+           
+        }
     }
 }
