@@ -55,6 +55,8 @@ namespace QLQuanCafe.GUI
         private void buttonItem27_Click(object sender, EventArgs e)
         {
             // TODO write it later
+            new QLQuanCafe.GUI.Dialog.About().ShowDialog();
+       
         }
 
         private void buttonX25_Click(object sender, EventArgs e)
