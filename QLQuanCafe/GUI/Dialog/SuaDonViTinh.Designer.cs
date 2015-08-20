@@ -40,10 +40,12 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             // LDonViTinh
             // 
+            this.LDonViTinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
             // 
             // 
             this.LDonViTinh.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.LDonViTinh.ForeColor = System.Drawing.Color.Black;
             this.LDonViTinh.Location = new System.Drawing.Point(31, 37);
             this.LDonViTinh.Name = "LDonViTinh";
             this.LDonViTinh.Size = new System.Drawing.Size(99, 23);
@@ -92,18 +94,19 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(284, 128);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(284, 146);
             this.Controls.Add(this.bntCancel);
             this.Controls.Add(this.buttonX1);
             this.Controls.Add(this.DonViTinh);
             this.Controls.Add(this.LDonViTinh);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "SuaDonViTinh";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.TitleText = "<font color=\"#000000\">Sửa Đơn Vị Tính</font><font color=\"#000000\"></font>";
+            this.TitleText = "<font color=\"#ffffff\">Sửa Đơn Vị Tính</font><font color=\"#000000\"></font>";
             this.Load += new System.EventHandler(this.SuaDonViTinh_Load);
             this.ResumeLayout(false);
 

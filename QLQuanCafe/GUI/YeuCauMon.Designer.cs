@@ -172,12 +172,13 @@ namespace QLQuanCafe.GUI
             this.Controls.Add(this.LSoLuong);
             this.Controls.Add(this.LDonGia);
             this.DoubleBuffered = true;
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "YeuCauMon";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.TitleText = "<font color=\"#000000\">Gọi Món</font><font color=\"#000000\"></font>";
+            this.TitleText = "<font color=\"#ffffff\">Gọi Món</font><font color=\"#000000\"></font>";
             this.Load += new System.EventHandler(this.YeuCauMon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.SoLuong)).EndInit();
             this.ResumeLayout(false);

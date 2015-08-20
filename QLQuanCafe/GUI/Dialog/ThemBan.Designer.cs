@@ -120,12 +120,13 @@ namespace QLQuanCafe.GUI.Dialog
             this.Controls.Add(this.IOpenTable);
             this.Controls.Add(this.txtTenBan);
             this.Controls.Add(this.ATable);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "ThemBan";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.TitleText = "<font color=\"#000000\">Thêm Bàn</font><font color=\"#000000\"></font>";
+            this.TitleText = "<font color=\"#ffffff\">Thêm Bàn</font><font color=\"#000000\"></font>";
             this.Load += new System.EventHandler(this.ThemBan_Load);
             this.ResumeLayout(false);
 

@@ -40,10 +40,12 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             // labelX1
             // 
+            this.labelX1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
             // 
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.ForeColor = System.Drawing.Color.Black;
             this.labelX1.Location = new System.Drawing.Point(13, 33);
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(75, 23);
@@ -94,18 +96,19 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(262, 134);
+            this.ClientSize = new System.Drawing.Size(280, 142);
             this.Controls.Add(this.btnHuyBo);
             this.Controls.Add(this.btnDongY);
             this.Controls.Add(this.txtTenBan);
             this.Controls.Add(this.labelX1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "SuaBan";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.TitleText = "<font color=\"#000000\">Sửa Bàn</font><font color=\"#000000\"></font>";
+            this.TitleText = "<font color=\"#ffffff\">Sửa Bàn</font><font color=\"#000000\"></font>";
             this.Load += new System.EventHandler(this.SuaBan_Load);
             this.ResumeLayout(false);
 

@@ -40,12 +40,12 @@ namespace QLQuanCafe.GUI.Dialog
             this.btnDongY = new DevComponents.DotNetBar.ButtonX();
             this.btnHuy = new DevComponents.DotNetBar.ButtonX();
             this.cbxDonViTinh = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.unitDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dipDonGia = new DevComponents.Editors.DoubleInput();
             this.txtTenNguyenLieu = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.btnThemDonViTinh = new DevComponents.DotNetBar.ButtonX();
-            this.unitDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dipDonGia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unitDataBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dipDonGia)).BeginInit();
             this.SuspendLayout();
             // 
             // LTenNguyenLieu
@@ -122,6 +122,10 @@ namespace QLQuanCafe.GUI.Dialog
             this.cbxDonViTinh.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cbxDonViTinh.TabIndex = 5;
             // 
+            // unitDataBindingSource
+            // 
+            this.unitDataBindingSource.DataSource = typeof(QLQuanCafe.DTO.UnitData);
+            // 
             // dipDonGia
             // 
             // 
@@ -164,10 +168,6 @@ namespace QLQuanCafe.GUI.Dialog
             this.btnThemDonViTinh.TabIndex = 8;
             this.btnThemDonViTinh.Text = "+";
             // 
-            // unitDataBindingSource
-            // 
-            this.unitDataBindingSource.DataSource = typeof(QLQuanCafe.DTO.UnitData);
-            // 
             // frmSuaThongTinNguyenLieu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -183,15 +183,16 @@ namespace QLQuanCafe.GUI.Dialog
             this.Controls.Add(this.LDonGia);
             this.Controls.Add(this.LDonViTinh);
             this.Controls.Add(this.LTenNguyenLieu);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "frmSuaThongTinNguyenLieu";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.TitleText = "<font color=\"#000000\">Sửa Thông Tin Nguyên Liệu</font>";
+            this.TitleText = "<font color=\"#ffffff\">Sửa Thông Tin Nguyên Liệu</font>";
             this.Load += new System.EventHandler(this.SuaThongTinNguyenLieu_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dipDonGia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.unitDataBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dipDonGia)).EndInit();
             this.ResumeLayout(false);
 
         }

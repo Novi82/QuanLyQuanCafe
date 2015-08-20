@@ -57,7 +57,7 @@ namespace QLQuanCafe.GUI
             // 
             this.textBoxX1.Border.Class = "TextBoxBorder";
             this.textBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-           // this.textBoxX1.DisabledBackColor = System.Drawing.Color.White;
+            this.textBoxX1.DisabledBackColor = System.Drawing.Color.White;
             this.textBoxX1.ForeColor = System.Drawing.Color.Black;
             this.textBoxX1.Location = new System.Drawing.Point(369, 90);
             this.textBoxX1.Name = "textBoxX1";
@@ -66,7 +66,7 @@ namespace QLQuanCafe.GUI
             // 
             // labelX4
             // 
-            this.labelX4.BackColor = System.Drawing.Color.White;
+            this.labelX4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
             // 
             // 
@@ -157,7 +157,7 @@ namespace QLQuanCafe.GUI
             // 
             // labelX3
             // 
-            this.labelX3.BackColor = System.Drawing.Color.White;
+            this.labelX3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
             // 
             // 
@@ -171,7 +171,7 @@ namespace QLQuanCafe.GUI
             // 
             // labelX5
             // 
-            this.labelX5.BackColor = System.Drawing.Color.White;
+            this.labelX5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
             // 
             // 
@@ -207,10 +207,12 @@ namespace QLQuanCafe.GUI
             // 
             // labelX6
             // 
+            this.labelX6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
             // 
             // 
             this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX6.ForeColor = System.Drawing.Color.Black;
             this.labelX6.Location = new System.Drawing.Point(53, 36);
             this.labelX6.Name = "labelX6";
             this.labelX6.Size = new System.Drawing.Size(54, 23);
@@ -219,10 +221,12 @@ namespace QLQuanCafe.GUI
             // 
             // labelX7
             // 
+            this.labelX7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
             // 
             // 
             this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX7.ForeColor = System.Drawing.Color.Black;
             this.labelX7.Location = new System.Drawing.Point(53, 87);
             this.labelX7.Name = "labelX7";
             this.labelX7.Size = new System.Drawing.Size(44, 23);
@@ -231,6 +235,8 @@ namespace QLQuanCafe.GUI
             // 
             // richTextBox1
             // 
+            this.richTextBox1.BackColor = System.Drawing.Color.White;
+            this.richTextBox1.ForeColor = System.Drawing.Color.Black;
             this.richTextBox1.Location = new System.Drawing.Point(84, 180);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(406, 96);
@@ -241,8 +247,8 @@ namespace QLQuanCafe.GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(540, 360);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(526, 360);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.textBoxX1);
             this.Controls.Add(this.labelX7);
@@ -258,10 +264,11 @@ namespace QLQuanCafe.GUI
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "DatBan";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.TitleText = "<font color=\"#000000\">Đặt Bàn</font><font color=\"#000000\"></font>";
+            this.TitleText = "<font color=\"#ffffff\">Đặt Bàn</font><font color=\"#000000\"></font>";
             this.Load += new System.EventHandler(this.DatBan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeInput1)).EndInit();
             this.ResumeLayout(false);

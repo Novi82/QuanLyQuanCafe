@@ -114,6 +114,18 @@
     <Compile Include="GUI\DatBan.Designer.cs">
       <DependentUpon>DatBan.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Dialog\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Dialog\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Dialog\ThongTin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Dialog\ThongTin.Designer.cs">
+      <DependentUpon>ThongTin.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\DoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -287,6 +299,12 @@
     <EmbeddedResource Include="GUI\DatBan.resx">
       <DependentUpon>DatBan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Dialog\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Dialog\ThongTin.resx">
+      <DependentUpon>ThongTin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\DoiMatKhau.resx">
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
@@ -412,6 +430,7 @@
     <Content Include="Resources\AddTable.png" />
     <Content Include="Resources\AddUsers.png" />
     <Content Include="Resources\AddUsers2.png" />
+    <None Include="Resources\Confirm.png" />
     <Content Include="Resources\Doanhthu.png" />
     <Content Include="Resources\donvitinh.png" />
     <Content Include="Resources\Hoadon.png" />

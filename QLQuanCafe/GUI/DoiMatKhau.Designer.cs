@@ -186,10 +186,11 @@ namespace QLQuanCafe.GUI
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "DoiMatKhau";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.TitleText = "<font color=\"#000000\">Đổi Mật Khẩu</font><font color=\"#FFFFFF\"></font>";
+            this.TitleText = "<font color=\"#ffffff\">Đổi Mật Khẩu</font><font color=\"#FFFFFF\"></font>";
             this.Load += new System.EventHandler(this.DoiMatKhau_Load);
             this.ResumeLayout(false);
 

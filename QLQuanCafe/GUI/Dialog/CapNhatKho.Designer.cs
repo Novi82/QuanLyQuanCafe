@@ -231,12 +231,13 @@ namespace QLQuanCafe.GUI.Dialog
             this.Controls.Add(this.LSoLuong);
             this.Controls.Add(this.LDonViTinh);
             this.Controls.Add(this.LMaNguyenLieu);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "CapNhatKho";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.TitleText = "<font color=\"#000000\">Hiệu Chỉnh Số Lượng</font><font color=\"#000000\"></font>";
+            this.TitleText = "<font color=\"#ffffff\">Hiệu Chỉnh Số Lượng</font><font color=\"#000000\"></font>";
             this.Load += new System.EventHandler(this.HieuChinhSoLuong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dipSoLuong)).EndInit();
             this.ResumeLayout(false);

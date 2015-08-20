@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnThemKhuVuc.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 346</value>
+    <value>12, 380</value>
   </data>
   <data name="btnThemKhuVuc.Size" type="System.Drawing.Size, System.Drawing">
     <value>81, 23</value>
@@ -141,10 +141,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnThemKhuVuc.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="btnSuaKv.Location" type="System.Drawing.Point, System.Drawing">
-    <value>116, 346</value>
+    <value>124, 380</value>
   </data>
   <data name="btnSuaKv.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -165,10 +165,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnSuaKv.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="btnXoaKv.Location" type="System.Drawing.Point, System.Drawing">
-    <value>227, 346</value>
+    <value>233, 380</value>
   </data>
   <data name="btnXoaKv.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -189,10 +189,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnXoaKv.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="btnThemBan.Location" type="System.Drawing.Point, System.Drawing">
-    <value>336, 346</value>
+    <value>431, 380</value>
   </data>
   <data name="btnThemBan.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -213,10 +213,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnThemBan.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="btnSuaBan.Location" type="System.Drawing.Point, System.Drawing">
-    <value>441, 346</value>
+    <value>542, 380</value>
   </data>
   <data name="btnSuaBan.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -237,10 +237,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnSuaBan.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="btnXoaBan.Location" type="System.Drawing.Point, System.Drawing">
-    <value>549, 346</value>
+    <value>662, 380</value>
   </data>
   <data name="btnXoaBan.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -261,7 +261,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnXoaBan.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="labelX1.Location" type="System.Drawing.Point, System.Drawing">
     <value>23, 13</value>
@@ -288,7 +288,7 @@
     <value>3</value>
   </data>
   <data name="labelX2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>327, 13</value>
+    <value>431, 13</value>
   </data>
   <data name="labelX2.Size" type="System.Drawing.Size, System.Drawing">
     <value>144, 23</value>
@@ -315,7 +315,7 @@
     <value>Mã Bàn</value>
   </data>
   <data name="tableIdDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
-    <value>50</value>
+    <value>80</value>
   </data>
   <data name="tableNameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Tên Bàn</value>
@@ -329,18 +329,21 @@
   <data name="noteDataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
     <value>Ghi Chú</value>
   </data>
+  <data name="noteDataGridViewTextBoxColumn1.Width" type="System.Int32, mscorlib">
+    <value>140</value>
+  </data>
   <metadata name="tableDataBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>185, 17</value>
   </metadata>
   <data name="dataGridViewX2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>327, 37</value>
+    <value>431, 37</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="dataGridViewX2.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
   </data>
   <data name="dataGridViewX2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>489, 283</value>
+    <value>522, 307</value>
   </data>
   <data name="dataGridViewX2.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -360,14 +363,14 @@
   <data name="areaIdDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Mã Khu Vực</value>
   </data>
-  <data name="areaIdDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
-    <value>50</value>
-  </data>
   <data name="areaNameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Tên Khu Vực</value>
   </data>
   <data name="noteDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Ghi Chú</value>
+  </data>
+  <data name="noteDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>162</value>
   </data>
   <metadata name="areaDataBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -376,7 +379,7 @@
     <value>12, 37</value>
   </data>
   <data name="dataGridViewX1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>289, 283</value>
+    <value>365, 307</value>
   </data>
   <data name="dataGridViewX1.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -393,6 +396,30 @@
   <data name="&gt;&gt;dataGridViewX1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="btnThoat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>788, 380</value>
+  </data>
+  <data name="btnThoat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btnThoat.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnThoat.Text" xml:space="preserve">
+    <value>Thoát</value>
+  </data>
+  <data name="&gt;&gt;btnThoat.Name" xml:space="preserve">
+    <value>btnThoat</value>
+  </data>
+  <data name="&gt;&gt;btnThoat.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=12.1.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;btnThoat.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnThoat.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -403,7 +430,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>837, 396</value>
+    <value>969, 426</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

@@ -46,9 +46,9 @@ namespace QLQuanCafe.GUI.Form
             this.btnTim = new DevComponents.DotNetBar.ButtonX();
             this.btnDatLai = new DevComponents.DotNetBar.ButtonX();
             this.dgvHoaDon = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.areaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnThoat = new DevComponents.DotNetBar.ButtonX();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.areaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.billIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalMoneyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -236,6 +236,7 @@ namespace QLQuanCafe.GUI.Form
             // 
             this.dgvHoaDon.AllowUserToAddRows = false;
             this.dgvHoaDon.AllowUserToDeleteRows = false;
+            this.dgvHoaDon.AllowUserToResizeRows = false;
             this.dgvHoaDon.AutoGenerateColumns = false;
             this.dgvHoaDon.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgvHoaDon.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -247,7 +248,7 @@ namespace QLQuanCafe.GUI.Form
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvHoaDon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvHoaDon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.billIdDataGridViewTextBoxColumn,
             this.timeDataGridViewTextBoxColumn,
@@ -268,10 +269,20 @@ namespace QLQuanCafe.GUI.Form
             this.dgvHoaDon.MultiSelect = false;
             this.dgvHoaDon.Name = "dgvHoaDon";
             this.dgvHoaDon.ReadOnly = true;
+            this.dgvHoaDon.RowHeadersVisible = false;
+            this.dgvHoaDon.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvHoaDon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHoaDon.Size = new System.Drawing.Size(887, 414);
             this.dgvHoaDon.TabIndex = 4;
             this.dgvHoaDon.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvHoaDon_RowsAdded);
+            // 
+            // areaDataGridViewTextBoxColumn
+            // 
+            this.areaDataGridViewTextBoxColumn.HeaderText = "Khu Vực";
+            this.areaDataGridViewTextBoxColumn.Name = "areaDataGridViewTextBoxColumn";
+            this.areaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.areaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.areaDataGridViewTextBoxColumn.Width = 150;
             // 
             // btnThoat
             // 
@@ -292,14 +303,6 @@ namespace QLQuanCafe.GUI.Form
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTextBoxColumn1.Width = 150;
-            // 
-            // areaDataGridViewTextBoxColumn
-            // 
-            this.areaDataGridViewTextBoxColumn.HeaderText = "Khu Vực";
-            this.areaDataGridViewTextBoxColumn.Name = "areaDataGridViewTextBoxColumn";
-            this.areaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.areaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.areaDataGridViewTextBoxColumn.Width = 150;
             // 
             // billIdDataGridViewTextBoxColumn
             // 
@@ -356,12 +359,13 @@ namespace QLQuanCafe.GUI.Form
             this.Controls.Add(this.labelX1);
             this.Controls.Add(this.dtiDenNgay);
             this.Controls.Add(this.dtiTuNgay);
+            this.DoubleBuffered = true;
             this.MaximizeBox = false;
             this.Name = "HoaDon";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HoaDon";
-            this.TitleText = "<font color=\"#000000\">Hóa Đơn\r\n</font>";
+            this.TitleText = "<font color=\"#ffffff\">Hóa Đơn\r\n</font>";
             this.Load += new System.EventHandler(this.HoaDon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtiTuNgay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtiDenNgay)).EndInit();

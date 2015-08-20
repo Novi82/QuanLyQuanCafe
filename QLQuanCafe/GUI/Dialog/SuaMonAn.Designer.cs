@@ -127,7 +127,7 @@ namespace QLQuanCafe.GUI.Dialog
             this.btnHuy.Size = new System.Drawing.Size(75, 23);
             this.btnHuy.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnHuy.TabIndex = 22;
-            this.btnHuy.Text = "Cancel";
+            this.btnHuy.Text = "Hủy Bỏ";
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // bntDongY
@@ -241,12 +241,13 @@ namespace QLQuanCafe.GUI.Dialog
             this.Controls.Add(this.LLoaiMon);
             this.Controls.Add(this.LTenMonAn);
             this.Controls.Add(this.imgMonAn);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "SuaMonAn";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.TitleText = "<font color=\"#000000\">Sửa Món Ăn</font><font color=\"#000000\"></font>";
+            this.TitleText = "<font color=\"#ffffff\">Sửa Món Ăn</font><font color=\"#000000\"></font>";
             this.Load += new System.EventHandler(this.SuaMonAn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.menuCategoryDataBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dipDonGia)).EndInit();

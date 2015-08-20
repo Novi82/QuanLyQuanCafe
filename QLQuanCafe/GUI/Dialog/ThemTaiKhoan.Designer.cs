@@ -43,10 +43,10 @@ namespace QLQuanCafe.GUI.Dialog
             this.txtMatKhau2 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.cbxQuyen = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.permissionDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnDongY = new DevComponents.DotNetBar.ButtonX();
             this.btnHuy = new DevComponents.DotNetBar.ButtonX();
             this.IAddUser = new DevComponents.DotNetBar.LabelX();
-            this.permissionDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.permissionDataBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -181,6 +181,10 @@ namespace QLQuanCafe.GUI.Dialog
             this.cbxQuyen.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cbxQuyen.TabIndex = 9;
             // 
+            // permissionDataBindingSource
+            // 
+            this.permissionDataBindingSource.DataSource = typeof(QLQuanCafe.DTO.PermissionData);
+            // 
             // btnDongY
             // 
             this.btnDongY.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -220,10 +224,6 @@ namespace QLQuanCafe.GUI.Dialog
             this.IAddUser.TabIndex = 1;
             this.IAddUser.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
-            // permissionDataBindingSource
-            // 
-            this.permissionDataBindingSource.DataSource = typeof(QLQuanCafe.DTO.PermissionData);
-            // 
             // ThemTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -242,12 +242,13 @@ namespace QLQuanCafe.GUI.Dialog
             this.Controls.Add(this.AUser);
             this.Controls.Add(this.IAddUser);
             this.Controls.Add(this.labelX1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "ThemTaiKhoan";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.TitleText = "<font color=\"#000000\">Thêm Tài Khoản</font><font color=\"#000000\"></font>";
+            this.TitleText = "<font color=\"#ffffff\">Thêm Tài Khoản</font><font color=\"#000000\"></font>";
             this.Load += new System.EventHandler(this.ThemTaiKhoan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.permissionDataBindingSource)).EndInit();
             this.ResumeLayout(false);

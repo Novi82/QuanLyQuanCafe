@@ -55,16 +55,16 @@ namespace QLQuanCafe.GUI
             this.TUser.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.TUser.DisabledBackColor = System.Drawing.Color.White;
             this.TUser.ForeColor = System.Drawing.Color.Black;
-            this.TUser.Location = new System.Drawing.Point(175, 140);
+            this.TUser.Location = new System.Drawing.Point(145, 140);
             this.TUser.Name = "TUser";
-            this.TUser.Size = new System.Drawing.Size(140, 20);
+            this.TUser.Size = new System.Drawing.Size(121, 20);
             this.TUser.TabIndex = 0;
             // 
             // BLogin
             // 
             this.BLogin.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.BLogin.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.BLogin.Location = new System.Drawing.Point(54, 247);
+            this.BLogin.Location = new System.Drawing.Point(41, 259);
             this.BLogin.Name = "BLogin";
             this.BLogin.Size = new System.Drawing.Size(75, 23);
             this.BLogin.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -79,7 +79,7 @@ namespace QLQuanCafe.GUI
             this.BCancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.BCancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.BCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BCancel.Location = new System.Drawing.Point(223, 247);
+            this.BCancel.Location = new System.Drawing.Point(191, 259);
             this.BCancel.Name = "BCancel";
             this.BCancel.Size = new System.Drawing.Size(75, 23);
             this.BCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -102,7 +102,7 @@ namespace QLQuanCafe.GUI
             // 
             this.Pass.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.Pass.ForeColor = System.Drawing.Color.Black;
-            this.Pass.Location = new System.Drawing.Point(54, 188);
+            this.Pass.Location = new System.Drawing.Point(24, 188);
             this.Pass.Name = "Pass";
             this.Pass.Size = new System.Drawing.Size(75, 23);
             this.Pass.TabIndex = 5;
@@ -116,7 +116,7 @@ namespace QLQuanCafe.GUI
             // 
             this.User.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.User.ForeColor = System.Drawing.Color.Black;
-            this.User.Location = new System.Drawing.Point(54, 140);
+            this.User.Location = new System.Drawing.Point(24, 140);
             this.User.Name = "User";
             this.User.Size = new System.Drawing.Size(92, 23);
             this.User.TabIndex = 6;
@@ -132,10 +132,10 @@ namespace QLQuanCafe.GUI
             this.TPass.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.TPass.DisabledBackColor = System.Drawing.Color.White;
             this.TPass.ForeColor = System.Drawing.Color.Black;
-            this.TPass.Location = new System.Drawing.Point(175, 191);
+            this.TPass.Location = new System.Drawing.Point(145, 191);
             this.TPass.Name = "TPass";
             this.TPass.PasswordChar = '*';
-            this.TPass.Size = new System.Drawing.Size(140, 20);
+            this.TPass.Size = new System.Drawing.Size(121, 20);
             this.TPass.TabIndex = 7;
             this.TPass.UseSystemPasswordChar = true;
             // 
@@ -148,7 +148,7 @@ namespace QLQuanCafe.GUI
             this.ILogin.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ILogin.ForeColor = System.Drawing.Color.Black;
             this.ILogin.Image = ((System.Drawing.Image)(resources.GetObject("ILogin.Image")));
-            this.ILogin.Location = new System.Drawing.Point(121, 3);
+            this.ILogin.Location = new System.Drawing.Point(96, 3);
             this.ILogin.Name = "ILogin";
             this.ILogin.Size = new System.Drawing.Size(111, 119);
             this.ILogin.TabIndex = 8;
@@ -160,7 +160,7 @@ namespace QLQuanCafe.GUI
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.CancelButton = this.BCancel;
-            this.ClientSize = new System.Drawing.Size(346, 312);
+            this.ClientSize = new System.Drawing.Size(310, 312);
             this.Controls.Add(this.ILogin);
             this.Controls.Add(this.TPass);
             this.Controls.Add(this.User);
@@ -168,12 +168,13 @@ namespace QLQuanCafe.GUI
             this.Controls.Add(this.BCancel);
             this.Controls.Add(this.BLogin);
             this.Controls.Add(this.TUser);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "Login";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.TitleText = "<font color=\"#000000\" >Đăng Nhập</font><font color=\"#0072BC\"></font>";
+            this.TitleText = "<font color=\"#ffffff\" >Đăng Nhập</font><font color=\"#0072BC\"></font>";
             this.Load += new System.EventHandler(this.DangNhap_Load);
             this.ResumeLayout(false);
 

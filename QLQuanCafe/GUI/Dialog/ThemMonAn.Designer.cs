@@ -205,12 +205,13 @@ namespace QLQuanCafe.GUI.Dialog
             this.Controls.Add(this.LDonGia);
             this.Controls.Add(this.LTenMonAn);
             this.Controls.Add(this.imgMonAn);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "ThemMonAn";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.TitleText = "<font color=\"#000000\">Thêm Món</font><font color=\"#000000\"></font>";
+            this.TitleText = "<font color=\"#ffffff\">Thêm Món</font><font color=\"#000000\"></font>";
             this.Load += new System.EventHandler(this.ThemMonAn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.unitDataBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dipDonGia)).EndInit();
