@@ -46,7 +46,7 @@ namespace QLQuanCafe.GUI
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.BackColor = System.Drawing.Color.White;
+            this.radioButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.radioButton1.ForeColor = System.Drawing.Color.Black;
             this.radioButton1.Location = new System.Drawing.Point(24, 38);
             this.radioButton1.Name = "radioButton1";
@@ -59,7 +59,7 @@ namespace QLQuanCafe.GUI
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.BackColor = System.Drawing.Color.White;
+            this.radioButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.radioButton2.ForeColor = System.Drawing.Color.Black;
             this.radioButton2.Location = new System.Drawing.Point(235, 38);
             this.radioButton2.Name = "radioButton2";
@@ -84,7 +84,7 @@ namespace QLQuanCafe.GUI
             // 
             // labelX1
             // 
-            this.labelX1.BackColor = System.Drawing.Color.White;
+            this.labelX1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
             // 
             // 
@@ -111,7 +111,7 @@ namespace QLQuanCafe.GUI
             // 
             // labelX2
             // 
-            this.labelX2.BackColor = System.Drawing.Color.White;
+            this.labelX2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             // 
             // 
             // 

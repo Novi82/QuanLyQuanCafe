@@ -192,7 +192,7 @@
     <value>8</value>
   </data>
   <data name="btnThemBan.Location" type="System.Drawing.Point, System.Drawing">
-    <value>397, 380</value>
+    <value>431, 380</value>
   </data>
   <data name="btnThemBan.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -216,7 +216,7 @@
     <value>7</value>
   </data>
   <data name="btnSuaBan.Location" type="System.Drawing.Point, System.Drawing">
-    <value>508, 380</value>
+    <value>542, 380</value>
   </data>
   <data name="btnSuaBan.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -240,7 +240,7 @@
     <value>6</value>
   </data>
   <data name="btnXoaBan.Location" type="System.Drawing.Point, System.Drawing">
-    <value>628, 380</value>
+    <value>662, 380</value>
   </data>
   <data name="btnXoaBan.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -264,7 +264,7 @@
     <value>5</value>
   </data>
   <data name="labelX1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 13</value>
+    <value>23, 13</value>
   </data>
   <data name="labelX1.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -288,7 +288,7 @@
     <value>3</value>
   </data>
   <data name="labelX2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>397, 13</value>
+    <value>431, 13</value>
   </data>
   <data name="labelX2.Size" type="System.Drawing.Size, System.Drawing">
     <value>144, 23</value>
@@ -336,7 +336,7 @@
     <value>185, 17</value>
   </metadata>
   <data name="dataGridViewX2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>397, 37</value>
+    <value>431, 37</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="dataGridViewX2.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
@@ -397,7 +397,7 @@
     <value>0</value>
   </data>
   <data name="btnThoat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>754, 380</value>
+    <value>788, 380</value>
   </data>
   <data name="btnThoat.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -430,7 +430,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>932, 426</value>
+    <value>969, 426</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
