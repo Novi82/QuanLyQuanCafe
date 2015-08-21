@@ -77,23 +77,17 @@ namespace QLQuanCafe.GUI
         private void FormMain_Load(object sender, EventArgs e)
         {
             LoadKhuVuc_Ban();
-            tabKhuVuc1.Load(areaAndTableBll.ListArea);
+            LoadThucDon();
         }
 
         private void LoadKhuVuc_Ban()
         {
-//            List<AreaData> listArea = areaAndTableBll.ListArea;
-//            foreach (AreaData area in listArea)
-//            {
-//                SuperTabItem areaTabItem = new  SuperTabItem();
-//                areaTabItem.Text = area.AreaName;
-//                
-//                tctKhuVuc.Tabs.Add(areaTabItem);
-//              
-//
-//            }
+            khuVuc_BanUC1.LoadKhuVuc();
         }
 
-
+        private void LoadThucDon()
+        {
+            thucDonUC1.LoadLoaiMonAn();
+        }
     }
 }

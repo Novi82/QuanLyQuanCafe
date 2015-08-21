@@ -27,7 +27,7 @@ namespace QLQuanCafe.GUI.Form
             {
                 if (bll.SelectAccountCommand.CanExecute(null))
                 {
-                    bll.SelectAccountCommand.Execute(dgvTaiKhoan.SelectedRows[0]);
+                    bll.SelectAccountCommand.Execute(dgvTaiKhoan.SelectedRows[0].DataBoundItem);
                 }
             }
         }

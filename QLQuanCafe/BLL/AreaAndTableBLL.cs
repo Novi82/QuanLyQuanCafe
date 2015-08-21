@@ -290,7 +290,7 @@ namespace QLQuanCafe.BLL
         {
             if (obj != null)
             {
-                AreaSelected = ((DataGridViewRow)obj).DataBoundItem as AreaData;
+                AreaSelected = obj as AreaData;
                 ListTable = LocatorDataSource.TableDS.GetAllTable(AreaSelected);
             }
         }
@@ -299,7 +299,7 @@ namespace QLQuanCafe.BLL
         {
             if (obj != null)
             {
-                TableSelected = ((DataGridViewRow)obj).DataBoundItem as TableData;
+                TableSelected = obj as TableData;
             }
         }
 

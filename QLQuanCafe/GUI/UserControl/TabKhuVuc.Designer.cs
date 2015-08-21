@@ -28,9 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("1");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("2");
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("3");
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TabKhuVuc));
             this.tctKhuVuc = new DevComponents.DotNetBar.SuperTabControl();
             this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.listViewEx1 = new DevComponents.DotNetBar.Controls.ListViewEx();
+            this.tableImage = new System.Windows.Forms.ImageList(this.components);
             this.superTabItem1 = new DevComponents.DotNetBar.SuperTabItem();
             ((System.ComponentModel.ISupportInitialize)(this.tctKhuVuc)).BeginInit();
             this.tctKhuVuc.SuspendLayout();
@@ -64,7 +70,7 @@
             this.tctKhuVuc.SelectedTabFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.tctKhuVuc.SelectedTabIndex = 2;
             this.tctKhuVuc.ShowFocusRectangle = true;
-            this.tctKhuVuc.Size = new System.Drawing.Size(348, 434);
+            this.tctKhuVuc.Size = new System.Drawing.Size(243, 434);
             this.tctKhuVuc.TabFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tctKhuVuc.TabIndex = 29;
             this.tctKhuVuc.Tabs.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -78,7 +84,7 @@
             this.superTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControlPanel1.Location = new System.Drawing.Point(0, 33);
             this.superTabControlPanel1.Name = "superTabControlPanel1";
-            this.superTabControlPanel1.Size = new System.Drawing.Size(348, 401);
+            this.superTabControlPanel1.Size = new System.Drawing.Size(243, 401);
             this.superTabControlPanel1.TabIndex = 0;
             this.superTabControlPanel1.TabItem = this.superTabItem1;
             // 
@@ -93,11 +99,22 @@
             this.listViewEx1.DisabledBackColor = System.Drawing.Color.Empty;
             this.listViewEx1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewEx1.ForeColor = System.Drawing.Color.Black;
+            this.listViewEx1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1,
+            listViewItem2,
+            listViewItem3});
+            this.listViewEx1.LargeImageList = this.tableImage;
             this.listViewEx1.Location = new System.Drawing.Point(0, 0);
             this.listViewEx1.Name = "listViewEx1";
-            this.listViewEx1.Size = new System.Drawing.Size(348, 401);
+            this.listViewEx1.Size = new System.Drawing.Size(243, 401);
             this.listViewEx1.TabIndex = 0;
             this.listViewEx1.UseCompatibleStateImageBehavior = false;
+            // 
+            // tableImage
+            // 
+            this.tableImage.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("tableImage.ImageStream")));
+            this.tableImage.TransparentColor = System.Drawing.Color.Transparent;
+            this.tableImage.Images.SetKeyName(0, "OpenTable");
             // 
             // superTabItem1
             // 
@@ -112,7 +129,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tctKhuVuc);
             this.Name = "TabKhuVuc";
-            this.Size = new System.Drawing.Size(348, 434);
+            this.Size = new System.Drawing.Size(243, 434);
+            this.Load += new System.EventHandler(this.TabKhuVuc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tctKhuVuc)).EndInit();
             this.tctKhuVuc.ResumeLayout(false);
             this.superTabControlPanel1.ResumeLayout(false);
@@ -126,5 +144,6 @@
         private DevComponents.DotNetBar.SuperTabControlPanel superTabControlPanel1;
         private DevComponents.DotNetBar.Controls.ListViewEx listViewEx1;
         private DevComponents.DotNetBar.SuperTabItem superTabItem1;
+        private System.Windows.Forms.ImageList tableImage;
     }
 }

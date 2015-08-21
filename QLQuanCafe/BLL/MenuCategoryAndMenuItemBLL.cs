@@ -19,7 +19,11 @@ namespace QLQuanCafe.BLL
         private List<MenuCategoryData> _listMenuCategory;
         public List<MenuCategoryData> ListMenuCategory
         {
-            get { return _listMenuCategory; }
+            get
+            {
+                Load();
+                return _listMenuCategory;
+            }
             set { SetProperty(ref _listMenuCategory, value); }
         }
 
@@ -276,7 +280,7 @@ namespace QLQuanCafe.BLL
         {
             if (obj != null)
             {
-                MenuCategorySelected = ((DataGridViewRow)obj).DataBoundItem as MenuCategoryData;
+                MenuCategorySelected = obj as MenuCategoryData;
 
                 try
                 {
@@ -293,7 +297,7 @@ namespace QLQuanCafe.BLL
         {
             if (obj != null)
             {
-                MenuItemSelected = ((DataGridViewRow)obj).DataBoundItem as MenuItemData;
+                MenuItemSelected = obj as MenuItemData;
             }
         }
 

@@ -270,11 +270,41 @@
     <Compile Include="GUI\Form\ThucDon.Designer.cs">
       <DependentUpon>ThucDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\UserControl\DatMonUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControl\DatMonUC.Designer.cs">
+      <DependentUpon>DatMonUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControl\HoaDonUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControl\HoaDonUC.Designer.cs">
+      <DependentUpon>HoaDonUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControl\KhuVuc_BanUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControl\KhuVuc_BanUC.Designer.cs">
+      <DependentUpon>KhuVuc_BanUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\UserControl\TabKhuVuc.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GUI\UserControl\TabKhuVuc.Designer.cs">
       <DependentUpon>TabKhuVuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControl\ThucDonUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControl\ThucDonUC.Designer.cs">
+      <DependentUpon>ThucDonUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControl\TongTienUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControl\TongTienUC.Designer.cs">
+      <DependentUpon>TongTienUC.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\XacNhanThanhToan.cs">
       <SubType>Form</SubType>
@@ -383,8 +413,23 @@
     <EmbeddedResource Include="GUI\Form\ThucDon.resx">
       <DependentUpon>ThucDon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UserControl\DatMonUC.resx">
+      <DependentUpon>DatMonUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UserControl\HoaDonUC.resx">
+      <DependentUpon>HoaDonUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UserControl\KhuVuc_BanUC.resx">
+      <DependentUpon>KhuVuc_BanUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\UserControl\TabKhuVuc.resx">
       <DependentUpon>TabKhuVuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UserControl\ThucDonUC.resx">
+      <DependentUpon>ThucDonUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UserControl\TongTienUC.resx">
+      <DependentUpon>TongTienUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\XacNhanThanhToan.resx">
       <DependentUpon>XacNhanThanhToan.cs</DependentUpon>

@@ -149,7 +149,7 @@ namespace QLQuanCafe.BLL
         {
             if (obj != null)
             {
-                UnitSelected = ((DataGridViewRow) obj).DataBoundItem as UnitData;
+                UnitSelected = obj as UnitData;
             }
         }
 

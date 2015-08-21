@@ -60,11 +60,11 @@ namespace QLQuanCafe.GUI.Form
             this.noteDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewX1 = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.areaDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnThoat = new DevComponents.DotNetBar.ButtonX();
             this.areaIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.areaNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.areaDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnThoat = new DevComponents.DotNetBar.ButtonX();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).BeginInit();
@@ -287,19 +287,6 @@ namespace QLQuanCafe.GUI.Form
             this.dataGridViewX1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewX1.SelectionChanged += new System.EventHandler(this.dataGridViewX1_SelectionChanged);
             // 
-            // areaDataBindingSource
-            // 
-            this.areaDataBindingSource.DataSource = typeof(QLQuanCafe.DTO.AreaData);
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnThoat.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            resources.ApplyResources(this.btnThoat, "btnThoat");
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnThoat.Click += new System.EventHandler(this.btnXoaBan_Click);
-            // 
             // areaIdDataGridViewTextBoxColumn
             // 
             this.areaIdDataGridViewTextBoxColumn.DataPropertyName = "AreaId";
@@ -326,6 +313,19 @@ namespace QLQuanCafe.GUI.Form
             resources.ApplyResources(this.noteDataGridViewTextBoxColumn, "noteDataGridViewTextBoxColumn");
             this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
             this.noteDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // areaDataBindingSource
+            // 
+            this.areaDataBindingSource.DataSource = typeof(QLQuanCafe.DTO.AreaData);
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnThoat.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            resources.ApplyResources(this.btnThoat, "btnThoat");
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // QuanLyKhuVuc_Ban
             // 
