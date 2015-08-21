@@ -485,6 +485,7 @@
     <Content Include="Resources\AddUsers.png" />
     <Content Include="Resources\AddUsers2.png" />
     <None Include="Resources\Confirm.png" />
+    <None Include="Resources\background.bmp" />
     <Content Include="Resources\Doanhthu.png" />
     <Content Include="Resources\donvitinh.png" />
     <Content Include="Resources\Hoadon.png" />

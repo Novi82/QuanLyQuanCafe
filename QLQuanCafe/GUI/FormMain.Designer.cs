@@ -286,12 +286,6 @@ namespace QLQuanCafe.GUI
             this.itemContainer1 = new DevComponents.DotNetBar.ItemContainer();
             this.itemContainer2 = new DevComponents.DotNetBar.ItemContainer();
             this.itemContainer3 = new DevComponents.DotNetBar.ItemContainer();
-            this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem3 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem4 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem5 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem6 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem7 = new DevComponents.DotNetBar.ButtonItem();
             this.galleryContainer1 = new DevComponents.DotNetBar.GalleryContainer();
             this.labelItem8 = new DevComponents.DotNetBar.LabelItem();
             this.buttonItem8 = new DevComponents.DotNetBar.ButtonItem();
@@ -299,8 +293,6 @@ namespace QLQuanCafe.GUI
             this.buttonItem10 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem11 = new DevComponents.DotNetBar.ButtonItem();
             this.itemContainer4 = new DevComponents.DotNetBar.ItemContainer();
-            this.buttonItem12 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem13 = new DevComponents.DotNetBar.ButtonItem();
             this.itemContainer5 = new DevComponents.DotNetBar.ItemContainer();
             this.itemContainer117 = new DevComponents.DotNetBar.ItemContainer();
             this.galleryContainer67 = new DevComponents.DotNetBar.GalleryContainer();
@@ -311,7 +303,30 @@ namespace QLQuanCafe.GUI
             this.labelItem69 = new DevComponents.DotNetBar.LabelItem();
             this.galleryContainer70 = new DevComponents.DotNetBar.GalleryContainer();
             this.labelItem70 = new DevComponents.DotNetBar.LabelItem();
+            this.galleryContainer71 = new DevComponents.DotNetBar.GalleryContainer();
+            this.labelItem71 = new DevComponents.DotNetBar.LabelItem();
+            this.galleryContainer72 = new DevComponents.DotNetBar.GalleryContainer();
+            this.labelItem72 = new DevComponents.DotNetBar.LabelItem();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.thucDonUC1 = new QLQuanCafe.GUI.UserControl.ThucDonUC();
+            this.hoaDonUC1 = new QLQuanCafe.GUI.UserControl.HoaDonUC();
+            this.tongTienUC1 = new QLQuanCafe.GUI.UserControl.TongTienUC();
+            this.khuVuc_BanUC1 = new QLQuanCafe.GUI.UserControl.KhuVuc_BanUC();
+            this.datMonUC1 = new QLQuanCafe.GUI.UserControl.DatMonUC();
             this.ribbonControl2 = new DevComponents.DotNetBar.RibbonControl();
+            this.applicationButton1 = new DevComponents.DotNetBar.ApplicationButton();
+            this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
+            this.itemContainer6 = new DevComponents.DotNetBar.ItemContainer();
+            this.itemContainer7 = new DevComponents.DotNetBar.ItemContainer();
+            this.itemContainer8 = new DevComponents.DotNetBar.ItemContainer();
+            this.buttonItem3 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem4 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem5 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem6 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem7 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem12 = new DevComponents.DotNetBar.ButtonItem();
+            this.galleryContainer73 = new DevComponents.DotNetBar.GalleryContainer();
+            this.labelItem73 = new DevComponents.DotNetBar.LabelItem();
             this.ribbonPanel3 = new DevComponents.DotNetBar.RibbonPanel();
             this.ribbonBar3 = new DevComponents.DotNetBar.RibbonBar();
             this.buttonItem17 = new DevComponents.DotNetBar.ButtonItem();
@@ -346,21 +361,14 @@ namespace QLQuanCafe.GUI
             this.ribbonTabItem5 = new DevComponents.DotNetBar.RibbonTabItem();
             this.ribbonTabItem6 = new DevComponents.DotNetBar.RibbonTabItem();
             this.ribbonTabItem7 = new DevComponents.DotNetBar.RibbonTabItem();
-            this.galleryContainer71 = new DevComponents.DotNetBar.GalleryContainer();
-            this.labelItem71 = new DevComponents.DotNetBar.LabelItem();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.thucDonUC1 = new QLQuanCafe.GUI.UserControl.ThucDonUC();
-            this.hoaDonUC1 = new QLQuanCafe.GUI.UserControl.HoaDonUC();
-            this.tongTienUC1 = new QLQuanCafe.GUI.UserControl.TongTienUC();
-            this.khuVuc_BanUC1 = new QLQuanCafe.GUI.UserControl.KhuVuc_BanUC();
-            this.datMonUC1 = new QLQuanCafe.GUI.UserControl.DatMonUC();
+            this.buttonItem13 = new DevComponents.DotNetBar.ButtonItem();
+            this.tableLayoutPanel1.SuspendLayout();
             this.ribbonControl2.SuspendLayout();
             this.ribbonPanel3.SuspendLayout();
             this.ribbonPanel5.SuspendLayout();
             this.ribbonPanel6.SuspendLayout();
             this.ribbonPanel7.SuspendLayout();
             this.ribbonPanel4.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // galleryContainer2
@@ -3873,57 +3881,6 @@ namespace QLQuanCafe.GUI
             // 
             this.itemContainer3.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
-            // buttonItem2
-            // 
-            this.buttonItem2.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItem2.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem2.Image")));
-            this.buttonItem2.Name = "buttonItem2";
-            this.buttonItem2.SubItemsExpandWidth = 24;
-            this.buttonItem2.Text = "&New";
-            // 
-            // buttonItem3
-            // 
-            this.buttonItem3.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItem3.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem3.Image")));
-            this.buttonItem3.Name = "buttonItem3";
-            this.buttonItem3.SubItemsExpandWidth = 24;
-            this.buttonItem3.Text = "&Open...";
-            // 
-            // buttonItem4
-            // 
-            this.buttonItem4.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItem4.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem4.Image")));
-            this.buttonItem4.Name = "buttonItem4";
-            this.buttonItem4.SubItemsExpandWidth = 24;
-            this.buttonItem4.Text = "&Save...";
-            // 
-            // buttonItem5
-            // 
-            this.buttonItem5.BeginGroup = true;
-            this.buttonItem5.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItem5.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem5.Image")));
-            this.buttonItem5.Name = "buttonItem5";
-            this.buttonItem5.SubItemsExpandWidth = 24;
-            this.buttonItem5.Text = "S&hare...";
-            // 
-            // buttonItem6
-            // 
-            this.buttonItem6.BeginGroup = true;
-            this.buttonItem6.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItem6.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem6.Image")));
-            this.buttonItem6.Name = "buttonItem6";
-            this.buttonItem6.SubItemsExpandWidth = 24;
-            this.buttonItem6.Text = "&Print...";
-            // 
-            // buttonItem7
-            // 
-            this.buttonItem7.BeginGroup = true;
-            this.buttonItem7.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItem7.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem7.Image")));
-            this.buttonItem7.Name = "buttonItem7";
-            this.buttonItem7.SubItemsExpandWidth = 24;
-            this.buttonItem7.Text = "&Close";
-            // 
             // galleryContainer1
             // 
             // 
@@ -3996,25 +3953,6 @@ namespace QLQuanCafe.GUI
             // 
             // 
             this.itemContainer4.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // buttonItem12
-            // 
-            this.buttonItem12.BeginGroup = true;
-            this.buttonItem12.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItem12.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonItem12.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem12.Image")));
-            this.buttonItem12.Name = "buttonItem12";
-            this.buttonItem12.SubItemsExpandWidth = 24;
-            this.buttonItem12.Text = "Opt&ions";
-            // 
-            // buttonItem13
-            // 
-            this.buttonItem13.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItem13.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonItem13.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem13.Image")));
-            this.buttonItem13.Name = "buttonItem13";
-            this.buttonItem13.SubItemsExpandWidth = 24;
-            this.buttonItem13.Text = "E&xit";
             // 
             // itemContainer5
             // 
@@ -4149,6 +4087,132 @@ namespace QLQuanCafe.GUI
             this.labelItem70.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelItem70.Name = "labelItem70";
             // 
+            // galleryContainer71
+            // 
+            // 
+            // 
+            // 
+            this.galleryContainer71.BackgroundStyle.Class = "RibbonFileMenuColumnTwoContainer";
+            this.galleryContainer71.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.galleryContainer71.EnableGalleryPopup = false;
+            this.galleryContainer71.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
+            this.galleryContainer71.MinimumSize = new System.Drawing.Size(180, 240);
+            this.galleryContainer71.MultiLine = false;
+            this.galleryContainer71.Name = "galleryContainer71";
+            this.galleryContainer71.PopupUsesStandardScrollbars = false;
+            // 
+            // 
+            // 
+            this.galleryContainer71.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // labelItem71
+            // 
+            this.labelItem71.BorderSide = DevComponents.DotNetBar.eBorderSide.Bottom;
+            this.labelItem71.BorderType = DevComponents.DotNetBar.eBorderType.Etched;
+            this.labelItem71.CanCustomize = false;
+            this.labelItem71.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelItem71.Name = "labelItem71";
+            // 
+            // galleryContainer72
+            // 
+            // 
+            // 
+            // 
+            this.galleryContainer72.BackgroundStyle.Class = "RibbonFileMenuColumnTwoContainer";
+            this.galleryContainer72.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.galleryContainer72.EnableGalleryPopup = false;
+            this.galleryContainer72.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
+            this.galleryContainer72.MinimumSize = new System.Drawing.Size(180, 240);
+            this.galleryContainer72.MultiLine = false;
+            this.galleryContainer72.Name = "galleryContainer72";
+            this.galleryContainer72.PopupUsesStandardScrollbars = false;
+            // 
+            // 
+            // 
+            this.galleryContainer72.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // labelItem72
+            // 
+            this.labelItem72.BorderSide = DevComponents.DotNetBar.eBorderSide.Bottom;
+            this.labelItem72.BorderType = DevComponents.DotNetBar.eBorderType.Etched;
+            this.labelItem72.CanCustomize = false;
+            this.labelItem72.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelItem72.Name = "labelItem72";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.tableLayoutPanel1.BackgroundImage = global::QLQuanCafe.Properties.Resources.background;
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.Controls.Add(this.thucDonUC1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.hoaDonUC1, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.tongTienUC1, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.khuVuc_BanUC1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.datMonUC1, 0, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.ForeColor = System.Drawing.Color.Black;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 160);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.52542F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.47458F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1370, 590);
+            this.tableLayoutPanel1.TabIndex = 36;
+            // 
+            // thucDonUC1
+            // 
+            this.thucDonUC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.thucDonUC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.thucDonUC1.ForeColor = System.Drawing.Color.Black;
+            this.thucDonUC1.Location = new System.Drawing.Point(324, 3);
+            this.thucDonUC1.Name = "thucDonUC1";
+            this.thucDonUC1.Size = new System.Drawing.Size(311, 415);
+            this.thucDonUC1.TabIndex = 1;
+            // 
+            // hoaDonUC1
+            // 
+            this.hoaDonUC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.hoaDonUC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.hoaDonUC1.ForeColor = System.Drawing.Color.Black;
+            this.hoaDonUC1.Location = new System.Drawing.Point(641, 3);
+            this.hoaDonUC1.Name = "hoaDonUC1";
+            this.hoaDonUC1.Size = new System.Drawing.Size(726, 415);
+            this.hoaDonUC1.TabIndex = 2;
+            // 
+            // tongTienUC1
+            // 
+            this.tongTienUC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.tongTienUC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tongTienUC1.ForeColor = System.Drawing.Color.Black;
+            this.tongTienUC1.Location = new System.Drawing.Point(641, 424);
+            this.tongTienUC1.Name = "tongTienUC1";
+            this.tongTienUC1.Size = new System.Drawing.Size(726, 163);
+            this.tongTienUC1.TabIndex = 4;
+            // 
+            // khuVuc_BanUC1
+            // 
+            this.khuVuc_BanUC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.khuVuc_BanUC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.khuVuc_BanUC1.ForeColor = System.Drawing.Color.Black;
+            this.khuVuc_BanUC1.Location = new System.Drawing.Point(3, 3);
+            this.khuVuc_BanUC1.Name = "khuVuc_BanUC1";
+            this.khuVuc_BanUC1.Size = new System.Drawing.Size(315, 415);
+            this.khuVuc_BanUC1.TabIndex = 5;
+            // 
+            // datMonUC1
+            // 
+            this.datMonUC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.tableLayoutPanel1.SetColumnSpan(this.datMonUC1, 2);
+            this.datMonUC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.datMonUC1.ForeColor = System.Drawing.Color.Black;
+            this.datMonUC1.Location = new System.Drawing.Point(3, 424);
+            this.datMonUC1.Name = "datMonUC1";
+            this.datMonUC1.Size = new System.Drawing.Size(632, 163);
+            this.datMonUC1.TabIndex = 3;
+            // 
             // ribbonControl2
             // 
             this.ribbonControl2.AllowDrop = true;
@@ -4169,6 +4233,7 @@ namespace QLQuanCafe.GUI
             this.ribbonControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.ribbonControl2.ForeColor = System.Drawing.Color.Black;
             this.ribbonControl2.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.applicationButton1,
             this.ribbonTabItem3,
             this.ribbonTabItem4,
             this.ribbonTabItem5,
@@ -4199,15 +4264,164 @@ namespace QLQuanCafe.GUI
             this.ribbonControl2.Text = "Tài Khoản";
             this.ribbonControl2.UseCustomizeDialog = false;
             // 
+            // applicationButton1
+            // 
+            this.applicationButton1.AutoExpandOnClick = true;
+            this.applicationButton1.CanCustomize = false;
+            this.applicationButton1.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.Image;
+            this.applicationButton1.Image = ((System.Drawing.Image)(resources.GetObject("applicationButton1.Image")));
+            this.applicationButton1.ImageFixedSize = new System.Drawing.Size(16, 16);
+            this.applicationButton1.ImagePaddingHorizontal = 0;
+            this.applicationButton1.ImagePaddingVertical = 1;
+            this.applicationButton1.Name = "applicationButton1";
+            this.applicationButton1.ShowSubItems = false;
+            this.applicationButton1.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.itemContainer6});
+            this.applicationButton1.Text = "&File";
+            // 
+            // buttonItem2
+            // 
+            this.buttonItem2.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItem2.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem2.Image")));
+            this.buttonItem2.Name = "buttonItem2";
+            this.buttonItem2.SubItemsExpandWidth = 24;
+            this.buttonItem2.Text = "&New";
+            // 
+            // itemContainer6
+            // 
+            // 
+            // 
+            // 
+            this.itemContainer6.BackgroundStyle.Class = "RibbonFileMenuContainer";
+            this.itemContainer6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.itemContainer6.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
+            this.itemContainer6.Name = "itemContainer6";
+            this.itemContainer6.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.itemContainer7});
+            // 
+            // 
+            // 
+            this.itemContainer6.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // itemContainer7
+            // 
+            // 
+            // 
+            // 
+            this.itemContainer7.BackgroundStyle.Class = "RibbonFileMenuTwoColumnContainer";
+            this.itemContainer7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.itemContainer7.ItemSpacing = 0;
+            this.itemContainer7.Name = "itemContainer7";
+            this.itemContainer7.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.itemContainer8});
+            // 
+            // 
+            // 
+            this.itemContainer7.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // itemContainer8
+            // 
+            // 
+            // 
+            // 
+            this.itemContainer8.BackgroundStyle.Class = "RibbonFileMenuColumnOneContainer";
+            this.itemContainer8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.itemContainer8.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
+            this.itemContainer8.MinimumSize = new System.Drawing.Size(120, 0);
+            this.itemContainer8.Name = "itemContainer8";
+            // 
+            // 
+            // 
+            this.itemContainer8.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // buttonItem3
+            // 
+            this.buttonItem3.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItem3.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem3.Image")));
+            this.buttonItem3.Name = "buttonItem3";
+            this.buttonItem3.SubItemsExpandWidth = 24;
+            this.buttonItem3.Text = "&Open...";
+            // 
+            // buttonItem4
+            // 
+            this.buttonItem4.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItem4.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem4.Image")));
+            this.buttonItem4.Name = "buttonItem4";
+            this.buttonItem4.SubItemsExpandWidth = 24;
+            this.buttonItem4.Text = "&Save...";
+            // 
+            // buttonItem5
+            // 
+            this.buttonItem5.BeginGroup = true;
+            this.buttonItem5.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItem5.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem5.Image")));
+            this.buttonItem5.Name = "buttonItem5";
+            this.buttonItem5.SubItemsExpandWidth = 24;
+            this.buttonItem5.Text = "S&hare...";
+            // 
+            // buttonItem6
+            // 
+            this.buttonItem6.BeginGroup = true;
+            this.buttonItem6.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItem6.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem6.Image")));
+            this.buttonItem6.Name = "buttonItem6";
+            this.buttonItem6.SubItemsExpandWidth = 24;
+            this.buttonItem6.Text = "&Print...";
+            // 
+            // buttonItem7
+            // 
+            this.buttonItem7.BeginGroup = true;
+            this.buttonItem7.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItem7.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem7.Image")));
+            this.buttonItem7.Name = "buttonItem7";
+            this.buttonItem7.SubItemsExpandWidth = 24;
+            this.buttonItem7.Text = "&Close";
+            // 
+            // buttonItem12
+            // 
+            this.buttonItem12.BeginGroup = true;
+            this.buttonItem12.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItem12.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonItem12.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem12.Image")));
+            this.buttonItem12.Name = "buttonItem12";
+            this.buttonItem12.SubItemsExpandWidth = 24;
+            this.buttonItem12.Text = "Opt&ions";
+            // 
+            // galleryContainer73
+            // 
+            // 
+            // 
+            // 
+            this.galleryContainer73.BackgroundStyle.Class = "RibbonFileMenuColumnTwoContainer";
+            this.galleryContainer73.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.galleryContainer73.EnableGalleryPopup = false;
+            this.galleryContainer73.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
+            this.galleryContainer73.MinimumSize = new System.Drawing.Size(180, 240);
+            this.galleryContainer73.MultiLine = false;
+            this.galleryContainer73.Name = "galleryContainer73";
+            this.galleryContainer73.PopupUsesStandardScrollbars = false;
+            // 
+            // 
+            // 
+            this.galleryContainer73.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // labelItem73
+            // 
+            this.labelItem73.BorderSide = DevComponents.DotNetBar.eBorderSide.Bottom;
+            this.labelItem73.BorderType = DevComponents.DotNetBar.eBorderType.Etched;
+            this.labelItem73.CanCustomize = false;
+            this.labelItem73.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelItem73.Name = "labelItem73";
+            // 
             // ribbonPanel3
             // 
             this.ribbonPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonPanel3.Controls.Add(this.ribbonBar3);
             this.ribbonPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel3.Location = new System.Drawing.Point(0, 61);
+            this.ribbonPanel3.Location = new System.Drawing.Point(0, 62);
             this.ribbonPanel3.Name = "ribbonPanel3";
             this.ribbonPanel3.Padding = new System.Windows.Forms.Padding(3, 0, 3, 2);
-            this.ribbonPanel3.Size = new System.Drawing.Size(1370, 99);
+            this.ribbonPanel3.Size = new System.Drawing.Size(1370, 98);
             this.ribbonPanel3.StretchLastRibbonBar = true;
             // 
             // 
@@ -4243,7 +4457,7 @@ namespace QLQuanCafe.GUI
             this.buttonItem17});
             this.ribbonBar3.Location = new System.Drawing.Point(3, 0);
             this.ribbonBar3.Name = "ribbonBar3";
-            this.ribbonBar3.Size = new System.Drawing.Size(80, 97);
+            this.ribbonBar3.Size = new System.Drawing.Size(80, 96);
             this.ribbonBar3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar3.TabIndex = 1;
             this.ribbonBar3.Text = "...";
@@ -4893,104 +5107,14 @@ namespace QLQuanCafe.GUI
             this.ribbonTabItem7.Panel = this.ribbonPanel7;
             this.ribbonTabItem7.Text = "Trợ Giúp";
             // 
-            // galleryContainer71
+            // buttonItem13
             // 
-            // 
-            // 
-            // 
-            this.galleryContainer71.BackgroundStyle.Class = "RibbonFileMenuColumnTwoContainer";
-            this.galleryContainer71.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.galleryContainer71.EnableGalleryPopup = false;
-            this.galleryContainer71.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.galleryContainer71.MinimumSize = new System.Drawing.Size(180, 240);
-            this.galleryContainer71.MultiLine = false;
-            this.galleryContainer71.Name = "galleryContainer71";
-            this.galleryContainer71.PopupUsesStandardScrollbars = false;
-            // 
-            // 
-            // 
-            this.galleryContainer71.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // labelItem71
-            // 
-            this.labelItem71.BorderSide = DevComponents.DotNetBar.eBorderSide.Bottom;
-            this.labelItem71.BorderType = DevComponents.DotNetBar.eBorderType.Etched;
-            this.labelItem71.CanCustomize = false;
-            this.labelItem71.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelItem71.Name = "labelItem71";
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.Controls.Add(this.thucDonUC1, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.hoaDonUC1, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.tongTienUC1, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.khuVuc_BanUC1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.datMonUC1, 0, 1);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.ForeColor = System.Drawing.Color.Black;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 160);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.52542F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.47458F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1370, 590);
-            this.tableLayoutPanel1.TabIndex = 36;
-            // 
-            // thucDonUC1
-            // 
-            this.thucDonUC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.thucDonUC1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.thucDonUC1.ForeColor = System.Drawing.Color.Black;
-            this.thucDonUC1.Location = new System.Drawing.Point(324, 3);
-            this.thucDonUC1.Name = "thucDonUC1";
-            this.thucDonUC1.Size = new System.Drawing.Size(311, 415);
-            this.thucDonUC1.TabIndex = 1;
-            // 
-            // hoaDonUC1
-            // 
-            this.hoaDonUC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.hoaDonUC1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.hoaDonUC1.ForeColor = System.Drawing.Color.Black;
-            this.hoaDonUC1.Location = new System.Drawing.Point(641, 3);
-            this.hoaDonUC1.Name = "hoaDonUC1";
-            this.hoaDonUC1.Size = new System.Drawing.Size(726, 415);
-            this.hoaDonUC1.TabIndex = 2;
-            // 
-            // tongTienUC1
-            // 
-            this.tongTienUC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.tongTienUC1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tongTienUC1.ForeColor = System.Drawing.Color.Black;
-            this.tongTienUC1.Location = new System.Drawing.Point(641, 424);
-            this.tongTienUC1.Name = "tongTienUC1";
-            this.tongTienUC1.Size = new System.Drawing.Size(726, 163);
-            this.tongTienUC1.TabIndex = 4;
-            // 
-            // khuVuc_BanUC1
-            // 
-            this.khuVuc_BanUC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.khuVuc_BanUC1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.khuVuc_BanUC1.ForeColor = System.Drawing.Color.Black;
-            this.khuVuc_BanUC1.Location = new System.Drawing.Point(3, 3);
-            this.khuVuc_BanUC1.Name = "khuVuc_BanUC1";
-            this.khuVuc_BanUC1.Size = new System.Drawing.Size(315, 415);
-            this.khuVuc_BanUC1.TabIndex = 5;
-            // 
-            // datMonUC1
-            // 
-            this.datMonUC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.tableLayoutPanel1.SetColumnSpan(this.datMonUC1, 2);
-            this.datMonUC1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.datMonUC1.ForeColor = System.Drawing.Color.Black;
-            this.datMonUC1.Location = new System.Drawing.Point(3, 424);
-            this.datMonUC1.Name = "datMonUC1";
-            this.datMonUC1.Size = new System.Drawing.Size(632, 163);
-            this.datMonUC1.TabIndex = 3;
+            this.buttonItem13.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItem13.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonItem13.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem13.Image")));
+            this.buttonItem13.Name = "buttonItem13";
+            this.buttonItem13.SubItemsExpandWidth = 24;
+            this.buttonItem13.Text = "E&xit";
             // 
             // FormMain
             // 
@@ -5011,6 +5135,7 @@ namespace QLQuanCafe.GUI
             this.Text = "PHẦN MỀM QUẢN LÝ QUÁN COFFEE";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormMain_Load);
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ribbonControl2.ResumeLayout(false);
             this.ribbonControl2.PerformLayout();
             this.ribbonPanel3.ResumeLayout(false);
@@ -5018,7 +5143,6 @@ namespace QLQuanCafe.GUI
             this.ribbonPanel6.ResumeLayout(false);
             this.ribbonPanel7.ResumeLayout(false);
             this.ribbonPanel4.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -5384,6 +5508,14 @@ namespace QLQuanCafe.GUI
         private UserControl.ThucDonUC thucDonUC1;
         private TableLayoutPanel tableLayoutPanel1;
         private UserControl.KhuVuc_BanUC khuVuc_BanUC1;
+        private GalleryContainer galleryContainer72;
+        private LabelItem labelItem72;
+        private ApplicationButton applicationButton1;
+        private ItemContainer itemContainer6;
+        private ItemContainer itemContainer7;
+        private ItemContainer itemContainer8;
+        private GalleryContainer galleryContainer73;
+        private LabelItem labelItem73;
 
 
 
