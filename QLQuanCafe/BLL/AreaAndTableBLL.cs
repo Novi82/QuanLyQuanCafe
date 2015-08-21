@@ -17,7 +17,11 @@ namespace QLQuanCafe.BLL
         private List<AreaData> _listArea;
         public List<AreaData> ListArea
         {
-            get { return _listArea; }
+            get
+            {
+                Load();
+                return _listArea;
+            }
             set { SetProperty(ref _listArea, value); }
         }
 

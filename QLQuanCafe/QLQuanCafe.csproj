@@ -270,6 +270,12 @@
     <Compile Include="GUI\Form\ThucDon.Designer.cs">
       <DependentUpon>ThucDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\UserControl\TabKhuVuc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControl\TabKhuVuc.Designer.cs">
+      <DependentUpon>TabKhuVuc.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\XacNhanThanhToan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -301,6 +307,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Dialog\About.resx">
       <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Dialog\ThongTin.resx">
+      <DependentUpon>ThongTin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DoiMatKhau.resx">
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
@@ -374,6 +383,9 @@
     <EmbeddedResource Include="GUI\Form\ThucDon.resx">
       <DependentUpon>ThucDon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UserControl\TabKhuVuc.resx">
+      <DependentUpon>TabKhuVuc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\XacNhanThanhToan.resx">
       <DependentUpon>XacNhanThanhToan.cs</DependentUpon>
     </EmbeddedResource>
@@ -385,14 +397,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\QLQuanCafe.DTO.AccountData.datasource" />
     <None Include="Properties\DataSources\QLQuanCafe.DTO.AreaData.datasource" />
@@ -408,6 +415,11 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -418,8 +430,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\about.bmp" />
-    <None Include="Resources\128px-coffee-icon-small.png" />
+    <None Include="Resources\iconSmall.png" />
     <Content Include="Resources\about.png" />
     <Content Include="Resources\AddAreas.png" />
     <Content Include="Resources\AddAreas1.png" />
@@ -447,7 +458,9 @@
     <Content Include="Resources\warehousing.png" />
     <Content Include="Resources\XuatKho.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Report\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

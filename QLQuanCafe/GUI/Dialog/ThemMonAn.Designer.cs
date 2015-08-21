@@ -162,6 +162,7 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             // dipDonGia
             // 
+            this.dipDonGia.AllowEmptyState = false;
             this.dipDonGia.BackColor = System.Drawing.Color.White;
             // 
             // 
@@ -169,8 +170,9 @@ namespace QLQuanCafe.GUI.Dialog
             this.dipDonGia.BackgroundStyle.Class = "DateTimeInputBackground";
             this.dipDonGia.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.dipDonGia.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.dipDonGia.DisplayFormat = "0";
             this.dipDonGia.ForeColor = System.Drawing.Color.Black;
-            this.dipDonGia.Increment = 1D;
+            this.dipDonGia.Increment = 1000D;
             this.dipDonGia.Location = new System.Drawing.Point(107, 73);
             this.dipDonGia.MinValue = 0D;
             this.dipDonGia.Name = "dipDonGia";
@@ -188,6 +190,7 @@ namespace QLQuanCafe.GUI.Dialog
             this.BAdd.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.BAdd.TabIndex = 13;
             this.BAdd.Text = "+";
+            this.BAdd.Click += new System.EventHandler(this.BAdd_Click);
             // 
             // ThemMonAn
             // 
@@ -205,7 +208,6 @@ namespace QLQuanCafe.GUI.Dialog
             this.Controls.Add(this.LDonGia);
             this.Controls.Add(this.LTenMonAn);
             this.Controls.Add(this.imgMonAn);
-            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

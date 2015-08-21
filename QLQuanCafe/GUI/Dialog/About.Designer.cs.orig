@@ -50,7 +50,7 @@
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX1.ForeColor = System.Drawing.Color.Black;
-            this.labelX1.Image = global::QLQuanCafe.Properties.Resources.IconSmall;
+            this.labelX1.Image = global::QLQuanCafe.Properties.Resources._128px_coffee_icon_small;
             this.labelX1.Location = new System.Drawing.Point(0, 12);
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(123, 99);
@@ -94,8 +94,12 @@
             // 
             this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+<<<<<<< Updated upstream
+            this.labelX4.Location = new System.Drawing.Point(27, 126);
+=======
             this.labelX4.ForeColor = System.Drawing.Color.Black;
             this.labelX4.Location = new System.Drawing.Point(12, 118);
+>>>>>>> Stashed changes
             this.labelX4.Name = "labelX4";
             this.labelX4.Size = new System.Drawing.Size(75, 23);
             this.labelX4.TabIndex = 2;
@@ -124,8 +128,12 @@
             // 
             this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+<<<<<<< Updated upstream
+            this.labelX6.Location = new System.Drawing.Point(90, 233);
+=======
             this.labelX6.ForeColor = System.Drawing.Color.Black;
             this.labelX6.Location = new System.Drawing.Point(71, 234);
+>>>>>>> Stashed changes
             this.labelX6.Name = "labelX6";
             this.labelX6.Size = new System.Drawing.Size(219, 23);
             this.labelX6.TabIndex = 2;
@@ -139,8 +147,12 @@
             // 
             this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+<<<<<<< Updated upstream
+            this.labelX7.Location = new System.Drawing.Point(90, 175);
+=======
             this.labelX7.ForeColor = System.Drawing.Color.Black;
             this.labelX7.Location = new System.Drawing.Point(71, 176);
+>>>>>>> Stashed changes
             this.labelX7.Name = "labelX7";
             this.labelX7.Size = new System.Drawing.Size(219, 23);
             this.labelX7.TabIndex = 2;
@@ -154,8 +166,12 @@
             // 
             this.labelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+<<<<<<< Updated upstream
+            this.labelX8.Location = new System.Drawing.Point(90, 204);
+=======
             this.labelX8.ForeColor = System.Drawing.Color.Black;
             this.labelX8.Location = new System.Drawing.Point(71, 205);
+>>>>>>> Stashed changes
             this.labelX8.Name = "labelX8";
             this.labelX8.Size = new System.Drawing.Size(259, 23);
             this.labelX8.TabIndex = 2;
@@ -169,8 +185,12 @@
             // 
             this.labelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+<<<<<<< Updated upstream
+            this.labelX9.Location = new System.Drawing.Point(90, 146);
+=======
             this.labelX9.ForeColor = System.Drawing.Color.Black;
             this.labelX9.Location = new System.Drawing.Point(71, 147);
+>>>>>>> Stashed changes
             this.labelX9.Name = "labelX9";
             this.labelX9.Size = new System.Drawing.Size(259, 23);
             this.labelX9.TabIndex = 2;
@@ -187,9 +207,9 @@
             this.labelX10.ForeColor = System.Drawing.Color.Black;
             this.labelX10.Location = new System.Drawing.Point(0, 279);
             this.labelX10.Name = "labelX10";
-            this.labelX10.Size = new System.Drawing.Size(281, 30);
+            this.labelX10.Size = new System.Drawing.Size(214, 30);
             this.labelX10.TabIndex = 3;
-            this.labelX10.Text = "Trường ĐH Công Nghệ Thông Tin - Khoa CNPM";
+            this.labelX10.Text = "Trường ĐH Công Nghệ Thông Tin";
             // 
             // btnOK
             // 
@@ -235,7 +255,11 @@
             this.Controls.Add(this.labelX3);
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.labelX1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+<<<<<<< Updated upstream
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+=======
+>>>>>>> Stashed changes
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "About";

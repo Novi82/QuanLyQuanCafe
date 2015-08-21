@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using QLQuanCafe.GUI.Dialog;
 
 namespace QLQuanCafe.Common
 {
@@ -12,7 +13,9 @@ namespace QLQuanCafe.Common
 
         public static DialogResult CreateInformationMessage(string content)
         {
-            return MessageBox.Show(content, "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+//            return MessageBox.Show(content, "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+              ThongTin dialog = new ThongTin(content);
+            return dialog.ShowDialog();
         }
 
         public static DialogResult CreateQuestionMessage(string content)

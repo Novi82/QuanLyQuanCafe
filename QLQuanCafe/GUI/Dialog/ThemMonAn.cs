@@ -67,5 +67,15 @@ namespace QLQuanCafe.GUI.Dialog
                     this.Close();
             }
         }
+
+        private void BAdd_Click(object sender, EventArgs e)
+        {
+            if (unitBll.ShowAddUnitWindowCommand.CanExecute(null))
+            {
+                unitBll.ShowAddUnitWindowCommand.Execute(null);
+                LoadDonViTinh();
+                cbxDonViTinh.SelectedIndex = cbxDonViTinh.FindString(unitBll.UnitToSave.UnitName);
+            }    
+        }
     }
 }

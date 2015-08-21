@@ -60,5 +60,16 @@ namespace QLQuanCafe.GUI.Dialog
         {
             this.Close();
         }
+
+        private void btnThemDvt_Click(object sender, EventArgs e)
+        {
+            if (unitbll.ShowAddUnitWindowCommand.CanExecute(null))
+            {
+                unitbll.ShowAddUnitWindowCommand.Execute(null);
+                loadDonViTinh();
+                cbxDonViTinh.SelectedIndex = cbxDonViTinh.FindString(unitbll.UnitToSave.UnitName);
+
+            }
+        }
     }
 }
