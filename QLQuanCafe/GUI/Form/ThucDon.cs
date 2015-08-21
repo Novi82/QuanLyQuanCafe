@@ -36,7 +36,7 @@ namespace QLQuanCafe.GUI.Form
             {
                 if (bll.SelectMenuCategoryCommand.CanExecute(null))
                 {
-                    bll.SelectMenuCategoryCommand.Execute(dgvLoaiMonAn.SelectedRows[0]);
+                    bll.SelectMenuCategoryCommand.Execute(dgvLoaiMonAn.SelectedRows[0].DataBoundItem);
                     LoadMonAn();
                 }
             }
@@ -48,7 +48,7 @@ namespace QLQuanCafe.GUI.Form
             {
                 if (bll.SelectMenuItemCommand.CanExecute(null))
                 {
-                    bll.SelectMenuItemCommand.Execute(dgvMonAn.SelectedRows[0]);
+                    bll.SelectMenuItemCommand.Execute(dgvMonAn.SelectedRows[0].DataBoundItem);
                 }
             }
         }

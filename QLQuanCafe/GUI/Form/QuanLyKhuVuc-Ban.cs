@@ -26,7 +26,7 @@ namespace QLQuanCafe.GUI.Form
             {
                 if (bll.SelectAreaCommand.CanExecute(null))
                 {
-                    bll.SelectAreaCommand.Execute(dataGridViewX1.SelectedRows[0]);
+                    bll.SelectAreaCommand.Execute(dataGridViewX1.SelectedRows[0].DataBoundItem);
                     LoadTable();
                 }
             }
@@ -38,7 +38,7 @@ namespace QLQuanCafe.GUI.Form
             {
                 if (bll.SelectTableCommand.CanExecute(null))
                 {
-                    bll.SelectTableCommand.Execute(dataGridViewX2.SelectedRows[0]);
+                    bll.SelectTableCommand.Execute(dataGridViewX2.SelectedRows[0].DataBoundItem);
                 }
             }
         }
@@ -118,6 +118,11 @@ namespace QLQuanCafe.GUI.Form
                     LoadTable();
                 }
             }
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

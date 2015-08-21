@@ -75,7 +75,7 @@ namespace QLQuanCafe.GUI.Form
             {
                 if (materialBll.SelectMaterialCommand.CanExecute(null))
                 {
-                    materialBll.SelectMaterialCommand.Execute(dgvKho.SelectedRows[0]);
+                    materialBll.SelectMaterialCommand.Execute(dgvKho.SelectedRows[0].DataBoundItem);
 
 //                    dgvKho.Selecteditem = null;
 //                    dgvKho.ClearSelection();

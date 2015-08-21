@@ -28,7 +28,7 @@ namespace QLQuanCafe.GUI.Form
         {
             if (bll.SelectMaterialCommand.CanExecute(null) && dgvNguyenLieu.SelectedRows.Count > 0)
             {
-                bll.SelectMaterialCommand.Execute(dgvNguyenLieu.SelectedRows[0]);
+                bll.SelectMaterialCommand.Execute(dgvNguyenLieu.SelectedRows[0].DataBoundItem);
             }
         }
 

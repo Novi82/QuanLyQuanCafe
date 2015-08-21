@@ -397,7 +397,7 @@
     <value>0</value>
   </data>
   <data name="btnThoat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>788, 380</value>
+    <value>878, 380</value>
   </data>
   <data name="btnThoat.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -471,12 +471,6 @@
   <data name="&gt;&gt;tableDataBindingSource.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;areaDataBindingSource.Name" xml:space="preserve">
-    <value>areaDataBindingSource</value>
-  </data>
-  <data name="&gt;&gt;areaDataBindingSource.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;areaIdDataGridViewTextBoxColumn.Name" xml:space="preserve">
     <value>areaIdDataGridViewTextBoxColumn</value>
   </data>
@@ -494,6 +488,12 @@
   </data>
   <data name="&gt;&gt;noteDataGridViewTextBoxColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;areaDataBindingSource.Name" xml:space="preserve">
+    <value>areaDataBindingSource</value>
+  </data>
+  <data name="&gt;&gt;areaDataBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>QuanLyKhuVuc_Ban</value>

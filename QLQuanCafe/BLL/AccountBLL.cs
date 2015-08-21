@@ -135,7 +135,7 @@ namespace QLQuanCafe.BLL
         {
             if (obj != null)
             {
-                AccountSelected = ((DataGridViewRow)obj).DataBoundItem as AccountData;
+                AccountSelected = obj as AccountData;
             }
         }
 

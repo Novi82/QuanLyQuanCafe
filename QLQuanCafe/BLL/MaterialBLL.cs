@@ -254,7 +254,7 @@ namespace QLQuanCafe.BLL
         {
             if (obj != null)
             {
-                MaterialSelected = ((DataGridViewRow)obj).DataBoundItem as MaterialData;
+                MaterialSelected = obj as MaterialData;
             }
         }
 

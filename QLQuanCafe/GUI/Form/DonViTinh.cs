@@ -29,7 +29,7 @@ namespace QLQuanCafe.GUI.Form
             {
                 if (LocatorBll.UnitVM.SelectUnitCommand.CanExecute(null))
                 {
-                    LocatorBll.UnitVM.SelectUnitCommand.Execute(dataGridViewX1.SelectedRows[0]);
+                    LocatorBll.UnitVM.SelectUnitCommand.Execute(dataGridViewX1.SelectedRows[0].DataBoundItem);
                 }
             }
         }
