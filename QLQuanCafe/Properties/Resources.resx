@@ -121,8 +121,8 @@
   <data name="AddUsers2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AddUsers2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Hoadon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Hoadon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="khuvuc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\khuvuc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AddMaterials1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AddMaterials1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -130,26 +130,26 @@
   <data name="about" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\about.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Hoadon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hoadon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Hoadon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hoadon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="OpenTable" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OpenTable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="XuatKho" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\XuatKho.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="thucdon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\thucdon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="donvitinh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\donvitinh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="TableFormMain" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TableFormMain.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Confirm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Confirm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="NhapKho" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NhapKho.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="khuvuc" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\khuvuc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AddAreas1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AddAreas1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AddUsers" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AddUsers.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,17 +157,17 @@
   <data name="Phanquyen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Phanquyen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AddMaterials" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AddMaterials.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="thucdon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\thucdon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="XuatKho" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XuatKho.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Kho" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Kho.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="NguyenLieu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\NguyenLieu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AddMaterials" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AddMaterials.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TableFormMain" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TableFormMain.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AddTable" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AddTable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,11 +178,14 @@
   <data name="AddAreas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AddAreas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="NguyenLieu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NguyenLieu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Doanhthu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Doanhthu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AddAreas1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AddAreas1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="OpenTable" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OpenTable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Users" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Users.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,7 +196,7 @@
   <data name="Users1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Users1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Confirm" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Confirm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="128px-coffee-icon-small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\128px-coffee-icon-small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
