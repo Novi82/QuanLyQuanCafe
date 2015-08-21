@@ -21,12 +21,16 @@ namespace QLQuanCafe.GUI.Dialog
             MaterialData materialData = materialBll.MaterialSelected;
             txtTenNguyenLieu.Text = materialData.MaterialName;
 
-            dipDonGia.Value = (double)materialData.Price;
+//            dipDonGia.Value = (double)materialData.Price;
 
-            cbxDonViTinh.DataSource = unitBll.ListUnit;
+            LoadDonViTinh();
             cbxDonViTinh.SelectedIndex = cbxDonViTinh.FindString(materialData.Unit.UnitName);
         }
 
+        private void LoadDonViTinh()
+        {
+            cbxDonViTinh.DataSource = unitBll.ListUnit;
+        }
         private void btnHuy_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -48,7 +52,7 @@ namespace QLQuanCafe.GUI.Dialog
             }
 
             materialBll.MaterialToSave.MaterialName = txtTenNguyenLieu.Text;
-            materialBll.MaterialToSave.Price = (decimal)dipDonGia.Value;
+//            materialBll.MaterialToSave.Price = (decimal)dipDonGia.Value;
             materialBll.MaterialToSave.Unit = cbxDonViTinh.SelectedItem as UnitData;
 
             if (materialBll.EditMaterial())
@@ -56,6 +60,16 @@ namespace QLQuanCafe.GUI.Dialog
                 if (MessageDialogHelper.CreateInformationMessage("Lưu thành công.") == DialogResult.OK)
                     this.Close();
             }
+        }
+
+        private void btnThemDonViTinh_Click(object sender, EventArgs e)
+        {
+            if (unitBll.ShowAddUnitWindowCommand.CanExecute(null))
+            {
+                unitBll.ShowAddUnitWindowCommand.Execute(null);
+                LoadDonViTinh();
+                cbxDonViTinh.SelectedIndex = cbxDonViTinh.FindString(unitBll.UnitToSave.UnitName);
+            }       
         }
     }
 }

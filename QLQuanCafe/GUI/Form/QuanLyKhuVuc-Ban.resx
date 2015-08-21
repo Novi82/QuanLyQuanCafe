@@ -435,30 +435,6 @@
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
-  <data name="&gt;&gt;areaIdDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>areaIdDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;areaIdDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;areaNameDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>areaNameDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;areaNameDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;noteDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>noteDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;noteDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;areaDataBindingSource.Name" xml:space="preserve">
-    <value>areaDataBindingSource</value>
-  </data>
-  <data name="&gt;&gt;areaDataBindingSource.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;tableIdDataGridViewTextBoxColumn.Name" xml:space="preserve">
     <value>tableIdDataGridViewTextBoxColumn</value>
   </data>
@@ -494,6 +470,30 @@
   </data>
   <data name="&gt;&gt;tableDataBindingSource.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;areaDataBindingSource.Name" xml:space="preserve">
+    <value>areaDataBindingSource</value>
+  </data>
+  <data name="&gt;&gt;areaDataBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;areaIdDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>areaIdDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;areaIdDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;areaNameDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>areaNameDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;areaNameDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;noteDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>noteDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;noteDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>QuanLyKhuVuc_Ban</value>

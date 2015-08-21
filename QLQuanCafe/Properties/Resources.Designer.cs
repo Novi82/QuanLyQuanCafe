@@ -63,16 +63,6 @@ namespace QLQuanCafe.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _128px_coffee_icon_small {
-            get {
-                object obj = ResourceManager.GetObject("128px-coffee-icon-small", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap about {
             get {
                 object obj = ResourceManager.GetObject("about", resourceCulture);
@@ -196,6 +186,16 @@ namespace QLQuanCafe.Properties {
         internal static System.Drawing.Bitmap Hoadon1 {
             get {
                 object obj = ResourceManager.GetObject("Hoadon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IconSmall {
+            get {
+                object obj = ResourceManager.GetObject("IconSmall", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

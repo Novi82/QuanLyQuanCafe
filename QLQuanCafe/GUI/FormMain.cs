@@ -1,16 +1,24 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
+using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.Metro;
 using QLQuanCafe.GUI.Form;
+using QLQuanCafe.BLL;
+using QLQuanCafe.DTO;
+using QLQuanCafe.GUI.UserControl;
 
 namespace QLQuanCafe.GUI
 {
     public partial class FormMain : MetroForm
     {
+        private AreaAndTableBll areaAndTableBll = LocatorBll.AreaAndTableVM;
         public FormMain()
         {
             InitializeComponent();
         }
+
+        #region Menu
 
         private void buttonItem20_Click(object sender, EventArgs e)
         {
@@ -24,7 +32,7 @@ namespace QLQuanCafe.GUI
 
         private void buttonItem23_Click(object sender, EventArgs e)
         {
-            new HoaDon().ShowDialog(); 
+            new HoaDon().ShowDialog();
         }
 
         private void buttonItem18_Click(object sender, EventArgs e)
@@ -56,13 +64,36 @@ namespace QLQuanCafe.GUI
         {
             // TODO write it later
             new QLQuanCafe.GUI.Dialog.About().ShowDialog();
-       
+
         }
 
         private void buttonX25_Click(object sender, EventArgs e)
         {
             new XacNhanThanhToan().ShowDialog();
-           
+
         }
+        #endregion
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            LoadKhuVuc_Ban();
+            tabKhuVuc1.Load(areaAndTableBll.ListArea);
+        }
+
+        private void LoadKhuVuc_Ban()
+        {
+//            List<AreaData> listArea = areaAndTableBll.ListArea;
+//            foreach (AreaData area in listArea)
+//            {
+//                SuperTabItem areaTabItem = new  SuperTabItem();
+//                areaTabItem.Text = area.AreaName;
+//                
+//                tctKhuVuc.Tabs.Add(areaTabItem);
+//              
+//
+//            }
+        }
+
+
     }
 }

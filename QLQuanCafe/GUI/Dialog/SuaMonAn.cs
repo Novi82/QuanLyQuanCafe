@@ -10,6 +10,7 @@ namespace QLQuanCafe.GUI.Dialog
     public partial class SuaMonAn : MetroForm
     {
         private MenuCategoryAndMenuItemBll bll = LocatorBll.MenuCategoryAndMenuItemVM;
+        private UnitBll unitbll = LocatorBll.UnitVM;
         public SuaMonAn()
         {
             InitializeComponent();
@@ -23,13 +24,16 @@ namespace QLQuanCafe.GUI.Dialog
             cbxLoaiMonAn.SelectedIndex = cbxLoaiMonAn.FindString(selectedItem.MenuCategory.MenuCategoryName);
 
             dipDonGia.Value = (double)selectedItem.Price;
-
-            
-            cbxDonViTinh.DataSource = LocatorBll.UnitVM.ListUnit;
+            LoadDonViTinh();
             cbxDonViTinh.SelectedIndex = cbxDonViTinh.FindString(selectedItem.Unit.UnitName);
-            // TODO Load Image
+
         }
 
+        private void LoadDonViTinh()
+        {
+            cbxDonViTinh.DataSource = unitbll.ListUnit;
+            
+        }
         private void bntDongY_Click(object sender, EventArgs e)
         {
             String message = string.Empty;
@@ -60,6 +64,16 @@ namespace QLQuanCafe.GUI.Dialog
         private void btnHuy_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void BAdd_Click(object sender, EventArgs e)
+        {
+            if (unitbll.ShowAddUnitWindowCommand.CanExecute(null))
+            {
+                unitbll.ShowAddUnitWindowCommand.Execute(null);
+                LoadDonViTinh();
+                cbxDonViTinh.SelectedIndex = cbxDonViTinh.FindString(unitbll.UnitToSave.UnitName);
+            }
         }
 
 

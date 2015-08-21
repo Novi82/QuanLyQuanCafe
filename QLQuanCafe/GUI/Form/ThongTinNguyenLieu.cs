@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using DevComponents.DotNetBar.Metro;
 using QLQuanCafe.BLL;
 
@@ -14,7 +15,9 @@ namespace QLQuanCafe.GUI.Form
 
         private void ThongTinNguyenLieu_Load(object sender, EventArgs e)
         {
+            
             LoadNguyenLieu();
+//            dgvNguyenLieu.Sort(dgvNguyenLieu.Columns[0], ListSortDirection.Ascending);
         }
 
         private void LoadNguyenLieu()

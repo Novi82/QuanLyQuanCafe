@@ -76,8 +76,6 @@ namespace QLQuanCafe.BLL
                             //HACK VIEW
                             ThemDonViTinh themDonViTinh = new ThemDonViTinh();
                             themDonViTinh.ShowDialog();
-                            //AddUnitWindow addUnitWindow = new AddUnitWindow();
-                            //addUnitWindow.ShowDialog();
                         },
                         p => true);
                 return _showAddUnitWindowCommand;

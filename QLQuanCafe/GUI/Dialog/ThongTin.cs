@@ -17,6 +17,12 @@ namespace QLQuanCafe.GUI.Dialog
             InitializeComponent();
         }
 
+        public ThongTin(String message):this()
+        {
+            
+            lblMessage.Text = message;
+
+        }
         private void labelX1_Click(object sender, EventArgs e)
         {
 

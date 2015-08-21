@@ -27,7 +27,7 @@ namespace QLQuanCafe.DAO
 
                 listMaterial.Add(material);
             }
-
+            listMaterial.Sort(((x, y) => String.Compare(x.MaterialId, y.MaterialId)));
             return listMaterial;
         }
 
