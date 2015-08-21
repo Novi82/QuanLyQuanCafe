@@ -34,20 +34,31 @@ namespace QLQuanCafe.GUI.Form
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+<<<<<<< HEAD
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+=======
+
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+>>>>>>> 4470b037919d8002e3ce1925386742ff9b60fe81
             this.dgvNguyenLieu = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.materialDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnThemNguyenLieu = new DevComponents.DotNetBar.ButtonX();
             this.btnSuaNguyenLieu = new DevComponents.DotNetBar.ButtonX();
             this.btnXoaNguyenLieu = new DevComponents.DotNetBar.ButtonX();
             this.btnThoat = new DevComponents.DotNetBar.ButtonX();
-            this.materialIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.materialDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.materialIdDataGridViewTextBoxColumn = new DevComponents.DotNetBar.Controls.DataGridViewCheckBoxXColumn();
             this.materialNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.unitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.materialDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNguyenLieu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.materialDataBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -58,16 +69,15 @@ namespace QLQuanCafe.GUI.Form
             this.dgvNguyenLieu.AllowUserToDeleteRows = false;
             this.dgvNguyenLieu.AllowUserToResizeRows = false;
             this.dgvNguyenLieu.AutoGenerateColumns = false;
-            this.dgvNguyenLieu.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgvNguyenLieu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvNguyenLieu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvNguyenLieu.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvNguyenLieu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvNguyenLieu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvNguyenLieu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.materialIdDataGridViewTextBoxColumn,
@@ -76,7 +86,19 @@ namespace QLQuanCafe.GUI.Form
             this.priceDataGridViewTextBoxColumn,
             this.quantityDataGridViewTextBoxColumn});
             this.dgvNguyenLieu.DataSource = this.materialDataBindingSource;
+<<<<<<< HEAD
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvNguyenLieu.DefaultCellStyle = dataGridViewCellStyle2;
+=======
+
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
@@ -84,26 +106,31 @@ namespace QLQuanCafe.GUI.Form
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvNguyenLieu.DefaultCellStyle = dataGridViewCellStyle5;
+>>>>>>> 4470b037919d8002e3ce1925386742ff9b60fe81
             this.dgvNguyenLieu.EnableHeadersVisualStyles = false;
-            this.dgvNguyenLieu.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.dgvNguyenLieu.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(115)))), ((int)(((byte)(70)))));
             this.dgvNguyenLieu.Location = new System.Drawing.Point(12, 25);
             this.dgvNguyenLieu.MultiSelect = false;
             this.dgvNguyenLieu.Name = "dgvNguyenLieu";
             this.dgvNguyenLieu.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvNguyenLieu.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvNguyenLieu.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvNguyenLieu.RowHeadersVisible = false;
             this.dgvNguyenLieu.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvNguyenLieu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvNguyenLieu.Size = new System.Drawing.Size(564, 463);
             this.dgvNguyenLieu.TabIndex = 0;
             this.dgvNguyenLieu.SelectionChanged += new System.EventHandler(this.dgvNguyenLieu_SelectionChanged);
+            // 
+            // materialDataBindingSource
+            // 
+            this.materialDataBindingSource.DataSource = typeof(QLQuanCafe.DTO.MaterialData);
             // 
             // btnThemNguyenLieu
             // 
@@ -153,12 +180,21 @@ namespace QLQuanCafe.GUI.Form
             this.btnThoat.Text = "Thoát";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
+            // materialDataBindingSource
+            // 
+            this.materialDataBindingSource.DataSource = typeof(QLQuanCafe.DTO.MaterialData);
+            // 
             // materialIdDataGridViewTextBoxColumn
             // 
+            this.materialIdDataGridViewTextBoxColumn.Checked = true;
+            this.materialIdDataGridViewTextBoxColumn.CheckState = System.Windows.Forms.CheckState.Indeterminate;
+            this.materialIdDataGridViewTextBoxColumn.CheckValue = "N";
             this.materialIdDataGridViewTextBoxColumn.DataPropertyName = "MaterialId";
             this.materialIdDataGridViewTextBoxColumn.HeaderText = "Mã";
             this.materialIdDataGridViewTextBoxColumn.Name = "materialIdDataGridViewTextBoxColumn";
             this.materialIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.materialIdDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.materialIdDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // materialNameDataGridViewTextBoxColumn
             // 
@@ -171,6 +207,8 @@ namespace QLQuanCafe.GUI.Form
             // unitDataGridViewTextBoxColumn
             // 
             this.unitDataGridViewTextBoxColumn.DataPropertyName = "Unit";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.unitDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this.unitDataGridViewTextBoxColumn.HeaderText = "Đơn Vị Tính";
             this.unitDataGridViewTextBoxColumn.Name = "unitDataGridViewTextBoxColumn";
             this.unitDataGridViewTextBoxColumn.ReadOnly = true;
@@ -178,6 +216,8 @@ namespace QLQuanCafe.GUI.Form
             // priceDataGridViewTextBoxColumn
             // 
             this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.priceDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
             this.priceDataGridViewTextBoxColumn.HeaderText = "Đơn Giá";
             this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
             this.priceDataGridViewTextBoxColumn.ReadOnly = true;
@@ -185,13 +225,11 @@ namespace QLQuanCafe.GUI.Form
             // quantityDataGridViewTextBoxColumn
             // 
             this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.quantityDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
             this.quantityDataGridViewTextBoxColumn.HeaderText = "Số Lượng";
             this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
             this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // materialDataBindingSource
-            // 
-            this.materialDataBindingSource.DataSource = typeof(QLQuanCafe.DTO.MaterialData);
             // 
             // ThongTinNguyenLieu
             // 
@@ -203,8 +241,7 @@ namespace QLQuanCafe.GUI.Form
             this.Controls.Add(this.btnSuaNguyenLieu);
             this.Controls.Add(this.btnThemNguyenLieu);
             this.Controls.Add(this.dgvNguyenLieu);
-            this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+
             this.MaximizeBox = false;
             this.Name = "ThongTinNguyenLieu";
             this.ShowIcon = false;
@@ -226,7 +263,7 @@ namespace QLQuanCafe.GUI.Form
         private ButtonX btnXoaNguyenLieu;
         private BindingSource materialDataBindingSource;
         private ButtonX btnThoat;
-        private DataGridViewTextBoxColumn materialIdDataGridViewTextBoxColumn;
+        private DataGridViewCheckBoxXColumn materialIdDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn materialNameDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn unitDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
