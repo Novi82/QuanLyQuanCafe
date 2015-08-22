@@ -7,13 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevComponents.DotNetBar.Controls;
 using QLQuanCafe.BLL;
 using QLQuanCafe.DTO;
 
 namespace QLQuanCafe.GUI.UserControl
 {
+   
     public partial class ThucDonUC : System.Windows.Forms.UserControl
     {
+   
         private HomePageBll homePageBll = LocatorBll.HomePageVM;
 
         private MenuCategoryAndMenuItemBll menuCategoryAndMenuItemBll = LocatorBll.MenuCategoryAndMenuItemVM;
@@ -48,6 +51,23 @@ namespace QLQuanCafe.GUI.UserControl
         {
             menuCategoryAndMenuItemBll.SelectMenuCategoryCommand.Execute(cbxLoaiMonAn.SelectedItem);
             LoadMonAn();
+        }
+
+        private void dgvThucDon_SelectionChanged(object sender, EventArgs e)
+        {
+            if (homePageBll != null)
+            {
+                DataGridViewX dgv = sender as DataGridViewX;
+                if (dgv.SelectedRows.Count > 0)
+                {
+                    if (homePageBll.SelectMenuItemCommand.CanExecute(null))
+                    {
+//                        homePageBll.SelectMenuItemCommand.Execute(dgv.SelectedRows[0].DataBoundItem);
+
+                        dgv.ClearSelection();
+                    }
+                }
+            }
         }
     }
 }

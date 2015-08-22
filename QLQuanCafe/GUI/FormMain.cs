@@ -87,7 +87,7 @@ namespace QLQuanCafe.GUI
 
         private void LoadThucDon()
         {
-            thucDonUC1.LoadLoaiMonAn();
+      
         }
     }
 }

@@ -445,6 +445,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\BillReport.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\QLQuanCafe.DTO.AccountData.datasource" />
     <None Include="Properties\DataSources\QLQuanCafe.DTO.AreaData.datasource" />
@@ -504,9 +505,7 @@
     <Content Include="Resources\warehousing.png" />
     <Content Include="Resources\XuatKho.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Report\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

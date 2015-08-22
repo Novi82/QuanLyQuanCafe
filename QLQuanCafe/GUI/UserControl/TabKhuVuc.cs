@@ -97,15 +97,12 @@ namespace QLQuanCafe.GUI.UserControl
                     ListViewEx listView = sender as ListViewEx;
                     if(listView.SelectedItems.Count>0)
                         homePageBll.SelectTableCommand.Execute(listView.SelectedItems[0].Tag);
-
-//                    ListViewMenuItem.SelectedItem = null;
                 }
             }
         }
 
         private void TabKhuVuc_Load(object sender, EventArgs e)
         {
-//            LoadArea(LocatorBll.AreaAndTableVM.ListArea);
         }
 
 

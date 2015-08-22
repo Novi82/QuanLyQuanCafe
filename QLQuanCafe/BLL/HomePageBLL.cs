@@ -6,6 +6,7 @@ using MySql.Data.MySqlClient;
 using QLQuanCafe.Common;
 using QLQuanCafe.DAO;
 using QLQuanCafe.DTO;
+using QLQuanCafe.GUI;
 
 namespace QLQuanCafe.BLL
 {
@@ -714,8 +715,8 @@ namespace QLQuanCafe.BLL
                 _isNewBillDetail = true;
 
                 //HACK view
-                //RequireMenuItemWindow requireMenuItemWindow = new RequireMenuItemWindow();
-                //requireMenuItemWindow.ShowDialog();
+                YeuCauMon yeuCauMon  = new YeuCauMon();
+                yeuCauMon.ShowDialog();
             }
         }
 
@@ -775,8 +776,8 @@ namespace QLQuanCafe.BLL
                     BillDetaiSelected = billDetail;
 
                     //_isNewBillDetail = false;
-                    //RequireMenuItemWindow requireMenuItemWindow = new RequireMenuItemWindow();
-                    //requireMenuItemWindow.ShowDialog();
+                    YeuCauMon yeuCauMon =new YeuCauMon();
+                    yeuCauMon.ShowDialog();
                 }
             }
         }
@@ -825,6 +826,8 @@ namespace QLQuanCafe.BLL
 
                 //Xuat bill
                 //HACK VIEW
+                XacNhanThanhToan xacNhanThanhToan = new XacNhanThanhToan();
+                xacNhanThanhToan.ShowDialog();
                 //BillWindow billWindow = new BillWindow(billID);
                 //billWindow.ShowDialog();
             }

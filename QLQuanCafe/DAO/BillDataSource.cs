@@ -25,7 +25,7 @@ namespace QLQuanCafe.DAO
                 bill.Table = new TableData { TableId = dt.Rows[0]["MaBan"].ToString() };
                 bill.TableLiquidate = new TableData { TableId = dt.Rows[0]["MaBanThanhToan"].ToString() };
                 bill.Time = DateTime.Parse(dt.Rows[0]["ThoiGian"].ToString());
-                bill.TotalMoney = Decimal.Parse(dt.Rows[0]["TongTienUC"].ToString());
+                bill.TotalMoney = Decimal.Parse(dt.Rows[0]["TongTien"].ToString());
             }
 
             return bill;

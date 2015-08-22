@@ -122,6 +122,7 @@
             this.dgvThucDon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvThucDon.Size = new System.Drawing.Size(301, 188);
             this.dgvThucDon.TabIndex = 34;
+            this.dgvThucDon.SelectionChanged += new System.EventHandler(this.dgvThucDon_SelectionChanged);
             // 
             // menuItemNameDataGridViewTextBoxColumn
             // 

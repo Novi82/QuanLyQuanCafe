@@ -166,9 +166,6 @@
   <data name="AddMaterials" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AddMaterials.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="TableFormMain" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TableFormMain.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="AddTable" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AddTable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
