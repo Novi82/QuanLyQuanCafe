@@ -51,5 +51,10 @@ namespace QLQuanCafe.DTO
         {
             Price = 1000;
         }
+
+        public override string ToString()
+        {
+            return MenuItemName;
+        }
     }
 }

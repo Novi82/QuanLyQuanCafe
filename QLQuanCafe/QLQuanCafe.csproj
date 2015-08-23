@@ -318,6 +318,12 @@
     <Compile Include="GUI\Dialog\XuatKho.Designer.cs">
       <DependentUpon>XuatKho.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\GoiMon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GoiMon.Designer.cs">
+      <DependentUpon>GoiMon.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\YeuCauMon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -437,6 +443,9 @@
     <EmbeddedResource Include="GUI\Dialog\XuatKho.resx">
       <DependentUpon>XuatKho.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GoiMon.resx">
+      <DependentUpon>GoiMon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\YeuCauMon.resx">
       <DependentUpon>YeuCauMon.cs</DependentUpon>
     </EmbeddedResource>
@@ -450,6 +459,7 @@
     <None Include="Properties\DataSources\QLQuanCafe.DTO.AccountData.datasource" />
     <None Include="Properties\DataSources\QLQuanCafe.DTO.AreaData.datasource" />
     <None Include="Properties\DataSources\QLQuanCafe.DTO.BillData.datasource" />
+    <None Include="Properties\DataSources\QLQuanCafe.DTO.BillDetailData.datasource" />
     <None Include="Properties\DataSources\QLQuanCafe.DTO.InventoryLogData.datasource" />
     <None Include="Properties\DataSources\QLQuanCafe.DTO.MaterialData.datasource" />
     <None Include="Properties\DataSources\QLQuanCafe.DTO.MenuCategoryData.datasource" />

@@ -16,6 +16,7 @@ namespace QLQuanCafe.GUI
         public FormMain()
         {
             InitializeComponent();
+
         }
 
         #region Menu
@@ -78,6 +79,7 @@ namespace QLQuanCafe.GUI
         {
             LoadKhuVuc_Ban();
             LoadThucDon();
+            hoaDonUC1.LoadHoaDonTrongNgay();
         }
 
         private void LoadKhuVuc_Ban()
@@ -88,6 +90,11 @@ namespace QLQuanCafe.GUI
         private void LoadThucDon()
         {
       
+        }
+
+        private void khuVuc_BanUC1_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

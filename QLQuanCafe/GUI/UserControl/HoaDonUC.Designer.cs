@@ -28,30 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlMain = new DevComponents.DotNetBar.PanelEx();
             this.dgvHoaDon = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.TenMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DVT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtGhiChu = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX11 = new DevComponents.DotNetBar.LabelX();
             this.labelX10 = new DevComponents.DotNetBar.LabelX();
             this.txtBan = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtKhuVuc = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX9 = new DevComponents.DotNetBar.LabelX();
+            this.lblHoaDonTrongNgay = new DevComponents.DotNetBar.LabelX();
+            this.billDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.billIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableLiquidateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalMoneyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isPaidDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.pnlMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.billDataBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMain
             // 
             this.pnlMain.CanvasColor = System.Drawing.SystemColors.Control;
             this.pnlMain.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.pnlMain.Controls.Add(this.lblHoaDonTrongNgay);
             this.pnlMain.Controls.Add(this.dgvHoaDon);
             this.pnlMain.Controls.Add(this.txtGhiChu);
             this.pnlMain.Controls.Add(this.labelX11);
@@ -74,9 +80,12 @@
             // 
             // dgvHoaDon
             // 
+            this.dgvHoaDon.AllowUserToAddRows = false;
+            this.dgvHoaDon.AllowUserToDeleteRows = false;
             this.dgvHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvHoaDon.AutoGenerateColumns = false;
             this.dgvHoaDon.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgvHoaDon.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -89,11 +98,13 @@
             this.dgvHoaDon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvHoaDon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.TenMon,
-            this.DVT,
-            this.SL,
-            this.DonGia,
-            this.ThanhTien});
+            this.billIdDataGridViewTextBoxColumn,
+            this.tableDataGridViewTextBoxColumn,
+            this.tableLiquidateDataGridViewTextBoxColumn,
+            this.totalMoneyDataGridViewTextBoxColumn,
+            this.timeDataGridViewTextBoxColumn,
+            this.isPaidDataGridViewCheckBoxColumn});
+            this.dgvHoaDon.DataSource = this.billDataBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -104,8 +115,10 @@
             this.dgvHoaDon.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvHoaDon.EnableHeadersVisualStyles = false;
             this.dgvHoaDon.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.dgvHoaDon.Location = new System.Drawing.Point(3, 48);
+            this.dgvHoaDon.Location = new System.Drawing.Point(3, 94);
+            this.dgvHoaDon.MultiSelect = false;
             this.dgvHoaDon.Name = "dgvHoaDon";
+            this.dgvHoaDon.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -117,46 +130,8 @@
             this.dgvHoaDon.RowHeadersVisible = false;
             this.dgvHoaDon.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvHoaDon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHoaDon.Size = new System.Drawing.Size(570, 371);
+            this.dgvHoaDon.Size = new System.Drawing.Size(570, 325);
             this.dgvHoaDon.TabIndex = 41;
-            // 
-            // TenMon
-            // 
-            this.TenMon.HeaderText = "Tên Món";
-            this.TenMon.Name = "TenMon";
-            this.TenMon.ReadOnly = true;
-            this.TenMon.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.TenMon.Width = 130;
-            // 
-            // DVT
-            // 
-            this.DVT.HeaderText = "Đơn Vị Tính";
-            this.DVT.Name = "DVT";
-            this.DVT.ReadOnly = true;
-            this.DVT.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // SL
-            // 
-            this.SL.HeaderText = "Số Lượng";
-            this.SL.Name = "SL";
-            this.SL.ReadOnly = true;
-            this.SL.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // DonGia
-            // 
-            this.DonGia.HeaderText = "Đơn Giá";
-            this.DonGia.Name = "DonGia";
-            this.DonGia.ReadOnly = true;
-            this.DonGia.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.DonGia.Width = 105;
-            // 
-            // ThanhTien
-            // 
-            this.ThanhTien.HeaderText = "Thành Tiền";
-            this.ThanhTien.Name = "ThanhTien";
-            this.ThanhTien.ReadOnly = true;
-            this.ThanhTien.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ThanhTien.Width = 132;
             // 
             // txtGhiChu
             // 
@@ -168,7 +143,7 @@
             this.txtGhiChu.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtGhiChu.DisabledBackColor = System.Drawing.Color.White;
             this.txtGhiChu.ForeColor = System.Drawing.Color.Black;
-            this.txtGhiChu.Location = new System.Drawing.Point(395, 19);
+            this.txtGhiChu.Location = new System.Drawing.Point(395, 65);
             this.txtGhiChu.Name = "txtGhiChu";
             this.txtGhiChu.PreventEnterBeep = true;
             this.txtGhiChu.Size = new System.Drawing.Size(165, 20);
@@ -182,7 +157,7 @@
             // 
             this.labelX11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX11.ForeColor = System.Drawing.Color.Black;
-            this.labelX11.Location = new System.Drawing.Point(338, 19);
+            this.labelX11.Location = new System.Drawing.Point(338, 65);
             this.labelX11.Name = "labelX11";
             this.labelX11.Size = new System.Drawing.Size(51, 23);
             this.labelX11.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -197,7 +172,7 @@
             // 
             this.labelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX10.ForeColor = System.Drawing.Color.Black;
-            this.labelX10.Location = new System.Drawing.Point(179, 19);
+            this.labelX10.Location = new System.Drawing.Point(179, 65);
             this.labelX10.Name = "labelX10";
             this.labelX10.Size = new System.Drawing.Size(30, 23);
             this.labelX10.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -214,7 +189,7 @@
             this.txtBan.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtBan.DisabledBackColor = System.Drawing.Color.White;
             this.txtBan.ForeColor = System.Drawing.Color.Black;
-            this.txtBan.Location = new System.Drawing.Point(215, 19);
+            this.txtBan.Location = new System.Drawing.Point(215, 65);
             this.txtBan.Name = "txtBan";
             this.txtBan.PreventEnterBeep = true;
             this.txtBan.ReadOnly = true;
@@ -231,7 +206,7 @@
             this.txtKhuVuc.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtKhuVuc.DisabledBackColor = System.Drawing.Color.White;
             this.txtKhuVuc.ForeColor = System.Drawing.Color.Black;
-            this.txtKhuVuc.Location = new System.Drawing.Point(57, 19);
+            this.txtKhuVuc.Location = new System.Drawing.Point(57, 65);
             this.txtKhuVuc.Name = "txtKhuVuc";
             this.txtKhuVuc.PreventEnterBeep = true;
             this.txtKhuVuc.ReadOnly = true;
@@ -246,12 +221,71 @@
             // 
             this.labelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX9.ForeColor = System.Drawing.Color.Black;
-            this.labelX9.Location = new System.Drawing.Point(3, 19);
+            this.labelX9.Location = new System.Drawing.Point(3, 65);
             this.labelX9.Name = "labelX9";
             this.labelX9.Size = new System.Drawing.Size(51, 23);
             this.labelX9.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.labelX9.TabIndex = 35;
             this.labelX9.Text = "Khu Vực :";
+            // 
+            // lblHoaDonTrongNgay
+            // 
+            // 
+            // 
+            // 
+            this.lblHoaDonTrongNgay.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lblHoaDonTrongNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHoaDonTrongNgay.Location = new System.Drawing.Point(155, 20);
+            this.lblHoaDonTrongNgay.Name = "lblHoaDonTrongNgay";
+            this.lblHoaDonTrongNgay.Size = new System.Drawing.Size(426, 39);
+            this.lblHoaDonTrongNgay.TabIndex = 42;
+            this.lblHoaDonTrongNgay.Text = "Hóa Đơn Trong Ngày";
+            // 
+            // billDataBindingSource
+            // 
+            this.billDataBindingSource.DataSource = typeof(QLQuanCafe.DTO.BillData);
+            // 
+            // billIdDataGridViewTextBoxColumn
+            // 
+            this.billIdDataGridViewTextBoxColumn.DataPropertyName = "BillId";
+            this.billIdDataGridViewTextBoxColumn.HeaderText = "BillId";
+            this.billIdDataGridViewTextBoxColumn.Name = "billIdDataGridViewTextBoxColumn";
+            this.billIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tableDataGridViewTextBoxColumn
+            // 
+            this.tableDataGridViewTextBoxColumn.DataPropertyName = "Table";
+            this.tableDataGridViewTextBoxColumn.HeaderText = "Table";
+            this.tableDataGridViewTextBoxColumn.Name = "tableDataGridViewTextBoxColumn";
+            this.tableDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tableLiquidateDataGridViewTextBoxColumn
+            // 
+            this.tableLiquidateDataGridViewTextBoxColumn.DataPropertyName = "TableLiquidate";
+            this.tableLiquidateDataGridViewTextBoxColumn.HeaderText = "TableLiquidate";
+            this.tableLiquidateDataGridViewTextBoxColumn.Name = "tableLiquidateDataGridViewTextBoxColumn";
+            this.tableLiquidateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // totalMoneyDataGridViewTextBoxColumn
+            // 
+            this.totalMoneyDataGridViewTextBoxColumn.DataPropertyName = "TotalMoney";
+            this.totalMoneyDataGridViewTextBoxColumn.HeaderText = "TotalMoney";
+            this.totalMoneyDataGridViewTextBoxColumn.Name = "totalMoneyDataGridViewTextBoxColumn";
+            this.totalMoneyDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // timeDataGridViewTextBoxColumn
+            // 
+            this.timeDataGridViewTextBoxColumn.DataPropertyName = "Time";
+            this.timeDataGridViewTextBoxColumn.HeaderText = "Time";
+            this.timeDataGridViewTextBoxColumn.Name = "timeDataGridViewTextBoxColumn";
+            this.timeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // isPaidDataGridViewCheckBoxColumn
+            // 
+            this.isPaidDataGridViewCheckBoxColumn.DataPropertyName = "IsPaid";
+            this.isPaidDataGridViewCheckBoxColumn.HeaderText = "IsPaid";
+            this.isPaidDataGridViewCheckBoxColumn.Name = "isPaidDataGridViewCheckBoxColumn";
+            this.isPaidDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
             // HoaDonUC
             // 
@@ -262,6 +296,7 @@
             this.Size = new System.Drawing.Size(584, 422);
             this.pnlMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.billDataBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -276,10 +311,13 @@
         private DevComponents.DotNetBar.Controls.TextBoxX txtKhuVuc;
         private DevComponents.DotNetBar.LabelX labelX9;
         private DevComponents.DotNetBar.Controls.DataGridViewX dgvHoaDon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenMon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DVT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SL;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
+        private DevComponents.DotNetBar.LabelX lblHoaDonTrongNgay;
+        private System.Windows.Forms.DataGridViewTextBoxColumn billIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tableDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tableLiquidateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalMoneyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn timeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn isPaidDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.BindingSource billDataBindingSource;
     }
 }

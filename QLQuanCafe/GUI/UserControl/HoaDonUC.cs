@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QLQuanCafe.BLL;
 
 namespace QLQuanCafe.GUI.UserControl
 {
@@ -15,6 +16,11 @@ namespace QLQuanCafe.GUI.UserControl
         public HoaDonUC()
         {
             InitializeComponent();
+        }
+
+        public void LoadHoaDonTrongNgay()
+        {
+            dgvHoaDon.DataSource = LocatorBll.HomePageVM.ListBillToday;
         }
     }
 }

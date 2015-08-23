@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KhuVuc_BanUC));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.mainPanel = new DevComponents.DotNetBar.PanelEx();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -37,7 +40,9 @@
             this.btnTachBan = new DevComponents.DotNetBar.ButtonX();
             this.btnGopBan = new DevComponents.DotNetBar.ButtonX();
             this.btnChuyenBan = new DevComponents.DotNetBar.ButtonX();
-            this.btnHuyMon = new DevComponents.DotNetBar.ButtonX();
+            this.btnHuyDatBan = new DevComponents.DotNetBar.ButtonX();
+            this.btnDatBan = new DevComponents.DotNetBar.ButtonX();
+            this.btnHuyBan = new DevComponents.DotNetBar.ButtonX();
             this.btnMoBan = new DevComponents.DotNetBar.ButtonX();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblGioDen = new DevComponents.DotNetBar.LabelX();
@@ -52,13 +57,18 @@
             this.stcKhuVuc = new DevComponents.DotNetBar.SuperTabControl();
             this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.superTabItem1 = new DevComponents.DotNetBar.SuperTabItem();
-            this.tableImage = new System.Windows.Forms.ImageList(this.components);
-            this.btnHuyBan = new DevComponents.DotNetBar.ButtonX();
             this.panelEx2 = new DevComponents.DotNetBar.PanelEx();
-            this.dgvMonDaGoi = new System.Windows.Forms.DataGridView();
             this.btnChuanBi = new DevComponents.DotNetBar.ButtonX();
             this.btnGoiMon = new DevComponents.DotNetBar.ButtonX();
-            this.btnDatBan = new DevComponents.DotNetBar.ButtonX();
+            this.btnHuyMon = new DevComponents.DotNetBar.ButtonX();
+            this.tableImage = new System.Windows.Forms.ImageList(this.components);
+            this.dgvMonDaGoi = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menuItemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.billDetailDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mainPanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -68,6 +78,7 @@
             this.stcKhuVuc.SuspendLayout();
             this.panelEx2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMonDaGoi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.billDetailDataBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // mainPanel
@@ -114,6 +125,7 @@
             this.panel1.Controls.Add(this.btnTachBan);
             this.panel1.Controls.Add(this.btnGopBan);
             this.panel1.Controls.Add(this.btnChuyenBan);
+            this.panel1.Controls.Add(this.btnHuyDatBan);
             this.panel1.Controls.Add(this.btnDatBan);
             this.panel1.Controls.Add(this.btnHuyBan);
             this.panel1.Controls.Add(this.btnMoBan);
@@ -127,7 +139,7 @@
             // 
             this.btnDonBan.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnDonBan.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnDonBan.Location = new System.Drawing.Point(3, 206);
+            this.btnDonBan.Location = new System.Drawing.Point(3, 226);
             this.btnDonBan.Name = "btnDonBan";
             this.btnDonBan.Size = new System.Drawing.Size(75, 23);
             this.btnDonBan.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -138,7 +150,7 @@
             // 
             this.btnTachBan.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnTachBan.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnTachBan.Location = new System.Drawing.Point(3, 163);
+            this.btnTachBan.Location = new System.Drawing.Point(3, 183);
             this.btnTachBan.Name = "btnTachBan";
             this.btnTachBan.Size = new System.Drawing.Size(75, 23);
             this.btnTachBan.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -149,7 +161,7 @@
             // 
             this.btnGopBan.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnGopBan.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnGopBan.Location = new System.Drawing.Point(3, 134);
+            this.btnGopBan.Location = new System.Drawing.Point(3, 154);
             this.btnGopBan.Name = "btnGopBan";
             this.btnGopBan.Size = new System.Drawing.Size(75, 23);
             this.btnGopBan.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -160,24 +172,51 @@
             // 
             this.btnChuyenBan.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnChuyenBan.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnChuyenBan.Location = new System.Drawing.Point(3, 105);
+            this.btnChuyenBan.Location = new System.Drawing.Point(3, 125);
             this.btnChuyenBan.Name = "btnChuyenBan";
             this.btnChuyenBan.Size = new System.Drawing.Size(75, 23);
             this.btnChuyenBan.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnChuyenBan.TabIndex = 19;
             this.btnChuyenBan.Text = "Chuyển Bàn";
             // 
-            // btnHuyMon
+            // btnHuyDatBan
             // 
-            this.btnHuyMon.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnHuyMon.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnHuyMon.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnHuyMon.Location = new System.Drawing.Point(133, 244);
-            this.btnHuyMon.Name = "btnHuyMon";
-            this.btnHuyMon.Size = new System.Drawing.Size(75, 23);
-            this.btnHuyMon.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnHuyMon.TabIndex = 18;
-            this.btnHuyMon.Text = "Hủy Món";
+            this.btnHuyDatBan.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnHuyDatBan.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnHuyDatBan.Enabled = false;
+            this.btnHuyDatBan.Location = new System.Drawing.Point(3, 90);
+            this.btnHuyDatBan.Name = "btnHuyDatBan";
+            this.btnHuyDatBan.Size = new System.Drawing.Size(75, 23);
+            this.btnHuyDatBan.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnHuyDatBan.TabIndex = 4;
+            this.btnHuyDatBan.Text = "Hủy Đặt Bàn";
+            this.btnHuyDatBan.Click += new System.EventHandler(this.btnHuyDatBan_Click);
+            // 
+            // btnDatBan
+            // 
+            this.btnDatBan.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnDatBan.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnDatBan.Enabled = false;
+            this.btnDatBan.Location = new System.Drawing.Point(3, 61);
+            this.btnDatBan.Name = "btnDatBan";
+            this.btnDatBan.Size = new System.Drawing.Size(75, 23);
+            this.btnDatBan.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnDatBan.TabIndex = 4;
+            this.btnDatBan.Text = "Đặt bàn";
+            this.btnDatBan.Click += new System.EventHandler(this.btnDatBan_Click);
+            // 
+            // btnHuyBan
+            // 
+            this.btnHuyBan.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnHuyBan.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnHuyBan.Enabled = false;
+            this.btnHuyBan.Location = new System.Drawing.Point(3, 32);
+            this.btnHuyBan.Name = "btnHuyBan";
+            this.btnHuyBan.Size = new System.Drawing.Size(75, 23);
+            this.btnHuyBan.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnHuyBan.TabIndex = 4;
+            this.btnHuyBan.Text = "Hủy Bàn";
+            this.btnHuyBan.Click += new System.EventHandler(this.btnHuyBan_Click);
             // 
             // btnMoBan
             // 
@@ -382,28 +421,6 @@
             this.superTabItem1.Name = "superTabItem1";
             this.superTabItem1.Text = "superTabItem1";
             // 
-            // tableImage
-            // 
-            this.tableImage.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("tableImage.ImageStream")));
-            this.tableImage.TransparentColor = System.Drawing.Color.Transparent;
-            this.tableImage.Images.SetKeyName(0, "Trong");
-            this.tableImage.Images.SetKeyName(1, "CoNguoi");
-            this.tableImage.Images.SetKeyName(2, "ChuaDon");
-            this.tableImage.Images.SetKeyName(3, "DaDat");
-            // 
-            // btnHuyBan
-            // 
-            this.btnHuyBan.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnHuyBan.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnHuyBan.Enabled = false;
-            this.btnHuyBan.Location = new System.Drawing.Point(3, 32);
-            this.btnHuyBan.Name = "btnHuyBan";
-            this.btnHuyBan.Size = new System.Drawing.Size(75, 23);
-            this.btnHuyBan.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnHuyBan.TabIndex = 4;
-            this.btnHuyBan.Text = "Hủy Bàn";
-            this.btnHuyBan.Click += new System.EventHandler(this.btnHuyBan_Click);
-            // 
             // panelEx2
             // 
             this.panelEx2.CanvasColor = System.Drawing.SystemColors.Control;
@@ -424,20 +441,6 @@
             this.panelEx2.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.panelEx2.Style.GradientAngle = 90;
             this.panelEx2.TabIndex = 6;
-            // 
-            // dgvMonDaGoi
-            // 
-            this.dgvMonDaGoi.AllowUserToAddRows = false;
-            this.dgvMonDaGoi.AllowUserToDeleteRows = false;
-            this.dgvMonDaGoi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvMonDaGoi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMonDaGoi.Location = new System.Drawing.Point(0, 0);
-            this.dgvMonDaGoi.Name = "dgvMonDaGoi";
-            this.dgvMonDaGoi.ReadOnly = true;
-            this.dgvMonDaGoi.Size = new System.Drawing.Size(335, 229);
-            this.dgvMonDaGoi.TabIndex = 4;
             // 
             // btnChuanBi
             // 
@@ -462,19 +465,118 @@
             this.btnGoiMon.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnGoiMon.TabIndex = 18;
             this.btnGoiMon.Text = "Gọi món";
+            this.btnGoiMon.Click += new System.EventHandler(this.btnGoiMon_Click);
             // 
-            // btnDatBan
+            // btnHuyMon
             // 
-            this.btnDatBan.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnDatBan.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnDatBan.Enabled = false;
-            this.btnDatBan.Location = new System.Drawing.Point(3, 61);
-            this.btnDatBan.Name = "btnDatBan";
-            this.btnDatBan.Size = new System.Drawing.Size(75, 23);
-            this.btnDatBan.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnDatBan.TabIndex = 4;
-            this.btnDatBan.Text = "Đặt bàn";
-            this.btnDatBan.Click += new System.EventHandler(this.btnDatBan_Click);
+            this.btnHuyMon.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnHuyMon.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnHuyMon.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnHuyMon.Location = new System.Drawing.Point(133, 244);
+            this.btnHuyMon.Name = "btnHuyMon";
+            this.btnHuyMon.Size = new System.Drawing.Size(75, 23);
+            this.btnHuyMon.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnHuyMon.TabIndex = 18;
+            this.btnHuyMon.Text = "Hủy Món";
+            // 
+            // tableImage
+            // 
+            this.tableImage.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("tableImage.ImageStream")));
+            this.tableImage.TransparentColor = System.Drawing.Color.Transparent;
+            this.tableImage.Images.SetKeyName(0, "Trong");
+            this.tableImage.Images.SetKeyName(1, "CoNguoi");
+            this.tableImage.Images.SetKeyName(2, "ChuaDon");
+            this.tableImage.Images.SetKeyName(3, "DaDat");
+            // 
+            // dgvMonDaGoi
+            // 
+            this.dgvMonDaGoi.AllowUserToAddRows = false;
+            this.dgvMonDaGoi.AllowUserToDeleteRows = false;
+            this.dgvMonDaGoi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvMonDaGoi.AutoGenerateColumns = false;
+            this.dgvMonDaGoi.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMonDaGoi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvMonDaGoi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMonDaGoi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.menuItemDataGridViewTextBoxColumn,
+            this.DonGia,
+            this.quantityDataGridViewTextBoxColumn,
+            this.ThanhTien,
+            this.noteDataGridViewTextBoxColumn});
+            this.dgvMonDaGoi.DataSource = this.billDetailDataBindingSource;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMonDaGoi.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvMonDaGoi.EnableHeadersVisualStyles = false;
+            this.dgvMonDaGoi.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.dgvMonDaGoi.Location = new System.Drawing.Point(3, 3);
+            this.dgvMonDaGoi.MultiSelect = false;
+            this.dgvMonDaGoi.Name = "dgvMonDaGoi";
+            this.dgvMonDaGoi.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMonDaGoi.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvMonDaGoi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvMonDaGoi.Size = new System.Drawing.Size(329, 235);
+            this.dgvMonDaGoi.TabIndex = 19;
+            this.dgvMonDaGoi.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvMonDaGoi_RowsAdded);
+            // 
+            // DonGia
+            // 
+            this.DonGia.HeaderText = "Đơn Giá";
+            this.DonGia.Name = "DonGia";
+            this.DonGia.ReadOnly = true;
+            // 
+            // menuItemDataGridViewTextBoxColumn
+            // 
+            this.menuItemDataGridViewTextBoxColumn.DataPropertyName = "MenuItem";
+            this.menuItemDataGridViewTextBoxColumn.HeaderText = "Món";
+            this.menuItemDataGridViewTextBoxColumn.Name = "menuItemDataGridViewTextBoxColumn";
+            this.menuItemDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // quantityDataGridViewTextBoxColumn
+            // 
+            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.HeaderText = "Số Lượng";
+            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
+            this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.DataPropertyName = "TotalMoney";
+            this.ThanhTien.HeaderText = "Thành Tiền";
+            this.ThanhTien.Name = "ThanhTien";
+            this.ThanhTien.ReadOnly = true;
+            // 
+            // noteDataGridViewTextBoxColumn
+            // 
+            this.noteDataGridViewTextBoxColumn.DataPropertyName = "Note";
+            this.noteDataGridViewTextBoxColumn.HeaderText = "Ghi Chú";
+            this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
+            this.noteDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // billDetailDataBindingSource
+            // 
+            this.billDetailDataBindingSource.DataSource = typeof(QLQuanCafe.DTO.BillDetailData);
             // 
             // KhuVuc_BanUC
             // 
@@ -493,6 +595,7 @@
             this.stcKhuVuc.ResumeLayout(false);
             this.panelEx2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMonDaGoi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.billDetailDataBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -524,9 +627,16 @@
         private System.Windows.Forms.ImageList tableImage;
         private DevComponents.DotNetBar.ButtonX btnHuyBan;
         private DevComponents.DotNetBar.PanelEx panelEx2;
-        private System.Windows.Forms.DataGridView dgvMonDaGoi;
         private DevComponents.DotNetBar.ButtonX btnChuanBi;
         private DevComponents.DotNetBar.ButtonX btnGoiMon;
         private DevComponents.DotNetBar.ButtonX btnDatBan;
+        private DevComponents.DotNetBar.ButtonX btnHuyDatBan;
+        private System.Windows.Forms.BindingSource billDetailDataBindingSource;
+        private DevComponents.DotNetBar.Controls.DataGridViewX dgvMonDaGoi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn menuItemDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn;
     }
 }

@@ -715,7 +715,7 @@ namespace QLQuanCafe.BLL
                 _isNewBillDetail = true;
 
                 //HACK view
-                YeuCauMon yeuCauMon  = new YeuCauMon();
+                YeuCauMon yeuCauMon = new YeuCauMon();
                 yeuCauMon.ShowDialog();
             }
         }
@@ -776,8 +776,8 @@ namespace QLQuanCafe.BLL
                     BillDetaiSelected = billDetail;
 
                     //_isNewBillDetail = false;
-                    YeuCauMon yeuCauMon =new YeuCauMon();
-                    yeuCauMon.ShowDialog();
+                    GoiMon goiMon =new GoiMon();
+                    goiMon.ShowDialog();
                 }
             }
         }

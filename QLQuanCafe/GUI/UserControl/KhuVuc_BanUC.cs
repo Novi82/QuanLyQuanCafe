@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.Controls;
 using QLQuanCafe.BLL;
 using QLQuanCafe.DTO;
+
+// ReSharper disable All
 
 namespace QLQuanCafe.GUI.UserControl
 {
@@ -22,6 +19,7 @@ namespace QLQuanCafe.GUI.UserControl
         public KhuVuc_BanUC()
         {
             InitializeComponent();
+            
         }
 
         private void KhuVuc_BanUC_Load(object sender, EventArgs e)
@@ -37,21 +35,21 @@ namespace QLQuanCafe.GUI.UserControl
                 btnMoBan.Enabled = true;
                 btnHuyBan.Enabled = false;
                 btnDatBan.Enabled = true;
-                btnDatBan.Text = "Đặt Bàn";
+                btnHuyDatBan.Enabled = false;
             }
             else if ("CoNguoi".Equals(state))
             {
                 btnMoBan.Enabled = false;
                 btnHuyBan.Enabled = true;
                 btnDatBan.Enabled = false;
-                btnDatBan.Text = "Đặt Bàn";
+                btnHuyDatBan.Enabled = false;
             }
             else if ("DaDat".Equals(state))
             {
                 btnMoBan.Enabled = false;
                 btnHuyBan.Enabled = false;
-                btnDatBan.Enabled = true;
-                btnDatBan.Text = "Hủy Đặt";
+                btnDatBan.Enabled = false;
+                btnHuyDatBan.Enabled = true;
             }
         }
         public void LoadKhuVuc()
@@ -68,7 +66,7 @@ namespace QLQuanCafe.GUI.UserControl
 
                 // list view init
                 ListViewEx listview = new ListViewEx();
-                listview.BackColor = System.Drawing.Color.White;
+                listview.BackColor = Color.White;
                 listview.Dock = DockStyle.Fill;
                 listview.LargeImageList = tableImage;
                 listview.SelectedIndexChanged += listview_SelectedIndexChanged;
@@ -90,7 +88,7 @@ namespace QLQuanCafe.GUI.UserControl
                 homePageBll.ListTable = alltable;
                 // tab panel config
                 panel.Controls.Add(listview);
-                panel.Dock = System.Windows.Forms.DockStyle.Fill;
+                panel.Dock = DockStyle.Fill;
                 //                panel.Location = new System.Drawing.Point(0, 33);
                 panel.Name = area.AreaId;
                 panel.Size = new System.Drawing.Size(600, 800);
@@ -106,7 +104,6 @@ namespace QLQuanCafe.GUI.UserControl
 
         void listview_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             if (homePageBll != null)
             {
                 if (homePageBll.SelectTableCommand.CanExecute(null))
@@ -120,6 +117,7 @@ namespace QLQuanCafe.GUI.UserControl
                         updateInfo(currenttable);
                         //                    lblGioDen.Text = DateTime.Now.ToShortTimeString();
                         SwitchButton();
+                        LoadBillDetail();
                     }
                 }
 
@@ -196,6 +194,45 @@ namespace QLQuanCafe.GUI.UserControl
                     SwitchButton();
                 }
             }
+        }
+
+        private void btnHuyDatBan_Click(object sender, EventArgs e)
+        {
+            TableData selectedTable = homePageBll.TableSelected;
+            if (selectedTable != null)
+            {
+                if (homePageBll.CancelOrderTableCommand.CanExecute(selectedTable))
+                {
+                    homePageBll.CancelOrderTableCommand.Execute(selectedTable);
+                    currentItem.ImageKey = homePageBll.TableSelected.TableState;
+                    updateInfo(homePageBll.TableSelected);
+                    lblGioDen.Text = string.Empty;
+                    SwitchButton();
+                }
+            }
+        }
+
+        private void btnGoiMon_Click(object sender, EventArgs e)
+        {
+            GoiMon goiMon = new GoiMon();
+            goiMon.ShowDialog();
+            LoadBillDetail();
+        }
+
+        private void dgvMonDaGoi_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            MenuItemData menuItemData = (dgvMonDaGoi.Rows[e.RowIndex].Cells["menuItemDataGridViewTextBoxColumn"]).Value as MenuItemData;
+            if (menuItemData != null)
+            {
+//                (dgvMonDaGoi.Rows[e.RowIndex].Cells["TenMon"]).Value = menuItemData.MenuItemName;
+                (dgvMonDaGoi.Rows[e.RowIndex].Cells["DonGia"]).Value = menuItemData.Price;
+            }
+        }
+
+        private void LoadBillDetail()
+        {
+            dgvMonDaGoi.DataSource = homePageBll.BillDetaisOfTableSelected;
+            lblTongTien.Text = homePageBll.BillOfTableSelected.TotalMoney.ToString();
         }
     }
 }

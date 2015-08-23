@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
@@ -40,6 +41,7 @@
             this.labelX10 = new DevComponents.DotNetBar.LabelX();
             this.btnOK = new DevComponents.DotNetBar.ButtonX();
             this.labelX11 = new DevComponents.DotNetBar.LabelX();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.SuspendLayout();
             // 
             // labelX1
@@ -218,6 +220,12 @@
             this.labelX11.TabIndex = 2;
             this.labelX11.Text = "Lớp :  SE211.F31";
             // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
             // About
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -261,5 +269,6 @@
         private DevComponents.DotNetBar.LabelX labelX10;
         private DevComponents.DotNetBar.ButtonX btnOK;
         private DevComponents.DotNetBar.LabelX labelX11;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
