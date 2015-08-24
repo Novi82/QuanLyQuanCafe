@@ -146,7 +146,7 @@ namespace QLQuanCafe.DAO
                     }
                 };
                 bill.Time = DateTime.Parse(row["ThoiGian"].ToString());
-                bill.TotalMoney = Decimal.Parse(row["TongTienUC"].ToString());
+                bill.TotalMoney = Decimal.Parse(row["TongTien"].ToString());
 
                 listBill.Add(bill);
             }

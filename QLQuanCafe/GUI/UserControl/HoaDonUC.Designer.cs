@@ -33,21 +33,20 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlMain = new DevComponents.DotNetBar.PanelEx();
+            this.lblHoaDonTrongNgay = new DevComponents.DotNetBar.LabelX();
             this.dgvHoaDon = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.billDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtGhiChu = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX11 = new DevComponents.DotNetBar.LabelX();
             this.labelX10 = new DevComponents.DotNetBar.LabelX();
             this.txtBan = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtKhuVuc = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX9 = new DevComponents.DotNetBar.LabelX();
-            this.lblHoaDonTrongNgay = new DevComponents.DotNetBar.LabelX();
-            this.billDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.billIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tableDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tableLiquidateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalMoneyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.isPaidDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.totalMoneyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KhuVuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.billDataBindingSource)).BeginInit();
@@ -78,6 +77,19 @@
             this.pnlMain.Style.GradientAngle = 90;
             this.pnlMain.TabIndex = 0;
             // 
+            // lblHoaDonTrongNgay
+            // 
+            // 
+            // 
+            // 
+            this.lblHoaDonTrongNgay.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lblHoaDonTrongNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHoaDonTrongNgay.Location = new System.Drawing.Point(155, 20);
+            this.lblHoaDonTrongNgay.Name = "lblHoaDonTrongNgay";
+            this.lblHoaDonTrongNgay.Size = new System.Drawing.Size(426, 39);
+            this.lblHoaDonTrongNgay.TabIndex = 42;
+            this.lblHoaDonTrongNgay.Text = "Hóa Đơn Trong Ngày";
+            // 
             // dgvHoaDon
             // 
             this.dgvHoaDon.AllowUserToAddRows = false;
@@ -99,18 +111,17 @@
             this.dgvHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvHoaDon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.billIdDataGridViewTextBoxColumn,
-            this.tableDataGridViewTextBoxColumn,
-            this.tableLiquidateDataGridViewTextBoxColumn,
-            this.totalMoneyDataGridViewTextBoxColumn,
             this.timeDataGridViewTextBoxColumn,
-            this.isPaidDataGridViewCheckBoxColumn});
+            this.totalMoneyDataGridViewTextBoxColumn,
+            this.KhuVuc,
+            this.tableDataGridViewTextBoxColumn});
             this.dgvHoaDon.DataSource = this.billDataBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvHoaDon.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvHoaDon.EnableHeadersVisualStyles = false;
@@ -132,6 +143,10 @@
             this.dgvHoaDon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHoaDon.Size = new System.Drawing.Size(570, 325);
             this.dgvHoaDon.TabIndex = 41;
+            // 
+            // billDataBindingSource
+            // 
+            this.billDataBindingSource.DataSource = typeof(QLQuanCafe.DTO.BillData);
             // 
             // txtGhiChu
             // 
@@ -228,64 +243,39 @@
             this.labelX9.TabIndex = 35;
             this.labelX9.Text = "Khu Vực :";
             // 
-            // lblHoaDonTrongNgay
-            // 
-            // 
-            // 
-            // 
-            this.lblHoaDonTrongNgay.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lblHoaDonTrongNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHoaDonTrongNgay.Location = new System.Drawing.Point(155, 20);
-            this.lblHoaDonTrongNgay.Name = "lblHoaDonTrongNgay";
-            this.lblHoaDonTrongNgay.Size = new System.Drawing.Size(426, 39);
-            this.lblHoaDonTrongNgay.TabIndex = 42;
-            this.lblHoaDonTrongNgay.Text = "Hóa Đơn Trong Ngày";
-            // 
-            // billDataBindingSource
-            // 
-            this.billDataBindingSource.DataSource = typeof(QLQuanCafe.DTO.BillData);
-            // 
             // billIdDataGridViewTextBoxColumn
             // 
             this.billIdDataGridViewTextBoxColumn.DataPropertyName = "BillId";
-            this.billIdDataGridViewTextBoxColumn.HeaderText = "BillId";
+            this.billIdDataGridViewTextBoxColumn.HeaderText = "Hóa Đơn";
             this.billIdDataGridViewTextBoxColumn.Name = "billIdDataGridViewTextBoxColumn";
             this.billIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tableDataGridViewTextBoxColumn
-            // 
-            this.tableDataGridViewTextBoxColumn.DataPropertyName = "Table";
-            this.tableDataGridViewTextBoxColumn.HeaderText = "Table";
-            this.tableDataGridViewTextBoxColumn.Name = "tableDataGridViewTextBoxColumn";
-            this.tableDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tableLiquidateDataGridViewTextBoxColumn
-            // 
-            this.tableLiquidateDataGridViewTextBoxColumn.DataPropertyName = "TableLiquidate";
-            this.tableLiquidateDataGridViewTextBoxColumn.HeaderText = "TableLiquidate";
-            this.tableLiquidateDataGridViewTextBoxColumn.Name = "tableLiquidateDataGridViewTextBoxColumn";
-            this.tableLiquidateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // totalMoneyDataGridViewTextBoxColumn
-            // 
-            this.totalMoneyDataGridViewTextBoxColumn.DataPropertyName = "TotalMoney";
-            this.totalMoneyDataGridViewTextBoxColumn.HeaderText = "TotalMoney";
-            this.totalMoneyDataGridViewTextBoxColumn.Name = "totalMoneyDataGridViewTextBoxColumn";
-            this.totalMoneyDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // timeDataGridViewTextBoxColumn
             // 
             this.timeDataGridViewTextBoxColumn.DataPropertyName = "Time";
-            this.timeDataGridViewTextBoxColumn.HeaderText = "Time";
+            this.timeDataGridViewTextBoxColumn.HeaderText = "Thời Gian";
             this.timeDataGridViewTextBoxColumn.Name = "timeDataGridViewTextBoxColumn";
             this.timeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // isPaidDataGridViewCheckBoxColumn
+            // totalMoneyDataGridViewTextBoxColumn
             // 
-            this.isPaidDataGridViewCheckBoxColumn.DataPropertyName = "IsPaid";
-            this.isPaidDataGridViewCheckBoxColumn.HeaderText = "IsPaid";
-            this.isPaidDataGridViewCheckBoxColumn.Name = "isPaidDataGridViewCheckBoxColumn";
-            this.isPaidDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.totalMoneyDataGridViewTextBoxColumn.DataPropertyName = "TotalMoney";
+            this.totalMoneyDataGridViewTextBoxColumn.HeaderText = "Tổng Tiền";
+            this.totalMoneyDataGridViewTextBoxColumn.Name = "totalMoneyDataGridViewTextBoxColumn";
+            this.totalMoneyDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // KhuVuc
+            // 
+            this.KhuVuc.HeaderText = "Khu Vực";
+            this.KhuVuc.Name = "KhuVuc";
+            this.KhuVuc.ReadOnly = true;
+            // 
+            // tableDataGridViewTextBoxColumn
+            // 
+            this.tableDataGridViewTextBoxColumn.DataPropertyName = "Table";
+            this.tableDataGridViewTextBoxColumn.HeaderText = "Bàn";
+            this.tableDataGridViewTextBoxColumn.Name = "tableDataGridViewTextBoxColumn";
+            this.tableDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // HoaDonUC
             // 
@@ -312,12 +302,11 @@
         private DevComponents.DotNetBar.LabelX labelX9;
         private DevComponents.DotNetBar.Controls.DataGridViewX dgvHoaDon;
         private DevComponents.DotNetBar.LabelX lblHoaDonTrongNgay;
-        private System.Windows.Forms.DataGridViewTextBoxColumn billIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tableDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tableLiquidateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn totalMoneyDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn timeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn isPaidDataGridViewCheckBoxColumn;
         private System.Windows.Forms.BindingSource billDataBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn billIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn timeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalMoneyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn KhuVuc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tableDataGridViewTextBoxColumn;
     }
 }

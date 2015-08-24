@@ -36,6 +36,7 @@ namespace QLQuanCafe.GUI.UserControl
                 btnHuyBan.Enabled = false;
                 btnDatBan.Enabled = true;
                 btnHuyDatBan.Enabled = false;
+                btnGoiMon.Enabled = false;
             }
             else if ("CoNguoi".Equals(state))
             {
@@ -43,6 +44,7 @@ namespace QLQuanCafe.GUI.UserControl
                 btnHuyBan.Enabled = true;
                 btnDatBan.Enabled = false;
                 btnHuyDatBan.Enabled = false;
+                btnGoiMon.Enabled = true;
             }
             else if ("DaDat".Equals(state))
             {
@@ -50,6 +52,12 @@ namespace QLQuanCafe.GUI.UserControl
                 btnHuyBan.Enabled = false;
                 btnDatBan.Enabled = false;
                 btnHuyDatBan.Enabled = true;
+                btnGoiMon.Enabled = false;
+            }
+            else if ("ChuaDon".Equals(state))
+            {
+                // bàn dã thanh toán nhưng chưa dọn
+
             }
         }
         public void LoadKhuVuc()
@@ -62,7 +70,6 @@ namespace QLQuanCafe.GUI.UserControl
                 areaTabItem.Text = area.AreaName;
 
                 SuperTabControlPanel panel = new SuperTabControlPanel();
-
 
                 // list view init
                 ListViewEx listview = new ListViewEx();
@@ -221,18 +228,91 @@ namespace QLQuanCafe.GUI.UserControl
 
         private void dgvMonDaGoi_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
-            MenuItemData menuItemData = (dgvMonDaGoi.Rows[e.RowIndex].Cells["menuItemDataGridViewTextBoxColumn"]).Value as MenuItemData;
-            if (menuItemData != null)
+            DataGridViewX dgv = sender as DataGridViewX;
+            MenuItemData menuItemData = null;
+            var rows = dgv.Rows;
+            if (dgv != null)
             {
-//                (dgvMonDaGoi.Rows[e.RowIndex].Cells["TenMon"]).Value = menuItemData.MenuItemName;
-                (dgvMonDaGoi.Rows[e.RowIndex].Cells["DonGia"]).Value = menuItemData.Price;
+                foreach (DataGridViewRow row in rows)
+                {
+                    menuItemData = (row.Cells["menuItemDataGridViewTextBoxColumn"]).Value as MenuItemData;
+                    if (menuItemData != null)
+                    {
+                        (row.Cells["DonGia"]).Value = menuItemData.Price;
+                    }
+                }
+                //lblTongTien.Text = homePageBll.BillOfTableSelected.TotalMoney.ToString();
             }
+            
         }
 
         private void LoadBillDetail()
         {
             dgvMonDaGoi.DataSource = homePageBll.BillDetaisOfTableSelected;
+            var rows = dgvMonDaGoi.Rows;
+            foreach (DataGridViewRow row in rows)
+            {
+                var data = row.DataBoundItem as BillDetailData;
+                if (data.IsPrepare)
+                {
+                    row.DefaultCellStyle.BackColor = Color.CadetBlue;
+                }
+                else
+                {
+                    row.DefaultCellStyle.BackColor = Color.White;
+                }
+            }
             lblTongTien.Text = homePageBll.BillOfTableSelected.TotalMoney.ToString();
+        }
+
+        private void dgvMonDaGoi_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvMonDaGoi.SelectedRows.Count > 0)
+            {
+                if (homePageBll != null)
+                {
+                    if (homePageBll.SelectBillDetailCommand.CanExecute(null))
+                    {
+                        homePageBll.SelectBillDetailCommand.Execute(dgvMonDaGoi.SelectedRows[0].DataBoundItem);
+
+                        dgvMonDaGoi.ClearSelection();
+                    }
+                    btnChuanBi.Enabled = (dgvMonDaGoi.Rows.Count > 0);
+                }
+            }                                
+        }
+
+        private void btnChuanBi_Click(object sender, EventArgs e)
+        {
+            if (dgvMonDaGoi.Rows.Count > 0)
+            {
+                if (homePageBll != null)
+                {
+                    if (homePageBll.PrepareBillDetailsCommand.CanExecute(null))
+                    {
+                        homePageBll.PrepareBillDetailsCommand.Execute(null);
+                        LoadBillDetail();
+                        dgvMonDaGoi.ClearSelection();
+                    }
+                }
+            }
+        }
+
+        private void btnThanhToan_Click(object sender, EventArgs e)
+        {
+            if (homePageBll != null && homePageBll.BillOfTableSelected != null)
+            {
+                if (homePageBll.PayBillCommand.CanExecute(null))
+                {
+                    homePageBll.PayBillCommand.Execute(null);
+                    LoadKhuVuc();
+                    LoadBillDetail();             
+                }
+            }
+        }
+        public ButtonX getBtnThanhToan()
+        {
+            return  btnThanhToan;
         }
     }
 }

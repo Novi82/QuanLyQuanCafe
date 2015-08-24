@@ -36,6 +36,10 @@ namespace QLQuanCafe.GUI
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.galleryContainer2 = new DevComponents.DotNetBar.GalleryContainer();
             this.labelItem1 = new DevComponents.DotNetBar.LabelItem();
             this.buttonX5 = new DevComponents.DotNetBar.ButtonX();
@@ -316,8 +320,8 @@ namespace QLQuanCafe.GUI
             this.galleryContainer72 = new DevComponents.DotNetBar.GalleryContainer();
             this.labelItem72 = new DevComponents.DotNetBar.LabelItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.hoaDonUC1 = new QLQuanCafe.GUI.UserControl.HoaDonUC();
-            this.khuVuc_BanUC1 = new QLQuanCafe.GUI.UserControl.KhuVuc_BanUC();
+            this.dgvHoaDonTrongNgay = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.KhuVuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ribbonControl2 = new DevComponents.DotNetBar.RibbonControl();
             this.ribbonPanel6 = new DevComponents.DotNetBar.RibbonPanel();
             this.ribbonBar13 = new DevComponents.DotNetBar.RibbonBar();
@@ -355,13 +359,21 @@ namespace QLQuanCafe.GUI
             this.ribbonTabItem7 = new DevComponents.DotNetBar.RibbonTabItem();
             this.galleryContainer73 = new DevComponents.DotNetBar.GalleryContainer();
             this.labelItem73 = new DevComponents.DotNetBar.LabelItem();
+            this.khuVuc_BanUC1 = new QLQuanCafe.GUI.UserControl.KhuVuc_BanUC();
+            this.billIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalMoneyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.billDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDonTrongNgay)).BeginInit();
             this.ribbonControl2.SuspendLayout();
             this.ribbonPanel6.SuspendLayout();
             this.ribbonPanel3.SuspendLayout();
             this.ribbonPanel5.SuspendLayout();
             this.ribbonPanel7.SuspendLayout();
             this.ribbonPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.billDataBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // galleryContainer2
@@ -4209,38 +4221,74 @@ namespace QLQuanCafe.GUI
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 600F));
-            this.tableLayoutPanel1.Controls.Add(this.hoaDonUC1, 2, 0);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 450F));
             this.tableLayoutPanel1.Controls.Add(this.khuVuc_BanUC1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.dgvHoaDonTrongNgay, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.ForeColor = System.Drawing.Color.Black;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 160);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.52542F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1370, 590);
             this.tableLayoutPanel1.TabIndex = 36;
             // 
-            // hoaDonUC1
+            // dgvHoaDonTrongNgay
             // 
-            this.hoaDonUC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.hoaDonUC1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.hoaDonUC1.ForeColor = System.Drawing.Color.Black;
-            this.hoaDonUC1.Location = new System.Drawing.Point(773, 3);
-            this.hoaDonUC1.Name = "hoaDonUC1";
-            this.hoaDonUC1.Size = new System.Drawing.Size(594, 584);
-            this.hoaDonUC1.TabIndex = 2;
+            this.dgvHoaDonTrongNgay.AllowUserToAddRows = false;
+            this.dgvHoaDonTrongNgay.AllowUserToDeleteRows = false;
+            this.dgvHoaDonTrongNgay.AutoGenerateColumns = false;
+            this.dgvHoaDonTrongNgay.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHoaDonTrongNgay.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvHoaDonTrongNgay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHoaDonTrongNgay.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.billIdDataGridViewTextBoxColumn,
+            this.timeDataGridViewTextBoxColumn,
+            this.totalMoneyDataGridViewTextBoxColumn,
+            this.KhuVuc,
+            this.tableDataGridViewTextBoxColumn});
+            this.dgvHoaDonTrongNgay.DataSource = this.billDataBindingSource;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvHoaDonTrongNgay.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvHoaDonTrongNgay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvHoaDonTrongNgay.EnableHeadersVisualStyles = false;
+            this.dgvHoaDonTrongNgay.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.dgvHoaDonTrongNgay.Location = new System.Drawing.Point(923, 3);
+            this.dgvHoaDonTrongNgay.MultiSelect = false;
+            this.dgvHoaDonTrongNgay.Name = "dgvHoaDonTrongNgay";
+            this.dgvHoaDonTrongNgay.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHoaDonTrongNgay.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvHoaDonTrongNgay.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvHoaDonTrongNgay.Size = new System.Drawing.Size(444, 584);
+            this.dgvHoaDonTrongNgay.TabIndex = 4;
             // 
-            // khuVuc_BanUC1
+            // KhuVuc
             // 
-            this.khuVuc_BanUC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.khuVuc_BanUC1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.khuVuc_BanUC1.ForeColor = System.Drawing.Color.Black;
-            this.khuVuc_BanUC1.Location = new System.Drawing.Point(3, 3);
-            this.khuVuc_BanUC1.Name = "khuVuc_BanUC1";
-            this.khuVuc_BanUC1.Size = new System.Drawing.Size(764, 584);
-            this.khuVuc_BanUC1.TabIndex = 3;
-            this.khuVuc_BanUC1.Load += new System.EventHandler(this.khuVuc_BanUC1_Load);
+            this.KhuVuc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.KhuVuc.HeaderText = "Khu Vực";
+            this.KhuVuc.Name = "KhuVuc";
+            this.KhuVuc.ReadOnly = true;
+            this.KhuVuc.Width = 80;
             // 
             // ribbonControl2
             // 
@@ -5012,6 +5060,58 @@ namespace QLQuanCafe.GUI
             this.labelItem73.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelItem73.Name = "labelItem73";
             // 
+            // khuVuc_BanUC1
+            // 
+            this.khuVuc_BanUC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.khuVuc_BanUC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.khuVuc_BanUC1.ForeColor = System.Drawing.Color.Black;
+            this.khuVuc_BanUC1.Location = new System.Drawing.Point(3, 3);
+            this.khuVuc_BanUC1.Name = "khuVuc_BanUC1";
+            this.khuVuc_BanUC1.Size = new System.Drawing.Size(914, 584);
+            this.khuVuc_BanUC1.TabIndex = 3;
+            this.khuVuc_BanUC1.Load += new System.EventHandler(this.khuVuc_BanUC1_Load);
+            // 
+            // billIdDataGridViewTextBoxColumn
+            // 
+            this.billIdDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.billIdDataGridViewTextBoxColumn.DataPropertyName = "BillId";
+            this.billIdDataGridViewTextBoxColumn.HeaderText = "Hóa Đơn";
+            this.billIdDataGridViewTextBoxColumn.Name = "billIdDataGridViewTextBoxColumn";
+            this.billIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // timeDataGridViewTextBoxColumn
+            // 
+            this.timeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.timeDataGridViewTextBoxColumn.DataPropertyName = "Time";
+            this.timeDataGridViewTextBoxColumn.HeaderText = "Thời Gian";
+            this.timeDataGridViewTextBoxColumn.Name = "timeDataGridViewTextBoxColumn";
+            this.timeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.timeDataGridViewTextBoxColumn.Width = 87;
+            // 
+            // totalMoneyDataGridViewTextBoxColumn
+            // 
+            this.totalMoneyDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.totalMoneyDataGridViewTextBoxColumn.DataPropertyName = "TotalMoney";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.totalMoneyDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            this.totalMoneyDataGridViewTextBoxColumn.HeaderText = "Tổng Tiền";
+            this.totalMoneyDataGridViewTextBoxColumn.Name = "totalMoneyDataGridViewTextBoxColumn";
+            this.totalMoneyDataGridViewTextBoxColumn.ReadOnly = true;
+            this.totalMoneyDataGridViewTextBoxColumn.Width = 90;
+            // 
+            // tableDataGridViewTextBoxColumn
+            // 
+            this.tableDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.tableDataGridViewTextBoxColumn.DataPropertyName = "Table";
+            this.tableDataGridViewTextBoxColumn.HeaderText = "Bàn";
+            this.tableDataGridViewTextBoxColumn.Name = "tableDataGridViewTextBoxColumn";
+            this.tableDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tableDataGridViewTextBoxColumn.Width = 54;
+            // 
+            // billDataBindingSource
+            // 
+            this.billDataBindingSource.DataSource = typeof(QLQuanCafe.DTO.BillData);
+            // 
             // FormMain
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -5032,6 +5132,7 @@ namespace QLQuanCafe.GUI
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDonTrongNgay)).EndInit();
             this.ribbonControl2.ResumeLayout(false);
             this.ribbonControl2.PerformLayout();
             this.ribbonPanel6.ResumeLayout(false);
@@ -5039,6 +5140,7 @@ namespace QLQuanCafe.GUI
             this.ribbonPanel5.ResumeLayout(false);
             this.ribbonPanel7.ResumeLayout(false);
             this.ribbonPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.billDataBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -5403,8 +5505,14 @@ namespace QLQuanCafe.GUI
         private LabelItem labelItem72;
         private GalleryContainer galleryContainer73;
         private LabelItem labelItem73;
-        private UserControl.HoaDonUC hoaDonUC1;
         private UserControl.KhuVuc_BanUC khuVuc_BanUC1;
+        private BindingSource billDataBindingSource;
+        private DataGridViewX dgvHoaDonTrongNgay;
+        private DataGridViewTextBoxColumn billIdDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn timeDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn totalMoneyDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn KhuVuc;
+        private DataGridViewTextBoxColumn tableDataGridViewTextBoxColumn;
 
 
 

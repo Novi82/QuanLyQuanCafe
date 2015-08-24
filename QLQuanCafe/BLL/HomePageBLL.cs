@@ -48,7 +48,11 @@ namespace QLQuanCafe.BLL
                 {
                     try
                     {
-                        BillOfTableSelected = LocatorDataSource.BillDS.GetLastBill(TableSelected);
+                        BillData bill = LocatorDataSource.BillDS.GetLastBill(TableSelected);
+                        if (bill != null)
+                        {
+                            BillOfTableSelected = bill;
+                        }
 
                         ((RelayCommand<object>) OpenTableCommand).RaiseCanExecuteChanged();
                         ((RelayCommand<object>) ChangeTableCommand).RaiseCanExecuteChanged();
@@ -729,6 +733,7 @@ namespace QLQuanCafe.BLL
                     LocatorDataSource.BillDetailDS.AddBillDetail(BillDetaiSelected);
 
                     BillDetaisOfTableSelected = LocatorDataSource.BillDetailDS.GetAllBillDetail(BillOfTableSelected);
+                    BillOfTableSelected = LocatorDataSource.BillDS.GetLastBill(TableSelected);
                 }
                 catch (MySqlException ex)
                 {
@@ -776,8 +781,8 @@ namespace QLQuanCafe.BLL
                     BillDetaiSelected = billDetail;
 
                     //_isNewBillDetail = false;
-                    GoiMon goiMon =new GoiMon();
-                    goiMon.ShowDialog();
+//                    GoiMon goiMon =new GoiMon();
+//                    goiMon.ShowDialog();
                 }
             }
         }
@@ -815,6 +820,8 @@ namespace QLQuanCafe.BLL
             try
             {
                 String billID = BillOfTableSelected.BillId;
+                BillData bill = LocatorDataSource.BillDS.GetLastBill(TableSelected);
+               
                 LocatorDataSource.BillDS.PayBill(BillOfTableSelected);
 
                 TableSelected = LocatorDataSource.TableDS.GetTable(TableSelected);
@@ -823,11 +830,13 @@ namespace QLQuanCafe.BLL
                 ListTable = LocatorDataSource.TableDS.GetAllTable();
 
                 ListBillToday = LocatorDataSource.BillDS.FindBill(DateTime.Now, DateTime.Now, "", "");
-
+               
+               
                 //Xuat bill
                 //HACK VIEW
-                XacNhanThanhToan xacNhanThanhToan = new XacNhanThanhToan();
+                XacNhanThanhToan xacNhanThanhToan = new XacNhanThanhToan(bill);
                 xacNhanThanhToan.ShowDialog();
+
                 //BillWindow billWindow = new BillWindow(billID);
                 //billWindow.ShowDialog();
             }

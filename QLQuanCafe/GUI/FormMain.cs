@@ -77,9 +77,10 @@ namespace QLQuanCafe.GUI
 
         private void FormMain_Load(object sender, EventArgs e)
         {
+            LocatorBll.HomePageVM.Load();
             LoadKhuVuc_Ban();
             LoadThucDon();
-            hoaDonUC1.LoadHoaDonTrongNgay();
+            LoadHoaDonTrongNgay();
         }
 
         private void LoadKhuVuc_Ban()
@@ -89,12 +90,22 @@ namespace QLQuanCafe.GUI
 
         private void LoadThucDon()
         {
-      
+            khuVuc_BanUC1.getBtnThanhToan().Click+=thanhtoan_Click;
+        }
+
+        private void thanhtoan_Click(object sender, EventArgs e)
+        {
+            LoadHoaDonTrongNgay();
         }
 
         private void khuVuc_BanUC1_Load(object sender, EventArgs e)
         {
             
+        }
+        public void LoadHoaDonTrongNgay()
+        {
+
+            dgvHoaDonTrongNgay.DataSource = LocatorBll.HomePageVM.ListBillToday;
         }
     }
 }

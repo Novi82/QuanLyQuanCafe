@@ -32,21 +32,27 @@ namespace QLQuanCafe.GUI
         private void InitializeComponent()
         {
             this.GThanhtoan = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.labelX3 = new DevComponents.DotNetBar.LabelX();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.BtnDongVaIn = new DevComponents.DotNetBar.ButtonX();
             this.btnIn = new DevComponents.DotNetBar.ButtonX();
             this.btnThoat = new DevComponents.DotNetBar.ButtonX();
-            this.labelX3 = new DevComponents.DotNetBar.LabelX();
+            this.txtBan = new DevComponents.DotNetBar.LabelX();
+            this.txtKhuVuc = new DevComponents.DotNetBar.LabelX();
+            this.txtTongTien = new DevComponents.DotNetBar.LabelX();
             this.GThanhtoan.SuspendLayout();
             this.SuspendLayout();
             // 
             // GThanhtoan
             // 
-            this.GThanhtoan.BackColor = System.Drawing.SystemColors.Window;
-            this.GThanhtoan.CanvasColor = System.Drawing.SystemColors.Control;
-            this.GThanhtoan.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
+            this.GThanhtoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.GThanhtoan.CanvasColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.GThanhtoan.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.GThanhtoan.ColorTable = DevComponents.DotNetBar.Controls.ePanelColorTable.Green;
+            this.GThanhtoan.Controls.Add(this.txtKhuVuc);
+            this.GThanhtoan.Controls.Add(this.txtTongTien);
+            this.GThanhtoan.Controls.Add(this.txtBan);
             this.GThanhtoan.Controls.Add(this.labelX2);
             this.GThanhtoan.Controls.Add(this.labelX3);
             this.GThanhtoan.Controls.Add(this.labelX1);
@@ -84,21 +90,6 @@ namespace QLQuanCafe.GUI
             this.GThanhtoan.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.GThanhtoan.TabIndex = 8;
             // 
-            // labelX1
-            // 
-            this.labelX1.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelX1.ForeColor = System.Drawing.Color.Black;
-            this.labelX1.Location = new System.Drawing.Point(17, 18);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(43, 23);
-            this.labelX1.TabIndex = 0;
-            this.labelX1.Text = "Bàn :";
-            // 
             // labelX2
             // 
             this.labelX2.BackColor = System.Drawing.Color.Transparent;
@@ -113,6 +104,36 @@ namespace QLQuanCafe.GUI
             this.labelX2.Size = new System.Drawing.Size(74, 23);
             this.labelX2.TabIndex = 0;
             this.labelX2.Text = "Khu Vực :";
+            // 
+            // labelX3
+            // 
+            this.labelX3.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelX3.ForeColor = System.Drawing.Color.Black;
+            this.labelX3.Location = new System.Drawing.Point(17, 84);
+            this.labelX3.Name = "labelX3";
+            this.labelX3.Size = new System.Drawing.Size(85, 23);
+            this.labelX3.TabIndex = 0;
+            this.labelX3.Text = "Tổng Tiền : ";
+            // 
+            // labelX1
+            // 
+            this.labelX1.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelX1.ForeColor = System.Drawing.Color.Black;
+            this.labelX1.Location = new System.Drawing.Point(17, 18);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.Size = new System.Drawing.Size(43, 23);
+            this.labelX1.TabIndex = 0;
+            this.labelX1.Text = "Bàn :";
             // 
             // BtnDongVaIn
             // 
@@ -146,21 +167,43 @@ namespace QLQuanCafe.GUI
             this.btnThoat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnThoat.TabIndex = 9;
             this.btnThoat.Text = "Thoát";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // labelX3
-            // 
-            this.labelX3.BackColor = System.Drawing.Color.Transparent;
-            // 
+            // txtBan
             // 
             // 
-            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelX3.ForeColor = System.Drawing.Color.Black;
-            this.labelX3.Location = new System.Drawing.Point(17, 84);
-            this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(85, 23);
-            this.labelX3.TabIndex = 0;
-            this.labelX3.Text = "Tổng Tiền : ";
+            // 
+            // 
+            this.txtBan.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtBan.Location = new System.Drawing.Point(75, 20);
+            this.txtBan.Name = "txtBan";
+            this.txtBan.Size = new System.Drawing.Size(96, 23);
+            this.txtBan.TabIndex = 10;
+            this.txtBan.Text = "labelX4";
+            // 
+            // txtKhuVuc
+            // 
+            // 
+            // 
+            // 
+            this.txtKhuVuc.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtKhuVuc.Location = new System.Drawing.Point(250, 18);
+            this.txtKhuVuc.Name = "txtKhuVuc";
+            this.txtKhuVuc.Size = new System.Drawing.Size(96, 23);
+            this.txtKhuVuc.TabIndex = 10;
+            this.txtKhuVuc.Text = "labelX4";
+            // 
+            // txtTongTien
+            // 
+            // 
+            // 
+            // 
+            this.txtTongTien.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtTongTien.Location = new System.Drawing.Point(108, 84);
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.Size = new System.Drawing.Size(240, 23);
+            this.txtTongTien.TabIndex = 10;
+            this.txtTongTien.Text = "labelX4";
             // 
             // XacNhanThanhToan
             // 
@@ -172,7 +215,6 @@ namespace QLQuanCafe.GUI
             this.Controls.Add(this.btnIn);
             this.Controls.Add(this.BtnDongVaIn);
             this.Controls.Add(this.GThanhtoan);
-            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -196,6 +238,9 @@ namespace QLQuanCafe.GUI
         private ButtonX btnIn;
         private ButtonX btnThoat;
         private LabelX labelX3;
+        private LabelX txtKhuVuc;
+        private LabelX txtTongTien;
+        private LabelX txtBan;
 
     }
 }
