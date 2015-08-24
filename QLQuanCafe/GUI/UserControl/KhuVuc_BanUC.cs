@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.Controls;
 using QLQuanCafe.BLL;
+using QLQuanCafe.DAO;
 using QLQuanCafe.DTO;
 
 // ReSharper disable All
@@ -19,7 +20,8 @@ namespace QLQuanCafe.GUI.UserControl
         public KhuVuc_BanUC()
         {
             InitializeComponent();
-            
+            homePageBll.OnUpdateView += delegate(object myObject, EventArgs args) { LoadKhuVuc(); };
+
         }
 
         private void KhuVuc_BanUC_Load(object sender, EventArgs e)
@@ -53,11 +55,6 @@ namespace QLQuanCafe.GUI.UserControl
                 btnDatBan.Enabled = false;
                 btnHuyDatBan.Enabled = true;
                 btnGoiMon.Enabled = false;
-            }
-            else if ("ChuaDon".Equals(state))
-            {
-                // bàn dã thanh toán nhưng chưa dọn
-
             }
         }
         public void LoadKhuVuc()
@@ -95,7 +92,7 @@ namespace QLQuanCafe.GUI.UserControl
                 homePageBll.ListTable = alltable;
                 // tab panel config
                 panel.Controls.Add(listview);
-                panel.Dock = DockStyle.Fill;
+                //panel.Dock = DockStyle.Fill;
                 //                panel.Location = new System.Drawing.Point(0, 33);
                 panel.Name = area.AreaId;
                 panel.Size = new System.Drawing.Size(600, 800);
@@ -127,7 +124,6 @@ namespace QLQuanCafe.GUI.UserControl
                         LoadBillDetail();
                     }
                 }
-
             }
         }
 
@@ -153,6 +149,20 @@ namespace QLQuanCafe.GUI.UserControl
                 trangthai = "Đã Đặt Trước";
             }
             lblTrangThai.Text = trangthai;
+            if (homePageBll.BillOfTableSelected != null && homePageBll.BillOfTableSelected.TableLiquidate != null)
+            {
+                TableData tableLiquidate = null;
+                tableLiquidate = LocatorDataSource.TableDS.GetTable(homePageBll.BillOfTableSelected.TableLiquidate);
+                if (tableLiquidate != null)
+                {
+                    lblBanThanhToan.Text = tableLiquidate.TableName;
+                }
+
+            }
+            else
+            {
+                lblBanThanhToan.Text = String.Empty;
+            }
         }
         private void btnMoBan_Click(object sender, EventArgs e)
         {
@@ -243,7 +253,7 @@ namespace QLQuanCafe.GUI.UserControl
                 }
                 //lblTongTien.Text = homePageBll.BillOfTableSelected.TotalMoney.ToString();
             }
-            
+
         }
 
         private void LoadBillDetail()
@@ -279,7 +289,7 @@ namespace QLQuanCafe.GUI.UserControl
                     }
                     btnChuanBi.Enabled = (dgvMonDaGoi.Rows.Count > 0);
                 }
-            }                                
+            }
         }
 
         private void btnChuanBi_Click(object sender, EventArgs e)
@@ -306,13 +316,50 @@ namespace QLQuanCafe.GUI.UserControl
                 {
                     homePageBll.PayBillCommand.Execute(null);
                     LoadKhuVuc();
-                    LoadBillDetail();             
+                    LoadBillDetail();
                 }
             }
         }
         public ButtonX getBtnThanhToan()
         {
-            return  btnThanhToan;
+            return btnThanhToan;
+        }
+
+        private void btnChuyenBan_Click(object sender, EventArgs e)
+        {
+            if (homePageBll.TableSelected != null)
+            {
+                if (homePageBll.ChangeTableCommand.CanExecute(null))
+                {
+                    homePageBll.ChangeTableCommand.Execute(null);
+
+                }
+
+            }
+        }
+
+        private void btnGopBan_Click(object sender, EventArgs e)
+        {
+            if (homePageBll.TableSelected != null)
+            {
+                //if (homePageBll.GroupTableCommand.CanExecute(null))
+                {
+                    homePageBll.GroupTableCommand.Execute(null);
+
+                }
+            }
+        }
+
+        private void btnTachBan_Click(object sender, EventArgs e)
+        {
+            if (homePageBll.TableSelected != null)
+            {
+                if (homePageBll.UnGroupTableCommand.CanExecute(null))
+                {
+                    homePageBll.UnGroupTableCommand.Execute(null);
+                    LoadKhuVuc();
+                }
+            }
         }
     }
 }

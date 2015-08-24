@@ -12,6 +12,9 @@ namespace QLQuanCafe.BLL
 {
     public class HomePageBll : BllBase
     {
+        public delegate void UpdateView(object myObject, 
+                                             EventArgs myArgs);
+        public event UpdateView OnUpdateView;
         /// <summary>
         /// Các thao tác trên bàn.
         /// </summary>
@@ -505,12 +508,13 @@ namespace QLQuanCafe.BLL
                         {
                             LocatorDataSource.BillDS.ChangeBill(BillOfTableSelected.BillId, tableSelected.TableId);
 
-                            MessageDialogHelper.CreateInformationMessage("Đã chuyển bàn thành công từ bàn " +
+                            MessageDialogHelper.CreateInformationMessage("Đã chuyển bàn thành công!\ntừ bàn " +
                                                                          TableSelected.TableName + " đến bàn " +
                                                                          tableSelected.TableName + ".");
 
                             ListTable = LocatorDataSource.TableDS.GetAllTable();
                             TableSelected = LocatorDataSource.TableDS.GetTable(tableSelected);
+                            OnUpdateView(this , new EventArgs());
                         }
                         _action = Action.Normal;
                     }
@@ -545,6 +549,7 @@ namespace QLQuanCafe.BLL
 
                             ListTable = LocatorDataSource.TableDS.GetAllTable();
                             TableSelected = LocatorDataSource.TableDS.GetTable(tableSelected);
+                            OnUpdateView(this, new EventArgs());
                         }
                         _action = Action.Normal;
                     }

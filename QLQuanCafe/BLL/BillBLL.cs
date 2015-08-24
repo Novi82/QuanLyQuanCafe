@@ -86,7 +86,7 @@ namespace QLQuanCafe.BLL
         {
             get
             {
-                Load();
+                //Load();
                 return _listBill;
             }
             set { SetProperty(ref _listBill, value); }

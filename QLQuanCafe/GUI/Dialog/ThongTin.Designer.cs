@@ -38,7 +38,7 @@
             this.btnOK.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnOK.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnOK.Location = new System.Drawing.Point(197, 91);
+            this.btnOK.Location = new System.Drawing.Point(150, 93);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
@@ -54,9 +54,9 @@
             this.lblMessage.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblMessage.ForeColor = System.Drawing.Color.Black;
-            this.lblMessage.Location = new System.Drawing.Point(105, 41);
+            this.lblMessage.Location = new System.Drawing.Point(96, 12);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(119, 23);
+            this.lblMessage.Size = new System.Drawing.Size(255, 75);
             this.lblMessage.TabIndex = 2;
             this.lblMessage.Text = "Lưu Thành Công";
             // 
@@ -80,7 +80,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 126);
+            this.ClientSize = new System.Drawing.Size(363, 122);
             this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.LabIConfirm);
             this.Controls.Add(this.btnOK);
