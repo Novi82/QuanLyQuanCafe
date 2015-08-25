@@ -2,9 +2,8 @@
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.Controls;
-using DevComponents.Editors;
 
-namespace QLQuanCafe.GUI
+namespace QLQuanCafe.GUI.Form
 {
     partial class FormMain
     {

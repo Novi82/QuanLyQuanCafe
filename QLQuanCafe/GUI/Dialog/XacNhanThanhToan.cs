@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Globalization;
 using DevComponents.DotNetBar.Metro;
 using QLQuanCafe.BLL;
 using QLQuanCafe.DTO;
 
-namespace QLQuanCafe.GUI
+namespace QLQuanCafe.GUI.Dialog
 {
     public partial class XacNhanThanhToan : MetroForm
     {

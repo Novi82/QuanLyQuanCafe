@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
 using QLQuanCafe.GUI;
+using QLQuanCafe.GUI.Form;
+
 namespace QLQuanCafe
 {
     static class Program

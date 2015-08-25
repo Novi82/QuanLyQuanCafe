@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using DevComponents.DotNetBar;
 
-namespace QLQuanCafe.GUI
+namespace QLQuanCafe.GUI.Dialog
 {
     partial class XacNhanThanhToan
     {

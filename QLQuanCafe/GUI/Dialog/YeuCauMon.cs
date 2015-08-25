@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Windows.Forms;
 using DevComponents.DotNetBar.Metro;
 using QLQuanCafe.BLL;
 using QLQuanCafe.DTO;
 
-namespace QLQuanCafe.GUI
+namespace QLQuanCafe.GUI.Dialog
 {
     public partial class YeuCauMon : MetroForm
     {

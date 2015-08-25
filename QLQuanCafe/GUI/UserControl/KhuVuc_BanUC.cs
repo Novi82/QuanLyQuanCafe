@@ -7,6 +7,7 @@ using DevComponents.DotNetBar.Controls;
 using QLQuanCafe.BLL;
 using QLQuanCafe.DAO;
 using QLQuanCafe.DTO;
+using QLQuanCafe.GUI.Form;
 
 // ReSharper disable All
 

@@ -142,10 +142,10 @@
     <Compile Include="GUI\Form\DonViTinh.Designer.cs">
       <DependentUpon>DonViTinh.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\FormMain.cs">
+    <Compile Include="GUI\Form\FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\FormMain.Designer.cs">
+    <Compile Include="GUI\Form\FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Dialog\CapNhatKho.cs">
@@ -310,10 +310,10 @@
     <Compile Include="GUI\UserControl\TongTienUC.Designer.cs">
       <DependentUpon>TongTienUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\XacNhanThanhToan.cs">
+    <Compile Include="GUI\Dialog\XacNhanThanhToan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\XacNhanThanhToan.Designer.cs">
+    <Compile Include="GUI\Dialog\XacNhanThanhToan.Designer.cs">
       <DependentUpon>XacNhanThanhToan.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Dialog\XuatKho.cs">
@@ -322,16 +322,16 @@
     <Compile Include="GUI\Dialog\XuatKho.Designer.cs">
       <DependentUpon>XuatKho.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\GoiMon.cs">
+    <Compile Include="GUI\Form\GoiMon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\GoiMon.Designer.cs">
+    <Compile Include="GUI\Form\GoiMon.Designer.cs">
       <DependentUpon>GoiMon.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\YeuCauMon.cs">
+    <Compile Include="GUI\Dialog\YeuCauMon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\YeuCauMon.Designer.cs">
+    <Compile Include="GUI\Dialog\YeuCauMon.Designer.cs">
       <DependentUpon>YeuCauMon.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -357,7 +357,7 @@
     <EmbeddedResource Include="GUI\Form\DonViTinh.resx">
       <DependentUpon>DonViTinh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\FormMain.resx">
+    <EmbeddedResource Include="GUI\Form\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Dialog\CapNhatKho.resx">
@@ -441,16 +441,16 @@
     <EmbeddedResource Include="GUI\UserControl\TongTienUC.resx">
       <DependentUpon>TongTienUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\XacNhanThanhToan.resx">
+    <EmbeddedResource Include="GUI\Dialog\XacNhanThanhToan.resx">
       <DependentUpon>XacNhanThanhToan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Dialog\XuatKho.resx">
       <DependentUpon>XuatKho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GoiMon.resx">
+    <EmbeddedResource Include="GUI\Form\GoiMon.resx">
       <DependentUpon>GoiMon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\YeuCauMon.resx">
+    <EmbeddedResource Include="GUI\Dialog\YeuCauMon.resx">
       <DependentUpon>YeuCauMon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

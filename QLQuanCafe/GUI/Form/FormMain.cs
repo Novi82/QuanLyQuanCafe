@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Windows.Forms;
-using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.Metro;
-using QLQuanCafe.GUI.Form;
 using QLQuanCafe.BLL;
-using QLQuanCafe.DTO;
-using QLQuanCafe.GUI.UserControl;
+using QLQuanCafe.GUI.Dialog;
 
-namespace QLQuanCafe.GUI
+namespace QLQuanCafe.GUI.Form
 {
     public partial class FormMain : MetroForm
     {

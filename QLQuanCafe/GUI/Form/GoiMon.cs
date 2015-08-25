@@ -5,7 +5,7 @@ using DevComponents.DotNetBar.Metro;
 using QLQuanCafe.BLL;
 using QLQuanCafe.DTO;
 
-namespace QLQuanCafe.GUI
+namespace QLQuanCafe.GUI.Form
 {
     public partial class GoiMon : MetroForm
     {
