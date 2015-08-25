@@ -1,10 +1,11 @@
 ﻿using System;
 using DevComponents.DotNetBar.Metro;
 using QLQuanCafe.BLL;
+using QLQuanCafe.Common;
 
 namespace QLQuanCafe.GUI.Dialog
 {
-    
+
     public partial class CapNhatKho : MetroForm
     {
         private MaterialBll materialBll = LocatorBll.MaterialVM;
@@ -16,7 +17,7 @@ namespace QLQuanCafe.GUI.Dialog
         private void HieuChinhSoLuong_Load(object sender, EventArgs e)
         {
             txtTenNguyenLieu.Text = materialBll.MaterialSelected.MaterialName;
-            txtGiaNhap.Text = materialBll.MaterialSelected.Price.ToString();
+            txtGiaNhap.Text = materialBll.MaterialSelected.Price.ToString("#,###");
             txtMaNguyenLieu.Text = materialBll.MaterialSelected.MaterialId;
             txtDonViTinh.Text = materialBll.MaterialSelected.Unit.UnitName;
             dipSoLuong.Value = materialBll.MaterialSelected.Quantity;
@@ -29,10 +30,20 @@ namespace QLQuanCafe.GUI.Dialog
 
         private void btnDongY_Click(object sender, EventArgs e)
         {
-            materialBll.MaterialToSave.Quantity = Convert.ToInt32(dipSoLuong.Value);
-            if (materialBll.UpdateInventory())
+            int quantity = Convert.ToInt32(dipSoLuong.Value);
+            if (quantity > 0)
             {
-                this.Close();
+
+                materialBll.MaterialToSave.Quantity = quantity;
+                if (materialBll.UpdateInventory())
+                {
+                    this.Close();
+                }
+            }
+            else
+            {
+                MessageDialogHelper.CreateErrorMessage("Số lượng phải lớn hơn 0");
+                dipSoLuong.Focus();
             }
         }
     }

@@ -172,6 +172,7 @@ namespace QLQuanCafe.GUI.Dialog
             this.cbxQuyen.DataSource = this.permissionDataBindingSource;
             this.cbxQuyen.DisplayMember = "PermissionName";
             this.cbxQuyen.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbxQuyen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxQuyen.ForeColor = System.Drawing.Color.Black;
             this.cbxQuyen.FormattingEnabled = true;
             this.cbxQuyen.ItemHeight = 14;
@@ -242,7 +243,6 @@ namespace QLQuanCafe.GUI.Dialog
             this.Controls.Add(this.AUser);
             this.Controls.Add(this.IAddUser);
             this.Controls.Add(this.labelX1);
-            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

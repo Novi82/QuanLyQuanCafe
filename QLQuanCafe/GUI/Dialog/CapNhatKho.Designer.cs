@@ -73,7 +73,7 @@ namespace QLQuanCafe.GUI.Dialog
             this.LDonViTinh.Location = new System.Drawing.Point(24, 182);
             this.LDonViTinh.Name = "LDonViTinh";
             this.LDonViTinh.Size = new System.Drawing.Size(75, 23);
-            this.LDonViTinh.TabIndex = 1;
+            this.LDonViTinh.TabIndex = 0;
             this.LDonViTinh.Text = "Đơn Vị Tính :";
             // 
             // LSoLuong
@@ -87,7 +87,7 @@ namespace QLQuanCafe.GUI.Dialog
             this.LSoLuong.Location = new System.Drawing.Point(24, 227);
             this.LSoLuong.Name = "LSoLuong";
             this.LSoLuong.Size = new System.Drawing.Size(75, 23);
-            this.LSoLuong.TabIndex = 2;
+            this.LSoLuong.TabIndex = 0;
             this.LSoLuong.Text = "Số Lượng :";
             // 
             // LTenNguyenLieu
@@ -101,7 +101,7 @@ namespace QLQuanCafe.GUI.Dialog
             this.LTenNguyenLieu.Location = new System.Drawing.Point(24, 100);
             this.LTenNguyenLieu.Name = "LTenNguyenLieu";
             this.LTenNguyenLieu.Size = new System.Drawing.Size(95, 23);
-            this.LTenNguyenLieu.TabIndex = 3;
+            this.LTenNguyenLieu.TabIndex = 0;
             this.LTenNguyenLieu.Text = "Tên Nguyên Liệu";
             // 
             // LGiaNhap
@@ -115,7 +115,7 @@ namespace QLQuanCafe.GUI.Dialog
             this.LGiaNhap.Location = new System.Drawing.Point(24, 142);
             this.LGiaNhap.Name = "LGiaNhap";
             this.LGiaNhap.Size = new System.Drawing.Size(75, 23);
-            this.LGiaNhap.TabIndex = 4;
+            this.LGiaNhap.TabIndex = 0;
             this.LGiaNhap.Text = "Giá Nhập :";
             // 
             // dipSoLuong
@@ -152,7 +152,7 @@ namespace QLQuanCafe.GUI.Dialog
             this.txtMaNguyenLieu.Name = "txtMaNguyenLieu";
             this.txtMaNguyenLieu.ReadOnly = true;
             this.txtMaNguyenLieu.Size = new System.Drawing.Size(133, 20);
-            this.txtMaNguyenLieu.TabIndex = 6;
+            this.txtMaNguyenLieu.TabIndex = 1;
             // 
             // txtTenNguyenLieu
             // 
@@ -168,7 +168,7 @@ namespace QLQuanCafe.GUI.Dialog
             this.txtTenNguyenLieu.Name = "txtTenNguyenLieu";
             this.txtTenNguyenLieu.ReadOnly = true;
             this.txtTenNguyenLieu.Size = new System.Drawing.Size(133, 20);
-            this.txtTenNguyenLieu.TabIndex = 7;
+            this.txtTenNguyenLieu.TabIndex = 2;
             // 
             // txtGiaNhap
             // 
@@ -184,7 +184,7 @@ namespace QLQuanCafe.GUI.Dialog
             this.txtGiaNhap.Name = "txtGiaNhap";
             this.txtGiaNhap.ReadOnly = true;
             this.txtGiaNhap.Size = new System.Drawing.Size(133, 20);
-            this.txtGiaNhap.TabIndex = 8;
+            this.txtGiaNhap.TabIndex = 3;
             // 
             // txtDonViTinh
             // 
@@ -200,7 +200,7 @@ namespace QLQuanCafe.GUI.Dialog
             this.txtDonViTinh.Name = "txtDonViTinh";
             this.txtDonViTinh.ReadOnly = true;
             this.txtDonViTinh.Size = new System.Drawing.Size(133, 20);
-            this.txtDonViTinh.TabIndex = 9;
+            this.txtDonViTinh.TabIndex = 4;
             // 
             // btnDongY
             // 
@@ -210,7 +210,7 @@ namespace QLQuanCafe.GUI.Dialog
             this.btnDongY.Name = "btnDongY";
             this.btnDongY.Size = new System.Drawing.Size(75, 23);
             this.btnDongY.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnDongY.TabIndex = 10;
+            this.btnDongY.TabIndex = 6;
             this.btnDongY.Text = "Đồng Ý";
             this.btnDongY.Click += new System.EventHandler(this.btnDongY_Click);
             // 
@@ -222,7 +222,7 @@ namespace QLQuanCafe.GUI.Dialog
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(75, 23);
             this.btnHuy.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnHuy.TabIndex = 11;
+            this.btnHuy.TabIndex = 7;
             this.btnHuy.Text = "Hủy Bỏ";
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
@@ -243,7 +243,6 @@ namespace QLQuanCafe.GUI.Dialog
             this.Controls.Add(this.LSoLuong);
             this.Controls.Add(this.LDonViTinh);
             this.Controls.Add(this.LMaNguyenLieu);
-            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

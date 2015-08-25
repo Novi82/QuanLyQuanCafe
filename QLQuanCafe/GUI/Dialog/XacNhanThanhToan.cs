@@ -33,7 +33,7 @@ namespace QLQuanCafe.GUI.Dialog
             //bill = LocatorBll.HomePageVM.BillOfTableSelected;
             txtKhuVuc.Text = LocatorBll.HomePageVM.TableSelected.Area.AreaName;
             txtBan.Text = LocatorBll.HomePageVM.TableSelected.TableName;
-            txtTongTien.Text = bill.TotalMoney.ToString();
+            txtTongTien.Text = bill.TotalMoney.ToString("#,###")+" VND";
         }
     }
 }

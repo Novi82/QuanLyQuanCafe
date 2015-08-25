@@ -198,8 +198,8 @@ namespace QLQuanCafe.BLL
         {
             try
             {
-                FromDate = DateTime.Now;
-                ToDate = DateTime.Now;
+                FromDate = DateTime.Today;
+                ToDate = DateTime.Today;
 
                 ListArea = LocatorDataSource.AreaDS.GetAllAreaToChoose();
                 AreaSelected = ListArea[0];

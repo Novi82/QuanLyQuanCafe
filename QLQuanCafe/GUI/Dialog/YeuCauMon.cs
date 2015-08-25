@@ -23,7 +23,7 @@ namespace QLQuanCafe.GUI.Dialog
         private void LoadThongTinMonAn()
         {
             txtTenMon.Text = itemBillDetailData.MenuItem.MenuItemName;
-            txtDonGia.Text = itemBillDetailData.MenuItem.Price.ToString();
+            txtDonGia.Text = itemBillDetailData.MenuItem.Price.ToString("#,###");
         }
 
         private void dipSoLuong_ValueChanged(object sender, EventArgs e)

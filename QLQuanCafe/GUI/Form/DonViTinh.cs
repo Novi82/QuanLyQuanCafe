@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 using DevComponents.DotNetBar.Metro;
 using QLQuanCafe.BLL;
 
@@ -69,7 +70,11 @@ namespace QLQuanCafe.GUI.Form
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            this.Close();
+            //this.Close();
+            MessageBox.Show(dataGridViewX1.Columns[0].SortMode.ToString()
+                + "\n" + dataGridViewX1.SortOrder
+                );
+            
         }
     }
 }

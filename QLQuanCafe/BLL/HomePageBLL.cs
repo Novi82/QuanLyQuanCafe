@@ -599,7 +599,8 @@ namespace QLQuanCafe.BLL
 
                     // Update lại trạng thái cho bàn ngoài list.
                     TableData tableChanged = ListTable.SingleOrDefault(p => p.TableId == TableSelected.TableId);
-                    if (tableChanged != null) tableChanged.TableState = TableSelected.TableState;
+                    if (tableChanged != null) 
+                        tableChanged.TableState = TableSelected.TableState;
                 }
                 catch (MySqlException ex)
                 {
@@ -799,6 +800,7 @@ namespace QLQuanCafe.BLL
             {
                 LocatorDataSource.BillDetailDS.DeleteBillDetail(BillDetaiSelected);
 
+                BillOfTableSelected = LocatorDataSource.BillDS.GetLastBill(TableSelected);
                 BillDetaisOfTableSelected = LocatorDataSource.BillDetailDS.GetAllBillDetail(BillOfTableSelected);
             }
             catch (MySqlException ex)

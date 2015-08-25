@@ -20,7 +20,7 @@ namespace QLQuanCafe.GUI.Dialog
         public ThongTin(String message):this()
         {
             
-            lblMessage.Text = message;
+            lblMessage.Text = message.Trim();
 
         }
         private void labelX1_Click(object sender, EventArgs e)

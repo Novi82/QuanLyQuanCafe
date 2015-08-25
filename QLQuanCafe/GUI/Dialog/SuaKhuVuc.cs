@@ -20,12 +20,12 @@ namespace QLQuanCafe.GUI.Dialog
 
         private void btnDongY_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtTenKhuVuc.Text))
+            if (string.IsNullOrEmpty(txtTenKhuVuc.Text.Trim()))
             {
                 MessageDialogHelper.CreateErrorMessage("Tên khu vực không được để trống.");
                 return;
             }
-            LocatorBll.AreaAndTableVM.AreaToSave.AreaName = txtTenKhuVuc.Text;    
+            LocatorBll.AreaAndTableVM.AreaToSave.AreaName = txtTenKhuVuc.Text.Trim();    
 
             if (LocatorBll.AreaAndTableVM.EditArea())
             {

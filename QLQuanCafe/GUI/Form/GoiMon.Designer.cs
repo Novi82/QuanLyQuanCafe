@@ -38,6 +38,7 @@ namespace QLQuanCafe.GUI.Form
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cbxLoaiMonAn = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.menuCategoryDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtTimMonAn = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.btnTimMonAn = new DevComponents.DotNetBar.ButtonX();
             this.dgvMonAn = new DevComponents.DotNetBar.Controls.DataGridViewX();
@@ -45,10 +46,9 @@ namespace QLQuanCafe.GUI.Form
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuItemDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.menuCategoryDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.menuCategoryDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMonAn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.menuItemDataBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menuCategoryDataBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // cbxLoaiMonAn
@@ -66,6 +66,10 @@ namespace QLQuanCafe.GUI.Form
             this.cbxLoaiMonAn.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cbxLoaiMonAn.TabIndex = 0;
             this.cbxLoaiMonAn.SelectedIndexChanged += new System.EventHandler(this.cbxLoaiMonAn_SelectedIndexChanged);
+            // 
+            // menuCategoryDataBindingSource
+            // 
+            this.menuCategoryDataBindingSource.DataSource = typeof(QLQuanCafe.DTO.MenuCategoryData);
             // 
             // txtTimMonAn
             // 
@@ -101,6 +105,7 @@ namespace QLQuanCafe.GUI.Form
             // 
             this.dgvMonAn.AllowUserToAddRows = false;
             this.dgvMonAn.AllowUserToDeleteRows = false;
+            this.dgvMonAn.AllowUserToOrderColumns = true;
             this.dgvMonAn.AutoGenerateColumns = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -170,10 +175,6 @@ namespace QLQuanCafe.GUI.Form
             // 
             this.menuItemDataBindingSource.DataSource = typeof(QLQuanCafe.DTO.MenuItemData);
             // 
-            // menuCategoryDataBindingSource
-            // 
-            this.menuCategoryDataBindingSource.DataSource = typeof(QLQuanCafe.DTO.MenuCategoryData);
-            // 
             // GoiMon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -191,9 +192,9 @@ namespace QLQuanCafe.GUI.Form
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TitleText = "<font color=\"#ffffff\">Gọi Món</font><font color=\"#000000\"></font>";
             this.Load += new System.EventHandler(this.YeuCauMon_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.menuCategoryDataBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMonAn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.menuItemDataBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menuCategoryDataBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -55,8 +55,8 @@
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
             this.btnThanhToan = new DevComponents.DotNetBar.ButtonX();
             this.btnChuanBi = new DevComponents.DotNetBar.ButtonX();
-            this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.lblTongTien = new DevComponents.DotNetBar.LabelX();
+            this.btnHuyMon = new DevComponents.DotNetBar.ButtonX();
             this.btnGoiMon = new DevComponents.DotNetBar.ButtonX();
             this.stcKhuVuc = new DevComponents.DotNetBar.SuperTabControl();
             this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
@@ -249,7 +249,7 @@
             this.lblBanThanhToan.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblBanThanhToan.Location = new System.Drawing.Point(121, 99);
             this.lblBanThanhToan.Name = "lblBanThanhToan";
-            this.lblBanThanhToan.Size = new System.Drawing.Size(75, 23);
+            this.lblBanThanhToan.Size = new System.Drawing.Size(212, 23);
             this.lblBanThanhToan.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.lblBanThanhToan.TabIndex = 1;
             // 
@@ -261,7 +261,7 @@
             this.lblGioDen.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblGioDen.Location = new System.Drawing.Point(121, 72);
             this.lblGioDen.Name = "lblGioDen";
-            this.lblGioDen.Size = new System.Drawing.Size(75, 23);
+            this.lblGioDen.Size = new System.Drawing.Size(212, 23);
             this.lblGioDen.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.lblGioDen.TabIndex = 1;
             // 
@@ -273,7 +273,7 @@
             this.lblTrangThai.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblTrangThai.Location = new System.Drawing.Point(121, 43);
             this.lblTrangThai.Name = "lblTrangThai";
-            this.lblTrangThai.Size = new System.Drawing.Size(75, 23);
+            this.lblTrangThai.Size = new System.Drawing.Size(212, 23);
             this.lblTrangThai.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.lblTrangThai.TabIndex = 1;
             // 
@@ -323,7 +323,7 @@
             this.lblTenBan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.lblTenBan.Location = new System.Drawing.Point(121, 14);
             this.lblTenBan.Name = "lblTenBan";
-            this.lblTenBan.Size = new System.Drawing.Size(75, 23);
+            this.lblTenBan.Size = new System.Drawing.Size(212, 23);
             this.lblTenBan.TabIndex = 0;
             // 
             // labelX1
@@ -347,8 +347,8 @@
             this.panelEx1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.panelEx1.Controls.Add(this.btnThanhToan);
             this.panelEx1.Controls.Add(this.btnChuanBi);
-            this.panelEx1.Controls.Add(this.labelX5);
             this.panelEx1.Controls.Add(this.lblTongTien);
+            this.panelEx1.Controls.Add(this.btnHuyMon);
             this.panelEx1.Controls.Add(this.btnGoiMon);
             this.panelEx1.DisabledBackColor = System.Drawing.Color.Empty;
             this.panelEx1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -366,13 +366,12 @@
             // btnThanhToan
             // 
             this.btnThanhToan.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnThanhToan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThanhToan.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnThanhToan.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThanhToan.Location = new System.Drawing.Point(253, 72);
+            this.btnThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnThanhToan.Location = new System.Drawing.Point(331, 95);
             this.btnThanhToan.Name = "btnThanhToan";
-            this.btnThanhToan.Size = new System.Drawing.Size(165, 40);
+            this.btnThanhToan.Size = new System.Drawing.Size(75, 23);
             this.btnThanhToan.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnThanhToan.TabIndex = 1;
             this.btnThanhToan.Text = "Thanh Toán";
@@ -382,33 +381,17 @@
             // btnChuanBi
             // 
             this.btnChuanBi.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnChuanBi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnChuanBi.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnChuanBi.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnChuanBi.Enabled = false;
-            this.btnChuanBi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnChuanBi.Location = new System.Drawing.Point(136, 72);
+            this.btnChuanBi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnChuanBi.Location = new System.Drawing.Point(225, 95);
             this.btnChuanBi.Name = "btnChuanBi";
-            this.btnChuanBi.Size = new System.Drawing.Size(111, 40);
+            this.btnChuanBi.Size = new System.Drawing.Size(75, 23);
             this.btnChuanBi.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnChuanBi.TabIndex = 18;
             this.btnChuanBi.Text = "Chuẩn bị";
             this.btnChuanBi.Click += new System.EventHandler(this.btnChuanBi_Click);
-            // 
-            // labelX5
-            // 
-            this.labelX5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            // 
-            // 
-            // 
-            this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX5.ForeColor = System.Drawing.Color.Red;
-            this.labelX5.Location = new System.Drawing.Point(356, 3);
-            this.labelX5.Name = "labelX5";
-            this.labelX5.Size = new System.Drawing.Size(62, 46);
-            this.labelX5.TabIndex = 0;
-            this.labelX5.Text = "vnd";
-            this.labelX5.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
             // lblTongTien
             // 
@@ -419,13 +402,27 @@
             this.lblTongTien.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTongTien.ForeColor = System.Drawing.Color.Red;
-            this.lblTongTien.Location = new System.Drawing.Point(136, 3);
+            this.lblTongTien.Location = new System.Drawing.Point(13, 14);
             this.lblTongTien.Name = "lblTongTien";
-            this.lblTongTien.Size = new System.Drawing.Size(220, 46);
+            this.lblTongTien.Size = new System.Drawing.Size(393, 46);
             this.lblTongTien.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.lblTongTien.TabIndex = 0;
-            this.lblTongTien.Text = "tongTien";
             this.lblTongTien.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // btnHuyMon
+            // 
+            this.btnHuyMon.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnHuyMon.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnHuyMon.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnHuyMon.Enabled = false;
+            this.btnHuyMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnHuyMon.Location = new System.Drawing.Point(119, 95);
+            this.btnHuyMon.Name = "btnHuyMon";
+            this.btnHuyMon.Size = new System.Drawing.Size(75, 23);
+            this.btnHuyMon.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnHuyMon.TabIndex = 18;
+            this.btnHuyMon.Text = "Hủy Món";
+            this.btnHuyMon.Click += new System.EventHandler(this.btnHuyMon_Click);
             // 
             // btnGoiMon
             // 
@@ -433,10 +430,10 @@
             this.btnGoiMon.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnGoiMon.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnGoiMon.Enabled = false;
-            this.btnGoiMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnGoiMon.Location = new System.Drawing.Point(3, 72);
+            this.btnGoiMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnGoiMon.Location = new System.Drawing.Point(13, 95);
             this.btnGoiMon.Name = "btnGoiMon";
-            this.btnGoiMon.Size = new System.Drawing.Size(127, 40);
+            this.btnGoiMon.Size = new System.Drawing.Size(75, 23);
             this.btnGoiMon.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnGoiMon.TabIndex = 18;
             this.btnGoiMon.Text = "Gọi món";
@@ -537,7 +534,7 @@
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvMonDaGoi.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvMonDaGoi.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -676,7 +673,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
         private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn;
         private DevComponents.DotNetBar.LabelX lblBanThanhToan;
-        private DevComponents.DotNetBar.LabelX labelX5;
         private DevComponents.DotNetBar.LabelX labelX4;
+        private DevComponents.DotNetBar.ButtonX btnHuyMon;
     }
 }

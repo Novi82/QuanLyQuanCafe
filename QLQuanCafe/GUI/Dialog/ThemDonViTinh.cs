@@ -22,13 +22,13 @@ namespace QLQuanCafe.GUI.Dialog
 
         private void BAccept_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(DonViTinh.Text))
+            if (string.IsNullOrEmpty(DonViTinh.Text.Trim()))
             {
                 MessageDialogHelper.CreateErrorMessage("Tên đơn vị tính không được để trống.");
                 return;
             }
             UnitData unitToSave = new UnitData();
-            unitToSave.UnitName = DonViTinh.Text;
+            unitToSave.UnitName = DonViTinh.Text.Trim();
             LocatorBll.UnitVM.UnitToSave = unitToSave;
             if (LocatorBll.UnitVM.AddUnit())
             {              

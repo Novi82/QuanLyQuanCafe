@@ -336,6 +336,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="GUI\BaoCaoThongKe.resx">
       <DependentUpon>BaoCaoThongKe.cs</DependentUpon>
     </EmbeddedResource>
@@ -458,7 +463,6 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report\BillReport.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\QLQuanCafe.DTO.AccountData.datasource" />
     <None Include="Properties\DataSources\QLQuanCafe.DTO.AreaData.datasource" />
@@ -490,6 +494,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Report\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Resources\iconSmall.png" />
     <Content Include="Resources\about.png" />
     <Content Include="Resources\AddAreas.png" />

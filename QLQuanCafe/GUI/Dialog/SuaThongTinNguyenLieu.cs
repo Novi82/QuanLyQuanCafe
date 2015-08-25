@@ -40,7 +40,7 @@ namespace QLQuanCafe.GUI.Dialog
         {
             String message = string.Empty;
 
-            if (string.IsNullOrEmpty(txtTenNguyenLieu.Text))
+            if (string.IsNullOrEmpty(txtTenNguyenLieu.Text.Trim()))
                 message += "Tên nguyên liệu không được bỏ trống.\n";
             if (cbxDonViTinh.SelectedItem == null)
                 message += "Đơn vị tính không được bỏ trống.\n";
@@ -51,7 +51,7 @@ namespace QLQuanCafe.GUI.Dialog
                 return;
             }
 
-            materialBll.MaterialToSave.MaterialName = txtTenNguyenLieu.Text;
+            materialBll.MaterialToSave.MaterialName = txtTenNguyenLieu.Text.Trim();
 //            materialBll.MaterialToSave.Price = (decimal)dipDonGia.Value;
             materialBll.MaterialToSave.Unit = cbxDonViTinh.SelectedItem as UnitData;
 

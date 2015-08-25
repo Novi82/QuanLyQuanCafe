@@ -26,12 +26,12 @@ namespace QLQuanCafe.GUI.Dialog
 
         private void btnDongY_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtTenLoaiMonAn.Text))
+            if (string.IsNullOrEmpty(txtTenLoaiMonAn.Text.Trim()))
             {
                 MessageDialogHelper.CreateErrorMessage("Tên loại món ăn không được để trống.");
                 return;
             }
-            bll.MenuCategoryToSave.MenuCategoryName = txtTenLoaiMonAn.Text;
+            bll.MenuCategoryToSave.MenuCategoryName = txtTenLoaiMonAn.Text.Trim();
             if (bll.EditMenuCategory())
             {
                 if (MessageDialogHelper.CreateInformationMessage("Lưu thành công.") == DialogResult.OK)

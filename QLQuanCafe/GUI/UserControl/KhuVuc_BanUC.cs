@@ -27,7 +27,7 @@ namespace QLQuanCafe.GUI.UserControl
 
         private void KhuVuc_BanUC_Load(object sender, EventArgs e)
         {
-
+            btnHuyMon.Enabled = true;
         }
 
         private void SwitchButton()
@@ -120,7 +120,7 @@ namespace QLQuanCafe.GUI.UserControl
                         homePageBll.SelectTableCommand.Execute(listView.SelectedItems[0].Tag);
                         TableData currenttable = homePageBll.TableSelected;
                         updateInfo(currenttable);
-                        //                    lblGioDen.Text = DateTime.Now.ToShortTimeString();
+                        lblGioDen.Text = homePageBll.BillOfTableSelected.Time.ToString();
                         SwitchButton();
                         LoadBillDetail();
                     }
@@ -175,7 +175,8 @@ namespace QLQuanCafe.GUI.UserControl
                     homePageBll.OpenTableCommand.Execute(selectedTable);
                     currentItem.ImageKey = homePageBll.TableSelected.TableState;
                     updateInfo(homePageBll.TableSelected);
-                    lblGioDen.Text = DateTime.Now.ToShortTimeString();
+                    lblGioDen.Text = DateTime.Now.ToString();
+                    homePageBll.BillOfTableSelected.Time = DateTime.Now;
                     SwitchButton();
                 }
             }
@@ -193,6 +194,7 @@ namespace QLQuanCafe.GUI.UserControl
                     currentItem.ImageKey = homePageBll.TableSelected.TableState;
                     updateInfo(homePageBll.TableSelected);
                     lblGioDen.Text = string.Empty;
+                    homePageBll.BillOfTableSelected.Time = null;
                     SwitchButton();
                 }
             }
@@ -209,6 +211,7 @@ namespace QLQuanCafe.GUI.UserControl
                     currentItem.ImageKey = homePageBll.TableSelected.TableState;
                     updateInfo(homePageBll.TableSelected);
                     lblGioDen.Text = string.Empty;
+                    homePageBll.BillOfTableSelected.Time = null;
                     SwitchButton();
                 }
             }
@@ -225,6 +228,7 @@ namespace QLQuanCafe.GUI.UserControl
                     currentItem.ImageKey = homePageBll.TableSelected.TableState;
                     updateInfo(homePageBll.TableSelected);
                     lblGioDen.Text = string.Empty;
+                    homePageBll.BillOfTableSelected.Time = null;
                     SwitchButton();
                 }
             }
@@ -273,7 +277,9 @@ namespace QLQuanCafe.GUI.UserControl
                     row.DefaultCellStyle.BackColor = Color.White;
                 }
             }
-            lblTongTien.Text = homePageBll.BillOfTableSelected.TotalMoney.ToString();
+            var tongtien = homePageBll.BillOfTableSelected.TotalMoney;
+            //lblTongTien.Text = String.Format("{0:0,0 vnđ}", tongtien);
+            lblTongTien.Text = tongtien.ToString("#,### vnđ");
         }
 
         private void dgvMonDaGoi_SelectionChanged(object sender, EventArgs e)
@@ -316,6 +322,7 @@ namespace QLQuanCafe.GUI.UserControl
                 if (homePageBll.PayBillCommand.CanExecute(null))
                 {
                     homePageBll.PayBillCommand.Execute(null);
+                    homePageBll.OpenTableCommand.Execute(null);
                     LoadKhuVuc();
                     LoadBillDetail();
                 }
@@ -360,6 +367,16 @@ namespace QLQuanCafe.GUI.UserControl
                     homePageBll.UnGroupTableCommand.Execute(null);
                     LoadKhuVuc();
                 }
+            }
+        }
+
+        private void btnHuyMon_Click(object sender, EventArgs e)
+        {
+            if (homePageBll.DeleteBillDetailCommand.CanExecute(null))
+            {
+                homePageBll.DeleteBillDetailCommand.Execute(null);
+                LoadBillDetail();
+                dgvMonDaGoi.ClearSelection();
             }
         }
     }

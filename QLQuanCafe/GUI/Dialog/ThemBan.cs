@@ -21,18 +21,16 @@ namespace QLQuanCafe.GUI.Dialog
 
         private void btnDongY_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtTenBan.Text))
+            if (string.IsNullOrEmpty(txtTenBan.Text.Trim()))
             {
                 MessageDialogHelper.CreateErrorMessage("Tên bàn không được để trống.");
                 return;
             }
             TableData tableToSave = new TableData();
-            tableToSave.TableName = txtTenBan.Text;
+            tableToSave.TableName = txtTenBan.Text.Trim();
 
-            // TODO test it plz
             tableToSave.Area = LocatorBll.AreaAndTableVM.AreaSelected;
 
-            // TODO trang thai = ??
             tableToSave.TableState = "Trong";
 
 

@@ -25,12 +25,12 @@ namespace QLQuanCafe.GUI.Dialog
 
         private void btnDongY_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtTenBan.Text))
+            if (string.IsNullOrEmpty(txtTenBan.Text.Trim()))
             {
                 MessageDialogHelper.CreateErrorMessage("Tên bàn không được để trống.");
                 return;
             }
-            LocatorBll.AreaAndTableVM.TableToSave.TableName = txtTenBan.Text;
+            LocatorBll.AreaAndTableVM.TableToSave.TableName = txtTenBan.Text.Trim();
             if (LocatorBll.AreaAndTableVM.EditTable())
             {
                 if (MessageDialogHelper.CreateInformationMessage("Lưu thành công.") == DialogResult.OK)

@@ -32,22 +32,21 @@ namespace QLQuanCafe.GUI.Dialog
         private void InitializeComponent()
         {
             this.GThanhtoan = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.txtKhuVuc = new DevComponents.DotNetBar.LabelX();
+            this.txtTongTien = new DevComponents.DotNetBar.LabelX();
+            this.txtBan = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.BtnDongVaIn = new DevComponents.DotNetBar.ButtonX();
             this.btnIn = new DevComponents.DotNetBar.ButtonX();
             this.btnThoat = new DevComponents.DotNetBar.ButtonX();
-            this.txtBan = new DevComponents.DotNetBar.LabelX();
-            this.txtKhuVuc = new DevComponents.DotNetBar.LabelX();
-            this.txtTongTien = new DevComponents.DotNetBar.LabelX();
             this.GThanhtoan.SuspendLayout();
             this.SuspendLayout();
             // 
             // GThanhtoan
             // 
-            this.GThanhtoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.GThanhtoan.CanvasColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.GThanhtoan.BackColor = System.Drawing.Color.White;
             this.GThanhtoan.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.GThanhtoan.ColorTable = DevComponents.DotNetBar.Controls.ePanelColorTable.Green;
             this.GThanhtoan.Controls.Add(this.txtKhuVuc);
@@ -89,6 +88,53 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             this.GThanhtoan.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.GThanhtoan.TabIndex = 8;
+            // 
+            // txtKhuVuc
+            // 
+            this.txtKhuVuc.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.txtKhuVuc.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtKhuVuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtKhuVuc.ForeColor = System.Drawing.Color.Black;
+            this.txtKhuVuc.Location = new System.Drawing.Point(250, 18);
+            this.txtKhuVuc.Name = "txtKhuVuc";
+            this.txtKhuVuc.Size = new System.Drawing.Size(96, 23);
+            this.txtKhuVuc.TabIndex = 10;
+            this.txtKhuVuc.Text = "labelX4";
+            // 
+            // txtTongTien
+            // 
+            this.txtTongTien.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.txtTongTien.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTongTien.ForeColor = System.Drawing.Color.Red;
+            this.txtTongTien.Location = new System.Drawing.Point(108, 76);
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtTongTien.Size = new System.Drawing.Size(240, 38);
+            this.txtTongTien.TabIndex = 10;
+            this.txtTongTien.Text = "labelX4";
+            this.txtTongTien.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // txtBan
+            // 
+            this.txtBan.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.txtBan.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtBan.ForeColor = System.Drawing.Color.Black;
+            this.txtBan.Location = new System.Drawing.Point(56, 18);
+            this.txtBan.Name = "txtBan";
+            this.txtBan.Size = new System.Drawing.Size(96, 23);
+            this.txtBan.TabIndex = 10;
+            this.txtBan.Text = "labelX4";
             // 
             // labelX2
             // 
@@ -169,47 +215,11 @@ namespace QLQuanCafe.GUI.Dialog
             this.btnThoat.Text = "Thoát";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // txtBan
-            // 
-            // 
-            // 
-            // 
-            this.txtBan.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtBan.Location = new System.Drawing.Point(75, 20);
-            this.txtBan.Name = "txtBan";
-            this.txtBan.Size = new System.Drawing.Size(96, 23);
-            this.txtBan.TabIndex = 10;
-            this.txtBan.Text = "labelX4";
-            // 
-            // txtKhuVuc
-            // 
-            // 
-            // 
-            // 
-            this.txtKhuVuc.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtKhuVuc.Location = new System.Drawing.Point(250, 18);
-            this.txtKhuVuc.Name = "txtKhuVuc";
-            this.txtKhuVuc.Size = new System.Drawing.Size(96, 23);
-            this.txtKhuVuc.TabIndex = 10;
-            this.txtKhuVuc.Text = "labelX4";
-            // 
-            // txtTongTien
-            // 
-            // 
-            // 
-            // 
-            this.txtTongTien.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtTongTien.Location = new System.Drawing.Point(108, 84);
-            this.txtTongTien.Name = "txtTongTien";
-            this.txtTongTien.Size = new System.Drawing.Size(240, 23);
-            this.txtTongTien.TabIndex = 10;
-            this.txtTongTien.Text = "labelX4";
-            // 
             // XacNhanThanhToan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(364, 233);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnIn);

@@ -35,7 +35,10 @@ namespace QLQuanCafe.GUI.Form
         private void cbxLoaiMonAn_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboBoxEx cbx = sender as ComboBoxEx;
-            homePageBll.MenuCategorySelected = cbx.SelectedItem as MenuCategoryData;
+            if (cbx != null)
+            {
+                homePageBll.MenuCategorySelected = cbx.SelectedItem as MenuCategoryData;
+            }
             LoadMonAn();
         }
 
@@ -66,19 +69,19 @@ namespace QLQuanCafe.GUI.Form
         {
             if (e.RowIndex >= 0)
             {
-                            if (dgvMonAn.SelectedRows.Count > 0)
-                            {
-                                if (homePageBll != null)
-                                {
-                                    if (homePageBll.SelectMenuItemCommand.CanExecute(null))
-                                    {
-                
-                                        homePageBll.SelectMenuItemCommand.Execute(dgvMonAn.SelectedRows[0].DataBoundItem);
-                
-                                        dgvMonAn.ClearSelection();
-                                    }
-                                }
-                            }
+                if (dgvMonAn.SelectedRows.Count > 0)
+                {
+                    if (homePageBll != null)
+                    {
+                        if (homePageBll.SelectMenuItemCommand.CanExecute(null))
+                        {
+
+                            homePageBll.SelectMenuItemCommand.Execute(dgvMonAn.SelectedRows[0].DataBoundItem);
+
+                            dgvMonAn.ClearSelection();
+                        }
+                    }
+                }
             }
         }
     }

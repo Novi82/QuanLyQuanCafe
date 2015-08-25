@@ -35,11 +35,11 @@ namespace QLQuanCafe.GUI.Dialog
         {
             String message = string.Empty;
 
-            if (string.IsNullOrEmpty(txtTenTaiKhoan.Text))
+            if (string.IsNullOrEmpty(txtTenTaiKhoan.Text.Trim()))
                 message += "Tên tài khoản không được bỏ trống.\n";
-            if (string.IsNullOrEmpty(txtMatKhau.Text))
+            if (string.IsNullOrEmpty(txtMatKhau.Text.Trim()))
                 message += "Mật khẩu không được bỏ trống.\n";
-            if (string.IsNullOrEmpty(txtMatKhau2.Text))
+            if (string.IsNullOrEmpty(txtMatKhau2.Text.Trim()))
                 message += "Mật khẩu nhập lại không được bỏ trống.\n";
             if (!string.IsNullOrEmpty(txtMatKhau.Text) && !string.IsNullOrEmpty(txtMatKhau2.Text) && !txtMatKhau.Text.Equals(txtMatKhau2.Text)) // should use equal();
                 message += "Mật khẩu và mật khẩu nhập lại không trùng nhau.\n";
@@ -53,12 +53,12 @@ namespace QLQuanCafe.GUI.Dialog
             }
 
             AccountData accountData = new AccountData();
-            accountData.UserName = txtTenTaiKhoan.Text;
-            accountData.Password = txtMatKhau.Text;
+            accountData.UserName = txtTenTaiKhoan.Text.Trim();
+            accountData.Password = txtMatKhau.Text.Trim();
             accountData.Permission = cbxQuyen.SelectedItem as PermissionData;
             bll.AccountToSave = accountData;
 
-            if (bll.AddAccount(txtMatKhau.Text))
+            if (bll.AddAccount(txtMatKhau.Text.Trim()))
             {
                 if (MessageDialogHelper.CreateInformationMessage("Lưu thành công.") == DialogResult.OK)
                     this.Close();

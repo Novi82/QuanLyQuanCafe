@@ -43,7 +43,7 @@ namespace QLQuanCafe.GUI.Dialog
             if (cbxDonViTinh.SelectedItem == null)
                 message += "Đơn vị tính không được bỏ trống.\n";
 
-            bll.MenuItemToSave.MenuItemName = txtTenMonAn.Text;
+            bll.MenuItemToSave.MenuItemName = txtTenMonAn.Text.Trim();
             bll.MenuItemToSave.MenuCategory = cbxLoaiMonAn.SelectedItem as MenuCategoryData;
             bll.MenuItemToSave.Price = (decimal)dipDonGia.Value;
             bll.MenuItemToSave.Unit = cbxDonViTinh.SelectedItem as UnitData;

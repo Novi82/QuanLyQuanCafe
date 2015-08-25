@@ -119,7 +119,7 @@ namespace QLQuanCafe.DAO
 
             return provider.ExecuteNonQuery("HOADON_proc_prepare", sqlStoredProcedureParams);
         }
-
+        
         public List<BillData> FindBill(DateTime startDay, DateTime endDay, string tableId, string areaId)
         {
             List<BillData> listBill = new List<BillData>();

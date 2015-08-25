@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Windows.Input;
 using MySql.Data.MySqlClient;
 using QLQuanCafe.Common;
@@ -127,7 +128,6 @@ namespace QLQuanCafe.BLL
                             try
                             {
                                 LocatorDataSource.UnitDS.DeleteUnit(UnitSelected);
-
                                 ListUnit = LocatorDataSource.UnitDS.GetAllUnit();
                             }
                             catch (MySqlException ex)

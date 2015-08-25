@@ -39,7 +39,7 @@ namespace QLQuanCafe.GUI.Dialog
         {
             String message = string.Empty;
 
-            if (string.IsNullOrEmpty(txtTenMonAn.Text))
+            if (string.IsNullOrEmpty(txtTenMonAn.Text.Trim()))
                 message += "Tên món ăn không được bỏ trống.\n";
             if (cbxDonViTinh.SelectedItem == null)
                 message += "Đơn vị tính không được bỏ trống.\n";
@@ -52,7 +52,7 @@ namespace QLQuanCafe.GUI.Dialog
 
             MenuItemData menuItemData= new MenuItemData();
 
-            menuItemData.MenuItemName = txtTenMonAn.Text;
+            menuItemData.MenuItemName = txtTenMonAn.Text.Trim();
 //            TODO     
 //            menuItemData.ImagePath
             menuItemData.MenuCategory = LocatorBll.MenuCategoryAndMenuItemVM.MenuCategorySelected;

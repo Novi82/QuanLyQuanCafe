@@ -21,12 +21,12 @@ namespace QLQuanCafe.GUI.Dialog
 
         private void btnAccept(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(DonViTinh.Text))
+            if (string.IsNullOrEmpty(DonViTinh.Text.Trim()))
             {
                 MessageDialogHelper.CreateErrorMessage("Tên đơn vị tính không được để trống.");
                 return;
             }
-            LocatorBll.UnitVM.UnitToSave.UnitName = DonViTinh.Text;
+            LocatorBll.UnitVM.UnitToSave.UnitName = DonViTinh.Text.Trim();
             if (LocatorBll.UnitVM.EditUnit())
             {
                 if (MessageDialogHelper.CreateInformationMessage("Lưu thành công.") == DialogResult.OK)

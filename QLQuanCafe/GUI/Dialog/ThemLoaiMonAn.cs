@@ -21,14 +21,14 @@ namespace QLQuanCafe.GUI.Dialog
 
         private void btnDongY_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtTenLoaiMon.Text))
+            if (string.IsNullOrEmpty(txtTenLoaiMon.Text.Trim()))
             {
                 MessageDialogHelper.CreateErrorMessage("Tên loại món ăn không được để trống.");
                 return;
             }
 
             MenuCategoryData menuCategoryData = new MenuCategoryData();
-            menuCategoryData.MenuCategoryName = txtTenLoaiMon.Text;
+            menuCategoryData.MenuCategoryName = txtTenLoaiMon.Text.Trim();
             LocatorBll.MenuCategoryAndMenuItemVM.MenuCategoryToSave = menuCategoryData;
 
             if (LocatorBll.MenuCategoryAndMenuItemVM.AddMenuCategory())

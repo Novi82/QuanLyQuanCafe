@@ -1,6 +1,7 @@
 ﻿using System;
 using DevComponents.DotNetBar.Metro;
 using QLQuanCafe.BLL;
+using QLQuanCafe.Common;
 
 namespace QLQuanCafe.GUI.Dialog
 {
@@ -15,7 +16,7 @@ namespace QLQuanCafe.GUI.Dialog
         private void XuatKho_Load(object sender, EventArgs e)
         {
             txtTenNguyenLieu.Text = materialBll.MaterialSelected.MaterialName;
-            txtGiaNhap.Text = materialBll.MaterialSelected.Price.ToString();
+            txtGiaNhap.Text = materialBll.MaterialSelected.Price.ToString("#,###");
             txtMaNguyenLieu.Text = materialBll.MaterialSelected.MaterialId;
             txtDonViTinh.Text = materialBll.MaterialSelected.Unit.UnitName;
             dipSoLuong.MaxValue = materialBll.MaterialSelected.Quantity;
@@ -23,10 +24,22 @@ namespace QLQuanCafe.GUI.Dialog
 
         private void btnDongY_Click(object sender, EventArgs e)
         {
-            materialBll.MaterialToSave.Quantity = Convert.ToInt32(dipSoLuong.Value);
-            if (materialBll.ExportMaterial())
+
+
+            int quantity = Convert.ToInt32(dipSoLuong.Value);
+            if (quantity > 0)
             {
-                this.Close();
+                materialBll.MaterialToSave.Quantity = quantity;
+
+                if (materialBll.ExportMaterial())
+                {
+                    this.Close();
+                }
+            }
+            else
+            {
+                MessageDialogHelper.CreateErrorMessage("Số lượng phải lớn hơn 0");
+                dipSoLuong.Focus();
             }
         }
 

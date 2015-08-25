@@ -103,6 +103,7 @@ namespace QLQuanCafe.GUI.Dialog
             this.cbxDonViTinh.DataSource = this.unitDataBindingSource;
             this.cbxDonViTinh.DisplayMember = "UnitName";
             this.cbxDonViTinh.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbxDonViTinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxDonViTinh.ForeColor = System.Drawing.Color.Black;
             this.cbxDonViTinh.FormattingEnabled = true;
             this.cbxDonViTinh.ItemHeight = 14;
@@ -147,7 +148,7 @@ namespace QLQuanCafe.GUI.Dialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(284, 158);
             this.Controls.Add(this.btnThemDonViTinh);
             this.Controls.Add(this.txtTenNguyenLieu);

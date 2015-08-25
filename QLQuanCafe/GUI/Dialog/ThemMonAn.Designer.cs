@@ -147,6 +147,7 @@ namespace QLQuanCafe.GUI.Dialog
             this.cbxDonViTinh.DataSource = this.unitDataBindingSource;
             this.cbxDonViTinh.DisplayMember = "UnitName";
             this.cbxDonViTinh.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbxDonViTinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxDonViTinh.ForeColor = System.Drawing.Color.Black;
             this.cbxDonViTinh.FormattingEnabled = true;
             this.cbxDonViTinh.ItemHeight = 14;

@@ -84,7 +84,7 @@ namespace QLQuanCafe.GUI.Dialog
             this.LMaNguyenLieu.Location = new System.Drawing.Point(21, 146);
             this.LMaNguyenLieu.Name = "LMaNguyenLieu";
             this.LMaNguyenLieu.Size = new System.Drawing.Size(96, 23);
-            this.LMaNguyenLieu.TabIndex = 2;
+            this.LMaNguyenLieu.TabIndex = 0;
             this.LMaNguyenLieu.Text = "Mã Nguyên Liệu :";
             // 
             // LTenNguyenLieu
@@ -98,7 +98,7 @@ namespace QLQuanCafe.GUI.Dialog
             this.LTenNguyenLieu.Location = new System.Drawing.Point(21, 194);
             this.LTenNguyenLieu.Name = "LTenNguyenLieu";
             this.LTenNguyenLieu.Size = new System.Drawing.Size(96, 23);
-            this.LTenNguyenLieu.TabIndex = 3;
+            this.LTenNguyenLieu.TabIndex = 0;
             this.LTenNguyenLieu.Text = "Tên Nguyên Liệu :";
             // 
             // LGiaNhap
@@ -112,7 +112,7 @@ namespace QLQuanCafe.GUI.Dialog
             this.LGiaNhap.Location = new System.Drawing.Point(21, 242);
             this.LGiaNhap.Name = "LGiaNhap";
             this.LGiaNhap.Size = new System.Drawing.Size(75, 23);
-            this.LGiaNhap.TabIndex = 4;
+            this.LGiaNhap.TabIndex = 0;
             this.LGiaNhap.Text = "Giá Nhập :";
             // 
             // LSoLuong
@@ -126,7 +126,7 @@ namespace QLQuanCafe.GUI.Dialog
             this.LSoLuong.Location = new System.Drawing.Point(21, 333);
             this.LSoLuong.Name = "LSoLuong";
             this.LSoLuong.Size = new System.Drawing.Size(75, 23);
-            this.LSoLuong.TabIndex = 5;
+            this.LSoLuong.TabIndex = 0;
             this.LSoLuong.Text = "Số Lượng :";
             // 
             // LDonViTinh
@@ -140,7 +140,7 @@ namespace QLQuanCafe.GUI.Dialog
             this.LDonViTinh.Location = new System.Drawing.Point(21, 289);
             this.LDonViTinh.Name = "LDonViTinh";
             this.LDonViTinh.Size = new System.Drawing.Size(75, 23);
-            this.LDonViTinh.TabIndex = 6;
+            this.LDonViTinh.TabIndex = 0;
             this.LDonViTinh.Text = "Đơn Vị Tính :";
             // 
             // txtMaNguyenLieu
@@ -157,7 +157,7 @@ namespace QLQuanCafe.GUI.Dialog
             this.txtMaNguyenLieu.Name = "txtMaNguyenLieu";
             this.txtMaNguyenLieu.ReadOnly = true;
             this.txtMaNguyenLieu.Size = new System.Drawing.Size(138, 20);
-            this.txtMaNguyenLieu.TabIndex = 7;
+            this.txtMaNguyenLieu.TabIndex = 1;
             // 
             // txtTenNguyenLieu
             // 
@@ -173,7 +173,7 @@ namespace QLQuanCafe.GUI.Dialog
             this.txtTenNguyenLieu.Name = "txtTenNguyenLieu";
             this.txtTenNguyenLieu.ReadOnly = true;
             this.txtTenNguyenLieu.Size = new System.Drawing.Size(138, 20);
-            this.txtTenNguyenLieu.TabIndex = 8;
+            this.txtTenNguyenLieu.TabIndex = 2;
             // 
             // txtGiaNhap
             // 
@@ -189,7 +189,7 @@ namespace QLQuanCafe.GUI.Dialog
             this.txtGiaNhap.Name = "txtGiaNhap";
             this.txtGiaNhap.ReadOnly = true;
             this.txtGiaNhap.Size = new System.Drawing.Size(138, 20);
-            this.txtGiaNhap.TabIndex = 9;
+            this.txtGiaNhap.TabIndex = 3;
             // 
             // dipSoLuong
             // 
@@ -225,7 +225,7 @@ namespace QLQuanCafe.GUI.Dialog
             this.txtDonViTinh.Name = "txtDonViTinh";
             this.txtDonViTinh.ReadOnly = true;
             this.txtDonViTinh.Size = new System.Drawing.Size(138, 20);
-            this.txtDonViTinh.TabIndex = 9;
+            this.txtDonViTinh.TabIndex = 4;
             // 
             // reflectionImage1
             // 
@@ -261,7 +261,6 @@ namespace QLQuanCafe.GUI.Dialog
             this.Controls.Add(this.LMaNguyenLieu);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnDongY);
-            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "NhapKho";
