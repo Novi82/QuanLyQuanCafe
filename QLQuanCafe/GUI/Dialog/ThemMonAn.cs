@@ -9,7 +9,7 @@ namespace QLQuanCafe.GUI.Dialog
 {
     public partial class ThemMonAn : MetroForm
     {
-        private UnitBll unitBll = LocatorBll.UnitVM;
+        private UnitBll unitBll = LocatorBll.UnitBll;
         public ThemMonAn()
         {
             InitializeComponent();
@@ -55,13 +55,13 @@ namespace QLQuanCafe.GUI.Dialog
             menuItemData.MenuItemName = txtTenMonAn.Text.Trim();
 //            TODO     
 //            menuItemData.ImagePath
-            menuItemData.MenuCategory = LocatorBll.MenuCategoryAndMenuItemVM.MenuCategorySelected;
+            menuItemData.MenuCategory = LocatorBll.MenuCategoryAndMenuItemBll.MenuCategorySelected;
             menuItemData.Price = (decimal)dipDonGia.Value;
             menuItemData.Unit = cbxDonViTinh.SelectedItem as UnitData;
 
-            LocatorBll.MenuCategoryAndMenuItemVM.MenuItemToSave = menuItemData;
+            LocatorBll.MenuCategoryAndMenuItemBll.MenuItemToSave = menuItemData;
 
-            if (LocatorBll.MenuCategoryAndMenuItemVM.AddMenuItem())
+            if (LocatorBll.MenuCategoryAndMenuItemBll.AddMenuItem())
             {
                 if (MessageDialogHelper.CreateInformationMessage("Lưu thành công.") == DialogResult.OK)
                     this.Close();

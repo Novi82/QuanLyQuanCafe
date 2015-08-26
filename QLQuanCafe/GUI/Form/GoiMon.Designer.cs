@@ -107,6 +107,9 @@ namespace QLQuanCafe.GUI.Form
             this.dgvMonAn.AllowUserToDeleteRows = false;
             this.dgvMonAn.AllowUserToOrderColumns = true;
             this.dgvMonAn.AutoGenerateColumns = false;
+            this.dgvMonAn.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgvMonAn.BackgroundColor = System.Drawing.Color.White;
+            this.dgvMonAn.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -133,7 +136,11 @@ namespace QLQuanCafe.GUI.Form
             this.dgvMonAn.Location = new System.Drawing.Point(12, 47);
             this.dgvMonAn.MultiSelect = false;
             this.dgvMonAn.Name = "dgvMonAn";
+            this.dgvMonAn.PaintEnhancedSelection = false;
             this.dgvMonAn.ReadOnly = true;
+            this.dgvMonAn.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvMonAn.RowHeadersVisible = false;
+            this.dgvMonAn.SelectAllSignVisible = false;
             this.dgvMonAn.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMonAn.Size = new System.Drawing.Size(354, 311);
             this.dgvMonAn.TabIndex = 35;
@@ -158,7 +165,6 @@ namespace QLQuanCafe.GUI.Form
             this.dataGridViewTextBoxColumn3.HeaderText = "Đơn Vị Tính";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 101;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -169,7 +175,7 @@ namespace QLQuanCafe.GUI.Form
             this.dataGridViewTextBoxColumn2.HeaderText = "Đơn Giá";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 78;
+            this.dataGridViewTextBoxColumn2.Width = 77;
             // 
             // menuItemDataBindingSource
             // 

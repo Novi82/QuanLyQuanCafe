@@ -17,7 +17,7 @@ namespace QLQuanCafe.GUI.UserControl
     public partial class TabKhuVuc : System.Windows.Forms.UserControl
     {
         private List<AreaData> listArea = new List<AreaData>();
-        private HomePageBll homePageBll = LocatorBll.HomePageVM;
+        private HomePageBll homePageBll = LocatorBll.HomePageBll;
         public SuperTabControl TctKhuVuc
         {
             set { tctKhuVuc = value; }
@@ -57,9 +57,9 @@ namespace QLQuanCafe.GUI.UserControl
                 listview.Dock=DockStyle.Fill;
                 listview.LargeImageList = tableImage;
                 listview.SelectedIndexChanged += listview_SelectedIndexChanged;
-                LocatorBll.AreaAndTableVM.SelectAreaCommand.Execute(area);
+                LocatorBll.AreaAndTableBll.SelectAreaCommand.Execute(area);
                 
-                List<TableData> listtable = LocatorBll.AreaAndTableVM.ListTable;
+                List<TableData> listtable = LocatorBll.AreaAndTableBll.ListTable;
 
                 foreach (TableData tableData in listtable)
                 {

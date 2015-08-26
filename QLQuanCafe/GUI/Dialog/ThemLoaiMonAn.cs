@@ -29,9 +29,9 @@ namespace QLQuanCafe.GUI.Dialog
 
             MenuCategoryData menuCategoryData = new MenuCategoryData();
             menuCategoryData.MenuCategoryName = txtTenLoaiMon.Text.Trim();
-            LocatorBll.MenuCategoryAndMenuItemVM.MenuCategoryToSave = menuCategoryData;
+            LocatorBll.MenuCategoryAndMenuItemBll.MenuCategoryToSave = menuCategoryData;
 
-            if (LocatorBll.MenuCategoryAndMenuItemVM.AddMenuCategory())
+            if (LocatorBll.MenuCategoryAndMenuItemBll.AddMenuCategory())
             {
                 if (MessageDialogHelper.CreateInformationMessage("Lưu thành công.") == DialogResult.OK)
                     this.Close();

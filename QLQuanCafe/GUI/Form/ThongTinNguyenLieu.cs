@@ -7,7 +7,7 @@ namespace QLQuanCafe.GUI.Form
 {
     public partial class ThongTinNguyenLieu : MetroForm
     {
-        private MaterialBll bll = LocatorBll.MaterialVM;
+        private MaterialBll bll = LocatorBll.MateriaBll;
         public ThongTinNguyenLieu()
         {
             InitializeComponent();
@@ -41,16 +41,23 @@ namespace QLQuanCafe.GUI.Form
         {
             bll.ShowAddMaterialWindowCommand.Execute(null);
             LoadNguyenLieu();
+            dgvNguyenLieu.Rows[dgvNguyenLieu.Rows.Count - 1].Selected = true;
         }
 
         private void btnSuaNguyenLieu_Click(object sender, EventArgs e)
         {
             if (dgvNguyenLieu.SelectedRows.Count > 0)
             {
-                if (bll.ShowEditMaterialWindowCommand.CanExecute(dgvNguyenLieu.SelectedRows[0]))
+                if (dgvNguyenLieu.CurrentRow != null)
                 {
-                    bll.ShowEditMaterialWindowCommand.Execute(dgvNguyenLieu.SelectedRows[0]);
+                    int index = dgvNguyenLieu.CurrentRow.Index;
+                    if (bll.ShowEditMaterialWindowCommand.CanExecute(dgvNguyenLieu.SelectedRows[0]))
+                    {
+                        bll.ShowEditMaterialWindowCommand.Execute(dgvNguyenLieu.SelectedRows[0]);
+                    }
                     LoadNguyenLieu();
+                    dgvNguyenLieu.ClearSelection();
+                    dgvNguyenLieu.Rows[index].Selected = true;
                 }
             }
         }

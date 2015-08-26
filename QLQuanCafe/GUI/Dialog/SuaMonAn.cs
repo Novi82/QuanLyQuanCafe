@@ -9,8 +9,8 @@ namespace QLQuanCafe.GUI.Dialog
 {
     public partial class SuaMonAn : MetroForm
     {
-        private MenuCategoryAndMenuItemBll bll = LocatorBll.MenuCategoryAndMenuItemVM;
-        private UnitBll unitbll = LocatorBll.UnitVM;
+        private MenuCategoryAndMenuItemBll bll = LocatorBll.MenuCategoryAndMenuItemBll;
+        private UnitBll unitbll = LocatorBll.UnitBll;
         public SuaMonAn()
         {
             InitializeComponent();

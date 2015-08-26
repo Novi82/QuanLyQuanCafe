@@ -15,7 +15,7 @@ namespace QLQuanCafe.GUI.Dialog
 
         private void SuaBan_Load(object sender, EventArgs e)
         {
-            txtTenBan.Text = LocatorBll.AreaAndTableVM.TableSelected.TableName;
+            txtTenBan.Text = LocatorBll.AreaAndTableBll.TableSelected.TableName;
         }
 
         private void btnHuyBo_Click(object sender, EventArgs e)
@@ -30,8 +30,8 @@ namespace QLQuanCafe.GUI.Dialog
                 MessageDialogHelper.CreateErrorMessage("Tên bàn không được để trống.");
                 return;
             }
-            LocatorBll.AreaAndTableVM.TableToSave.TableName = txtTenBan.Text.Trim();
-            if (LocatorBll.AreaAndTableVM.EditTable())
+            LocatorBll.AreaAndTableBll.TableToSave.TableName = txtTenBan.Text.Trim();
+            if (LocatorBll.AreaAndTableBll.EditTable())
             {
                 if (MessageDialogHelper.CreateInformationMessage("Lưu thành công.") == DialogResult.OK)
                     this.Close();

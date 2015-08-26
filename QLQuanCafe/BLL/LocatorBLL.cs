@@ -2,111 +2,111 @@
 {
     public class LocatorBll
     {
-        private static MainWindowBll _mainWindowVM;
-        public static MainWindowBll MainWindowVM
+        private static MainWindowBll _mainWindowBll;
+        public static MainWindowBll MainWindowBll
         {
             get
             {
-                if (_mainWindowVM == null)
-                    _mainWindowVM = new MainWindowBll();
+                if (_mainWindowBll == null)
+                    _mainWindowBll = new MainWindowBll();
 
-                return _mainWindowVM;
+                return _mainWindowBll;
             }
         }
 
-        private static HomePageBll _homePageVM;
-        public static HomePageBll HomePageVM
+        private static HomePageBll _homePageBll;
+        public static HomePageBll HomePageBll
         {
             get
             {
-                if (_homePageVM == null)
-                    _homePageVM = new HomePageBll();
+                if (_homePageBll == null)
+                    _homePageBll = new HomePageBll();
 
-                return _homePageVM;
+                return _homePageBll;
             }
         }
 
-        private static AreaAndTableBll _areaAndTableVM;
-        public static AreaAndTableBll AreaAndTableVM
+        private static AreaAndTableBll _areaAndTableBll;
+        public static AreaAndTableBll AreaAndTableBll
         {
             get
             {
-                if (_areaAndTableVM == null)
-                    _areaAndTableVM = new AreaAndTableBll();
+                if (_areaAndTableBll == null)
+                    _areaAndTableBll = new AreaAndTableBll();
 
-                return _areaAndTableVM;
+                return _areaAndTableBll;
             }
         }
 
-        private static MenuCategoryAndMenuItemBll _menuCategoryAndMenuItemVM;
-        public static MenuCategoryAndMenuItemBll MenuCategoryAndMenuItemVM
+        private static MenuCategoryAndMenuItemBll _menuCategoryAndMenuItemBll;
+        public static MenuCategoryAndMenuItemBll MenuCategoryAndMenuItemBll
         {
             get
             {
-                if (_menuCategoryAndMenuItemVM == null)
-                    _menuCategoryAndMenuItemVM = new MenuCategoryAndMenuItemBll();
+                if (_menuCategoryAndMenuItemBll == null)
+                    _menuCategoryAndMenuItemBll = new MenuCategoryAndMenuItemBll();
 
-                return _menuCategoryAndMenuItemVM;
+                return _menuCategoryAndMenuItemBll;
             }
         }
 
-        private static UnitBll _unitVM;
-        public static UnitBll UnitVM
+        private static UnitBll _unitBll;
+        public static UnitBll UnitBll
         {
             get
             {
-                if (_unitVM == null)
-                    _unitVM = new UnitBll();
+                if (_unitBll == null)
+                    _unitBll = new UnitBll();
 
-                return _unitVM;
+                return _unitBll;
             }
         }
 
-        private static BillBll _billVM;
-        public static BillBll BillVM
+        private static BillBll _billBll;
+        public static BillBll BillBll
         {
             get
             {
-                if (_billVM == null)
-                    _billVM = new BillBll();
+                if (_billBll == null)
+                    _billBll = new BillBll();
 
-                return _billVM;
+                return _billBll;
             }
         }
 
-        private static MaterialBll _materialVM;
-        public static MaterialBll MaterialVM
+        private static MaterialBll _materiaBll;
+        public static MaterialBll MateriaBll
         {
             get
             {
-                if (_materialVM == null)
-                    _materialVM = new MaterialBll();
+                if (_materiaBll == null)
+                    _materiaBll = new MaterialBll();
 
-                return _materialVM;
+                return _materiaBll;
             }
         }
 
-        private static LoginBll _loginVM;
-        public static LoginBll LoginVM
+        private static LoginBll _loginBll;
+        public static LoginBll LoginBll
         {
             get
             {
-                if (_loginVM == null)
-                    _loginVM = new LoginBll();
+                if (_loginBll == null)
+                    _loginBll = new LoginBll();
 
-                return _loginVM;
+                return _loginBll;
             }
         }
 
-        private static AccountBll _accountVM;
-        public static AccountBll AccountVM
+        private static AccountBll _accountBll;
+        public static AccountBll AccountBll
         {
             get
             {
-                if (_accountVM == null)
-                    _accountVM = new AccountBll();
+                if (_accountBll == null)
+                    _accountBll = new AccountBll();
 
-                return _accountVM;
+                return _accountBll;
             }
         }
     }

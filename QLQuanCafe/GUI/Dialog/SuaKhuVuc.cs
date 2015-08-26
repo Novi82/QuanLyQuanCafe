@@ -15,7 +15,7 @@ namespace QLQuanCafe.GUI.Dialog
 
         private void SuaKhuVuc_Load(object sender, EventArgs e)
         {
-            txtTenKhuVuc.Text = LocatorBll.AreaAndTableVM.AreaToSave.AreaName;
+            txtTenKhuVuc.Text = LocatorBll.AreaAndTableBll.AreaToSave.AreaName;
         }
 
         private void btnDongY_Click(object sender, EventArgs e)
@@ -25,9 +25,9 @@ namespace QLQuanCafe.GUI.Dialog
                 MessageDialogHelper.CreateErrorMessage("Tên khu vực không được để trống.");
                 return;
             }
-            LocatorBll.AreaAndTableVM.AreaToSave.AreaName = txtTenKhuVuc.Text.Trim();    
+            LocatorBll.AreaAndTableBll.AreaToSave.AreaName = txtTenKhuVuc.Text.Trim();    
 
-            if (LocatorBll.AreaAndTableVM.EditArea())
+            if (LocatorBll.AreaAndTableBll.EditArea())
             {
                 if (MessageDialogHelper.CreateInformationMessage("Lưu thành công.") == DialogResult.OK)
                     this.Close();

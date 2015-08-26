@@ -534,7 +534,7 @@
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvMonDaGoi.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvMonDaGoi.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -570,10 +570,9 @@
             // 
             this.tableImage.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("tableImage.ImageStream")));
             this.tableImage.TransparentColor = System.Drawing.Color.Transparent;
-            this.tableImage.Images.SetKeyName(0, "Trong");
-            this.tableImage.Images.SetKeyName(1, "CoNguoi");
-            this.tableImage.Images.SetKeyName(2, "ChuaDon");
-            this.tableImage.Images.SetKeyName(3, "DaDat");
+            this.tableImage.Images.SetKeyName(0, "CoNguoi");
+            this.tableImage.Images.SetKeyName(1, "Trong");
+            this.tableImage.Images.SetKeyName(2, "DaDat");
             // 
             // menuItemDataGridViewTextBoxColumn
             // 

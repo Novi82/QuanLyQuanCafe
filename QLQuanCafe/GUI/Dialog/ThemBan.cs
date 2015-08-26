@@ -29,14 +29,14 @@ namespace QLQuanCafe.GUI.Dialog
             TableData tableToSave = new TableData();
             tableToSave.TableName = txtTenBan.Text.Trim();
 
-            tableToSave.Area = LocatorBll.AreaAndTableVM.AreaSelected;
+            tableToSave.Area = LocatorBll.AreaAndTableBll.AreaSelected;
 
             tableToSave.TableState = "Trong";
 
 
-            LocatorBll.AreaAndTableVM.TableToSave = tableToSave;
+            LocatorBll.AreaAndTableBll.TableToSave = tableToSave;
 
-            if (LocatorBll.AreaAndTableVM.AddTable())
+            if (LocatorBll.AreaAndTableBll.AddTable())
             {
                 if (MessageDialogHelper.CreateInformationMessage("Lưu thành công.") == DialogResult.OK)
                     this.Close();

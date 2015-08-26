@@ -6,7 +6,7 @@ namespace QLQuanCafe.GUI.Form
 {
     public partial class QuanLyTaiKhoan : MetroForm
     {
-        private AccountBll bll = LocatorBll.AccountVM;
+        private AccountBll bll = LocatorBll.AccountBll;
         public QuanLyTaiKhoan()
         {
             InitializeComponent();
@@ -31,14 +31,17 @@ namespace QLQuanCafe.GUI.Form
                 }
             }
         }
-
+        
         private void btnThemTaiKhoan_Click(object sender, EventArgs e)
         {
+            int index = dgvTaiKhoan.CurrentRow.Index;
             if (bll.ShowAddAccountWindowCommand.CanExecute(null))
             {
                 bll.ShowAddAccountWindowCommand.Execute(null);
-                LoadAccount();
             }
+            LoadAccount();
+            dgvTaiKhoan.ClearSelection();
+            dgvTaiKhoan.Rows[index].Selected = true;
         }
 
         private void btnXoaTaiKhoan_Click(object sender, EventArgs e)

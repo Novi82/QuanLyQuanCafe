@@ -6,7 +6,7 @@ namespace QLQuanCafe.GUI.Form
 {
     public partial class ThucDon : MetroForm
     {
-        private readonly MenuCategoryAndMenuItemBll bll = LocatorBll.MenuCategoryAndMenuItemVM;
+        private readonly MenuCategoryAndMenuItemBll bll = LocatorBll.MenuCategoryAndMenuItemBll;
 
         public ThucDon()
         {
@@ -58,6 +58,7 @@ namespace QLQuanCafe.GUI.Form
             {
                 bll.ShowAddMenuCategoryWindowCommand.Execute(null);
                 LoadLoaiMonAn();
+                dgvLoaiMonAn.Rows[dgvLoaiMonAn.Rows.Count - 1].Selected = true;
             }
         }
 
@@ -67,8 +68,14 @@ namespace QLQuanCafe.GUI.Form
             {
                 if (bll.ShowEditMenuCategoryWindowCommand.CanExecute(dgvLoaiMonAn.SelectedRows[0]))
                 {
-                    bll.ShowEditMenuCategoryWindowCommand.Execute(dgvLoaiMonAn.SelectedRows[0]);
-                    LoadLoaiMonAn();
+                    if (dgvLoaiMonAn.CurrentRow != null)
+                    {
+                        int index = dgvLoaiMonAn.CurrentRow.Index;
+                        bll.ShowEditMenuCategoryWindowCommand.Execute(dgvLoaiMonAn.SelectedRows[0]);
+                        LoadLoaiMonAn();
+                        dgvLoaiMonAn.ClearSelection();
+                        dgvLoaiMonAn.Rows[index].Selected = true;
+                    }
                 }
             }
         }
@@ -91,6 +98,7 @@ namespace QLQuanCafe.GUI.Form
             {
                 bll.ShowAddMenuItemWindowCommand.Execute(null);
                 LoadMonAn();
+                dgvMonAn.Rows[dgvMonAn.Rows.Count - 1].Selected = true;
             }
         }
 
@@ -98,11 +106,14 @@ namespace QLQuanCafe.GUI.Form
         {
             if (dgvMonAn.SelectedRows.Count > 0)
             {
+                int index = dgvMonAn.CurrentRow.Index;
                 if (bll.ShowEditMenuItemWindowCommand.CanExecute(dgvMonAn.SelectedRows[0]))
                 {
                     bll.ShowEditMenuItemWindowCommand.Execute(dgvMonAn.SelectedRows[0]);
-                    LoadMonAn();
                 }
+                LoadMonAn();
+                dgvMonAn.ClearSelection();
+                dgvMonAn.Rows[index].Selected = true;
             }
         }
 

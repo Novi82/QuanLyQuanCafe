@@ -17,9 +17,9 @@ namespace QLQuanCafe.GUI.UserControl
     public partial class ThucDonUC : System.Windows.Forms.UserControl
     {
    
-        private HomePageBll homePageBll = LocatorBll.HomePageVM;
+        private HomePageBll homePageBll = LocatorBll.HomePageBll;
 
-        private MenuCategoryAndMenuItemBll menuCategoryAndMenuItemBll = LocatorBll.MenuCategoryAndMenuItemVM;
+        private MenuCategoryAndMenuItemBll menuCategoryAndMenuItemBll = LocatorBll.MenuCategoryAndMenuItemBll;
 
         public ThucDonUC()
         {

@@ -9,7 +9,7 @@ namespace QLQuanCafe.GUI.Dialog
 {
     public partial class ThemTaiKhoan : MetroForm
     {
-        private AccountBll bll = LocatorBll.AccountVM;
+        private AccountBll bll = LocatorBll.AccountBll;
         public ThemTaiKhoan()
         {
             InitializeComponent();

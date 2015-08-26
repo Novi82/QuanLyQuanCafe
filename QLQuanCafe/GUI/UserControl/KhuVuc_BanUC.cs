@@ -15,14 +15,19 @@ namespace QLQuanCafe.GUI.UserControl
 {
     public partial class KhuVuc_BanUC : System.Windows.Forms.UserControl
     {
-        private AreaAndTableBll areaAndTableBll = LocatorBll.AreaAndTableVM;
-        private HomePageBll homePageBll = LocatorBll.HomePageVM;
+        private AreaAndTableBll areaAndTableBll = LocatorBll.AreaAndTableBll;
+        private HomePageBll homePageBll = LocatorBll.HomePageBll;
         private ListViewItem currentItem = new ListViewItem();
+        public SuperTabItem currentTabItem { get; set; }
+        public int supertTabItemSelectedIndex { get; set; }
+        public SuperTabControlPanel currentSuperTabControlPanel { get; set; }
+        public ListViewEx currentListViewEx { get; set; }
+        public ListViewItem currentListViewItem { get; set; }
         public KhuVuc_BanUC()
         {
             InitializeComponent();
             homePageBll.OnUpdateView += delegate(object myObject, EventArgs args) { LoadKhuVuc(); };
-
+            stcKhuVuc.SelectedTabIndex = 1;
         }
 
         private void KhuVuc_BanUC_Load(object sender, EventArgs e)
@@ -60,6 +65,7 @@ namespace QLQuanCafe.GUI.UserControl
         }
         public void LoadKhuVuc()
         {
+            //saveCurrent();
             stcKhuVuc.Tabs.Clear();
             List<AreaData> _list = areaAndTableBll.ListArea;
             foreach (AreaData area in _list)
@@ -71,13 +77,14 @@ namespace QLQuanCafe.GUI.UserControl
 
                 // list view init
                 ListViewEx listview = new ListViewEx();
+                listview.Name = "listview";
                 listview.BackColor = Color.White;
                 listview.Dock = DockStyle.Fill;
                 listview.LargeImageList = tableImage;
                 listview.SelectedIndexChanged += listview_SelectedIndexChanged;
-                LocatorBll.AreaAndTableVM.SelectAreaCommand.Execute(area);
+                LocatorBll.AreaAndTableBll.SelectAreaCommand.Execute(area);
 
-                List<TableData> listtable = LocatorBll.AreaAndTableVM.ListTable;
+                List<TableData> listtable = LocatorBll.AreaAndTableBll.ListTable;
                 List<TableData> alltable = new List<TableData>();
                 foreach (TableData tableData in listtable)
                 {
@@ -103,10 +110,41 @@ namespace QLQuanCafe.GUI.UserControl
                 areaTabItem.AttachedControl = panel;
 
                 stcKhuVuc.Tabs.Add(areaTabItem);
-
+                //loadCurrent();
             }
         }
 
+        private void saveCurrent()
+        {
+            currentTabItem = stcKhuVuc.SelectedTab;
+            supertTabItemSelectedIndex = stcKhuVuc.SelectedTabIndex;
+            currentSuperTabControlPanel = (SuperTabControlPanel) currentTabItem.AttachedControl ;
+            currentListViewEx = (ListViewEx) currentSuperTabControlPanel.Controls["listview"];
+            if (currentListViewEx!= null && currentListViewEx.SelectedItems.Count > 0)
+            {
+                currentListViewItem = currentListViewEx.SelectedItems[0];
+            }
+            else
+            {
+                currentListViewItem = null;
+            }
+        }
+
+        private void loadCurrent()
+        {
+
+            //stcKhuVuc.SelectedTab =currentTabItem ;
+            stcKhuVuc.SelectedTabIndex = supertTabItemSelectedIndex;
+            //currentTabItem.AttachedControl = currentSuperTabControlPanel;
+            //((ListViewEx)stcKhuVuc.SelectedTab.AttachedControl).
+            //currentListViewEx = (ListViewEx)currentSuperTabControlPanel.Controls["listview"];
+            //currentListViewItem = currentListViewEx.SelectedItems[0];
+            if (currentListViewItem!=null)
+            {
+                 currentListViewItem.Selected = true;
+            }
+           
+        }
         void listview_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (homePageBll != null)
@@ -333,6 +371,10 @@ namespace QLQuanCafe.GUI.UserControl
             return btnThanhToan;
         }
 
+        public LabelX getlblTongtien()
+        {
+            return lblTongTien;
+        }
         private void btnChuyenBan_Click(object sender, EventArgs e)
         {
             if (homePageBll.TableSelected != null)
@@ -340,7 +382,6 @@ namespace QLQuanCafe.GUI.UserControl
                 if (homePageBll.ChangeTableCommand.CanExecute(null))
                 {
                     homePageBll.ChangeTableCommand.Execute(null);
-
                 }
 
             }

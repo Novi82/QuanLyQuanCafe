@@ -32,5 +32,15 @@ namespace QLQuanCafe.Properties {
                 return ((string)(this["coffeemanagementConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;persistsecurityinfo=True;database=coffeemanagement")]
+        public string coffeemanagementConnectionStringReport {
+            get {
+                return ((string)(this["coffeemanagementConnectionStringReport"]));
+            }
+        }
     }
 }

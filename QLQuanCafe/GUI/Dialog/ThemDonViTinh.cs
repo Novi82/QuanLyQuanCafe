@@ -29,8 +29,8 @@ namespace QLQuanCafe.GUI.Dialog
             }
             UnitData unitToSave = new UnitData();
             unitToSave.UnitName = DonViTinh.Text.Trim();
-            LocatorBll.UnitVM.UnitToSave = unitToSave;
-            if (LocatorBll.UnitVM.AddUnit())
+            LocatorBll.UnitBll.UnitToSave = unitToSave;
+            if (LocatorBll.UnitBll.AddUnit())
             {              
                 if (MessageDialogHelper.CreateInformationMessage("Lưu thành công.") == DialogResult.OK)
                     this.Close();

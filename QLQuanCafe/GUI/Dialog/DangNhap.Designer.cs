@@ -3,7 +3,7 @@ using System.Windows.Forms;
 using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.Controls;
 
-namespace QLQuanCafe.GUI
+namespace QLQuanCafe.GUI.Dialog
 {
     partial class Login
     {
@@ -35,58 +35,59 @@ namespace QLQuanCafe.GUI
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            this.TUser = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.BLogin = new DevComponents.DotNetBar.ButtonX();
-            this.BCancel = new DevComponents.DotNetBar.ButtonX();
+            this.txtUserName = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.btnDangNhap = new DevComponents.DotNetBar.ButtonX();
+            this.btnHuy = new DevComponents.DotNetBar.ButtonX();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.Pass = new DevComponents.DotNetBar.LabelX();
             this.User = new DevComponents.DotNetBar.LabelX();
-            this.TPass = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtPassword = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.ILogin = new DevComponents.DotNetBar.LabelX();
             this.SuspendLayout();
             // 
-            // TUser
+            // txtUserName
             // 
-            this.TUser.BackColor = System.Drawing.Color.White;
+            this.txtUserName.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
-            this.TUser.Border.Class = "TextBoxBorder";
-            this.TUser.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.TUser.DisabledBackColor = System.Drawing.Color.White;
-            this.TUser.ForeColor = System.Drawing.Color.Black;
-            this.TUser.Location = new System.Drawing.Point(145, 140);
-            this.TUser.Name = "TUser";
-            this.TUser.Size = new System.Drawing.Size(121, 20);
-            this.TUser.TabIndex = 0;
+            this.txtUserName.Border.Class = "TextBoxBorder";
+            this.txtUserName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtUserName.DisabledBackColor = System.Drawing.Color.White;
+            this.txtUserName.ForeColor = System.Drawing.Color.Black;
+            this.txtUserName.Location = new System.Drawing.Point(145, 140);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(121, 20);
+            this.txtUserName.TabIndex = 1;
             // 
-            // BLogin
+            // btnDangNhap
             // 
-            this.BLogin.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.BLogin.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.BLogin.Location = new System.Drawing.Point(41, 259);
-            this.BLogin.Name = "BLogin";
-            this.BLogin.Size = new System.Drawing.Size(75, 23);
-            this.BLogin.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.BLogin.SymbolColor = System.Drawing.Color.Maroon;
-            this.BLogin.SymbolSize = 10F;
-            this.BLogin.TabIndex = 1;
-            this.BLogin.Text = "Đăng Nhập";
-            this.BLogin.Click += new System.EventHandler(this.BLogin_Click);
+            this.btnDangNhap.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnDangNhap.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnDangNhap.Location = new System.Drawing.Point(41, 259);
+            this.btnDangNhap.Name = "btnDangNhap";
+            this.btnDangNhap.Size = new System.Drawing.Size(75, 23);
+            this.btnDangNhap.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnDangNhap.SymbolColor = System.Drawing.Color.Maroon;
+            this.btnDangNhap.SymbolSize = 10F;
+            this.btnDangNhap.TabIndex = 3;
+            this.btnDangNhap.Text = "Đăng Nhập";
+            this.btnDangNhap.Click += new System.EventHandler(this.BLogin_Click);
             // 
-            // BCancel
+            // btnHuy
             // 
-            this.BCancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.BCancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.BCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BCancel.Location = new System.Drawing.Point(191, 259);
-            this.BCancel.Name = "BCancel";
-            this.BCancel.Size = new System.Drawing.Size(75, 23);
-            this.BCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.BCancel.SymbolColor = System.Drawing.Color.Maroon;
-            this.BCancel.SymbolSize = 10F;
-            this.BCancel.TabIndex = 2;
-            this.BCancel.Text = "Hủy Bỏ";
+            this.btnHuy.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnHuy.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnHuy.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnHuy.Location = new System.Drawing.Point(191, 259);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(75, 23);
+            this.btnHuy.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnHuy.SymbolColor = System.Drawing.Color.Maroon;
+            this.btnHuy.SymbolSize = 10F;
+            this.btnHuy.TabIndex = 4;
+            this.btnHuy.Text = "Hủy Bỏ";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // imageList1
             // 
@@ -105,7 +106,7 @@ namespace QLQuanCafe.GUI
             this.Pass.Location = new System.Drawing.Point(24, 188);
             this.Pass.Name = "Pass";
             this.Pass.Size = new System.Drawing.Size(75, 23);
-            this.Pass.TabIndex = 5;
+            this.Pass.TabIndex = 0;
             this.Pass.Text = "Mật Khẩu :";
             // 
             // User
@@ -119,25 +120,26 @@ namespace QLQuanCafe.GUI
             this.User.Location = new System.Drawing.Point(24, 140);
             this.User.Name = "User";
             this.User.Size = new System.Drawing.Size(92, 23);
-            this.User.TabIndex = 6;
+            this.User.TabIndex = 0;
             this.User.Text = "Tên Tài Khoản :";
             // 
-            // TPass
+            // txtPassword
             // 
-            this.TPass.BackColor = System.Drawing.Color.White;
+            this.txtPassword.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
-            this.TPass.Border.Class = "TextBoxBorder";
-            this.TPass.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.TPass.DisabledBackColor = System.Drawing.Color.White;
-            this.TPass.ForeColor = System.Drawing.Color.Black;
-            this.TPass.Location = new System.Drawing.Point(145, 191);
-            this.TPass.Name = "TPass";
-            this.TPass.PasswordChar = '*';
-            this.TPass.Size = new System.Drawing.Size(121, 20);
-            this.TPass.TabIndex = 7;
-            this.TPass.UseSystemPasswordChar = true;
+            this.txtPassword.Border.Class = "TextBoxBorder";
+            this.txtPassword.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtPassword.DisabledBackColor = System.Drawing.Color.White;
+            this.txtPassword.ForeColor = System.Drawing.Color.Black;
+            this.txtPassword.Location = new System.Drawing.Point(145, 191);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(121, 20);
+            this.txtPassword.TabIndex = 2;
+            this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
             // ILogin
             // 
@@ -151,7 +153,7 @@ namespace QLQuanCafe.GUI
             this.ILogin.Location = new System.Drawing.Point(96, 3);
             this.ILogin.Name = "ILogin";
             this.ILogin.Size = new System.Drawing.Size(111, 119);
-            this.ILogin.TabIndex = 8;
+            this.ILogin.TabIndex = 0;
             // 
             // Login
             // 
@@ -159,16 +161,15 @@ namespace QLQuanCafe.GUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.CancelButton = this.BCancel;
+            this.CancelButton = this.btnHuy;
             this.ClientSize = new System.Drawing.Size(310, 312);
             this.Controls.Add(this.ILogin);
-            this.Controls.Add(this.TPass);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.User);
             this.Controls.Add(this.Pass);
-            this.Controls.Add(this.BCancel);
-            this.Controls.Add(this.BLogin);
-            this.Controls.Add(this.TUser);
-            this.DoubleBuffered = true;
+            this.Controls.Add(this.btnHuy);
+            this.Controls.Add(this.btnDangNhap);
+            this.Controls.Add(this.txtUserName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -184,13 +185,13 @@ namespace QLQuanCafe.GUI
 
         #endregion
 
-        private TextBoxX TUser;
-        private ButtonX BLogin;
-        private ButtonX BCancel;
+        private TextBoxX txtUserName;
+        private ButtonX btnDangNhap;
+        private ButtonX btnHuy;
         private ImageList imageList1;
         private LabelX Pass;
         private LabelX User;
-        private TextBoxX TPass;
+        private TextBoxX txtPassword;
         private LabelX ILogin;
     }
 }

@@ -7,8 +7,8 @@ namespace QLQuanCafe.GUI.Dialog
 {
     public partial class YeuCauMon : MetroForm
     {
-        private BillDetailData itemBillDetailData = LocatorBll.HomePageVM.BillDetaiSelected;
-        private HomePageBll HomePageBll = LocatorBll.HomePageVM;
+        private BillDetailData itemBillDetailData = LocatorBll.HomePageBll.BillDetaiSelected;
+        private HomePageBll HomePageBll = LocatorBll.HomePageBll;
         public YeuCauMon()
         {
             InitializeComponent();

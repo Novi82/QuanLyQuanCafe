@@ -9,7 +9,7 @@ namespace QLQuanCafe.GUI.Form
 {
     public partial class GoiMon : MetroForm
     {
-        private HomePageBll homePageBll = LocatorBll.HomePageVM;
+        private HomePageBll homePageBll = LocatorBll.HomePageBll;
         public GoiMon()
         {
             InitializeComponent();
@@ -46,7 +46,7 @@ namespace QLQuanCafe.GUI.Form
         {
             if (txtTimMonAn.Text != null)
             {
-                homePageBll.SearchTextMenuItem = txtTimMonAn.Text;
+                homePageBll.SearchTextMenuItem = txtTimMonAn.Text.Trim();
             }
             if (homePageBll.SearchMenuItemCommand.CanExecute(null))
             {
@@ -75,9 +75,7 @@ namespace QLQuanCafe.GUI.Form
                     {
                         if (homePageBll.SelectMenuItemCommand.CanExecute(null))
                         {
-
                             homePageBll.SelectMenuItemCommand.Execute(dgvMonAn.SelectedRows[0].DataBoundItem);
-
                             dgvMonAn.ClearSelection();
                         }
                     }

@@ -20,7 +20,7 @@ namespace QLQuanCafe.GUI.UserControl
 
         public void LoadHoaDonTrongNgay()
         {
-            dgvHoaDon.DataSource = LocatorBll.HomePageVM.ListBillToday;
+            dgvHoaDon.DataSource = LocatorBll.HomePageBll.ListBillToday;
         }
     }
 }

@@ -29,9 +29,9 @@ namespace QLQuanCafe.GUI.Dialog
 
             AreaData areaToSave = new AreaData();
             areaToSave.AreaName = txtKhuVuc.Text.Trim();
-            LocatorBll.AreaAndTableVM.AreaToSave = areaToSave;
+            LocatorBll.AreaAndTableBll.AreaToSave = areaToSave;
 
-            if (LocatorBll.AreaAndTableVM.AddArea())
+            if (LocatorBll.AreaAndTableBll.AddArea())
             {
                 if (MessageDialogHelper.CreateInformationMessage("Lưu thành công.") == DialogResult.OK)
                     this.Close();

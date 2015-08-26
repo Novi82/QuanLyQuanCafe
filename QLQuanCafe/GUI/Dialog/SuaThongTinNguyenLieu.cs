@@ -9,8 +9,8 @@ namespace QLQuanCafe.GUI.Dialog
 {
     public partial class frmSuaThongTinNguyenLieu : MetroForm
     {
-        private UnitBll unitBll = LocatorBll.UnitVM;
-        private MaterialBll materialBll = LocatorBll.MaterialVM;
+        private UnitBll unitBll = LocatorBll.UnitBll;
+        private MaterialBll materialBll = LocatorBll.MateriaBll;
         public frmSuaThongTinNguyenLieu()
         {
             InitializeComponent();

@@ -1,6 +1,7 @@
 ﻿using System;
 using DevComponents.DotNetBar.Metro;
 using QLQuanCafe.BLL;
+using QLQuanCafe.DAO;
 using QLQuanCafe.DTO;
 
 namespace QLQuanCafe.GUI.Dialog
@@ -8,6 +9,7 @@ namespace QLQuanCafe.GUI.Dialog
     public partial class XacNhanThanhToan : MetroForm
     {
         private BillData bill =null;
+        //private string tongtien = String.Empty;
         public XacNhanThanhToan()
         {
             InitializeComponent();
@@ -15,9 +17,11 @@ namespace QLQuanCafe.GUI.Dialog
 
         public XacNhanThanhToan(BillData bill) : this()
         {
-            this.bill = bill;
+            LocatorBll.BillBll.Load();
+            this.bill = LocatorBll.BillBll.ListBill.Find(x=>x.BillId.Contains(bill.BillId));
         }
 
+        public decimal TongTien { get; set; }
         private void XacNhanThanhToan_Load(object sender, EventArgs e)
         {
             LoadHoaDon();
@@ -31,9 +35,9 @@ namespace QLQuanCafe.GUI.Dialog
         private void LoadHoaDon()
         {
             //bill = LocatorBll.HomePageVM.BillOfTableSelected;
-            txtKhuVuc.Text = LocatorBll.HomePageVM.TableSelected.Area.AreaName;
-            txtBan.Text = LocatorBll.HomePageVM.TableSelected.TableName;
-            txtTongTien.Text = bill.TotalMoney.ToString("#,###")+" VND";
+            txtKhuVuc.Text = LocatorBll.HomePageBll.TableSelected.Area.AreaName;
+            txtBan.Text = LocatorBll.HomePageBll.TableSelected.TableName;
+            txtTongTien.Text = bill.TotalMoney.ToString("#,###") + " VND";
         }
     }
 }

@@ -7,7 +7,7 @@ namespace QLQuanCafe.GUI.Dialog
 {
     public partial class NhapKho : MetroForm
     {
-        private MaterialBll materialBll = LocatorBll.MaterialVM;
+        private MaterialBll materialBll = LocatorBll.MateriaBll;
 
         public NhapKho()
         {

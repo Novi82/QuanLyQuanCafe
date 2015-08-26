@@ -16,7 +16,7 @@ namespace QLQuanCafe.GUI.Dialog
 
         private void SuaDonViTinh_Load(object sender, EventArgs e)
         {
-            DonViTinh.Text = LocatorBll.UnitVM.UnitToSave.UnitName;
+            DonViTinh.Text = LocatorBll.UnitBll.UnitToSave.UnitName;
         }
 
         private void btnAccept(object sender, EventArgs e)
@@ -26,12 +26,17 @@ namespace QLQuanCafe.GUI.Dialog
                 MessageDialogHelper.CreateErrorMessage("Tên đơn vị tính không được để trống.");
                 return;
             }
-            LocatorBll.UnitVM.UnitToSave.UnitName = DonViTinh.Text.Trim();
-            if (LocatorBll.UnitVM.EditUnit())
+            LocatorBll.UnitBll.UnitToSave.UnitName = DonViTinh.Text.Trim();
+            if (LocatorBll.UnitBll.EditUnit())
             {
                 if (MessageDialogHelper.CreateInformationMessage("Lưu thành công.") == DialogResult.OK)
                     this.Close();
             }
+        }
+
+        private void bntCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

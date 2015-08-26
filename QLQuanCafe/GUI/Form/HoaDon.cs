@@ -8,8 +8,8 @@ namespace QLQuanCafe.GUI.Form
 {
     public partial class HoaDon : MetroForm
     {
-        private BillBll billBll = LocatorBll.BillVM;
-        private AreaAndTableBll areaAndTableBll = LocatorBll.AreaAndTableVM;
+        private BillBll billBll = LocatorBll.BillBll;
+        private AreaAndTableBll areaAndTableBll = LocatorBll.AreaAndTableBll;
         public HoaDon()
         {
             InitializeComponent();
@@ -50,9 +50,8 @@ namespace QLQuanCafe.GUI.Form
             foreach (DataGridViewRow row in rows)
             {
                 TableData tableData =(row.Cells["tableDataGridViewTextBoxColumn"]).Value as TableData;
-                (row.Cells["areaDataGridViewTextBoxColumn"]).Value = tableData.Area;
+                if (tableData != null) (row.Cells["areaDataGridViewTextBoxColumn"]).Value = tableData.Area;
             }
-           
         }
 
         private void btnTim_Click(object sender, EventArgs e)

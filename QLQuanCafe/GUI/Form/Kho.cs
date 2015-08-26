@@ -6,8 +6,8 @@ namespace QLQuanCafe.GUI.Form
 {
     public partial class Kho : MetroForm
     {
-        private MaterialBll materialBll = LocatorBll.MaterialVM;
-        private UnitBll UnitBll = LocatorBll.UnitVM;
+        private MaterialBll materialBll = LocatorBll.MateriaBll;
+        private UnitBll UnitBll = LocatorBll.UnitBll;
         public Kho()
         {
             InitializeComponent();
@@ -31,16 +31,25 @@ namespace QLQuanCafe.GUI.Form
         {
             materialBll.ShowAddMaterialWindowCommand.Execute(null);
             LoadNguyenLieu();
+            dgvKho.Rows[dgvKho.Rows.Count - 1].Selected = true;
+
         }
 
         private void btnNhap_Click(object sender, EventArgs e)
         {
             if (dgvKho.SelectedRows.Count > 0)
             {
-                if (materialBll.ShowImportMaterialWindowCommand.CanExecute(dgvKho.SelectedRows[0]))
+                if (dgvKho.CurrentRow != null)
                 {
-                    materialBll.ShowImportMaterialWindowCommand.Execute(dgvKho.SelectedRows[0]);
+                    int index = dgvKho.CurrentRow.Index;
+                    if (materialBll.ShowImportMaterialWindowCommand.CanExecute(dgvKho.SelectedRows[0]))
+                    {
+                        materialBll.ShowImportMaterialWindowCommand.Execute(dgvKho.SelectedRows[0]);
+                    
+                    }
                     LoadNguyenLieu();
+                    dgvKho.ClearSelection();
+                    dgvKho.Rows[index].Selected = true;
                 }
             }
         }
@@ -49,10 +58,17 @@ namespace QLQuanCafe.GUI.Form
         {
             if (dgvKho.SelectedRows.Count > 0)
             {
-                if (materialBll.ShowExportMaterialWindowCommand.CanExecute(dgvKho.SelectedRows[0]))
+                if (dgvKho.CurrentRow != null)
                 {
-                    materialBll.ShowExportMaterialWindowCommand.Execute(dgvKho.SelectedRows[0]);
+                    int index = dgvKho.CurrentRow.Index;
+                    if (materialBll.ShowExportMaterialWindowCommand.CanExecute(dgvKho.SelectedRows[0]))
+                    {
+                        materialBll.ShowExportMaterialWindowCommand.Execute(dgvKho.SelectedRows[0]);
+                        LoadNguyenLieu();
+                    }
                     LoadNguyenLieu();
+                    dgvKho.ClearSelection();
+                    dgvKho.Rows[index].Selected = true;
                 }
             }
         }
@@ -61,10 +77,16 @@ namespace QLQuanCafe.GUI.Form
         {
             if (dgvKho.SelectedRows.Count > 0)
             {
-                if (materialBll.ShowUpdateInventoryWindowCommand.CanExecute(dgvKho.SelectedRows[0]))
+                if (dgvKho.CurrentRow != null)
                 {
-                    materialBll.ShowUpdateInventoryWindowCommand.Execute(dgvKho.SelectedRows[0]);
+                    int index = dgvKho.CurrentRow.Index;
+                    if (materialBll.ShowUpdateInventoryWindowCommand.CanExecute(dgvKho.SelectedRows[0]))
+                    {
+                        materialBll.ShowUpdateInventoryWindowCommand.Execute(dgvKho.SelectedRows[0]);
+                    }
                     LoadNguyenLieu();
+                    dgvKho.ClearSelection();
+                    dgvKho.Rows[index].Selected = true;
                 }
             }
         }
@@ -76,9 +98,6 @@ namespace QLQuanCafe.GUI.Form
                 if (materialBll.SelectMaterialCommand.CanExecute(null))
                 {
                     materialBll.SelectMaterialCommand.Execute(dgvKho.SelectedRows[0].DataBoundItem);
-
-//                    dgvKho.Selecteditem = null;
-//                    dgvKho.ClearSelection();
                 }
             }
         }

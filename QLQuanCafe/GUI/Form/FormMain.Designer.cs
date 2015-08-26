@@ -318,10 +318,23 @@ namespace QLQuanCafe.GUI.Form
             this.labelItem71 = new DevComponents.DotNetBar.LabelItem();
             this.galleryContainer72 = new DevComponents.DotNetBar.GalleryContainer();
             this.labelItem72 = new DevComponents.DotNetBar.LabelItem();
+            this.galleryContainer73 = new DevComponents.DotNetBar.GalleryContainer();
+            this.labelItem73 = new DevComponents.DotNetBar.LabelItem();
+            this.galleryContainer74 = new DevComponents.DotNetBar.GalleryContainer();
+            this.labelItem74 = new DevComponents.DotNetBar.LabelItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.khuVuc_BanUC1 = new QLQuanCafe.GUI.UserControl.KhuVuc_BanUC();
             this.dgvHoaDonTrongNgay = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.billIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalMoneyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KhuVuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.billDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ribbonControl2 = new DevComponents.DotNetBar.RibbonControl();
+            this.ribbonPanel3 = new DevComponents.DotNetBar.RibbonPanel();
+            this.ribbonBar3 = new DevComponents.DotNetBar.RibbonBar();
+            this.buttonItem17 = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanel6 = new DevComponents.DotNetBar.RibbonPanel();
             this.ribbonBar13 = new DevComponents.DotNetBar.RibbonBar();
             this.buttonItem26 = new DevComponents.DotNetBar.ButtonItem();
@@ -329,9 +342,6 @@ namespace QLQuanCafe.GUI.Form
             this.buttonItem25 = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBar11 = new DevComponents.DotNetBar.RibbonBar();
             this.buttonItem24 = new DevComponents.DotNetBar.ButtonItem();
-            this.ribbonPanel3 = new DevComponents.DotNetBar.RibbonPanel();
-            this.ribbonBar3 = new DevComponents.DotNetBar.RibbonBar();
-            this.buttonItem17 = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanel5 = new DevComponents.DotNetBar.RibbonPanel();
             this.ribbonBar2 = new DevComponents.DotNetBar.RibbonBar();
             this.buttonItem16 = new DevComponents.DotNetBar.ButtonItem();
@@ -356,23 +366,17 @@ namespace QLQuanCafe.GUI.Form
             this.ribbonTabItem5 = new DevComponents.DotNetBar.RibbonTabItem();
             this.ribbonTabItem6 = new DevComponents.DotNetBar.RibbonTabItem();
             this.ribbonTabItem7 = new DevComponents.DotNetBar.RibbonTabItem();
-            this.galleryContainer73 = new DevComponents.DotNetBar.GalleryContainer();
-            this.labelItem73 = new DevComponents.DotNetBar.LabelItem();
-            this.khuVuc_BanUC1 = new QLQuanCafe.GUI.UserControl.KhuVuc_BanUC();
-            this.billIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalMoneyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tableDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.billDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.galleryContainer75 = new DevComponents.DotNetBar.GalleryContainer();
+            this.labelItem75 = new DevComponents.DotNetBar.LabelItem();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDonTrongNgay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.billDataBindingSource)).BeginInit();
             this.ribbonControl2.SuspendLayout();
-            this.ribbonPanel6.SuspendLayout();
             this.ribbonPanel3.SuspendLayout();
+            this.ribbonPanel6.SuspendLayout();
             this.ribbonPanel5.SuspendLayout();
             this.ribbonPanel7.SuspendLayout();
             this.ribbonPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.billDataBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // galleryContainer2
@@ -4213,6 +4217,58 @@ namespace QLQuanCafe.GUI.Form
             this.labelItem72.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelItem72.Name = "labelItem72";
             // 
+            // galleryContainer73
+            // 
+            // 
+            // 
+            // 
+            this.galleryContainer73.BackgroundStyle.Class = "RibbonFileMenuColumnTwoContainer";
+            this.galleryContainer73.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.galleryContainer73.EnableGalleryPopup = false;
+            this.galleryContainer73.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
+            this.galleryContainer73.MinimumSize = new System.Drawing.Size(180, 240);
+            this.galleryContainer73.MultiLine = false;
+            this.galleryContainer73.Name = "galleryContainer73";
+            this.galleryContainer73.PopupUsesStandardScrollbars = false;
+            // 
+            // 
+            // 
+            this.galleryContainer73.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // labelItem73
+            // 
+            this.labelItem73.BorderSide = DevComponents.DotNetBar.eBorderSide.Bottom;
+            this.labelItem73.BorderType = DevComponents.DotNetBar.eBorderType.Etched;
+            this.labelItem73.CanCustomize = false;
+            this.labelItem73.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelItem73.Name = "labelItem73";
+            // 
+            // galleryContainer74
+            // 
+            // 
+            // 
+            // 
+            this.galleryContainer74.BackgroundStyle.Class = "RibbonFileMenuColumnTwoContainer";
+            this.galleryContainer74.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.galleryContainer74.EnableGalleryPopup = false;
+            this.galleryContainer74.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
+            this.galleryContainer74.MinimumSize = new System.Drawing.Size(180, 240);
+            this.galleryContainer74.MultiLine = false;
+            this.galleryContainer74.Name = "galleryContainer74";
+            this.galleryContainer74.PopupUsesStandardScrollbars = false;
+            // 
+            // 
+            // 
+            this.galleryContainer74.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // labelItem74
+            // 
+            this.labelItem74.BorderSide = DevComponents.DotNetBar.eBorderSide.Bottom;
+            this.labelItem74.BorderType = DevComponents.DotNetBar.eBorderType.Etched;
+            this.labelItem74.CanCustomize = false;
+            this.labelItem74.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelItem74.Name = "labelItem74";
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -4232,12 +4288,30 @@ namespace QLQuanCafe.GUI.Form
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1370, 590);
             this.tableLayoutPanel1.TabIndex = 36;
             // 
+            // khuVuc_BanUC1
+            // 
+            this.khuVuc_BanUC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.khuVuc_BanUC1.currentListViewEx = null;
+            this.khuVuc_BanUC1.currentListViewItem = null;
+            this.khuVuc_BanUC1.currentSuperTabControlPanel = null;
+            this.khuVuc_BanUC1.currentTabItem = null;
+            this.khuVuc_BanUC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.khuVuc_BanUC1.ForeColor = System.Drawing.Color.Black;
+            this.khuVuc_BanUC1.Location = new System.Drawing.Point(3, 3);
+            this.khuVuc_BanUC1.Name = "khuVuc_BanUC1";
+            this.khuVuc_BanUC1.Size = new System.Drawing.Size(914, 584);
+            this.khuVuc_BanUC1.supertTabItemSelectedIndex = 0;
+            this.khuVuc_BanUC1.TabIndex = 3;
+            this.khuVuc_BanUC1.Load += new System.EventHandler(this.khuVuc_BanUC1_Load);
+            // 
             // dgvHoaDonTrongNgay
             // 
             this.dgvHoaDonTrongNgay.AllowUserToAddRows = false;
             this.dgvHoaDonTrongNgay.AllowUserToDeleteRows = false;
+            this.dgvHoaDonTrongNgay.AllowUserToResizeRows = false;
             this.dgvHoaDonTrongNgay.AutoGenerateColumns = false;
             this.dgvHoaDonTrongNgay.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgvHoaDonTrongNgay.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -4259,7 +4333,7 @@ namespace QLQuanCafe.GUI.Form
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvHoaDonTrongNgay.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvHoaDonTrongNgay.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -4277,9 +4351,40 @@ namespace QLQuanCafe.GUI.Form
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvHoaDonTrongNgay.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvHoaDonTrongNgay.RowHeadersVisible = false;
             this.dgvHoaDonTrongNgay.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHoaDonTrongNgay.Size = new System.Drawing.Size(444, 584);
             this.dgvHoaDonTrongNgay.TabIndex = 4;
+            this.dgvHoaDonTrongNgay.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvHoaDonTrongNgay_DataBindingComplete);
+            this.dgvHoaDonTrongNgay.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvHoaDonTrongNgay_RowsAdded);
+            // 
+            // billIdDataGridViewTextBoxColumn
+            // 
+            this.billIdDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.billIdDataGridViewTextBoxColumn.DataPropertyName = "BillId";
+            this.billIdDataGridViewTextBoxColumn.HeaderText = "Hóa Đơn";
+            this.billIdDataGridViewTextBoxColumn.Name = "billIdDataGridViewTextBoxColumn";
+            this.billIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // timeDataGridViewTextBoxColumn
+            // 
+            this.timeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.timeDataGridViewTextBoxColumn.DataPropertyName = "Time";
+            this.timeDataGridViewTextBoxColumn.HeaderText = "Thời Gian";
+            this.timeDataGridViewTextBoxColumn.Name = "timeDataGridViewTextBoxColumn";
+            this.timeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.timeDataGridViewTextBoxColumn.Width = 87;
+            // 
+            // totalMoneyDataGridViewTextBoxColumn
+            // 
+            this.totalMoneyDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.totalMoneyDataGridViewTextBoxColumn.DataPropertyName = "TotalMoney";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.totalMoneyDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            this.totalMoneyDataGridViewTextBoxColumn.HeaderText = "Tổng Tiền";
+            this.totalMoneyDataGridViewTextBoxColumn.Name = "totalMoneyDataGridViewTextBoxColumn";
+            this.totalMoneyDataGridViewTextBoxColumn.ReadOnly = true;
+            this.totalMoneyDataGridViewTextBoxColumn.Width = 83;
             // 
             // KhuVuc
             // 
@@ -4287,7 +4392,20 @@ namespace QLQuanCafe.GUI.Form
             this.KhuVuc.HeaderText = "Khu Vực";
             this.KhuVuc.Name = "KhuVuc";
             this.KhuVuc.ReadOnly = true;
-            this.KhuVuc.Width = 80;
+            this.KhuVuc.Width = 54;
+            // 
+            // tableDataGridViewTextBoxColumn
+            // 
+            this.tableDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.tableDataGridViewTextBoxColumn.DataPropertyName = "Table";
+            this.tableDataGridViewTextBoxColumn.HeaderText = "Bàn";
+            this.tableDataGridViewTextBoxColumn.Name = "tableDataGridViewTextBoxColumn";
+            this.tableDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tableDataGridViewTextBoxColumn.Width = 54;
+            // 
+            // billDataBindingSource
+            // 
+            this.billDataBindingSource.DataSource = typeof(QLQuanCafe.DTO.BillData);
             // 
             // ribbonControl2
             // 
@@ -4300,8 +4418,8 @@ namespace QLQuanCafe.GUI.Form
             this.ribbonControl2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonControl2.CanCustomize = false;
             this.ribbonControl2.CaptionVisible = true;
-            this.ribbonControl2.Controls.Add(this.ribbonPanel6);
             this.ribbonControl2.Controls.Add(this.ribbonPanel3);
+            this.ribbonControl2.Controls.Add(this.ribbonPanel6);
             this.ribbonControl2.Controls.Add(this.ribbonPanel5);
             this.ribbonControl2.Controls.Add(this.ribbonPanel7);
             this.ribbonControl2.Controls.Add(this.ribbonPanel4);
@@ -4339,162 +4457,6 @@ namespace QLQuanCafe.GUI.Form
             this.ribbonControl2.Text = "Tài Khoản";
             this.ribbonControl2.UseCustomizeDialog = false;
             // 
-            // ribbonPanel6
-            // 
-            this.ribbonPanel6.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel6.Controls.Add(this.ribbonBar13);
-            this.ribbonPanel6.Controls.Add(this.ribbonBar12);
-            this.ribbonPanel6.Controls.Add(this.ribbonBar11);
-            this.ribbonPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel6.Location = new System.Drawing.Point(0, 61);
-            this.ribbonPanel6.Name = "ribbonPanel6";
-            this.ribbonPanel6.Padding = new System.Windows.Forms.Padding(3, 0, 3, 2);
-            this.ribbonPanel6.Size = new System.Drawing.Size(1370, 99);
-            this.ribbonPanel6.StretchLastRibbonBar = true;
-            // 
-            // 
-            // 
-            this.ribbonPanel6.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel6.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel6.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel6.TabIndex = 4;
-            // 
-            // ribbonBar13
-            // 
-            this.ribbonBar13.AutoOverflowEnabled = true;
-            this.ribbonBar13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            // 
-            // 
-            // 
-            this.ribbonBar13.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonBar13.ContainerControlProcessDialogKey = true;
-            this.ribbonBar13.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ribbonBar13.DragDropSupport = true;
-            this.ribbonBar13.ForeColor = System.Drawing.Color.Black;
-            this.ribbonBar13.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem26});
-            this.ribbonBar13.Location = new System.Drawing.Point(174, 0);
-            this.ribbonBar13.Name = "ribbonBar13";
-            this.ribbonBar13.Size = new System.Drawing.Size(110, 97);
-            this.ribbonBar13.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonBar13.TabIndex = 3;
-            this.ribbonBar13.Text = "...";
-            // 
-            // 
-            // 
-            this.ribbonBar13.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar13.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // buttonItem26
-            // 
-            this.buttonItem26.Image = global::QLQuanCafe.Properties.Resources.warehousing;
-            this.buttonItem26.ImageFixedSize = new System.Drawing.Size(45, 45);
-            this.buttonItem26.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem26.Name = "buttonItem26";
-            this.buttonItem26.SubItemsExpandWidth = 14;
-            this.buttonItem26.Text = "<div width= \"100\"  align = \"center\" >Nhập - Xuất Kho </div>";
-            this.buttonItem26.Tooltip = "Báo Cáo Nhập - Xuất Kho";
-            // 
-            // ribbonBar12
-            // 
-            this.ribbonBar12.AutoOverflowEnabled = true;
-            this.ribbonBar12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            // 
-            // 
-            // 
-            this.ribbonBar12.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonBar12.ContainerControlProcessDialogKey = true;
-            this.ribbonBar12.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ribbonBar12.DragDropSupport = true;
-            this.ribbonBar12.ForeColor = System.Drawing.Color.Black;
-            this.ribbonBar12.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem25});
-            this.ribbonBar12.Location = new System.Drawing.Point(94, 0);
-            this.ribbonBar12.Name = "ribbonBar12";
-            this.ribbonBar12.Size = new System.Drawing.Size(80, 97);
-            this.ribbonBar12.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonBar12.TabIndex = 2;
-            this.ribbonBar12.Text = "...";
-            // 
-            // 
-            // 
-            this.ribbonBar12.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar12.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // buttonItem25
-            // 
-            this.buttonItem25.Image = global::QLQuanCafe.Properties.Resources.Doanhthu;
-            this.buttonItem25.ImageFixedSize = new System.Drawing.Size(45, 45);
-            this.buttonItem25.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem25.Name = "buttonItem25";
-            this.buttonItem25.SubItemsExpandWidth = 14;
-            this.buttonItem25.Text = "<div width= \"70\"  align = \"center\" >Doanh Thu </div>";
-            this.buttonItem25.Tooltip = "Báo Cáo Doanh Thu";
-            // 
-            // ribbonBar11
-            // 
-            this.ribbonBar11.AutoOverflowEnabled = true;
-            this.ribbonBar11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            // 
-            // 
-            // 
-            this.ribbonBar11.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonBar11.ContainerControlProcessDialogKey = true;
-            this.ribbonBar11.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ribbonBar11.DragDropSupport = true;
-            this.ribbonBar11.ForeColor = System.Drawing.Color.Black;
-            this.ribbonBar11.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem24});
-            this.ribbonBar11.Location = new System.Drawing.Point(3, 0);
-            this.ribbonBar11.Name = "ribbonBar11";
-            this.ribbonBar11.Size = new System.Drawing.Size(91, 97);
-            this.ribbonBar11.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonBar11.TabIndex = 1;
-            this.ribbonBar11.Text = "...";
-            // 
-            // 
-            // 
-            this.ribbonBar11.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar11.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // buttonItem24
-            // 
-            this.buttonItem24.Image = global::QLQuanCafe.Properties.Resources.uathich;
-            this.buttonItem24.ImageFixedSize = new System.Drawing.Size(45, 45);
-            this.buttonItem24.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem24.Name = "buttonItem24";
-            this.buttonItem24.SubItemsExpandWidth = 14;
-            this.buttonItem24.Text = "<div width= \"70\"  align = \"center\" >Món Ưa Thích</div>";
-            this.buttonItem24.Tooltip = "Báo Cáo Món Ưa Thích";
-            this.buttonItem24.Click += new System.EventHandler(this.buttonItem24_Click);
-            // 
             // ribbonPanel3
             // 
             this.ribbonPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -4518,7 +4480,6 @@ namespace QLQuanCafe.GUI.Form
             // 
             this.ribbonPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel3.TabIndex = 1;
-            this.ribbonPanel3.Visible = false;
             // 
             // ribbonBar3
             // 
@@ -4563,6 +4524,166 @@ namespace QLQuanCafe.GUI.Form
             this.buttonItem17.SubItemsExpandWidth = 14;
             this.buttonItem17.Text = "<div width= \"70\"  align = \"center\" >Đăng Xuất </div>";
             this.buttonItem17.Tooltip = "Đăng Xuất Tài Khoản";
+            this.buttonItem17.Click += new System.EventHandler(this.buttonItem17_Click);
+            // 
+            // ribbonPanel6
+            // 
+            this.ribbonPanel6.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel6.Controls.Add(this.ribbonBar13);
+            this.ribbonPanel6.Controls.Add(this.ribbonBar12);
+            this.ribbonPanel6.Controls.Add(this.ribbonBar11);
+            this.ribbonPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel6.Location = new System.Drawing.Point(0, 61);
+            this.ribbonPanel6.Name = "ribbonPanel6";
+            this.ribbonPanel6.Padding = new System.Windows.Forms.Padding(3, 0, 3, 2);
+            this.ribbonPanel6.Size = new System.Drawing.Size(1370, 99);
+            this.ribbonPanel6.StretchLastRibbonBar = true;
+            // 
+            // 
+            // 
+            this.ribbonPanel6.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel6.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel6.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel6.TabIndex = 4;
+            this.ribbonPanel6.Visible = false;
+            // 
+            // ribbonBar13
+            // 
+            this.ribbonBar13.AutoOverflowEnabled = true;
+            this.ribbonBar13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // 
+            // 
+            this.ribbonBar13.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonBar13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonBar13.ContainerControlProcessDialogKey = true;
+            this.ribbonBar13.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ribbonBar13.DragDropSupport = true;
+            this.ribbonBar13.ForeColor = System.Drawing.Color.Black;
+            this.ribbonBar13.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem26});
+            this.ribbonBar13.Location = new System.Drawing.Point(174, 0);
+            this.ribbonBar13.Name = "ribbonBar13";
+            this.ribbonBar13.Size = new System.Drawing.Size(110, 97);
+            this.ribbonBar13.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonBar13.TabIndex = 3;
+            this.ribbonBar13.Text = "...";
+            // 
+            // 
+            // 
+            this.ribbonBar13.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonBar13.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // buttonItem26
+            // 
+            this.buttonItem26.Image = global::QLQuanCafe.Properties.Resources.warehousing;
+            this.buttonItem26.ImageFixedSize = new System.Drawing.Size(45, 45);
+            this.buttonItem26.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem26.Name = "buttonItem26";
+            this.buttonItem26.SubItemsExpandWidth = 14;
+            this.buttonItem26.Text = "<div width= \"100\"  align = \"center\" >Nhập - Xuất Kho </div>";
+            this.buttonItem26.Tooltip = "Báo Cáo Nhập - Xuất Kho";
+            this.buttonItem26.Click += new System.EventHandler(this.buttonItem26_Click);
+            // 
+            // ribbonBar12
+            // 
+            this.ribbonBar12.AutoOverflowEnabled = true;
+            this.ribbonBar12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // 
+            // 
+            this.ribbonBar12.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonBar12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonBar12.ContainerControlProcessDialogKey = true;
+            this.ribbonBar12.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ribbonBar12.DragDropSupport = true;
+            this.ribbonBar12.ForeColor = System.Drawing.Color.Black;
+            this.ribbonBar12.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem25});
+            this.ribbonBar12.Location = new System.Drawing.Point(94, 0);
+            this.ribbonBar12.Name = "ribbonBar12";
+            this.ribbonBar12.Size = new System.Drawing.Size(80, 97);
+            this.ribbonBar12.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonBar12.TabIndex = 2;
+            this.ribbonBar12.Text = "...";
+            // 
+            // 
+            // 
+            this.ribbonBar12.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonBar12.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // buttonItem25
+            // 
+            this.buttonItem25.Image = global::QLQuanCafe.Properties.Resources.Doanhthu;
+            this.buttonItem25.ImageFixedSize = new System.Drawing.Size(45, 45);
+            this.buttonItem25.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem25.Name = "buttonItem25";
+            this.buttonItem25.SubItemsExpandWidth = 14;
+            this.buttonItem25.Text = "<div width= \"70\"  align = \"center\" >Doanh Thu </div>";
+            this.buttonItem25.Tooltip = "Báo Cáo Doanh Thu";
+            this.buttonItem25.Click += new System.EventHandler(this.buttonItem25_Click);
+            // 
+            // ribbonBar11
+            // 
+            this.ribbonBar11.AutoOverflowEnabled = true;
+            this.ribbonBar11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            // 
+            // 
+            // 
+            this.ribbonBar11.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonBar11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonBar11.ContainerControlProcessDialogKey = true;
+            this.ribbonBar11.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ribbonBar11.DragDropSupport = true;
+            this.ribbonBar11.ForeColor = System.Drawing.Color.Black;
+            this.ribbonBar11.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem24});
+            this.ribbonBar11.Location = new System.Drawing.Point(3, 0);
+            this.ribbonBar11.Name = "ribbonBar11";
+            this.ribbonBar11.Size = new System.Drawing.Size(91, 97);
+            this.ribbonBar11.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonBar11.TabIndex = 1;
+            this.ribbonBar11.Text = "...";
+            // 
+            // 
+            // 
+            this.ribbonBar11.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonBar11.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // buttonItem24
+            // 
+            this.buttonItem24.Image = global::QLQuanCafe.Properties.Resources.uathich;
+            this.buttonItem24.ImageFixedSize = new System.Drawing.Size(45, 45);
+            this.buttonItem24.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem24.Name = "buttonItem24";
+            this.buttonItem24.SubItemsExpandWidth = 14;
+            this.buttonItem24.Text = "<div width= \"70\"  align = \"center\" >Món Ưa Thích</div>";
+            this.buttonItem24.Tooltip = "Báo Cáo Món Ưa Thích";
+            this.buttonItem24.Click += new System.EventHandler(this.buttonItem24_Click);
             // 
             // ribbonPanel5
             // 
@@ -5004,6 +5125,7 @@ namespace QLQuanCafe.GUI.Form
             // 
             // ribbonTabItem3
             // 
+            this.ribbonTabItem3.Checked = true;
             this.ribbonTabItem3.Name = "ribbonTabItem3";
             this.ribbonTabItem3.Panel = this.ribbonPanel3;
             this.ribbonTabItem3.Text = "Hệ Thống";
@@ -5022,7 +5144,6 @@ namespace QLQuanCafe.GUI.Form
             // 
             // ribbonTabItem6
             // 
-            this.ribbonTabItem6.Checked = true;
             this.ribbonTabItem6.Name = "ribbonTabItem6";
             this.ribbonTabItem6.Panel = this.ribbonPanel6;
             this.ribbonTabItem6.Text = "Báo Cáo";
@@ -5033,83 +5154,31 @@ namespace QLQuanCafe.GUI.Form
             this.ribbonTabItem7.Panel = this.ribbonPanel7;
             this.ribbonTabItem7.Text = "Trợ Giúp";
             // 
-            // galleryContainer73
+            // galleryContainer75
             // 
             // 
             // 
             // 
-            this.galleryContainer73.BackgroundStyle.Class = "RibbonFileMenuColumnTwoContainer";
-            this.galleryContainer73.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.galleryContainer73.EnableGalleryPopup = false;
-            this.galleryContainer73.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.galleryContainer73.MinimumSize = new System.Drawing.Size(180, 240);
-            this.galleryContainer73.MultiLine = false;
-            this.galleryContainer73.Name = "galleryContainer73";
-            this.galleryContainer73.PopupUsesStandardScrollbars = false;
+            this.galleryContainer75.BackgroundStyle.Class = "RibbonFileMenuColumnTwoContainer";
+            this.galleryContainer75.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.galleryContainer75.EnableGalleryPopup = false;
+            this.galleryContainer75.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
+            this.galleryContainer75.MinimumSize = new System.Drawing.Size(180, 240);
+            this.galleryContainer75.MultiLine = false;
+            this.galleryContainer75.Name = "galleryContainer75";
+            this.galleryContainer75.PopupUsesStandardScrollbars = false;
             // 
             // 
             // 
-            this.galleryContainer73.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.galleryContainer75.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
-            // labelItem73
+            // labelItem75
             // 
-            this.labelItem73.BorderSide = DevComponents.DotNetBar.eBorderSide.Bottom;
-            this.labelItem73.BorderType = DevComponents.DotNetBar.eBorderType.Etched;
-            this.labelItem73.CanCustomize = false;
-            this.labelItem73.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelItem73.Name = "labelItem73";
-            // 
-            // khuVuc_BanUC1
-            // 
-            this.khuVuc_BanUC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.khuVuc_BanUC1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.khuVuc_BanUC1.ForeColor = System.Drawing.Color.Black;
-            this.khuVuc_BanUC1.Location = new System.Drawing.Point(3, 3);
-            this.khuVuc_BanUC1.Name = "khuVuc_BanUC1";
-            this.khuVuc_BanUC1.Size = new System.Drawing.Size(914, 584);
-            this.khuVuc_BanUC1.TabIndex = 3;
-            this.khuVuc_BanUC1.Load += new System.EventHandler(this.khuVuc_BanUC1_Load);
-            // 
-            // billIdDataGridViewTextBoxColumn
-            // 
-            this.billIdDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.billIdDataGridViewTextBoxColumn.DataPropertyName = "BillId";
-            this.billIdDataGridViewTextBoxColumn.HeaderText = "Hóa Đơn";
-            this.billIdDataGridViewTextBoxColumn.Name = "billIdDataGridViewTextBoxColumn";
-            this.billIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // timeDataGridViewTextBoxColumn
-            // 
-            this.timeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.timeDataGridViewTextBoxColumn.DataPropertyName = "Time";
-            this.timeDataGridViewTextBoxColumn.HeaderText = "Thời Gian";
-            this.timeDataGridViewTextBoxColumn.Name = "timeDataGridViewTextBoxColumn";
-            this.timeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.timeDataGridViewTextBoxColumn.Width = 87;
-            // 
-            // totalMoneyDataGridViewTextBoxColumn
-            // 
-            this.totalMoneyDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.totalMoneyDataGridViewTextBoxColumn.DataPropertyName = "TotalMoney";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.totalMoneyDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
-            this.totalMoneyDataGridViewTextBoxColumn.HeaderText = "Tổng Tiền";
-            this.totalMoneyDataGridViewTextBoxColumn.Name = "totalMoneyDataGridViewTextBoxColumn";
-            this.totalMoneyDataGridViewTextBoxColumn.ReadOnly = true;
-            this.totalMoneyDataGridViewTextBoxColumn.Width = 90;
-            // 
-            // tableDataGridViewTextBoxColumn
-            // 
-            this.tableDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.tableDataGridViewTextBoxColumn.DataPropertyName = "Table";
-            this.tableDataGridViewTextBoxColumn.HeaderText = "Bàn";
-            this.tableDataGridViewTextBoxColumn.Name = "tableDataGridViewTextBoxColumn";
-            this.tableDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tableDataGridViewTextBoxColumn.Width = 54;
-            // 
-            // billDataBindingSource
-            // 
-            this.billDataBindingSource.DataSource = typeof(QLQuanCafe.DTO.BillData);
+            this.labelItem75.BorderSide = DevComponents.DotNetBar.eBorderSide.Bottom;
+            this.labelItem75.BorderType = DevComponents.DotNetBar.eBorderType.Etched;
+            this.labelItem75.CanCustomize = false;
+            this.labelItem75.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelItem75.Name = "labelItem75";
             // 
             // FormMain
             // 
@@ -5132,14 +5201,14 @@ namespace QLQuanCafe.GUI.Form
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDonTrongNgay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.billDataBindingSource)).EndInit();
             this.ribbonControl2.ResumeLayout(false);
             this.ribbonControl2.PerformLayout();
-            this.ribbonPanel6.ResumeLayout(false);
             this.ribbonPanel3.ResumeLayout(false);
+            this.ribbonPanel6.ResumeLayout(false);
             this.ribbonPanel5.ResumeLayout(false);
             this.ribbonPanel7.ResumeLayout(false);
             this.ribbonPanel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.billDataBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -5512,6 +5581,10 @@ namespace QLQuanCafe.GUI.Form
         private DataGridViewTextBoxColumn totalMoneyDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn KhuVuc;
         private DataGridViewTextBoxColumn tableDataGridViewTextBoxColumn;
+        private GalleryContainer galleryContainer74;
+        private LabelItem labelItem74;
+        private GalleryContainer galleryContainer75;
+        private LabelItem labelItem75;
 
 
 

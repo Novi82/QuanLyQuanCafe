@@ -8,6 +8,7 @@ using QLQuanCafe.DAO;
 using QLQuanCafe.DTO;
 using QLQuanCafe.GUI;
 using QLQuanCafe.GUI.Dialog;
+using QLQuanCafe.GUI.UserControl;
 
 namespace QLQuanCafe.BLL
 {
@@ -843,6 +844,7 @@ namespace QLQuanCafe.BLL
                 //Xuat bill
                 //HACK VIEW
                 XacNhanThanhToan xacNhanThanhToan = new XacNhanThanhToan(bill);
+               
                 xacNhanThanhToan.ShowDialog();
 
                 //BillWindow billWindow = new BillWindow(billID);

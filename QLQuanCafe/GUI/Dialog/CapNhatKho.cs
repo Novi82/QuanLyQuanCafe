@@ -8,7 +8,7 @@ namespace QLQuanCafe.GUI.Dialog
 
     public partial class CapNhatKho : MetroForm
     {
-        private MaterialBll materialBll = LocatorBll.MaterialVM;
+        private MaterialBll materialBll = LocatorBll.MateriaBll;
         public CapNhatKho()
         {
             InitializeComponent();

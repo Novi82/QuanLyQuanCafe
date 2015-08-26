@@ -89,6 +89,7 @@ namespace QLQuanCafe.GUI.Dialog
             this.bntCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.bntCancel.TabIndex = 3;
             this.bntCancel.Text = "Hủy Bỏ";
+            this.bntCancel.Click += new System.EventHandler(this.bntCancel_Click);
             // 
             // SuaDonViTinh
             // 
@@ -100,7 +101,6 @@ namespace QLQuanCafe.GUI.Dialog
             this.Controls.Add(this.buttonX1);
             this.Controls.Add(this.DonViTinh);
             this.Controls.Add(this.LDonViTinh);
-            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

@@ -36,9 +36,22 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\DevComponents.DotNetBar2.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.Charts.v13.2.Core, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v13.2.Core, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v13.2.Core, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v13.2.Core, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v13.2.Core, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v13.2.Core, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v13.2.UI, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v13.2.Extensions, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="MySql.Data">
       <HintPath>..\packages\MySql.Data.6.9.7\lib\net45\MySql.Data.dll</HintPath>
     </Reference>
@@ -47,7 +60,9 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Printing" />
     <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Input.Manipulations" />
     <Reference Include="System.Xml.Linq" />
@@ -71,7 +86,33 @@
     <Compile Include="BLL\MaterialBll.cs" />
     <Compile Include="BLL\MenuCategoryAndMenuItemBll.cs" />
     <Compile Include="BLL\UnitBll.cs" />
+    <Compile Include="coffeemanagementDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>coffeemanagementDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="coffeemanagementDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>coffeemanagementDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="coffeemanagementDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>coffeemanagementDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="coffeemanagementDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>coffeemanagementDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="coffeemanagementDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>coffeemanagementDataSet4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Common\BindableBase.cs" />
+    <Compile Include="Common\Convertor.cs" />
     <Compile Include="Common\ImageHelper.cs" />
     <Compile Include="Common\MessageDialogHelper.cs" />
     <Compile Include="Common\ReplayCommand.cs" />
@@ -106,10 +147,10 @@
     <Compile Include="GUI\BaoCaoThongKe.Designer.cs">
       <DependentUpon>BaoCaoThongKe.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\DangNhap.cs">
+    <Compile Include="GUI\Dialog\DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\DangNhap.Designer.cs">
+    <Compile Include="GUI\Dialog\DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\DatBan.cs">
@@ -135,6 +176,12 @@
     </Compile>
     <Compile Include="GUI\DoiMatKhau.Designer.cs">
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Form\DoanhThuThang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Form\DoanhThuThang.Designer.cs">
+      <DependentUpon>DoanhThuThang.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Form\DonViTinh.cs">
       <SubType>Form</SubType>
@@ -171,6 +218,12 @@
     </Compile>
     <Compile Include="GUI\Dialog\NhapKho.Designer.cs">
       <DependentUpon>NhapKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Form\Nhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Form\Nhap.Designer.cs">
+      <DependentUpon>Nhap.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Form\QuanLyKhuVuc-Ban.cs">
       <SubType>Form</SubType>
@@ -336,15 +389,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Report\DataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="GUI\BaoCaoThongKe.resx">
       <DependentUpon>BaoCaoThongKe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\DangNhap.resx">
+    <EmbeddedResource Include="GUI\Dialog\DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DatBan.resx">
@@ -358,6 +406,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DoiMatKhau.resx">
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Form\DoanhThuThang.resx">
+      <DependentUpon>DoanhThuThang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Form\DonViTinh.resx">
       <DependentUpon>DonViTinh.cs</DependentUpon>
@@ -376,6 +427,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Dialog\NhapKho.resx">
       <DependentUpon>NhapKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Form\Nhap.resx">
+      <DependentUpon>Nhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Form\QuanLyKhuVuc-Ban.resx">
       <DependentUpon>QuanLyKhuVuc-Ban.cs</DependentUpon>
@@ -458,12 +512,83 @@
     <EmbeddedResource Include="GUI\Dialog\YeuCauMon.resx">
       <DependentUpon>YeuCauMon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\DoanhThuThang.rdlc" />
+    <EmbeddedResource Include="Report\DS HOADON.rdlc" />
+    <EmbeddedResource Include="Report\Nhap.rdlc" />
+    <None Include="coffeemanagementDataSet.xsc">
+      <DependentUpon>coffeemanagementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="coffeemanagementDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>coffeemanagementDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="coffeemanagementDataSet.xss">
+      <DependentUpon>coffeemanagementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="coffeemanagementDataSet1.xsc">
+      <DependentUpon>coffeemanagementDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="coffeemanagementDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>coffeemanagementDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="coffeemanagementDataSet1.xss">
+      <DependentUpon>coffeemanagementDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="coffeemanagementDataSet2.xsc">
+      <DependentUpon>coffeemanagementDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="coffeemanagementDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>coffeemanagementDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="coffeemanagementDataSet2.xss">
+      <DependentUpon>coffeemanagementDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="coffeemanagementDataSet3.xsc">
+      <DependentUpon>coffeemanagementDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="coffeemanagementDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>coffeemanagementDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="coffeemanagementDataSet3.xss">
+      <DependentUpon>coffeemanagementDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="coffeemanagementDataSet4.xsc">
+      <DependentUpon>coffeemanagementDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="coffeemanagementDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>coffeemanagementDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="coffeemanagementDataSet4.xss">
+      <DependentUpon>coffeemanagementDataSet4.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\QLQuanCafe.BLL.AccountBll.datasource" />
+    <None Include="Properties\DataSources\QLQuanCafe.BLL.AreaAndTableBll.datasource" />
+    <None Include="Properties\DataSources\QLQuanCafe.BLL.BillBll.datasource" />
+    <None Include="Properties\DataSources\QLQuanCafe.BLL.BllBase.datasource" />
+    <None Include="Properties\DataSources\QLQuanCafe.BLL.HomePageBll+UpdateView.datasource" />
+    <None Include="Properties\DataSources\QLQuanCafe.BLL.HomePageBll.datasource" />
+    <None Include="Properties\DataSources\QLQuanCafe.BLL.LocatorBll.datasource" />
+    <None Include="Properties\DataSources\QLQuanCafe.BLL.LoginBll.datasource" />
+    <None Include="Properties\DataSources\QLQuanCafe.BLL.MainWindowBll.datasource" />
+    <None Include="Properties\DataSources\QLQuanCafe.BLL.MaterialBll.datasource" />
+    <None Include="Properties\DataSources\QLQuanCafe.BLL.MenuCategoryAndMenuItemBll.datasource" />
+    <None Include="Properties\DataSources\QLQuanCafe.BLL.UnitBll.datasource" />
     <None Include="Properties\DataSources\QLQuanCafe.DTO.AccountData.datasource" />
     <None Include="Properties\DataSources\QLQuanCafe.DTO.AreaData.datasource" />
     <None Include="Properties\DataSources\QLQuanCafe.DTO.BillData.datasource" />
@@ -494,17 +619,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Report\DataSet1.xsc">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="Report\DataSet1.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Report\DataSet1.xss">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
     <None Include="Resources\iconSmall.png" />
     <Content Include="Resources\about.png" />
     <Content Include="Resources\AddAreas.png" />

@@ -1,17 +1,22 @@
 ﻿using System;
+using System.Windows.Forms;
 using DevComponents.DotNetBar.Metro;
 using QLQuanCafe.BLL;
+using QLQuanCafe.DTO;
 using QLQuanCafe.GUI.Dialog;
+using QLQuanCafe.GUI;
 
 namespace QLQuanCafe.GUI.Form
 {
     public partial class FormMain : MetroForm
     {
-        private AreaAndTableBll areaAndTableBll = LocatorBll.AreaAndTableVM;
+        private AreaAndTableBll areaAndTableBll = LocatorBll.AreaAndTableBll;
         public FormMain()
         {
-            InitializeComponent();
 
+            InitializeComponent();
+            Login login = new Login();
+            login.ShowDialog();
         }
 
         #region Menu
@@ -72,10 +77,11 @@ namespace QLQuanCafe.GUI.Form
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-            LocatorBll.HomePageVM.Load();
+            LocatorBll.HomePageBll.Load();
             LoadKhuVuc_Ban();
             LoadThucDon();
             LoadHoaDonTrongNgay();
+
         }
 
         private void LoadKhuVuc_Ban()
@@ -85,7 +91,7 @@ namespace QLQuanCafe.GUI.Form
 
         private void LoadThucDon()
         {
-            khuVuc_BanUC1.getBtnThanhToan().Click+=thanhtoan_Click;
+            khuVuc_BanUC1.getBtnThanhToan().Click += thanhtoan_Click;
         }
 
         private void thanhtoan_Click(object sender, EventArgs e)
@@ -95,12 +101,47 @@ namespace QLQuanCafe.GUI.Form
 
         private void khuVuc_BanUC1_Load(object sender, EventArgs e)
         {
-            
+
         }
         public void LoadHoaDonTrongNgay()
         {
 
-            dgvHoaDonTrongNgay.DataSource = LocatorBll.HomePageVM.ListBillToday;
+            dgvHoaDonTrongNgay.DataSource = LocatorBll.HomePageBll.ListBillToday;
+        }
+
+        private void dgvHoaDonTrongNgay_RowsAdded(object sender, System.Windows.Forms.DataGridViewRowsAddedEventArgs e)
+        {
+            var rows = dgvHoaDonTrongNgay.Rows;
+            foreach (DataGridViewRow row in rows)
+            {
+                TableData tableData = (row.Cells["tableDataGridViewTextBoxColumn"]).Value as TableData;
+                if (tableData != null) (row.Cells["KhuVuc"]).Value = tableData.Area;
+            }
+        }
+
+        private void buttonItem25_Click(object sender, EventArgs e)
+        {
+            BaoCao_ThongKe BCTK = new BaoCao_ThongKe();
+            BCTK.ShowDialog();
+        }
+
+        private void buttonItem26_Click(object sender, EventArgs e)
+        {
+            Nhap n = new Nhap();
+            n.ShowDialog();
+        }
+
+        private void buttonItem17_Click(object sender, EventArgs e)
+        {
+            if (LocatorBll.LoginBll.Logout())
+            {
+                Application.Restart();
+            }
+        }
+
+        private void dgvHoaDonTrongNgay_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+           
         }
     }
 }

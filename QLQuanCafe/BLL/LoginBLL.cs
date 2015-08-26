@@ -97,10 +97,11 @@ namespace QLQuanCafe.BLL
             }
         }
 
-        public bool Login(string password)
+        public bool Login(string user,string password)
         {
             try
             {
+                Account.UserName = user;
                 Account.Password = password;
                 Account = LocatorDataSource.AccountDS.Login(Account);
 

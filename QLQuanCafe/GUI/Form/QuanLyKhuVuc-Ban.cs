@@ -10,7 +10,7 @@ namespace QLQuanCafe.GUI.Form
         public QuanLyKhuVuc_Ban()
         {
             InitializeComponent();
-            bll = LocatorBll.AreaAndTableVM;
+            bll = LocatorBll.AreaAndTableBll;
             LoadArea();
 //            LoadTable();
         }
@@ -60,6 +60,7 @@ namespace QLQuanCafe.GUI.Form
             {
                 bll.ShowAddAreaWindowCommand.Execute(null);
                 LoadArea();
+                dataGridViewX1.Rows[dataGridViewX1.Rows.Count - 1].Selected = true;
             }
         }
 
@@ -67,10 +68,16 @@ namespace QLQuanCafe.GUI.Form
         {
             if (dataGridViewX1.SelectedRows.Count > 0)
             {
-                if (bll.ShowEditAreaWindowCommand.CanExecute(dataGridViewX1.SelectedRows[0]))
+                if (dataGridViewX1.CurrentRow != null)
                 {
-                    bll.ShowEditAreaWindowCommand.Execute(dataGridViewX1.SelectedRows[0]);
+                    int index = dataGridViewX1.CurrentRow.Index;
+                    if (bll.ShowEditAreaWindowCommand.CanExecute(dataGridViewX1.SelectedRows[0]))
+                    {
+                        bll.ShowEditAreaWindowCommand.Execute(dataGridViewX1.SelectedRows[0]);
+                    }
                     LoadArea();
+                    dataGridViewX1.ClearSelection();
+                    dataGridViewX1.Rows[index].Selected = true;
                 }
             }
         }
@@ -93,6 +100,7 @@ namespace QLQuanCafe.GUI.Form
             {
                 bll.ShowAddTableWindowCommand.Execute(null);
                 LoadTable();
+                dataGridViewX2.Rows[dataGridViewX2.Rows.Count - 1].Selected = true;
             }
         }
 
@@ -100,10 +108,16 @@ namespace QLQuanCafe.GUI.Form
         {
             if (dataGridViewX2.SelectedRows.Count > 0)
             {
-                if (bll.ShowEditTableWindowCommand.CanExecute(dataGridViewX2.SelectedRows[0]))
+                if (dataGridViewX2.CurrentRow != null)
                 {
-                    bll.ShowEditTableWindowCommand.Execute(dataGridViewX2.SelectedRows[0]);
+                    int index = dataGridViewX1.CurrentRow.Index;
+                    if (bll.ShowEditTableWindowCommand.CanExecute(dataGridViewX2.SelectedRows[0]))
+                    {
+                        bll.ShowEditTableWindowCommand.Execute(dataGridViewX2.SelectedRows[0]);
+                    }
                     LoadTable();
+                    dataGridViewX2.ClearSelection();
+                    dataGridViewX2.Rows[index].Selected = true;
                 }
             }
         }
